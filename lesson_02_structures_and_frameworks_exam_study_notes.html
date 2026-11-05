@@ -1,0 +1,1701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 02 (Week 02) – Structures and Frameworks | Exam Study Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1e293b;
+      --ink-muted: #64748b;
+      --border-line: #e2dcd0;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.28);
+
+      /* 5-Color Highlighter Marker System - Light Mode */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+
+      /* Callout backgrounds */
+      --quote-bg: #fffbeb;
+      --quote-border: #f59e0b;
+      --teach-bg: #eef2ff;
+      --teach-border: #4f46e5;
+      --read-bg: #ecfdf5;
+      --read-border: #10b981;
+      --trap-bg: #fff1f2;
+      --trap-border: #e11d48;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #121316;
+      --bg-card: #1c1e24;
+      --bg-subtle: #16181d;
+      --ink-main: #f1f5f9;
+      --ink-muted: #94a3b8;
+      --border-line: #2e323b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      /* 5-Color Highlighter Marker System - Dark Mode */
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+
+      /* Callout backgrounds */
+      --quote-bg: rgba(245, 158, 11, 0.12);
+      --quote-border: #fbbf24;
+      --teach-bg: rgba(99, 102, 241, 0.14);
+      --teach-border: #818cf8;
+      --read-bg: rgba(16, 185, 129, 0.12);
+      --read-border: #34d399;
+      --trap-bg: rgba(244, 63, 94, 0.14);
+      --trap-border: #fb7185;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Highlighter Marker Styles */
+    mark.y, mark.hl-yellow {
+      background: var(--hl-yellow);
+      color: var(--hl-yellow-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.g, mark.hl-green {
+      background: var(--hl-green);
+      color: var(--hl-green-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.p, mark.hl-pink {
+      background: var(--hl-pink);
+      color: var(--hl-pink-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.b, mark.hl-blue {
+      background: var(--hl-blue);
+      color: var(--hl-blue-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.u, mark.hl-purple {
+      background: var(--hl-purple);
+      color: var(--hl-purple-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Study Note Cards & Containers */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-line);
+    }
+
+    /* Callout Boxes */
+    .callout-quote {
+      background-color: var(--quote-bg);
+      border-left: 4px solid var(--quote-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-teach {
+      background-color: var(--teach-bg);
+      border-left: 4px solid var(--teach-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-read {
+      background-color: var(--read-bg);
+      border-left: 4px solid var(--read-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-trap {
+      background-color: var(--trap-bg);
+      border-left: 4px solid var(--trap-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Study Tables */
+    .study-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .study-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .study-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Section Number Pill */
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body data-lesson="week02" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- STICKY TOP STUDY BAR & NAVIGATION -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Week 02 / Lesson 02</span>
+        <span class="font-bold text-sm sm:text-base truncate">Structures and Frameworks — Complete Study Notes (Slides 01–45)</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Jump Pills -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
+        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Overview &amp; C2C (S1–4)</a>
+        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. 5-C Model &amp; PESTEL (S5–9)</a>
+        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Project 7-S Framework (S10–14)</a>
+        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. ICOM Conversion Process (S15–20)</a>
+        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. 4-D, S-Curve, Gates &amp; Agile (S21–30)</a>
+        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. 3 Complexity Lenses &amp; Crossrail (S31–38)</a>
+        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Arson Task Force &amp; Exit Check (S39–45)</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO HEADER (SLIDE 01) -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #4f46e5;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="slide-badge">📌 Slide 01 • Title &amp; Source</span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          İSTANBUL AYDIN UNIVERSITY • PROJECT MANAGEMENT
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Week 02 (Lesson 02): <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Structures and Frameworks</span>
+      </h1>
+      <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
+        <strong>Instructor:</strong> Prof. Naghdali Choupani &nbsp;|&nbsp;
+        <strong>Textbook:</strong> <em>Project Management</em> (Fifth Edition, 2022, Chapter 2) by Harvey Maylor &amp; Neil Turner (Pearson)
+      </p>
+
+      <!-- Highlighter Color Legend Bar -->
+      <div class="p-4 rounded-xl border flex flex-wrap items-center gap-3 text-xs sm:text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <span class="font-bold uppercase tracking-wider mr-1">🖍️ Study Highlighter Key:</span>
+        <span><mark class="y">Core Principle / Book Quote</mark></span>
+        <span><mark class="g">Framework / Model Element</mark></span>
+        <span><mark class="b">Lifecycle / Process Flow / Deliverable</mark></span>
+        <span><mark class="p">Complexity / Risk / Exam Trap / Constraint</mark></span>
+        <span><mark class="u">People / Governance / 7-S Role</mark></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- =====================================================================
+         SECTION 1: OVERVIEW, FOUNDATION & SENSE-MAKING (SLIDES 01–04)
+    ====================================================================== -->
+    <section id="sec1" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">1</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Overview, Foundation &amp; Sense-Making</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 01–04 • Learning Objectives, Week 1 vs. Week 2 Progression &amp; The Big Carpet Company (Cradle to Cradle / C2C)</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 02 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 02</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Chapter 2 Learning Objectives</span>
+        </div>
+        <h3 class="text-xl font-bold">What you will learn today</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 1</div>
+            <div class="text-lg font-extrabold mb-1">1. Describe</div>
+            <p class="text-sm"><mark class="y">Describe the environment</mark> that a project operates in and some of the <mark class="p">challenges facing project managers</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 2</div>
+            <div class="text-lg font-extrabold mb-1">2. Use</div>
+            <p class="text-sm"><mark class="g">Use a framework to identify elements of a project</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 3</div>
+            <div class="text-lg font-extrabold mb-1">3. Assess</div>
+            <p class="text-sm"><mark class="p">Assess the managerial complexity of a project</mark> and the <mark class="u">implications of this for the project manager and the organisation</mark>.</p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Prof. Naghdali Choupani)</strong>
+          By the end, you will <mark class="g">use these models to explain a project</mark>, <mark class="p">identify its management challenges</mark> and <mark class="b">propose suitable responses</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 03 & SLIDE 04 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 03 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 03</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Course Progression</span>
+            </div>
+            <h3 class="text-lg font-bold">From "what is a project?" to "how do we manage it?"</h3>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-slate-600 dark:text-slate-300 block mb-1">Week 1 foundation:</strong>
+                Projects are <mark class="y">temporary, have aspects of uniqueness and pursue a mission</mark>. <mark class="p">People, change and uncertainty</mark> make delivery challenging.
+              </div>
+              <div class="p-3.5 rounded-xl border-2 border-indigo-500/60" style="background-color: var(--teach-bg);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">Week 2 task:</strong>
+                Use a <mark class="g">small set of models</mark> to understand the <mark class="g">environment</mark>, the <mark class="u">organisation of work</mark>, the <mark class="b">delivery process</mark> and the <mark class="p">difficulty of management</mark>.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> Recall one project from last week. State its intended result and one uncertainty. Keep it in mind as you compare today's frameworks.
+          </div>
+        </div>
+
+        <!-- SLIDE 04 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 04</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Why We Need Frameworks</span>
+            </div>
+            <h3 class="text-lg font-bold">Sense-making: the Big Carpet Company</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "Following a strategy of <mark class="g">C2C</mark> would mean a <mark class="y">radical change for the firm, its products, and supply chain</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Cradle to Cradle / C2C)</strong>
+            The book's <strong>Cradle to Cradle (C2C)</strong> example involves <mark class="b">recyclable materials, suppliers, reverse logistics and a changing product portfolio</mark>. A short description cannot capture every interaction; <mark class="g">frameworks help us select what to examine</mark>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: THE PROJECT ENVIRONMENT — 5-C MODEL & PESTEL (SLIDES 05–09)
+    ====================================================================== -->
+    <section id="sec2" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">2</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">The Project Environment: The 5-C Model &amp; PESTEL</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 05–09 • Figure 2.1 (The 5-C Model), Exact Definitions of the 5 Cs, Full PESTEL Breakdown &amp; Completeness vs. Customer Focus</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 05: FIGURE 2.1 THE 5-C MODEL -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 05 • Figure 2.1</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Describing the project environment: the 5-C model</span>
+        </div>
+        <h3 class="text-xl font-bold">The project environment: the 5-C model (Figure 2.1)</h3>
+
+        <!-- Custom SVG reproducing Figure 2.1 -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 860 520" class="w-full min-w-[700px]" aria-label="Figure 2.1 Describing the project environment: the 5-C model">
+            <!-- Outer Frame Grid -->
+            <rect x="10" y="10" width="840" height="500" fill="#e0f2fe" stroke="#334155" stroke-width="2"/>
+            <!-- Vertical lines for Left (Market trends) and Right (Customers) columns -->
+            <line x1="125" y1="10" x2="125" y2="510" stroke="#334155" stroke-width="1.6"/>
+            <line x1="735" y1="10" x2="735" y2="510" stroke="#334155" stroke-width="1.6"/>
+            <!-- Horizontal lines for Top (External environment) and Bottom (Competition) bands -->
+            <line x1="10" y1="82" x2="850" y2="82" stroke="#334155" stroke-width="1.6"/>
+            <line x1="125" y1="438" x2="735" y2="438" stroke="#334155" stroke-width="1.6"/>
+
+            <!-- Frame Labels -->
+            <text x="67" y="38" text-anchor="middle" font-size="13" font-style="italic" font-weight="700" fill="#0f172a">Market</text>
+            <text x="67" y="55" text-anchor="middle" font-size="13" font-style="italic" font-weight="700" fill="#0f172a">trends</text>
+            <text x="430" y="46" text-anchor="middle" font-size="14" font-weight="700" fill="#0f172a">External environment</text>
+            <text x="792" y="46" text-anchor="middle" font-size="13" font-style="italic" font-weight="700" fill="#0f172a">Customers</text>
+
+            <text x="430" y="470" text-anchor="middle" font-size="13" font-weight="600" fill="#0f172a">Other project organisations who could do the same task</text>
+            <text x="430" y="490" text-anchor="middle" font-size="13.5" font-style="italic" font-weight="800" fill="#0f172a">Competition</text>
+
+            <!-- Central Concentric Ovals: Project team + Complexity -->
+            <ellipse cx="430" cy="260" rx="205" ry="74" fill="#d1fae5" stroke="#15803d" stroke-width="1.8"/>
+            <text x="430" y="206" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">Project team</text>
+
+            <ellipse cx="430" cy="268" rx="168" ry="50" fill="#bbf7d0" stroke="#15803d" stroke-width="1.8"/>
+            <text x="430" y="246" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">Complexity <tspan font-weight="500">– the difficulty of</tspan></text>
+            <text x="430" y="262" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">managing projects increases due to more</text>
+            <text x="430" y="278" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">stringent legislation, increasing size</text>
+            <text x="430" y="294" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">and scale of projects, and the</text>
+            <text x="430" y="309" text-anchor="middle" font-size="11.5" font-weight="600" fill="#0f172a">impact of the other C's.</text>
+
+            <!-- TOP 2-WAY BLOCK ARROW: Context -->
+            <polygon points="430,52 530,96 498,96 498,162 530,162 430,202 330,162 362,162 362,96 330,96" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <g text-anchor="middle" font-size="12" fill="#0f172a">
+              <text x="430" y="102" font-weight="800" font-size="13">Context –</text>
+              <text x="430" y="117" font-weight="600">Political,</text>
+              <text x="430" y="131" font-weight="600">economic,</text>
+              <text x="430" y="145" font-weight="600">social,</text>
+              <text x="430" y="159" font-weight="600">technical,</text>
+              <text x="430" y="173" font-weight="600">environmental,</text>
+              <text x="430" y="187" font-weight="600">legal</text>
+            </g>
+
+            <!-- BOTTOM 2-WAY BLOCK ARROW: Competitiveness -->
+            <polygon points="430,318 535,362 502,362 502,422 535,422 430,462 325,422 358,422 358,362 325,362" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <g text-anchor="middle" font-size="11.5" fill="#0f172a">
+              <text x="430" y="362" font-weight="800" font-size="12.5">Competitiveness –</text>
+              <text x="430" y="376" font-weight="600">reduced monopolies</text>
+              <text x="430" y="390" font-weight="600">on technology, work</text>
+              <text x="430" y="404" font-weight="600">can be done almost</text>
+              <text x="430" y="418" font-weight="600">anywhere,</text>
+              <text x="430" y="432" font-weight="600">time and quality are</text>
+              <text x="430" y="445" font-weight="600">competitive resources</text>
+            </g>
+
+            <!-- LEFT 2-WAY BLOCK ARROW: Completeness -->
+            <polygon points="18,268 78,205 78,228 242,228 242,205 302,268 242,331 242,308 78,308 78,331" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <g text-anchor="middle" font-size="12" fill="#0f172a">
+              <text x="160" y="256" font-weight="800" font-size="13">Completeness –</text>
+              <text x="160" y="272" font-weight="600">a move to integrated solutions,</text>
+              <text x="160" y="288" font-weight="600">not just products or services</text>
+            </g>
+
+            <!-- RIGHT 2-WAY BLOCK ARROW: Customer focus -->
+            <polygon points="558,268 618,205 618,228 782,228 782,205 842,268 782,331 782,308 618,308 618,331" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <g text-anchor="middle" font-size="11.5" fill="#0f172a">
+              <text x="700" y="248" font-weight="800" font-size="13">Customer focus –</text>
+              <text x="700" y="264" font-weight="600">new standards emerging of</text>
+              <text x="700" y="279" font-weight="600">requirements of products and</text>
+              <text x="700" y="294" font-weight="600">services and flexibility</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 05)</strong>
+          The project team sits inside a wider environment. <mark class="y">The two-way arrows matter: external conditions shape the project, and the project can change those conditions.</mark> Use the five Cs to ask what influences delivery.
+        </div>
+      </div>
+
+      <!-- SLIDE 06: EXACT DEFINITIONS OF THE FIVE Cs -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 06</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Exact Textbook Definitions</span>
+        </div>
+        <h3 class="text-xl font-bold">The five Cs: exact definitions</h3>
+
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th class="w-48">The 5 Cs</th>
+                <th>Exact Definition</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-extrabold"><mark class="g">1. Context</mark></td>
+                <td>the <mark class="y">external general influences on the organisation</mark> in which the project is taking place;</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="p">2. Complexity</mark></td>
+                <td>the <mark class="p">level of difficulty or complication</mark> of a piece of work called 'a project';</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="b">3. Completeness</mark></td>
+                <td><mark class="b">how much of the end requirement a project will deliver</mark>;</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="g">4. Competitiveness</mark></td>
+                <td><mark class="y">how many other organisations will be competing</mark> to deliver that work;</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">5. Customer focus</mark></td>
+                <td>the <mark class="u">expectation that customers will have their needs met</mark> by the project.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-trap text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note &amp; Exam Trap (Slide 06)</strong>
+          The headings prompt different questions. <mark class="p">Completeness concerns the breadth of the solution; it is NOT a percentage-complete measure.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 07, SLIDE 08 & SLIDE 09: PESTEL & COMPLETENESS / CUSTOMER FOCUS -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 07</span>
+            <span class="slide-badge">Slide 08</span>
+            <span class="slide-badge">Slide 09</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">PESTEL Analysis &amp; Complete Solutions</span>
+        </div>
+
+        <h3 class="text-xl font-bold">PESTEL: Examining the External Context (Slides 07–08)</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">P – Political (Slide 07)</strong>
+            All organisations have <mark class="u">politics, hierarchies and a requirement at least to recognise where the power in that organisation really lies</mark>.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">E – Economic (Slide 07)</strong>
+            The <mark class="g">influence of general and local economics</mark> (e.g., supplier prices, funding climate).
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">S – Social (Slide 07)</strong>
+            The influence of <mark class="u">social changes on the project environment</mark>, for instance on <mark class="b">methods of communication, use of social media, and the impact on relationships</mark>.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">T – Technical (Slide 08)</strong>
+            <mark class="b">Changes in technology</mark> will challenge the viability of some projects and create the need for others, in addition to <mark class="b">determining the way in which those projects are delivered</mark>.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">E – Environmental (Slide 08)</strong>
+            An <mark class="g">assessment of environmental impact is mandated</mark> for many projects now as part of <mark class="g">corporate social responsibility</mark>.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">L – Legal (Slide 08)</strong>
+            Recent challenges have included <mark class="p">data-sharing (GDPR) and uncertainty over international trade rules</mark>.
+          </div>
+        </div>
+
+        <div class="callout-teach text-xs space-y-1">
+          <strong class="block uppercase tracking-wider text-indigo-600 dark:text-indigo-400">🎓 Teaching Notes (Slides 07–08 – Campus Event Application)</strong>
+          <p>• <strong>Slide 07:</strong> For a campus event, consider approval priorities, supplier prices and how students communicate. <mark class="y">Record a possible effect on the project, not just a PESTEL label.</mark></p>
+          <p>• <strong>Slide 08:</strong> Test registration technology, consider waste and transport impacts, and identify applicable permissions and data-handling requirements.</p>
+        </div>
+
+        <!-- Slide 09 -->
+        <div class="pt-4 border-t grid grid-cols-1 md:grid-cols-2 gap-4" style="border-color: var(--border-line);">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 09: Complete Solution &amp; Customer-Focused Process</strong>
+            <p class="italic font-medium">
+              "<mark class="y">Customer focus applies to both the outcome and the process by which it is delivered.</mark>"
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 09 – Flight-Training Example)</strong>
+            The flight-training example expands from <mark class="b">selling simulators to providing instructors, aircraft and facilities</mark>. <strong>Completeness</strong> broadens the solution. <strong>Customer focus</strong> involves users during delivery, so the result meets their needs.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: THE PROJECT 7-S FRAMEWORK (SLIDES 10–14)
+    ====================================================================== -->
+    <section id="sec3" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">3</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">The Project 7-S Framework (Internal Assessment)</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 10–14 • Table 2.1 Project 7-S Adaptation, Direction/Organisation/Methods, People/Capability/Relationships &amp; Student Careers Event Review</p>
+        </div>
+      </div>
+
+      <!-- SLIDES 10, 11, 12: TABLE 2.1 PROJECT 7-S -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 10 • Table 2.1</span>
+            <span class="slide-badge">Slide 11</span>
+            <span class="slide-badge">Slide 12</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Maylor &amp; Turner's Project 7-S Framework</span>
+        </div>
+
+        <h3 class="text-xl font-bold">The 7-S examines the project itself (Table 2.1)</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 10)</strong>
+            <p class="italic font-medium">
+              "Their original 7-S is <mark class="y">amended for the project environment</mark>, with a description of each of the elements, as shown in Table 2.1."
+            </p>
+          </div>
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Exam Trap Warning (Slide 10)</strong>
+            Use this book's project version: <mark class="g">Strategy, Structure, Systems, Staff, Skills, Style/culture and Stakeholders</mark>. It is an adaptation of McKinsey's framework; <mark class="p">do not substitute a different seven-item list</mark> (e.g., McKinsey's "Shared Values" is replaced by <strong>Stakeholders</strong> in the project 7-S).
+          </div>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th class="w-40">Group</th>
+                <th class="w-44">7-S Element</th>
+                <th>Exact Textbook Definition (Slides 11–12)</th>
+                <th>Key Guiding Question</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td rowspan="3" class="font-bold text-indigo-600 dark:text-indigo-400">Direction, Organisation &amp; Methods (Slide 11)</td>
+                <td class="font-extrabold"><mark class="g">1. Strategy</mark></td>
+                <td>The <mark class="y">high-level requirements of the project and the means to achieve them</mark></td>
+                <td>What are we trying to achieve, and how?</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">2. Structure</mark></td>
+                <td>The <mark class="u">organisational arrangement</mark> that will be used to carry out the project</td>
+                <td>Who reports to whom? Who owns decisions?</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="b">3. Systems</mark></td>
+                <td>The <mark class="b">methods for work to be designed, monitored and controlled</mark></td>
+                <td>How are progress, quality and changes handled?</td>
+              </tr>
+              <tr>
+                <td rowspan="4" class="font-bold text-emerald-700 dark:text-emerald-400">People, Capability &amp; Relationships (Slide 12)</td>
+                <td class="font-extrabold"><mark class="u">4. Staff</mark></td>
+                <td>The <mark class="u">selection, recruitment, management and leadership</mark> of those working on the project</td>
+                <td>Do we have the right people allocated?</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="g">5. Skills</mark></td>
+                <td>The <mark class="g">managerial and technical tools available</mark> to the project manager and the staff, and how these are developed</td>
+                <td>Do they have the capability &amp; tools needed?</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">6. Style / culture</mark></td>
+                <td>The <mark class="u">underlying way of working and inter-relating</mark> within the work team or organisation</td>
+                <td>How does the team collaborate and surface issues?</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">7. Stakeholders</mark></td>
+                <td><mark class="u">Individuals and groups with an interest in the project process or outcome</mark></td>
+                <td>Who is affected by the process or result?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-teach text-xs">
+          <strong>🎓 Teaching Note (Slide 12):</strong> <mark class="p">Distinguish having people (Staff) from having the necessary capability (Skills).</mark> Culture shapes how they work together; stakeholders include those affected by the process or result.
+        </div>
+      </div>
+
+      <!-- SLIDE 13 & SLIDE 14: CAREERS EVENT 7-S REVIEW ACTIVITY -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 13</span>
+            <span class="slide-badge">Slide 14</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Worked Class Activity: 6-Week Student Careers Event</span>
+        </div>
+        <h3 class="text-xl font-bold">Activity: Review a student careers event &amp; Suggested 7-S review</h3>
+
+        <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <strong>Teaching Scenario (Slide 13):</strong> A student team will host a careers event in <strong>six weeks</strong>. Employers attend, the <strong>venue is shared</strong> and the <strong>booking system is untested</strong>. Identify a concern under each S and propose practical actions.
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block uppercase text-xs tracking-wider">1. Direction and delivery (Slide 14)</strong>
+            <ul class="space-y-1.5">
+              <li>• <strong>Strategy:</strong> <mark class="g">Define the event's benefit.</mark></li>
+              <li>• <strong>Structure:</strong> <mark class="u">Name decision owners.</mark></li>
+              <li>• <strong>Systems:</strong> <mark class="b">Confirm venue access and test booking before registration opens.</mark></li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-600 dark:text-emerald-400 block uppercase text-xs tracking-wider">2. People and relationships (Slide 14)</strong>
+            <ul class="space-y-1.5">
+              <li>• <strong>Staff:</strong> <mark class="u">Allocate reliable volunteers.</mark></li>
+              <li>• <strong>Skills:</strong> <mark class="g">Provide technical support.</mark></li>
+              <li>• <strong>Style/culture:</strong> <mark class="u">Surface issues early.</mark></li>
+              <li>• <strong>Stakeholders:</strong> <mark class="u">Agree expectations with employers and students.</mark></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 14)</strong>
+          <mark class="y">An action can address several Ss.</mark> A <strong>booking rehearsal</strong>, for example, checks the <mark class="b">system</mark>, reveals <mark class="g">skill gaps</mark> and involves <mark class="u">users (stakeholders)</mark>.
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: ICOM — THE PROJECT AS A CONVERSION PROCESS (SLIDES 15–20)
+    ====================================================================== -->
+    <section id="sec4" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">4</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">ICOM: The Project as a Conversion Process</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 15–20 • Figure 2.2 (ICOM Model), Inputs/Brief vs. Outputs/Changed People, 9 Controls/Constraints, 5 Mechanisms &amp; Careers Event ICOM Map</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 15: FIGURE 2.2 ICOM CONVERSION PROCESS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 15 • Figure 2.2</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">The project as a conversion process</span>
+        </div>
+        <h3 class="text-xl font-bold">ICOM: the project as a conversion process (Figure 2.2)</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-8 p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <svg viewBox="0 0 680 390" class="w-full min-w-[540px]" aria-label="Figure 2.2 The project as a conversion process">
+              <defs>
+                <marker id="icomArr22" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#0d9488"/>
+                </marker>
+              </defs>
+
+              <!-- TOP: Controls (and constraints) -->
+              <g font-size="12.5" fill="currentColor">
+                <text x="270" y="22" font-weight="800" font-size="13.5">Controls (and constraints):</text>
+                <text x="270" y="40">– time</text>
+                <text x="270" y="56">– quality</text>
+                <text x="270" y="72">– cost</text>
+                <text x="270" y="88">– legal</text>
+                <text x="270" y="104">– ethical</text>
+                <text x="270" y="120">– environmental</text>
+                <text x="270" y="136">– logic</text>
+                <text x="270" y="152">– activation</text>
+                <text x="270" y="168">– indirect effects</text>
+              </g>
+              <line x1="330" y1="175" x2="330" y2="212" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr22)"/>
+
+              <!-- LEFT: Inputs -->
+              <text x="145" y="232" font-size="13.5" font-weight="800" fill="currentColor">Inputs:</text>
+              <text x="145" y="250" font-size="13" fill="currentColor">want / need</text>
+              <line x1="225" y1="238" x2="278" y2="238" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr22)"/>
+
+              <!-- CENTER: Project -->
+              <rect x="284" y="218" width="92" height="40" rx="3" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <text x="330" y="243" text-anchor="middle" font-size="14.5" font-weight="800" fill="#0f172a">Project</text>
+
+              <!-- RIGHT: Outputs -->
+              <line x1="376" y1="238" x2="428" y2="238" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr22)"/>
+              <text x="440" y="232" font-size="13.5" font-weight="800" fill="currentColor">Outputs:</text>
+              <text x="440" y="250" font-size="13" fill="currentColor">satisfied need</text>
+
+              <!-- BOTTOM: Mechanisms -->
+              <line x1="330" y1="298" x2="330" y2="263" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr22)"/>
+              <g font-size="12.5" fill="currentColor">
+                <text x="245" y="318" font-weight="800" font-size="13.5">Mechanisms:</text>
+                <text x="245" y="335">– people</text>
+                <text x="245" y="351">– knowledge and expertise</text>
+                <text x="245" y="367">– financial resources</text>
+                <text x="245" y="383">– tools and techniques / technology</text>
+              </g>
+            </svg>
+          </div>
+
+          <div class="lg:col-span-4 space-y-4">
+            <div class="callout-read text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 15)</strong>
+              <ul class="space-y-1.5 mt-2">
+                <li>• <mark class="b">Inputs</mark> express a <strong>want or need</strong>.</li>
+                <li>• <mark class="g">Outputs</mark> <strong>satisfy that need</strong>.</li>
+                <li>• <mark class="p">Controls and constraints</mark> <strong>limit delivery</strong>.</li>
+                <li>• <mark class="u">Mechanisms</mark> <strong>make it possible</strong>.</li>
+              </ul>
+              <p class="mt-2 text-xs">Read the arrows before listing examples: each has a different function.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 16, SLIDE 17 & SLIDE 18 -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- SLIDE 16 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 16</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Inputs &amp; Outputs</span>
+            </div>
+            <h3 class="text-lg font-bold">Inputs and outputs: need and transformation</h3>
+
+            <div class="p-3.5 rounded-xl border text-xs space-y-1" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block text-sm">1. Input and brief:</strong>
+              There has to be a limit to the number of projects started, encapsulated into a <mark class="b">brief – a document describing the nature of the work to be undertaken before resources are released</mark> to do even preliminary work.
+            </div>
+
+            <div class="p-3.5 rounded-xl border text-xs space-y-1" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-600 dark:text-emerald-400 block text-sm">2. Output: changed people:</strong>
+              Through a <mark class="g">training project, the participants have received new knowledge</mark> and so are part of the transformation process as well as being a product of it.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> A project can produce information, a tangible product or changed capability. <mark class="p">For a training project, completing sessions is not enough to demonstrate that the intended learning need has been met.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 17 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 17</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">9 Controls &amp; Constraints</span>
+            </div>
+            <h3 class="text-lg font-bold">Controls and constraints go beyond a deadline</h3>
+
+            <div class="space-y-2 text-xs">
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-rose-600 dark:text-rose-400">1. Time:</strong> All projects by definition have a time constraint; in practice, <mark class="p">often found to be the most challenging to meet</mark>.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-amber-700 dark:text-amber-400">2. Cost:</strong> The <mark class="p">value and timing of financial resources</mark> required to carry out the project work.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400">3. Quality:</strong> The <mark class="y">standards by which both the product (output) and the process itself will be judged</mark>.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> The book also lists <mark class="p">legal, ethical, environmental, logic, activation and indirect-effect constraints</mark> (e.g., an earlier task must finish [logic] or formal authorisation is required [activation]).
+          </div>
+        </div>
+
+        <!-- SLIDE 18 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 18</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">5 Mechanisms &amp; Integration</span>
+            </div>
+            <h3 class="text-lg font-bold">Mechanisms: how the transformation becomes possible</h3>
+
+            <div class="callout-quote text-xs">
+              <strong class="block uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "They are required to be the <mark class="y">integrator of the elements of the project – the need or want with the available mechanisms or resources – under the conditions imposed by the constraints</mark>."
+              </p>
+            </div>
+
+            <div class="p-3 rounded-xl border text-xs" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong>5 Listed Mechanisms:</strong> (1) <mark class="u">people</mark>, (2) <mark class="g">knowledge and expertise</mark>, (3) <mark class="b">financial resources</mark>, (4) <mark class="b">tools and techniques</mark>, and (5) <mark class="b">technology</mark>.
+            </div>
+          </div>
+
+          <div class="callout-trap text-xs">
+            <strong>⚠️ Dual Role of Funding (Slides 18 &amp; 20):</strong> <mark class="p">A budget ceiling constrains work (Control/Constraint)</mark>; <mark class="g">available funding enables it (Mechanism)</mark>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 19 & SLIDE 20: CAREERS EVENT ICOM MAP -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 19</span>
+            <span class="slide-badge">Slide 20</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Worked Class Activity: Careers Event ICOM Map</span>
+        </div>
+        <h3 class="text-xl font-bold">Activity &amp; Suggested ICOM Map for the Student Careers Event</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="p-4 rounded-xl border-t-4 border-sky-500" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-sky-700 dark:text-sky-400 mb-1">1. Input</div>
+            <p><mark class="b">Students need access to employers and clearer information about career opportunities.</mark></p>
+          </div>
+          <div class="p-4 rounded-xl border-t-4 border-emerald-500" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-emerald-700 dark:text-emerald-400 mb-1">2. Output</div>
+            <p><mark class="g">A delivered event that enables useful employer-student interaction and provides accessible follow-up information.</mark> <em>(Avoid naming only the event date!)</em></p>
+          </div>
+          <div class="p-4 rounded-xl border-t-4 border-rose-500" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-rose-700 dark:text-rose-400 mb-1">3. Controls / constraints</div>
+            <p><mark class="p">Six-week deadline, agreed spending limit, venue conditions and relevant permissions.</mark></p>
+          </div>
+          <div class="p-4 rounded-xl border-t-4 border-purple-500" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-purple-700 dark:text-purple-400 mb-1">4. Mechanisms</div>
+            <p><mark class="u">Student organisers, employer contacts, venue staff, available funding and a tested booking platform.</mark></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: PROJECT LIFECYCLES — 4-D, CURVES, GATES, AGILE & DESIGN THINKING (SLIDES 21–30)
+    ====================================================================== -->
+    <section id="sec5" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">5</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Project Lifecycles: 4-D, Activity &amp; S-Curves, Stage Gates, Agile &amp; Design Thinking</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 21–30 • Fig 2.3 (4-D Lifecycle), Hedgehog Syndrome, Fig 2.4 (Activity Curve) vs. Fig 2.5 (S-Curve), Fig 2.6 (IDeA Stage-Gate Model), Project vs. Product Life, Agile Values, Hybrid &amp; Design Thinking</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 21 (FIGURE 2.3), SLIDE 22 & SLIDE 23 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 21 • Figure 2.3</span>
+            <span class="slide-badge">Slide 22</span>
+            <span class="slide-badge">Slide 23</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Four Phases of Project Lifecycle (4-D) &amp; Avoiding "Hedgehog Syndrome"</span>
+        </div>
+
+        <h3 class="text-xl font-bold">4-D: connect delivery with learning (Figure 2.3)</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Custom SVG reproducing Figure 2.3 -->
+          <div class="lg:col-span-6 p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <svg viewBox="0 0 480 280" class="w-full max-w-md" aria-label="Figure 2.3 Four phases of project lifecycle">
+              <defs>
+                <marker id="d4Arr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#0d9488"/>
+                </marker>
+              </defs>
+
+              <!-- D1: Define it! (Top) -->
+              <rect x="175" y="14" width="130" height="52" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <text x="240" y="36" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">D1:</text>
+              <text x="240" y="54" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">Define it!</text>
+
+              <!-- D2: Design it! (Right) -->
+              <rect x="260" y="114" width="130" height="52" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <text x="325" y="136" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">D2:</text>
+              <text x="325" y="154" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">Design it!</text>
+
+              <!-- D3: Do it! (Bottom) -->
+              <rect x="175" y="214" width="130" height="52" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <text x="240" y="236" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">D3:</text>
+              <text x="240" y="254" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">Do it!</text>
+
+              <!-- D4: Develop it! (Left) -->
+              <rect x="90" y="114" width="130" height="52" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <text x="155" y="136" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">D4:</text>
+              <text x="155" y="154" text-anchor="middle" font-size="13.5" font-weight="800" fill="#0f172a">Develop it!</text>
+
+              <!-- 4 Connecting Arrows & Deliverable Labels -->
+              <!-- D1 -> D2: The brief -->
+              <line x1="285" y1="66" x2="285" y2="108" stroke="#0d9488" stroke-width="2.5" marker-end="url(#d4Arr)"/>
+              <text x="296" y="92" font-size="13" font-weight="700" fill="currentColor">The brief</text>
+
+              <!-- D2 -> D3: The proposal/PID -->
+              <line x1="285" y1="166" x2="285" y2="208" stroke="#0d9488" stroke-width="2.5" marker-end="url(#d4Arr)"/>
+              <text x="296" y="192" font-size="13" font-weight="700" fill="currentColor">The proposal/PID</text>
+
+              <!-- D3 -> D4: The outcomes -->
+              <line x1="195" y1="214" x2="195" y2="172" stroke="#0d9488" stroke-width="2.5" marker-end="url(#d4Arr)"/>
+              <text x="184" y="192" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">The outcomes</text>
+
+              <!-- D4 -> D1: Process and product knowledge -->
+              <line x1="195" y1="114" x2="195" y2="72" stroke="#0d9488" stroke-width="2.5" marker-end="url(#d4Arr)"/>
+              <text x="184" y="84" text-anchor="end" font-size="12.5" font-weight="700" fill="currentColor">Process and product</text>
+              <text x="184" y="100" text-anchor="end" font-size="12.5" font-weight="700" fill="currentColor">knowledge</text>
+            </svg>
+          </div>
+
+          <!-- Slide 22 Questions per Phase -->
+          <div class="lg:col-span-6 space-y-3 text-sm">
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">D1 – Define (➔ Output: The brief):</strong>
+              <mark class="y">What is to be done? Why is it to be done? What are the benefits?</mark>
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">D2 – Design (➔ Output: The proposal/PID):</strong>
+              <mark class="b">How will it be done? Who will be involved in each part? When can it start and finish? What methods and structure are going to be used?</mark>
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">D3 – Deliver / Do (➔ Output: The outcomes):</strong>
+              <mark class="b">How should the project be managed, measured and evaluated on a day-to-day basis?</mark>
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-600 dark:text-emerald-400">D4 – Develop (➔ Output: Process &amp; product knowledge):</strong>
+              <mark class="g">How can we learn from the work? How can the project process be improved?</mark>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 23: Avoid "Hedgehog Syndrome" -->
+        <div class="pt-3 border-t grid grid-cols-1 md:grid-cols-2 gap-4" style="border-color: var(--border-line);">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 23 Quote: Avoid "Hedgehog Syndrome"</strong>
+            <p class="italic font-medium">
+              "Unless there is an opportunity to <mark class="y">develop the project processes and provide the feedback to the organisation, the knowledge is lost</mark>."
+            </p>
+          </div>
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note (Slide 23 – Lessons Identified vs. Learned)</strong>
+            The book describes organisations <mark class="p">repeating expensive mistakes because experience does not feed into future projects</mark> (like hedgehogs getting flattened on roads repeatedly). <mark class="y">A review must lead to changed practice. Recording "lessons identified" alone does not prove that learning has happened.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 24 (FIGURE 2.4) & SLIDE 25 (FIGURE 2.5) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 24: FIGURE 2.4 LEVEL OF ACTIVITY -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 24 • Figure 2.4</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Level of activity vs. Time</span>
+            </div>
+            <h3 class="text-lg font-bold">Activity rises and falls over the lifecycle (Figure 2.4)</h3>
+
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 440 230" class="w-full" aria-label="Figure 2.4 Graph showing how level of activity varies with time">
+                <!-- Axes -->
+                <line x1="55" y1="15" x2="55" y2="195" stroke="currentColor" stroke-width="2"/>
+                <line x1="55" y1="195" x2="415" y2="195" stroke="currentColor" stroke-width="2"/>
+                <text x="20" y="105" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor" transform="rotate(-90 20 105)">Level of activity</text>
+                <text x="235" y="218" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Time</text>
+
+                <!-- Phase Dashed Lines -->
+                <line x1="85" y1="18" x2="85" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="130" y1="18" x2="130" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="365" y1="18" x2="365" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+                <!-- Phase Vertical Labels -->
+                <text x="73" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 73 110)">Define it</text>
+                <text x="110" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 110 110)">Design it</text>
+                <text x="248" y="85" text-anchor="middle" font-size="12.5" font-weight="800" fill="currentColor" transform="rotate(-90 248 85)">Do it</text>
+                <text x="385" y="95" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 385 95)">Develop it</text>
+
+                <!-- Bell-shaped Activity Curve -->
+                <path d="M55,190 Q105,170 155,95 Q235,10 285,30 Q345,65 395,155" fill="none" stroke="#0284c7" stroke-width="3.5"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 24)</strong>
+            The horizontal axis is time; the vertical axis is activity level. In the generic model, <mark class="b">delivery ("Do it") has the highest activity</mark>, then activity falls during "Develop it". This is a conceptual pattern, not measured data or a timetable for every project.
+          </div>
+        </div>
+
+        <!-- SLIDE 25: FIGURE 2.5 THE S-CURVE -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 25 • Figure 2.5</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Cumulative expenditure vs. Time (S-curve)</span>
+            </div>
+            <h3 class="text-lg font-bold">The S-curve shows cumulative expenditure (Figure 2.5)</h3>
+
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 440 230" class="w-full" aria-label="Figure 2.5 Graph of cumulative expenditure against time - the S-curve">
+                <!-- Axes -->
+                <line x1="55" y1="15" x2="55" y2="195" stroke="currentColor" stroke-width="2"/>
+                <line x1="55" y1="195" x2="415" y2="195" stroke="currentColor" stroke-width="2"/>
+                <text x="20" y="105" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor" transform="rotate(-90 20 105)">Cumulative expenditure</text>
+                <text x="235" y="218" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Time</text>
+
+                <!-- Phase Dashed Lines -->
+                <line x1="85" y1="18" x2="85" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="130" y1="18" x2="130" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+                <line x1="365" y1="18" x2="365" y2="195" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+                <!-- Phase Vertical Labels -->
+                <text x="73" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 73 110)">Define it</text>
+                <text x="110" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 110 110)">Design it</text>
+                <text x="248" y="120" text-anchor="middle" font-size="12.5" font-weight="800" fill="currentColor" transform="rotate(-90 248 120)">Do it</text>
+                <text x="385" y="110" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor" transform="rotate(-90 385 110)">Develop it</text>
+
+                <!-- S-Curve -->
+                <path d="M55,190 Q115,182 150,165 C205,135 230,55 305,36 Q355,24 405,22" fill="none" stroke="#0284c7" stroke-width="3.5"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 25 – Exam Favorite)</strong>
+            <mark class="b">Cumulative spending adds up over time, so the curve does NOT fall when activity declines.</mark> Its <mark class="y">slope is steepest during intensive delivery ("Do it")</mark>. <mark class="p">Early decisions can commit later spending even when little cash has yet been paid.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 26: FIGURE 2.6 STAGE GATES (IDeA IN ARMENIA) -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="slide-badge">Slide 26 • Figure 2.6</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Project lifecycle example from IDeA in Armenia</span>
+        </div>
+        <h3 class="text-xl font-bold">Stage gates: assess before continuing (Figure 2.6)</h3>
+
+        <div class="overflow-x-auto">
+          <table class="study-table text-xs">
+            <thead>
+              <tr>
+                <th class="w-32">Lifecycle Span</th>
+                <th colspan="6" class="text-center bg-emerald-100/80 dark:bg-emerald-950/50 text-emerald-900 dark:text-emerald-200 font-extrabold">PROJECT (Phases 1–6 &amp; Gates 0–5) ➔</th>
+                <th class="text-center bg-sky-100/80 dark:bg-sky-950/50 text-sky-900 dark:text-sky-200 font-extrabold">OPERATIONS ➔</th>
+              </tr>
+              <tr>
+                <th>Phase</th>
+                <th>1. Capture Idea</th>
+                <th>2. Initiate Project</th>
+                <th>3. Develop Concept</th>
+                <th>4. Select &amp; Plan in Detail</th>
+                <th>5. Fundraise &amp; Prepare to Execute</th>
+                <th>6. Execute</th>
+                <th>7. Operate</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold">Gate number (after phase)</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 0</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 1</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 2</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 3</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 4</td>
+                <td class="font-extrabold text-emerald-700 dark:text-emerald-400">◆ Gate 5</td>
+                <td class="italic" style="color: var(--ink-muted);">Ongoing Operations</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Gate focus</td>
+                <td><mark class="y">Strategic Assessment</mark></td>
+                <td><mark class="b">Funding Assessment</mark></td>
+                <td><mark class="g">Delivery Strategy</mark></td>
+                <td><mark class="b">Financing Decision</mark></td>
+                <td><mark class="u">Execution Readiness</mark></td>
+                <td><mark class="g">Operational Readiness</mark></td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Main deliverables to gate</td>
+                <td><strong>ROM</strong> time, cost, benefits, assumptions, risks</td>
+                <td><strong>Project Initiation Document (PID)</strong> / Proposal</td>
+                <td>Preliminary plans</td>
+                <td>• Detailed plans<br>• Fundraising document</td>
+                <td>• Execution plans<br>• Contracts<br>• Benefits realisation plan<br>• Funding availability</td>
+                <td>• Operational start-up plans<br>• Asset data<br>• Project history file<br>• Lessons learned</td>
+                <td>–</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Continuous Rule (Gates 0–3)</td>
+                <td colspan="4" class="bg-rose-50/70 dark:bg-rose-950/30 font-medium">
+                  • <mark class="y">Opportunity Statement updated at each gate.</mark><br>
+                  • <mark class="b">Cost, time, resources proposed/estimated for each gate, before moving to the next gate.</mark>
+                </td>
+                <td colspan="3"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 26)</strong>
+          The IDeA foundation example places decision gates between phases. <mark class="b">Evidence becomes more detailed as work progresses.</mark> <mark class="p">A gate reviews readiness and continuing value; it can lead to stopping the project.</mark> <strong>ROM</strong> means <em>rough order of magnitude</em>.
+        </div>
+      </div>
+
+      <!-- SLIDES 27, 28, 29 & 30: PRODUCT LIFE, AGILE VALUES, HYBRID & DESIGN THINKING -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDES 27 & 28 -->
+        <div class="note-card p-6 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 27</span>
+                <span class="slide-badge">Slide 28</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Product Life &amp; Agile Values</span>
+            </div>
+
+            <!-- Slide 27 -->
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold">Slide 27: Project lifecycle and product life are different</h3>
+              <div class="callout-quote text-xs">
+                "It is important to <mark class="y">distinguish between the 'project' lifecycle (the development and delivery of the project itself) and that of the product or service being developed</mark>."
+              </div>
+              <p class="text-xs">
+                <strong>Teaching Note:</strong> A project develops and delivers something; the <mark class="b">resulting asset or service may operate for years</mark>. The hospital-system example includes <mark class="g">handover, training and support</mark>. Consider ongoing use and maintenance during early planning.
+              </p>
+            </div>
+
+            <!-- Slide 28 -->
+            <div class="pt-3 border-t space-y-2.5" style="border-color: var(--border-line);">
+              <h3 class="text-lg font-bold">Slide 28: Agile values — a shift of emphasis</h3>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+                <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                  <strong class="text-indigo-600 dark:text-indigo-400 block">1. People</strong>
+                  <mark class="u">individuals and interactions</mark> over processes and tools;
+                </div>
+                <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                  <strong class="text-emerald-600 dark:text-emerald-400 block">2. Working results</strong>
+                  <mark class="g">working software</mark> over comprehensive documentation;
+                </div>
+                <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                  <strong class="text-sky-600 dark:text-sky-400 block">3. Collaboration</strong>
+                  <mark class="u">customer collaboration</mark> over contract negotiation;
+                </div>
+                <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                  <strong class="text-amber-600 dark:text-amber-400 block">4. Adaptation</strong>
+                  <mark class="b">responding to change</mark> over following a plan.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-trap text-xs">
+            <strong>⚠️ Teaching Note (Slide 28):</strong> The book says that the <mark class="y">items on the right still have value</mark>. <mark class="p">Agile is NOT permission to omit planning, documentation or agreements.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDES 29 & 30 -->
+        <div class="note-card p-6 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 29</span>
+                <span class="slide-badge">Slide 30</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Hybrid Working &amp; Design Thinking</span>
+            </div>
+
+            <!-- Slide 29 -->
+            <div class="space-y-2">
+              <h3 class="text-lg font-bold">Slide 29: Choose linear, iterative or hybrid working</h3>
+              <div class="callout-quote text-xs">
+                "A <mark class="g">mixed or 'hybrid' approach</mark> should be considered when <mark class="y">some aspects of a project would benefit from an agile approach but other aspects are deemed inappropriate for its application</mark>."
+              </div>
+              <p class="text-xs">
+                <strong>Teaching Note:</strong> A <mark class="b">stable venue-booking process may use planned steps</mark>; an <mark class="g">unfamiliar registration experience may benefit from prototypes and user feedback</mark>. The choice follows the task and uncertainty.
+              </p>
+            </div>
+
+            <!-- Slide 30 -->
+            <div class="pt-3 border-t space-y-2" style="border-color: var(--border-line);">
+              <h3 class="text-lg font-bold">Slide 30: Design thinking — understand before solutionising</h3>
+              <div class="callout-quote text-xs">
+                "But one of the key differences in approach is the <mark class="y">discipline of holding off on a solution, until the problem is properly understood</mark>."
+              </div>
+              <p class="text-xs">
+                <strong>Teaching Note:</strong> <mark class="p">Before deciding that students need a new app, investigate what prevents them from finding opportunities.</mark> The book connects user needs, available resources and organisational constraints; creativity applies to both the output and its delivery process.
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Pair Prompt (Slide 30):</strong> Propose two questions you would ask students before choosing a technical solution (e.g., "How do you currently hear about employers?" and "What stops you from attending career events?").
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: MANAGERIAL COMPLEXITY — 3 LENSES, CROSSRAIL & BoKs (SLIDES 31–38)
+    ====================================================================== -->
+    <section id="sec6" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">6</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Managerial Complexity: 3 Lenses, Crossrail &amp; Bodies of Knowledge</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 31–38 • Book Launch vs. 24-Partner Research, Structural / Socio-Political / Emergent Complexity, Complexity Profile, Crossrail Case, Understand-Reduce-Respond &amp; BoKs</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 31 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 31</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Comparing Managerial Demands</span>
+        </div>
+        <h3 class="text-xl font-bold">Two projects, different managerial demands</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Book launch (Local bookshop owner)</strong>
+            "He would need to liaise between the publishers, the author's agent and his own team to generate interest in the event and to use it to turn that interest into much-needed sales."<br>
+            <span class="text-xs font-semibold mt-1 block">➔ Experienced shop owner can use <mark class="g">relatively simple planning</mark>.</span>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Scientific research (European network)</strong>
+            "The grant funded a network of scientists to pursue work that would assist in the understanding of major diseases, was worth <mark class="p">many million euros per year and involved no less than 24 partners from all over Europe</mark>."<br>
+            <span class="text-xs font-semibold mt-1 block">➔ Involves <mark class="p">many partners, legal agreements and specialist work</mark>.</span>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 31)</strong>
+          <mark class="y">Importance alone does not tell us the kind of management support needed.</mark> (The book launch is vital to the shop owner's survival, yet its managerial complexity is far lower than the 24-partner research network).
+        </div>
+      </div>
+
+      <!-- SLIDES 32, 33, 34 & 35: THE THREE COMPLEXITY LENSES & COMPLEXITY PROFILE -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="slide-badge">Slide 32</span>
+            <span class="slide-badge">Slide 33</span>
+            <span class="slide-badge">Slide 34</span>
+            <span class="slide-badge">Slide 35</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Three Dimensions of Complexity &amp; Dynamic Profiling</span>
+        </div>
+
+        <h3 class="text-xl font-bold">The Three Complexity Lenses (Structural, Socio-Political, Emergent)</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <!-- Slide 32: Structural -->
+          <div class="p-4 rounded-xl border-t-4 border-indigo-600 space-y-2.5" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-base text-indigo-700 dark:text-indigo-300">1. Structural Complexity (Slide 32)</div>
+            <div class="callout-quote text-xs">
+              "Structural complexity is associated with <mark class="g">size, variety, breadth of scope, the level of interdependence of people or tasks, or the pace of the work</mark>."
+            </div>
+            <p class="text-xs">
+              <strong>Teaching Note:</strong> Look for many interacting tasks, disciplines, constraints or organisations. <mark class="p">A large number is not automatically the problem; the coordination it creates is.</mark> Responses: clearer interfaces, roles and dependency tracking.
+            </p>
+          </div>
+
+          <!-- Slide 33: Socio-political -->
+          <div class="p-4 rounded-xl border-t-4 border-purple-600 space-y-2.5" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-base text-purple-700 dark:text-purple-300">2. Socio-Political Complexity (Slide 33)</div>
+            <div class="callout-quote text-xs">
+              "Socio-political complexity is associated with a <mark class="u">project's importance, its people, power, and (P)politics, in both the project team and wider</mark>."
+            </div>
+            <p class="text-xs">
+              <strong>Teaching Note:</strong> People may want different outcomes or have unequal influence. <mark class="p">More scheduling detail will NOT by itself resolve conflicting interests.</mark>
+            </p>
+          </div>
+
+          <!-- Slide 34: Emergent -->
+          <div class="p-4 rounded-xl border-t-4 border-rose-600 space-y-2.5" style="background-color: var(--bg-subtle);">
+            <div class="font-extrabold text-base text-rose-700 dark:text-rose-300">3. Emergent Complexity (Slide 34)</div>
+            <div class="callout-quote text-xs">
+              "Emergent complexity comprises <mark class="p">uncertainty and change</mark>. Uncertainty is typically the result of <mark class="p">novelty of technology or process, a lack of experience, and (non)availability of information</mark> on which to make decisions."
+            </div>
+            <p class="text-xs">
+              <strong>Teaching Note:</strong> Test assumptions, use feedback and revisit plans. <mark class="y">One event can affect all three complexity types, so categories can overlap.</mark>
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 35: Build a profile, then revisit it -->
+        <div class="pt-3 border-t grid grid-cols-1 md:grid-cols-2 gap-4" style="border-color: var(--border-line);">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 35 Quote: Complexity Profile</strong>
+            <p class="italic font-medium">
+              "A <mark class="g">complexity profile</mark> is a useful framework if <mark class="y">used at the outset and then at various times during the project to identify particular difficulties and formulate a response to them</mark>."
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 35)</strong>
+            A profile identifies <mark class="y">particular sources of difficulty; it is not just a single "high/low" label</mark>. Assessments are subjective and should be supported by evidence. <mark class="b">Recheck them as requirements, relationships and resources change.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 36, SLIDE 37 & SLIDE 38: CROSSRAIL, UNDERSTAND-REDUCE-RESPOND & BoKs -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 36: CROSSRAIL -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 36</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Crossrail Case Study</span>
+            </div>
+            <h3 class="text-lg font-bold">Crossrail: use the three complexity lenses</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "Get some trains that will run on the system, <mark class="p">work with the signalling to the east of London, the underground, and the west (all completely different)</mark>."
+              </p>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                • <strong>Structural lens:</strong> <mark class="g">Technical interfaces</mark> between tunnels, existing infrastructure, stations, power, 3 incompatible signalling systems and trains.
+              </div>
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                • <strong>Socio-political lens:</strong> <mark class="u">Different organisations and priorities</mark> across London transport bodies and contractors.
+              </div>
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                • <strong>Emergent lens:</strong> <mark class="p">Unknown underground conditions and software integration delays</mark> creating uncertainty.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> Technical interfaces are structural; different organisations/priorities create socio-political difficulty; unknown underground conditions create uncertainty.
+          </div>
+        </div>
+
+        <!-- SLIDE 37 & SLIDE 38 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 37</span>
+                <span class="slide-badge">Slide 38</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Managing Complexity &amp; BoKs</span>
+            </div>
+
+            <h3 class="text-lg font-bold">Slide 37: Understand, reduce, respond</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 text-xs">
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Understand</strong>
+                <mark class="y">Describe the sources of difficulty and their interactions.</mark> Gather evidence from people doing and affected by the work.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">2. Reduce</strong>
+                <mark class="g">Remove avoidable difficulty</mark> where possible: clarify scope, simplify interfaces or resolve competing requirements.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-rose-600 dark:text-rose-400 block mb-1">3. Respond</strong>
+                <mark class="b">Organise to handle remaining complexity</mark>: use expertise, coordination, stakeholder engagement and feedback.
+              </div>
+            </div>
+
+            <div class="callout-trap text-xs">
+              <strong>⚠️ Teaching Note (Slide 37):</strong> <mark class="p">Do not confuse reducing complexity with ignoring it; residual difficulties still need a response.</mark>
+            </div>
+
+            <!-- Slide 38: Bodies of Knowledge -->
+            <div class="pt-3 border-t space-y-2" style="border-color: var(--border-line);">
+              <h4 class="font-bold text-base">Slide 38: Bodies of Knowledge (APM / PMI) support judgement</h4>
+              <div class="callout-quote text-xs">
+                "The standards do not set out to be comprehensive about everything that is known about project management; rather they provide guidance on some of the common ground between projects that covers <mark class="y">'most projects most of the time'</mark>."
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 7: CASE STUDY — THE ARSON TASK FORCE (ATF) & EXIT CHECK (SLIDES 39–45)
+    ====================================================================== -->
+    <section id="sec7" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">7</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Case Study: The Arson Task Force (ATF) &amp; Exit Check</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 39–45 • 24-Month Multi-Agency Project, Complete 7-S Case Evidence, 2-Year Extension Recommendations &amp; Final Exit Check</p>
+        </div>
+      </div>
+
+      <!-- SLIDES 39, 40, 41 & 42: THE ARSON TASK FORCE 7-S EVIDENCE -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="slide-badge">Slide 39</span>
+            <span class="slide-badge">Slide 40</span>
+            <span class="slide-badge">Slide 41</span>
+            <span class="slide-badge">Slide 42</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Avon Fire &amp; Rescue + Avon &amp; Somerset Constabulary + Somerset Fire &amp; Rescue</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Case: The Arson Task Force (ATF) &amp; 7-S Diagnostic Evidence</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 39 Case Overview</strong>
+            <p class="italic font-medium">
+              "The <mark class="g">Arson Task Force (ATF)</mark> was the name given to a <mark class="b">24-month project to reduce the incidence of arson in one area</mark>."
+            </p>
+            <p class="not-italic text-xs mt-1.5">
+              Alliance of <strong>two fire and rescue services</strong> and an <strong>area police force</strong>, with <strong>eight full-time staff</strong>. Work included partnership, detection, education and intervention.
+            </p>
+          </div>
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note (Slide 39)</strong>
+            The review reports reduced arson and a strong knowledge base, alongside opportunities to improve management. <mark class="p">A successful outcome does NOT prove every management practice was robust.</mark>
+          </div>
+        </div>
+
+        <!-- Complete 7-S Evidence Table from Slides 40, 41, 42 -->
+        <div class="overflow-x-auto">
+          <table class="study-table text-xs sm:text-sm">
+            <thead>
+              <tr>
+                <th class="w-36">7-S Element</th>
+                <th>Exact Case Evidence Quote (Slides 40–42)</th>
+                <th>Strength vs. Vulnerability (Teaching Notes)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-extrabold"><mark class="g">1. Strategy</mark><br><span class="text-[11px] font-normal">(Slide 40)</span></td>
+                <td>"There was <mark class="p">no priority attached to these objectives</mark> however, and <mark class="p">no allowance or process for change</mark> and assessing the impact of changes on quality."</td>
+                <td>Objectives provided direction, but <mark class="p">unclear priorities and lack of change control</mark> created vulnerability.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">2. Structure</mark><br><span class="text-[11px] font-normal">(Slide 40)</span></td>
+                <td>"While <mark class="p">no single individual had overall responsibility or authority</mark> for the project, the shared goals and the efforts of the two individuals concerned have carried this."</td>
+                <td><mark class="g">Co-location supported teamwork</mark>, but <mark class="p">shared/unclear overall authority</mark> was a governance risk.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="b">3. Systems</mark><br><span class="text-[11px] font-normal">(Slide 41)</span></td>
+                <td>"However, this does have an <mark class="p">impact on the repeatability of such a project</mark> and <mark class="p">does not provide any evidence for future time or resource planning</mark>."</td>
+                <td>Flexibility helped the team, but <mark class="p">undocumented processes made the approach harder to repeat</mark>.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">4. Staff</mark><br><span class="text-[11px] font-normal">(Slide 41)</span></td>
+                <td>"When a <mark class="p">key member of staff was promoted out of the team</mark>, a core resource was removed. More importantly for the project was the <mark class="p">loss of considerable knowledge</mark> as a result of this move, and instability for the team."</td>
+                <td><mark class="p">Knowledge concentrated in individuals became vulnerable</mark> when people moved on.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="g">5. Skills</mark><br><span class="text-[11px] font-normal">(Slide 42)</span></td>
+                <td>"<mark class="p">Not training the project managers in PRINCE2 until well into the execution phase</mark> of the project was a major oversight."</td>
+                <td><mark class="p">Late PM training</mark> reduced its value during initial planning and setup.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">6. Style / culture</mark><br><span class="text-[11px] font-normal">(Slide 42)</span></td>
+                <td>"From the comments of the interviewees, the <mark class="g">can-do culture of the team appeared to be entirely consistent with the goals</mark> of the project and has been encouraged by the team leaders."</td>
+                <td><mark class="g">Major strength to preserve!</mark> Constructive, motivated team culture.</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="u">7. Stakeholders</mark><br><span class="text-[11px] font-normal">(Slide 42)</span></td>
+                <td>"There was <mark class="p">no evidence that a communications plan/strategy was in place</mark> and this should form an integral part of the work packages in such a project."</td>
+                <td><mark class="p">Missing formal stakeholder communication strategy</mark> across agencies and community.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- SLIDE 43 & SLIDE 44: WORKSHOP & SUGGESTED RECOMMENDATIONS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 43</span>
+            <span class="slide-badge">Slide 44</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">2-Year Funding Extension Recommendations</span>
+        </div>
+        <h3 class="text-xl font-bold">Workshop: Use the 7-S to recommend improvements for the next two years</h3>
+
+        <div class="callout-quote text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Book Workshop Question (Slide 43)</strong>
+          <p class="italic font-medium">
+            "The ATF received funding for a further two years. What would you recommend that the management of the ATF does to ensure success?"
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border-t-4 border-indigo-600" style="background-color: var(--bg-subtle);">
+            <strong class="text-indigo-700 dark:text-indigo-300 block text-base mb-1">1. Clarify governance (Strategy &amp; Structure)</strong>
+            <p><mark class="u">Agree priorities, decision authority and board responsibilities.</mark> <em>Evidence:</em> no prioritisation and no single overall authority. <mark class="g">Retain the benefits of co-location.</mark></p>
+          </div>
+          <div class="p-4 rounded-xl border-t-4 border-emerald-600" style="background-color: var(--bg-subtle);">
+            <strong class="text-emerald-700 dark:text-emerald-300 block text-base mb-1">2. Transfer knowledge (Systems &amp; Staff)</strong>
+            <p><mark class="b">Record basic plans, progress and role knowledge; prepare for staff changes.</mark> <em>Evidence:</em> weak systematisation and knowledge loss when a key person left.</p>
+          </div>
+          <div class="p-4 rounded-xl border-t-4 border-amber-500" style="background-color: var(--bg-subtle);">
+            <strong class="text-amber-800 dark:text-amber-300 block text-base mb-1">3. Build capability (Skills, Culture &amp; Stakeholders)</strong>
+            <p><mark class="g">Train early and set a stakeholder communication plan.</mark> <mark class="u">Keep the can-do culture.</mark> Monitor both delivery activity and longer-term outcomes.</p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-xs">
+          <strong>🎓 Teaching Note (Slide 44):</strong> A reduction in arson can be affected by external events; <mark class="p">process measures help assess the team's work, but do not alone prove social impact</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 45: EXIT CHECK -->
+      <div class="note-card p-6 space-y-4" style="border-top: 5px solid #10b981;">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 45 • Final Review</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Exit Check: Choose a Model and Explain Why</span>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">Question 1: Which model helps examine external political or technical influences? Which reviews the project's internal management issues?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> <mark class="g">PESTEL</mark> (within the <strong>5-C Context</strong>) examines external political, economic, social, technical, environmental and legal influences; the <mark class="u">project 7-S framework</mark> (Strategy, Structure, Systems, Staff, Skills, Style/culture, Stakeholders) reviews the project's internal management issues.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">Question 2: In ICOM [Inputs, Controls (Constraints), Outputs, and Mechanisms], how does a constraint differ from a mechanism?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> <mark class="p">A constraint limits or governs delivery</mark> (e.g., time deadline, budget ceiling, legal/quality standard), whereas <mark class="g">a mechanism enables the transformation to happen</mark> (e.g., people, expertise, available funding, tools and technology).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">Question 3: Why should a complexity assessment be repeated during the project?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> Because <mark class="b">requirements, resources, relationships and external conditions change over the project lifecycle</mark>, so the sources of structural, socio-political, and emergent difficulty—and the <mark class="y">needed management response—may also change</mark>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4">
+      Complete Study Guide for <strong>Week 02 (Lesson 02): Structures and Frameworks</strong> (Slides 01–45) • Prof. Naghdali Choupani • İstanbul Aydın University • Based on Harvey Maylor &amp; Neil Turner, <em>Project Management</em> (5th Edition, 2022, Chapter 2, Pearson).
+    </div>
+  </footer>
+
+  <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var text = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          icon.textContent = "☀️";
+          text.textContent = "Light Notebook Mode";
+        } else {
+          root.removeAttribute("data-theme");
+          icon.textContent = "🌙";
+          text.textContent = "Dark Study Mode";
+        }
+      }
+
+      btn.addEventListener("click", function() {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
+    })();
+  </script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

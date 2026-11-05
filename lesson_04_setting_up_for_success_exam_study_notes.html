@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 04 (Week 04) – Setting up for Success | Exam Study Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1e293b;
+      --ink-muted: #64748b;
+      --border-line: #e2dcd0;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.28);
+
+      /* Highlighter Marker Colors - Light Mode */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+
+      /* Callout backgrounds */
+      --quote-bg: #fffbeb;
+      --quote-border: #f59e0b;
+      --teach-bg: #eef2ff;
+      --teach-border: #4f46e5;
+      --read-bg: #ecfdf5;
+      --read-border: #10b981;
+      --trap-bg: #fff1f2;
+      --trap-border: #e11d48;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #0f141c;
+      --bg-card: #18202c;
+      --bg-subtle: #131a24;
+      --ink-main: #f1f5f9;
+      --ink-muted: #94a3b8;
+      --border-line: #2d3748;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      /* Highlighter Marker Colors - Dark Mode */
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+
+      /* Callout backgrounds */
+      --quote-bg: rgba(245, 158, 11, 0.12);
+      --quote-border: #fbbf24;
+      --teach-bg: rgba(99, 102, 241, 0.14);
+      --teach-border: #818cf8;
+      --read-bg: rgba(16, 185, 129, 0.12);
+      --read-border: #34d399;
+      --trap-bg: rgba(244, 63, 94, 0.14);
+      --trap-border: #fb7185;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Highlighter Marker Styles */
+    mark.hl-yellow {
+      background: var(--hl-yellow);
+      color: var(--hl-yellow-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-green {
+      background: var(--hl-green);
+      color: var(--hl-green-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-pink {
+      background: var(--hl-pink);
+      color: var(--hl-pink-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-blue {
+      background: var(--hl-blue);
+      color: var(--hl-blue-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-purple {
+      background: var(--hl-purple);
+      color: var(--hl-purple-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Study Note Cards & Containers */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-line);
+    }
+
+    /* Callout Boxes */
+    .callout-quote {
+      background-color: var(--quote-bg);
+      border-left: 4px solid var(--quote-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-teach {
+      background-color: var(--teach-bg);
+      border-left: 4px solid var(--teach-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-read {
+      background-color: var(--read-bg);
+      border-left: 4px solid var(--read-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-trap {
+      background-color: var(--trap-bg);
+      border-left: 4px solid var(--trap-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Study Tables */
+    .study-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .study-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .study-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Section Number Pill */
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body data-lesson="week04" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- STICKY TOP STUDY BAR & NAVIGATION -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Week 04 / Lesson 04</span>
+        <span class="font-bold text-sm sm:text-base truncate">Setting up for Success — Complete Study Notes (Slides 01–38)</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Jump Pills -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
+        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Overview &amp; Core Chain (S1–6)</a>
+        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. Stakeholders, Metrics &amp; M&amp;E (S7–16)</a>
+        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Trade-Offs, Iron Triangle &amp; GTO (S17–26)</a>
+        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. Value, Scorecard &amp; Benefits Map (S27–33)</a>
+        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. Case Study: Rummidge Campus (S34–38)</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO HEADER (SLIDE 01) -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #4f46e5;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="slide-badge">📌 Slide 01 • Title &amp; Source</span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          İSTANBUL AYDIN UNIVERSITY • PROJECT MANAGEMENT
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Week 04 (Lesson 04): <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Setting up for Success</span>
+      </h1>
+      <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
+        <strong>Instructor:</strong> Prof. Naghdali Choupani &nbsp;|&nbsp;
+        <strong>Textbook:</strong> <em>Project Management</em> (Fifth Edition, Chapter 4) by Harvey Maylor &amp; Neil Turner (Pearson)
+      </p>
+
+      <!-- Highlighter Color Legend Bar -->
+      <div class="p-4 rounded-xl border flex flex-wrap items-center gap-3 text-xs sm:text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <span class="font-bold uppercase tracking-wider mr-1">🖍️ Study Highlighter Key:</span>
+        <span><mark class="hl-yellow">Core Definitions &amp; Rules</mark></span>
+        <span><mark class="hl-green">Deliverables / Benefits / Value</mark></span>
+        <span><mark class="hl-blue">Frameworks / Matrices / Metrics</mark></span>
+        <span><mark class="hl-pink">Conflicts / Traps ("Zone of no brain") / Constraints</mark></span>
+        <span><mark class="hl-purple">Stakeholders / Governance / Owners</mark></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- =====================================================================
+         SECTION 1: OVERVIEW, GUIDING PRINCIPLE & THE CORE CHAIN (SLIDES 01–06)
+    ====================================================================== -->
+    <section id="sec1" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">1</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Overview, Guiding Principle &amp; The Core Chain</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 01–06 • Learning Objectives, "Begin with the end in mind", Table 4.1 (Stakeholders → Requirements → Measures), Conflicting Needs &amp; Delivering Value</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 02 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 02</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Learning Objectives</span>
+        </div>
+        <h3 class="text-xl font-bold">Three Learning Objectives for Setting Up for Success</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 1</div>
+            <div class="text-lg font-extrabold mb-1">Stakeholders and success</div>
+            <p class="text-sm">Identify <mark class="hl-purple">appropriate stakeholders</mark> and <mark class="hl-blue">relevant success measures at the outset</mark> of a project and recognise their <mark class="hl-green">achievement or otherwise at completion</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 2</div>
+            <div class="text-lg font-extrabold mb-1">Trade-offs</div>
+            <p class="text-sm">Demonstrate the <mark class="hl-yellow">need for and the implications of prioritising trade-offs</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 3</div>
+            <div class="text-lg font-extrabold mb-1">Benefits and requirements</div>
+            <p class="text-sm">Recognise a <mark class="hl-blue">structured approach</mark> to assessing the <mark class="hl-green">benefits of and requirements for a project</mark>.</p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Prof. Naghdali Choupani)</strong>
+          By the end of class, you should be able to <mark class="hl-purple">identify whose requirements matter</mark>, <mark class="hl-blue">define measures at different times</mark>, <mark class="hl-yellow">prioritise objectives</mark>, and <mark class="hl-green">trace expected benefits back to project changes</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 03, SLIDE 05 & SLIDE 06 -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- SLIDE 03 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 03</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Core Mindset</span>
+            </div>
+            <h3 class="text-lg font-bold">The guiding principle</h3>
+
+            <div class="callout-quote">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic text-base font-bold">
+                "<mark class="hl-yellow">Begin with the end in mind.</mark>"
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            A project can be <mark class="hl-pink">called successful by one stakeholder and disappointing by another</mark>. Agree what <mark class="hl-green">outcome and value are sought</mark> before designing the work.
+          </div>
+        </div>
+
+        <!-- SLIDE 05 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 05</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Conflicting Needs</span>
+            </div>
+            <h3 class="text-lg font-bold">Why one measure is rarely enough</h3>
+
+            <div class="callout-quote text-xs">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "The challenge to achieving total success comes from the <mark class="hl-yellow">complexity of the objectives</mark> and the <mark class="hl-purple">requirements of many different groups of stakeholders</mark> for the project, not least because <mark class="hl-pink">there will be conflicts between the requirements of each</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-trap text-xs">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note</strong>
+            A project can <mark class="hl-pink">satisfy a sponsor's budget target while harming users, staff or neighbours</mark>. List distinct groups and their requirements before deciding what "success" means.
+          </div>
+        </div>
+
+        <!-- SLIDE 06 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 06</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Value vs. Output</span>
+            </div>
+            <h3 class="text-lg font-bold">Value is larger than the delivered product</h3>
+
+            <div class="callout-quote">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic text-sm font-bold">
+                "...a project is about <mark class="hl-green">delivering value rather than a product</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            A finished building, service or system is an <mark class="hl-yellow">output</mark>. The <mark class="hl-green">value comes from what people can do with it and from how the work affects them</mark>. This distinction explains why stakeholder analysis belongs at project start.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 04: TABLE 4.1 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 04 • Table 4.1</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Stakeholders, requirements and measures</span>
+        </div>
+        <h3 class="text-xl font-bold">The core chain: people → needs → evidence (Table 4.1)</h3>
+
+        <!-- Visual Chain Banner -->
+        <div class="p-3.5 rounded-xl border flex flex-wrap items-center justify-center gap-3 text-sm font-bold" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <span class="px-3 py-1 rounded-lg bg-purple-100 text-purple-900 border border-purple-300">1. Stakeholders (People)</span>
+          <span class="text-lg">➔</span>
+          <span class="px-3 py-1 rounded-lg bg-amber-100 text-amber-900 border border-amber-300">2. Requirements (Needs)</span>
+          <span class="text-lg">➔</span>
+          <span class="px-3 py-1 rounded-lg bg-sky-100 text-sky-900 border border-sky-300">3. Measures (Evidence)</span>
+        </div>
+
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th class="w-40">Item</th>
+                <th>Definition</th>
+                <th>Examples</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-extrabold"><mark class="hl-purple">Stakeholders</mark></td>
+                <td><mark class="hl-yellow">Any individual or group with an interest in the project process or outcome</mark></td>
+                <td>The project customers, the delivery team, the end beneficiaries of the project, anyone affected by the outcome, <mark class="hl-pink">proponents and opponents of any change</mark></td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="hl-yellow">Requirements</mark></td>
+                <td><mark class="hl-yellow">What each individual or group wants from the process or outcome</mark></td>
+                <td><mark class="hl-green">Defined requirements</mark> in the form of a specification or contract, <mark class="hl-purple">implicit requirements</mark> (I want this project to be a good place to work), or <mark class="hl-pink">legal/ethical/moral/commercial/competitive requirements</mark></td>
+              </tr>
+              <tr>
+                <td class="font-extrabold"><mark class="hl-blue">Measures</mark></td>
+                <td><mark class="hl-blue">The means by which it will be determined during and post project whether those requirements have been met</mark></td>
+                <td>Level of compliance to specification, customer satisfaction, level of return on investment, staff retention levels</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 04)</strong>
+          Table 4.1 defines stakeholders, requirements and measures. A <mark class="hl-purple">stakeholder</mark> has an interest in the process or outcome; a <mark class="hl-yellow">requirement</mark> expresses what they want; a <mark class="hl-blue">measure</mark> lets the team check whether it was met.
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: STAKEHOLDER ANALYSIS, REQUIREMENTS & EVALUATION ACROSS TIME (SLIDES 07–16)
+    ====================================================================== -->
+    <section id="sec2" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">2</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Stakeholder Analysis, Requirements &amp; Evaluation Across Time</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 07–16 • Internal/External Stakeholders, Concentric Circles (Fig 4.1 &amp; Fig 4.2 World Cup 2022), Input/Process/Outcome Requirements (Table 4.2), NPD Metrics (Table 4.3), Conventional vs. Participatory M&amp;E (Table 4.4) &amp; Power-Interest Map (Fig 4.3)</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 07 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 07</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Finding Unstated Interests</span>
+        </div>
+        <h3 class="text-xl font-bold">Identify stakeholders beyond the formal team</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Internal</strong>
+            <mark class="hl-purple">Project team and governance participants</mark> who do the work or make decisions.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">2. External</strong>
+            <mark class="hl-purple">Customers, sponsors, beneficiaries, affected communities, regulators, suppliers</mark> and others outside the team.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">3. Find them</strong>
+            Ask <mark class="hl-yellow">who is affected, who is overlooked, who can support or oppose, and whose behaviour must change</mark>.
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (World Bank Questions)</strong>
+          The chapter uses <mark class="hl-blue">World Bank questions</mark> to identify groups whose interest may be unstated. <mark class="hl-pink">Do not assume that those with the most formal authority are the only relevant stakeholders.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 08 (FIGURE 4.1) & SLIDE 09 (FIGURE 4.2 WORLD CUP 2022) -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 08: FIGURE 4.1 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 08 • Figure 4.1</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Stakeholder groups</span>
+            </div>
+            <h3 class="text-lg font-bold">Start with three stakeholder circles (Figure 4.1)</h3>
+
+            <div class="p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 380 340" class="w-full max-w-xs" aria-label="Figure 4.1 Stakeholder groups">
+                <!-- Outer Circle: Rest of the world -->
+                <circle cx="190" cy="170" r="155" fill="#0ea5e9" stroke="#0369a1" stroke-width="2"/>
+                <!-- Middle Circle: Core externals -->
+                <circle cx="190" cy="170" r="115" fill="#4ade80" stroke="#15803d" stroke-width="2"/>
+                <!-- Inner Circle: Internal team -->
+                <circle cx="190" cy="170" r="68" fill="#fed7aa" stroke="#c2410c" stroke-width="2"/>
+
+                <text x="190" y="174" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">Internal team</text>
+                <text x="190" y="262" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">Core externals</text>
+                <text x="190" y="308" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">Rest of the world</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 08)</strong>
+            <mark class="hl-purple">Internal team</mark> is central; <mark class="hl-green">core externals</mark> are outside the team but crucial to success; the <mark class="hl-blue">rest of the world</mark> is monitored for changes. <mark class="hl-yellow">A person or group can move inward when their influence or impact changes.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 09: FIGURE 4.2 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 09 • Figure 4.2</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Stakeholder grouping for World Cup 2022</span>
+            </div>
+            <h3 class="text-lg font-bold">The World Cup example: many legitimate interests (Figure 4.2)</h3>
+
+            <div class="p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 400 370" class="w-full max-w-sm" aria-label="Figure 4.2 Stakeholder grouping for World Cup 2022">
+                <!-- Outer Circle -->
+                <circle cx="200" cy="185" r="175" fill="#0ea5e9" stroke="#0369a1" stroke-width="2"/>
+                <!-- Middle Circle -->
+                <circle cx="200" cy="175" r="135" fill="#4ade80" stroke="#15803d" stroke-width="2"/>
+                <!-- Inner Circle -->
+                <circle cx="200" cy="155" r="88" fill="#fed7aa" stroke="#c2410c" stroke-width="2"/>
+
+                <!-- Inner Text: Internal team -->
+                <g text-anchor="middle" fill="#0f172a" font-size="10.5">
+                  <text x="200" y="96" font-weight="800" font-size="11.5">Internal team</text>
+                  <text x="200" y="112" font-weight="600">Players and support</text>
+                  <text x="200" y="126" font-weight="600">FIFA</text>
+                  <text x="200" y="140" font-weight="600">Stadia owners</text>
+                  <text x="200" y="154" font-weight="600">Law enforcement agencies</text>
+                  <text x="200" y="168" font-weight="600">Sponsors</text>
+                  <text x="200" y="182" font-weight="600">Venue staff</text>
+                  <text x="200" y="196" font-weight="600">Organising committee</text>
+                </g>
+
+                <!-- Middle Ring Text: Core externals -->
+                <g text-anchor="middle" fill="#0f172a" font-size="10.5">
+                  <text x="200" y="253" font-weight="800" font-size="11.5">Core externals</text>
+                  <text x="200" y="267" font-weight="600">Players' associates</text>
+                  <text x="200" y="280" font-weight="600">National associations</text>
+                  <text x="200" y="293" font-weight="600">Fans attending</text>
+                  <text x="200" y="305" font-weight="600">Press</text>
+                </g>
+
+                <!-- Outer Ring Text: Rest of the world -->
+                <g text-anchor="middle" fill="#0f172a" font-size="10.5">
+                  <text x="200" y="325" font-weight="800" font-size="11.5">Rest of the world</text>
+                  <text x="200" y="339" font-weight="600">TV, radio and online</text>
+                  <text x="200" y="352" font-weight="600">audience</text>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 09)</strong>
+            The book's 2022 World Cup grouping includes <mark class="hl-purple">players and organisers</mark>, <mark class="hl-green">core external groups such as fans and press</mark>, and <mark class="hl-blue">global audiences</mark>. <mark class="hl-pink">Late matches may help players in heat but inconvenience viewers in another time zone.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 10 (TABLE 4.2), SLIDE 11 (TABLE 4.3) & SLIDE 12 -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="slide-badge">Slide 10 • Table 4.2</span>
+            <span class="slide-badge">Slide 11 • Table 4.3</span>
+            <span class="slide-badge">Slide 12</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Input/Process/Outcome Requirements, NPD Metrics Over Time &amp; The 'How' of Delivery</span>
+        </div>
+
+        <!-- Slide 10: Table 4.2 -->
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold">Slide 10: Requirements refer to input, process or outcome (Table 4.2)</h3>
+          <div class="overflow-x-auto">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Dimension</th>
+                  <th>Input</th>
+                  <th>Process</th>
+                  <th>Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-bold">Characteristics</td>
+                  <td><mark class="hl-yellow">Limit on resources provided</mark> (quotes 1, 6)</td>
+                  <td><mark class="hl-blue">The environment in which the project is undertaken</mark> (quote 3); <mark class="hl-blue">process resource consumption controlled</mark> (quote 4)</td>
+                  <td><mark class="hl-green">Product meets certain requirements</mark> (quotes 1, 2, 5)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout-read text-sm">
+            <strong>🔍 How to Read It (Slide 10):</strong> <strong>Input:</strong> limit the resources supplied. <strong>Process:</strong> shape how work is carried out. <strong>Outcome:</strong> specify what the product must do. <mark class="hl-pink">Check all three; a team can meet an output specification while exhausting staff or damaging relationships.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 11: Table 4.3 -->
+        <div class="space-y-3 pt-4 border-t" style="border-color: var(--border-line);">
+          <h3 class="text-xl font-bold">Slide 11: Success measures change across time — Table 4.3 New product development (NPD) metrics</h3>
+          <div class="overflow-x-auto">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th class="w-64">Type of measure</th>
+                  <th>Characteristic measured</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-bold"><mark class="hl-blue">Process measures</mark></td>
+                  <td>Product development <mark class="hl-yellow">cost, time and conformance to quality procedures</mark></td>
+                </tr>
+                <tr>
+                  <td class="font-bold"><mark class="hl-green">Short-term outcome measures</mark></td>
+                  <td><mark class="hl-green">Product performance level, desirability to market, flexibility of design</mark> to be changed to meet emergent customer needs</td>
+                </tr>
+                <tr>
+                  <td class="font-bold"><mark class="hl-purple">Longer-term outcome measures</mark></td>
+                  <td><mark class="hl-green">Payback period, customer satisfaction, percentage of business</mark> being generated by the new product, <mark class="hl-green">market share, customisability for high-margin markets</mark></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout-read text-sm">
+            <strong>🔍 How to Read It (Slide 11):</strong> The book contrasts process measures, short-term outcomes and longer-term outcomes. <mark class="hl-yellow">Decide who will measure each, and when.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 12 -->
+        <div class="pt-4 border-t space-y-3" style="border-color: var(--border-line);">
+          <h3 class="text-xl font-bold">Slide 12: How delivery feels also matters (The Restaurant Analogy)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 12)</strong>
+              <p class="italic font-medium">
+                "...the <mark class="hl-yellow">'how' of project delivery</mark>, although less tangible, is <mark class="hl-green">highly significant in creating customer satisfaction</mark>."
+              </p>
+            </div>
+            <div class="callout-teach text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 12)</strong>
+              A project may <mark class="hl-pink">meet time, budget and specification yet irritate clients or alienate stakeholders</mark>. The chapter compares this with a <mark class="hl-yellow">restaurant whose food is good but service is poor</mark>. Include <mark class="hl-blue">process and relationship measures</mark>.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 13 (TABLE 4.4) & SLIDE 14 (FIGURE 4.3 POWER-INTEREST MAP) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 13: TABLE 4.4 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 13 • Table 4.4</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Conventional vs. Participatory M&amp;E</span>
+            </div>
+            <h3 class="text-lg font-bold">Conventional and participatory evaluation (Table 4.4)</h3>
+
+            <div class="overflow-x-auto">
+              <table class="study-table">
+                <thead>
+                  <tr>
+                    <th>Dimension</th>
+                    <th>Conventional M&amp;E</th>
+                    <th>Participatory M&amp;E</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-bold">Who plans and manages the process:</td>
+                    <td><mark class="hl-purple">Project managers</mark></td>
+                    <td><mark class="hl-purple">Local people, project staff, managers and other stakeholders</mark>, often helped by a facilitator</td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">Role of 'primary stakeholders' (intended beneficiaries):</td>
+                    <td><mark class="hl-pink">Provide information only</mark></td>
+                    <td><mark class="hl-green">Design and adapt the methodology, collect and analyse data, share findings and link them to action</mark></td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">How success is measured:</td>
+                    <td><mark class="hl-blue">Externally defined, mainly quantitative indicators</mark></td>
+                    <td><mark class="hl-blue">Internally defined indicators, including more qualitative judgements</mark></td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">Approach:</td>
+                    <td><mark class="hl-yellow">Pre-determined</mark></td>
+                    <td><mark class="hl-green">Adaptive</mark></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 13)</strong>
+            Conventional monitoring is mainly planned and managed by project managers. <mark class="hl-green">Participatory monitoring involves beneficiaries and other stakeholders in defining, gathering and using evidence, and adapts as needs emerge.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 14: FIGURE 4.3 POWER-INTEREST MAP -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 14 • Figure 4.3</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Power: Interest stakeholder map</span>
+            </div>
+            <h3 class="text-lg font-bold">Map power and interest to plan engagement (Figure 4.3)</h3>
+
+            <!-- Visual 2x2 Matrix reproducing Figure 4.3 -->
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="flex items-stretch gap-3">
+                <!-- Vertical Y-Axis Label (Power) -->
+                <div class="flex flex-col justify-between items-center py-2 text-xs font-extrabold text-teal-700 dark:text-teal-400">
+                  <span>High ▲</span>
+                  <span style="writing-mode: vertical-rl; transform: rotate(180deg);" class="tracking-widest text-sm text-slate-800 dark:text-slate-200">Power</span>
+                  <span>Low ▼</span>
+                </div>
+
+                <!-- 2x2 Grid -->
+                <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                  <!-- Top-Left: Keep satisfied -->
+                  <div class="p-3.5 rounded-lg border-2 border-teal-600/60 bg-teal-50/90 dark:bg-teal-950/40 space-y-1.5">
+                    <div class="font-extrabold text-sm text-teal-900 dark:text-teal-200">Keep satisfied</div>
+                    <div class="text-[11px] font-bold text-teal-700 dark:text-teal-400 uppercase">High Power • Low Interest</div>
+                    <ul class="text-xs list-disc list-inside space-y-1">
+                      <li>Moderate priority group</li>
+                      <li>Need to keep this group sufficiently involved</li>
+                    </ul>
+                  </div>
+
+                  <!-- Top-Right: Manage closely -->
+                  <div class="p-3.5 rounded-lg border-2 border-emerald-600 bg-lime-100/90 dark:bg-emerald-950/50 space-y-1.5">
+                    <div class="font-extrabold text-sm text-emerald-950 dark:text-emerald-200">Manage closely</div>
+                    <div class="text-[11px] font-bold text-emerald-800 dark:text-emerald-400 uppercase">High Power • High Interest</div>
+                    <ul class="text-xs list-disc list-inside space-y-1 font-medium">
+                      <li><mark class="hl-yellow">Highest priority for the project manager</mark></li>
+                      <li>Manage through active engagement</li>
+                    </ul>
+                  </div>
+
+                  <!-- Bottom-Left: Monitor only -->
+                  <div class="p-3.5 rounded-lg border-2 border-sky-500/60 bg-sky-50/90 dark:bg-sky-950/40 space-y-1.5">
+                    <div class="font-extrabold text-sm text-sky-900 dark:text-sky-200">Monitor only</div>
+                    <div class="text-[11px] font-bold text-sky-700 dark:text-sky-400 uppercase">Low Power • Low Interest</div>
+                    <ul class="text-xs list-disc list-inside space-y-1">
+                      <li>Lowest priority for the project manager</li>
+                      <li>Don't overload them with communication</li>
+                    </ul>
+                  </div>
+
+                  <!-- Bottom-Right: Keep informed -->
+                  <div class="p-3.5 rounded-lg border-2 border-teal-500/60 bg-emerald-50/90 dark:bg-teal-900/30 space-y-1.5">
+                    <div class="font-extrabold text-sm text-teal-900 dark:text-teal-200">Keep informed</div>
+                    <div class="text-[11px] font-bold text-teal-700 dark:text-teal-400 uppercase">Low Power • High Interest</div>
+                    <ul class="text-xs list-disc list-inside space-y-1">
+                      <li>Moderate priority group</li>
+                      <li>Objective is to sustain their interest and leverage when useful to the project</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Horizontal X-Axis Label (Interest) -->
+              <div class="flex justify-between items-center pl-10 pt-2 text-xs font-extrabold text-teal-700 dark:text-teal-400">
+                <span>◀ Low</span>
+                <span class="tracking-widest text-sm text-slate-800 dark:text-slate-200">Interest</span>
+                <span>High ▶</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 14)</strong>
+            High power/high interest: <mark class="hl-yellow">manage closely</mark>. High power/low interest: <mark class="hl-blue">keep satisfied</mark>. Low power/high interest: <mark class="hl-green">keep informed</mark>. Low/low: <mark class="hl-purple">monitor</mark>. <mark class="hl-pink">This is a rough guide, not a substitute for understanding affected people.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 15 & SLIDE 16: STUDENT-SERVICES PROJECT ACTIVITY -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 15</span>
+            <span class="slide-badge">Slide 16</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Worked Class Activity: Online Student-Enquiry Service</span>
+        </div>
+        <h3 class="text-xl font-bold">Activity: A student-services project &amp; Suggested analysis: different end points</h3>
+
+        <!-- Slide 15 Prompts -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Teaching scenario</strong>
+            A university proposes an online student-enquiry service. Identify a <mark class="hl-purple">sponsor, student users, front-line staff and one less visible affected group</mark>.
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">2. Define success</strong>
+            For three groups, write one requirement and one observable measure. <mark class="hl-blue">Include a process or longer-term measure, not only launch date.</mark>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">3. Engagement</strong>
+            Place each group on a power-interest map and explain how you would involve them. <mark class="hl-yellow">What could make a group move quadrant?</mark>
+          </div>
+        </div>
+
+        <!-- Slide 16 Suggested Analysis Across 3 Time Horizons -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border-l-4 border-sky-500" style="background-color: var(--bg-subtle);">
+            <div class="text-xs font-bold uppercase text-sky-700 dark:text-sky-400">Time Horizon 1</div>
+            <div class="text-base font-extrabold mb-1">At launch</div>
+            <p><mark class="hl-blue">Service works, staff are prepared, accessibility and privacy needs are met.</mark></p>
+          </div>
+          <div class="p-4 rounded-xl border-l-4 border-emerald-500" style="background-color: var(--bg-subtle);">
+            <div class="text-xs font-bold uppercase text-emerald-700 dark:text-emerald-400">Time Horizon 2</div>
+            <div class="text-base font-extrabold mb-1">After a term</div>
+            <p><mark class="hl-green">Students receive useful answers, repeat contacts fall, staff workload remains manageable.</mark></p>
+          </div>
+          <div class="p-4 rounded-xl border-l-4 border-purple-500" style="background-color: var(--bg-subtle);">
+            <div class="text-xs font-bold uppercase text-purple-700 dark:text-purple-400">Time Horizon 3</div>
+            <div class="text-base font-extrabold mb-1">Over time</div>
+            <p><mark class="hl-purple">The university adapts the service using feedback and can show the value of the investment.</mark></p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm space-y-1">
+          <strong class="block text-xs uppercase tracking-wider text-indigo-600 dark:text-indigo-400">🎓 Teaching Notes (Slides 15 &amp; 16)</strong>
+          <p>• <strong>Stakeholder Values (Slide 15):</strong> Students may value <mark class="hl-green">accurate, timely answers</mark>; staff may value <mark class="hl-blue">workable procedures and training</mark>; a sponsor may value <mark class="hl-yellow">affordability</mark>. Measure <mark class="hl-green">resolution quality as well as response time</mark>.</p>
+          <p>• <strong>Accountability (Slide 16):</strong> <mark class="hl-pink">A single opening-date target misses later benefits and the experience of delivery.</mark> Put a <mark class="hl-purple">named owner and assessment date</mark> against each measure.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: TRADE-OFFS, THE IRON TRIANGLE, CONFORMANCE VS. PERFORMANCE & GTO (SLIDES 17–26)
+    ====================================================================== -->
+    <section id="sec3" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">3</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Trade-Offs, Iron Triangle, Conformance vs. Performance &amp; GTO</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 17–26 • Prioritising Objectives, Fig 4.4 ("Zone of no brain"), Figs 4.5–4.8 Priority Positions, Table 4.5 Conformance vs. Performance &amp; Givens / Tradeables / Optimisers (GTO)</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 17 & SLIDE 18 (FIGURE 4.4 THE IRON TRIANGLE) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 17 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 17</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Definition of Trade-Off</span>
+            </div>
+            <h3 class="text-xl font-bold">Time, cost and quality create choices</h3>
+
+            <div class="callout-quote">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic text-base font-medium">
+                "A <mark class="hl-yellow">trade-off is, therefore, the prioritisation of the objectives</mark> of a project."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            The three objectives constrain one another. <mark class="hl-pink">A shorter deadline can require more resources or a different specification.</mark> <mark class="hl-yellow">State priorities before planning, then use them when unexpected problems appear.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 18: FIGURE 4.4 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 18 • Figure 4.4</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Trade-offs in project management</span>
+            </div>
+            <h3 class="text-xl font-bold">The iron triangle &amp; "Zone of no brain" (Figure 4.4)</h3>
+
+            <div class="p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 190" class="w-full max-w-lg" aria-label="Figure 4.4 The iron triangle">
+                <defs>
+                  <marker id="znbArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#0f172a"/>
+                  </marker>
+                </defs>
+                <!-- Outer Triangle -->
+                <polygon points="270,42 195,155 345,155" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+                <!-- Inner Triangle: Zone of no brain -->
+                <polygon points="270,98 252,132 288,132" fill="#7dd3fc" stroke="#0369a1" stroke-width="2"/>
+
+                <!-- Labels -->
+                <text x="270" y="28" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">T = Time performance</text>
+                <text x="185" y="160" text-anchor="end" font-size="14" font-weight="800" fill="currentColor">Q = Quality performance</text>
+                <text x="355" y="160" text-anchor="start" font-size="14" font-weight="800" fill="currentColor">C = Cost performance</text>
+
+                <!-- Pointer to Zone of no brain -->
+                <text x="342" y="88" font-size="14" font-weight="800" fill="#be123c">Zone of no brain</text>
+                <line x1="335" y1="88" x2="284" y2="115" stroke="#be123c" stroke-width="2.2" marker-end="url(#znbArr)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">🔍 How to Read It (Slide 18 – Exam Essential)</strong>
+            The original triangle represents time, cost and quality performance. The central <mark class="hl-pink">"zone of no brain"</mark> warns against <mark class="hl-pink">claiming maximum performance on every dimension without real evidence of resources or choices</mark>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 19 (FIGS 4.5 & 4.6), SLIDE 20 (FIGS 4.7 & 4.8) & SLIDE 21 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex flex-wrap items-center gap-2">
+            <span class="slide-badge">Slide 19 • Figs 4.5 &amp; 4.6</span>
+            <span class="slide-badge">Slide 20 • Figs 4.7 &amp; 4.8</span>
+            <span class="slide-badge">Slide 21</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Positioning the Priority Marker Inside the Triangle</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Different projects put the priority in different places (Figures 4.5–4.8)</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Figure 4.5: Time Priority -->
+          <div class="p-4 rounded-xl border text-center space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400">Figure 4.5 (Slide 19)</div>
+            <div class="font-extrabold text-sm">Time priority project</div>
+            <svg viewBox="0 0 180 135" class="w-36 mx-auto" aria-label="Figure 4.5 Time priority project">
+              <polygon points="90,25 30,115 150,115" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <circle cx="90" cy="48" r="11" fill="#7dd3fc" stroke="#0369a1" stroke-width="2"/>
+              <text x="90" y="18" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">T</text>
+              <text x="18" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Q</text>
+              <text x="162" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">C</text>
+            </svg>
+            <p class="text-xs">Marker pulled to <mark class="hl-blue">T (Time)</mark>; cost or quality must flex if needed.</p>
+          </div>
+
+          <!-- Figure 4.6: Quality Priority -->
+          <div class="p-4 rounded-xl border text-center space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400">Figure 4.6 (Slide 19)</div>
+            <div class="font-extrabold text-sm">Quality priority project</div>
+            <svg viewBox="0 0 180 135" class="w-36 mx-auto" aria-label="Figure 4.6 Quality priority project">
+              <polygon points="90,25 30,115 150,115" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <circle cx="52" cy="103" r="11" fill="#7dd3fc" stroke="#0369a1" stroke-width="2"/>
+              <text x="90" y="18" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">T</text>
+              <text x="18" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Q</text>
+              <text x="162" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">C</text>
+            </svg>
+            <p class="text-xs">Marker pulled to <mark class="hl-green">Q (Quality)</mark>; time or cost adjusts to protect quality.</p>
+          </div>
+
+          <!-- Figure 4.7: Cost Priority -->
+          <div class="p-4 rounded-xl border text-center space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400">Figure 4.7 (Slide 20)</div>
+            <div class="font-extrabold text-sm">Cost priority project</div>
+            <svg viewBox="0 0 180 135" class="w-36 mx-auto" aria-label="Figure 4.7 Cost priority project">
+              <polygon points="90,25 30,115 150,115" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <circle cx="128" cy="103" r="11" fill="#7dd3fc" stroke="#0369a1" stroke-width="2"/>
+              <text x="90" y="18" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">T</text>
+              <text x="18" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Q</text>
+              <text x="162" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">C</text>
+            </svg>
+            <p class="text-xs">Marker pulled to <mark class="hl-yellow">C (Cost)</mark>; budget is the primary constraint.</p>
+          </div>
+
+          <!-- Figure 4.8: Time AND Quality Priority -->
+          <div class="p-4 rounded-xl border text-center space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">Figure 4.8 (Slide 20)</div>
+            <div class="font-extrabold text-sm">Time AND quality priority</div>
+            <svg viewBox="0 0 180 135" class="w-36 mx-auto" aria-label="Figure 4.8 Time AND quality priority">
+              <polygon points="90,25 30,115 150,115" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+              <circle cx="68" cy="76" r="11" fill="#7dd3fc" stroke="#0369a1" stroke-width="2"/>
+              <text x="90" y="18" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">T</text>
+              <text x="18" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Q</text>
+              <text x="162" y="120" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">C</text>
+            </svg>
+            <p class="text-xs">Combined priority on <mark class="hl-pink">T and Q edge</mark>; makes resource &amp; scope decisions critical.</p>
+          </div>
+        </div>
+
+        <!-- Slide 21 Quote & Note -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-3 border-t" style="border-color: var(--border-line);">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 21: Do not leave priorities implicit)</strong>
+            <p class="italic font-medium">
+              "The <mark class="hl-purple">project leader</mark> needs to ensure that the <mark class="hl-yellow">team are clear on the actual priorities if or when trade-offs need to be made, and that there is a common, shared, view</mark>."
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 21)</strong>
+            <mark class="hl-pink">If different team members optimise different objectives, work can pull in incompatible directions.</mark> Record <mark class="hl-purple">who agreed the priority</mark> and <mark class="hl-yellow">what decision it will guide when conditions change</mark>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 22 (TABLE 4.5) & SLIDE 23 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 22: TABLE 4.5 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 22 • Table 4.5</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Conformance versus performance</span>
+            </div>
+            <h3 class="text-lg font-bold">Conformance versus performance: attributes of time, cost and quality (Table 4.5)</h3>
+
+            <div class="overflow-x-auto">
+              <table class="study-table">
+                <thead>
+                  <tr>
+                    <th>Dimension</th>
+                    <th>Time</th>
+                    <th>Cost</th>
+                    <th>Quality</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-extrabold"><mark class="hl-green">Performance</mark></td>
+                    <td class="font-semibold"><mark class="hl-green">Shortest possible</mark></td>
+                    <td class="font-semibold"><mark class="hl-green">Cheapest possible</mark></td>
+                    <td class="font-semibold"><mark class="hl-green">Highest level</mark></td>
+                  </tr>
+                  <tr>
+                    <td class="font-extrabold"><mark class="hl-blue">Conformance</mark></td>
+                    <td class="font-semibold"><mark class="hl-blue">As planned</mark></td>
+                    <td class="font-semibold"><mark class="hl-blue">As budgeted</mark></td>
+                    <td class="font-semibold"><mark class="hl-blue">As specified</mark></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 22)</strong>
+            <mark class="hl-blue">Conformance</mark> asks whether the project met its stated time, cost and quality targets (<em>as planned, as budgeted, as specified</em>). <mark class="hl-green">Performance</mark> pushes for the shortest duration, lowest cost or highest quality. <mark class="hl-pink">A project can conform to a weak target without excelling.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 23 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 23</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Limits of the Iron Triangle</span>
+            </div>
+            <h3 class="text-lg font-bold">Beyond time, cost and quality</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "<mark class="hl-pink">time, cost and quality are incomplete as a statement of requirements for a project.</mark>"
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            <mark class="hl-yellow">Legal, ethical, safety, environmental, service, staff and stakeholder benefits may matter.</mark> A project also needs room to handle <mark class="hl-blue">requirements that become clearer during delivery</mark>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 24, SLIDE 25 & SLIDE 26: GTO FRAMEWORK & CAMPUS OPENING ACTIVITY -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 24 • GTO Framework</span>
+            <span class="slide-badge">Slide 25</span>
+            <span class="slide-badge">Slide 26</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Givens, Tradeables &amp; Optimisers (GTO)</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Slide 24: GTO – Name the status of every objective</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border-2 border-rose-500/70" style="background-color: var(--trap-bg);">
+            <div class="text-xs font-extrabold uppercase tracking-wider text-rose-700 dark:text-rose-300">G = Givens (Non-Negotiable)</div>
+            <p class="text-sm mt-1">
+              <mark class="hl-pink">Objectives that must be achieved and cannot be traded</mark>, such as <mark class="hl-yellow">compliance with relevant law or a necessary safety standard</mark>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border-2 border-amber-500/70" style="background-color: var(--quote-bg);">
+            <div class="text-xs font-extrabold uppercase tracking-wider text-amber-800 dark:text-amber-300">T = Tradeables (Flexible)</div>
+            <p class="text-sm mt-1">
+              <mark class="hl-yellow">Desirable objectives that can be adjusted to protect more important aims</mark>, such as <mark class="hl-blue">optional features or a flexible scope element</mark>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border-2 border-emerald-500/70" style="background-color: var(--read-bg);">
+            <div class="text-xs font-extrabold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">O = Optimisers (Maximise)</div>
+            <p class="text-sm mt-1">
+              <mark class="hl-green">Outcomes stakeholders want more of</mark>, such as <mark class="hl-green">citizen benefit or less disruption, pursued without violating givens</mark>.
+            </p>
+          </div>
+        </div>
+
+        <div class="callout-trap text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note (Slide 24 – Why Tradeables Are Essential)</strong>
+          GTO means <strong>givens, tradeables and optimisers</strong>. It widens the discussion beyond the iron triangle. <mark class="hl-pink">A workable plan needs genuine tradeables; otherwise the apparent agreement hides an impossible promise.</mark>
+        </div>
+
+        <!-- Slide 25 & Slide 26 Worked Activity -->
+        <div class="pt-4 border-t space-y-4" style="border-color: var(--border-line);">
+          <h4 class="text-lg font-bold">Slides 25 &amp; 26 Activity: Negotiate a campus opening &amp; Suggested GTO decision</h4>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 text-sm">
+            <!-- Slide 25 Scenario -->
+            <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-indigo-600 dark:text-indigo-400 uppercase text-xs tracking-wider">Slide 25: Scenario &amp; Contractor Dilemma</div>
+              <p>• <strong>Scenario:</strong> A campus must be ready for a <strong>September intake</strong>. The conversion budget is tight; an <strong>optional social area</strong>, <strong>accessibility</strong>, <strong>fire safety</strong> and <strong>staff training</strong> remain unresolved.</p>
+              <p>• <strong>Choose:</strong> Classify opening date, legal safety, accessibility, training, optional social space and cost as givens, tradeables or optimisers.</p>
+              <p>• <strong>Respond:</strong> A contractor offers to <mark class="hl-pink">save two weeks by postponing accessibility work</mark>. Decide using your classification and propose a safer adjustment.</p>
+              <p class="pt-1 border-t text-xs" style="border-color: var(--border-line);">
+                <strong>Suggested Classification:</strong> <mark class="hl-pink">Legal safety and accessibility are givens</mark>; <mark class="hl-yellow">optional social space is a possible tradeable</mark>. The deadline may be a given if teaching cannot be rescheduled. Training should not be removed without checking operational readiness.
+              </p>
+            </div>
+
+            <!-- Slide 26 Decision -->
+            <div class="p-4 rounded-xl border space-y-2.5" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-emerald-600 dark:text-emerald-400 uppercase text-xs tracking-wider">Slide 26: Suggested GTO Decision</div>
+              <p>1. <strong>Reject the shortcut:</strong> <mark class="hl-pink">Do not trade away required safety or accessibility for time.</mark></p>
+              <p>2. <strong>Protect the real date:</strong> Keep the September opening as a given <mark class="hl-yellow">only if feasible with critical requirements met</mark>.</p>
+              <p>3. <strong>Adjust what can move:</strong> <mark class="hl-green">Phase optional facilities, add suitable capacity, revise noncritical scope, or escalate a budget change with evidence.</mark></p>
+              <p class="pt-1 border-t text-xs" style="border-color: var(--border-line);">
+                <strong>Teaching Note:</strong> The classification provides a reasoned decision rule. The <mark class="hl-purple">sponsor may need to decide whether cost or scope can change</mark>; the team should <mark class="hl-yellow">disclose the implications rather than quietly weakening standards</mark>.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: DELIVERING VALUE, BALANCED SCORECARD & BENEFITS MAPPING (SLIDES 27–33)
+    ====================================================================== -->
+    <section id="sec4" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">4</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Delivering Value, Balanced Scorecard &amp; Benefits Mapping</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 27–33 • Yielding Value, 4 Balanced Scorecard Perspectives, Fig 4.9 Benefits Map for PPM Capability, Student Enquiries Map &amp; Testing Intangible Benefits (Pilot, Benchmark, Model)</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 27 & SLIDE 28 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 27 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 27</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Core Purpose of Projects</span>
+            </div>
+            <h3 class="text-xl font-bold">A project should yield value</h3>
+
+            <div class="callout-quote">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic text-base font-medium">
+                "The fundamental idea is that a <mark class="hl-green">project should yield value: value to someone at some point in time</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            Value may be <mark class="hl-green">financial, social or experiential</mark>. Specify <mark class="hl-purple">who benefits and when</mark>; <mark class="hl-pink">"the project is finished" is not itself a benefit</mark>.
+          </div>
+        </div>
+
+        <!-- SLIDE 28 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="slide-badge">Slide 28</span>
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">Balanced Scorecard Framework</span>
+          </div>
+          <h3 class="text-xl font-bold">Four perspectives of the balanced scorecard</h3>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-sm">
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-indigo-600 dark:text-indigo-400 mb-1">1. Financial</div>
+              <p>What <mark class="hl-green">financial benefit</mark> will the project create for <mark class="hl-purple">owners or funders</mark>?</p>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-emerald-600 dark:text-emerald-400 mb-1">2. Customers and suppliers</div>
+              <p>What <mark class="hl-green">direct benefit, goodwill or new relationship</mark> will they gain?</p>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-amber-600 dark:text-amber-400 mb-1">3. Internal processes</div>
+              <p>Which <mark class="hl-blue">organisational process will work better</mark>?</p>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-purple-600 dark:text-purple-400 mb-1">4. Innovation and learning</div>
+              <p>What <mark class="hl-yellow">knowledge or capability</mark> will the work create?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 29: FIGURE 4.9 BENEFITS MAP FOR PPM CAPABILITY IMPROVEMENT -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="slide-badge">Slide 29 • Figure 4.9</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Benefits map for PPM (programme and project management) capability improvement</span>
+        </div>
+        <h3 class="text-xl font-bold">Benefits mapping works backwards from the value (Figure 4.9)</h3>
+
+        <!-- Two-Way Reading Direction Banner -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs font-bold">
+          <div class="p-3 rounded-lg border bg-amber-50 dark:bg-amber-950/30 border-amber-300 flex items-center justify-between">
+            <span>⬅️ <strong>READ RIGHT TO LEFT TO PLAN:</strong></span>
+            <span class="mono-font">Drivers → Benefits → Org Changes → Enabling Changes</span>
+          </div>
+          <div class="p-3 rounded-lg border bg-emerald-50 dark:bg-emerald-950/30 border-emerald-300 flex items-center justify-between">
+            <span>➡️ <strong>TRACE LEFT TO RIGHT TO TEST CAUSALITY:</strong></span>
+            <span class="mono-font">Enabling Changes → Org Changes → Benefits → Drivers</span>
+          </div>
+        </div>
+
+        <!-- Complete 4-Column Visual Replica of Figure 4.9 -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <div class="min-w-[780px] grid grid-cols-4 gap-4 items-stretch text-xs">
+
+            <!-- Column 1: Enabling changes -->
+            <div class="p-3.5 rounded-xl border-2 border-sky-400 bg-white dark:bg-slate-800 flex flex-col justify-between space-y-2.5">
+              <div class="text-center font-extrabold text-sm py-1.5 rounded bg-sky-100 text-sky-900 border border-sky-300">
+                1. Enabling changes
+              </div>
+              <div class="space-y-2 my-auto">
+                <div class="p-2.5 rounded-lg border border-sky-300 bg-sky-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Define appropriate processes
+                </div>
+                <div class="p-2.5 rounded-lg border border-sky-300 bg-sky-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Aspiration to improve PPM established
+                </div>
+                <div class="p-2.5 rounded-lg border border-sky-300 bg-sky-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Means for innovation of processes known
+                </div>
+                <div class="p-2.5 rounded-lg border border-sky-300 bg-sky-50/70 dark:bg-slate-700 text-center font-semibold">
+                  'New' processes supported
+                </div>
+              </div>
+              <div class="text-[11px] text-center font-bold text-sky-700 dark:text-sky-300">Enables ➔</div>
+            </div>
+
+            <!-- Column 2: Organisational changes -->
+            <div class="p-3.5 rounded-xl border-2 border-indigo-400 bg-white dark:bg-slate-800 flex flex-col justify-between space-y-2">
+              <div class="text-center font-extrabold text-sm py-1.5 rounded bg-indigo-100 text-indigo-900 border border-indigo-300">
+                2. Organisational changes
+              </div>
+              <div class="grid grid-cols-1 gap-1.5 my-auto">
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Have good systems and processes in place
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  We recognise good PPM
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Organisation promotes successes
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  PPM recognised as core activity
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Learning by doing established
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Use of process rewarded
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Critical mass of users
+                </div>
+                <div class="p-2 rounded border border-indigo-300 bg-indigo-50/70 dark:bg-slate-700 text-center font-semibold">
+                  Community of practice of PPM
+                </div>
+              </div>
+              <div class="text-[11px] text-center font-bold text-indigo-700 dark:text-indigo-300">Delivers ➔</div>
+            </div>
+
+            <!-- Column 3: Organisational benefits -->
+            <div class="p-3.5 rounded-xl border-2 border-emerald-500 bg-white dark:bg-slate-800 flex flex-col justify-between space-y-2.5">
+              <div class="text-center font-extrabold text-sm py-1.5 rounded bg-emerald-100 text-emerald-900 border border-emerald-300">
+                3. Organisational benefits
+              </div>
+              <div class="space-y-2.5 my-auto">
+                <div class="p-2.5 rounded-lg border-2 border-emerald-400 bg-emerald-50/80 dark:bg-slate-700 space-y-1">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 dark:text-emerald-300 block">External</span>
+                  <div class="font-bold text-center">Hit targets (TCQ)</div>
+                </div>
+                <div class="p-2.5 rounded-lg border-2 border-emerald-400 bg-emerald-50/80 dark:bg-slate-700 space-y-1.5">
+                  <span class="text-[10px] font-extrabold uppercase tracking-wider text-emerald-800 dark:text-emerald-300 block">Internal</span>
+                  <div class="p-1.5 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">Own and be proud of what we do</div>
+                  <div class="p-1.5 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">Removal of some frustration</div>
+                  <div class="p-1.5 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">Ability to be more forward thinking</div>
+                  <div class="p-1.5 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">Keep linkage to why projects done</div>
+                </div>
+              </div>
+              <div class="text-[11px] text-center font-bold text-emerald-700 dark:text-emerald-300">Supports ➔</div>
+            </div>
+
+            <!-- Column 4: Organisational drivers -->
+            <div class="p-3.5 rounded-xl border-2 border-amber-500 bg-white dark:bg-slate-800 flex flex-col justify-between space-y-2.5">
+              <div class="text-center font-extrabold text-sm py-1.5 rounded bg-amber-100 text-amber-900 border border-amber-300">
+                4. Organisational drivers
+              </div>
+              <div class="space-y-3 my-auto">
+                <div class="p-3 rounded-lg border-2 border-amber-400 bg-amber-50/90 dark:bg-slate-700 text-center font-extrabold">
+                  Survival
+                </div>
+                <div class="p-3 rounded-lg border-2 border-amber-400 bg-amber-50/90 dark:bg-slate-700 text-center font-extrabold">
+                  Recognised centre of excellence for benefits delivery
+                </div>
+                <div class="p-3 rounded-lg border-2 border-amber-400 bg-amber-50/90 dark:bg-slate-700 text-center font-extrabold">
+                  Potential for increased funding
+                </div>
+              </div>
+              <div class="text-[11px] text-center font-bold text-amber-700 dark:text-amber-300">⬅ Start Here to Plan</div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 29)</strong>
+          <mark class="hl-yellow">Read the original map from right to left to plan: organisational drivers → benefits → organisational changes → enabling changes.</mark> Then <mark class="hl-green">trace left to right to test whether actions plausibly produce the desired outcome</mark>. <strong>PPM</strong> means programme and project management.
+        </div>
+      </div>
+
+      <!-- SLIDE 30, SLIDE 31, SLIDE 32 & SLIDE 33 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 30 & SLIDE 33 -->
+        <div class="note-card p-6 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 30</span>
+                <span class="slide-badge">Slide 33</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Tracing Causal Chains</span>
+            </div>
+            <h3 class="text-lg font-bold">A small benefits map: student enquiries &amp; Trace a benefit back</h3>
+
+            <!-- Slide 30 -->
+            <div class="space-y-2.5 text-sm">
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400">1. Driver → benefit:</strong>
+                <mark class="hl-green">Improve student support → students obtain accurate answers with less waiting.</mark>
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400">2. Organisational change:</strong>
+                <mark class="hl-blue">Staff use clear routing, shared knowledge and feedback.</mark>
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-700 dark:text-sky-400">3. Enabling change:</strong>
+                <mark class="hl-yellow">Map questions, assign owners, train staff and pilot the service.</mark>
+              </div>
+              <p class="text-xs italic" style="color: var(--ink-muted);">
+                <strong>Slide 30 Teaching Note:</strong> <mark class="hl-pink">Each arrow is an assumption to test.</mark> Success measures might include resolution accuracy, waiting time and staff workload after launch.
+              </p>
+            </div>
+
+            <!-- Slide 33 Activity -->
+            <div class="p-4 rounded-xl border space-y-2 text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold text-rose-600 dark:text-rose-400 uppercase text-xs tracking-wider">Slide 33 Activity: Trace a Benefit All the Way Back</div>
+              <p>• <strong>Task:</strong> Choose a campus benefit (e.g., employer partnerships or student access). Write 1 required organisational change + 1 enabling action, plus 1 launch measure &amp; 1 later measure.</p>
+              <p>• <strong>Suggested Test:</strong> If a new facility opens but the intended benefit does not appear, which assumption in the chain would you examine first?</p>
+              <p class="pt-1 border-t" style="border-color: var(--border-line);">
+                ➔ <strong>Suggested Answer:</strong> <mark class="hl-pink">Opening a building does not automatically create partnerships.</mark> Check whether <mark class="hl-blue">programmes, agreements, staffing and employer engagement changed</mark>, then examine whether the benefit measure was realistic.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 31 & SLIDE 32 -->
+        <div class="note-card p-6 space-y-5 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 31</span>
+                <span class="slide-badge">Slide 32</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Pilot, Benchmark &amp; Model</span>
+            </div>
+            <h3 class="text-lg font-bold">Make intangible benefits more testable &amp; Worked example</h3>
+
+            <!-- Slide 31 Quote -->
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 31)</strong>
+              <p class="italic font-medium">
+                "<mark class="hl-yellow">carrying out a pilot study</mark> — determine on a small scale the <mark class="hl-green">costs and benefits of the work being proposed before launching into a full-scale project</mark>;"
+              </p>
+            </div>
+
+            <div class="callout-teach text-xs">
+              <strong>🎓 Teaching Note (Slide 31):</strong> Alongside a <strong>pilot study</strong>, the book also proposes <mark class="hl-blue">benchmarking/reference sites</mark> and <mark class="hl-blue">modelling</mark>. State what evidence each method could produce and what uncertainty remains.
+            </div>
+
+            <!-- Slide 32 Three Methods Applied -->
+            <div class="space-y-2.5 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400">1. Pilot (Slide 32):</strong>
+                <mark class="hl-yellow">Trial the service with one department for six weeks</mark>; record waiting time, resolution quality and staff hours.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-600 dark:text-emerald-400">2. Benchmark (Slide 32):</strong>
+                <mark class="hl-blue">Compare with a similar service</mark>, noting differences in student numbers and processes.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-purple-600 dark:text-purple-400">3. Model (Slide 32):</strong>
+                <mark class="hl-blue">Estimate full rollout demand using the pilot</mark> and test low, expected and high volumes.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-trap text-xs">
+            <strong>⚠️ Teaching Note (Slide 32):</strong> <mark class="hl-pink">A model is only as reliable as its inputs; document assumptions and who will own later benefits.</mark>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: BOOK CASE STUDY – A NEW CAMPUS FOR RUMMIDGE (SLIDES 34–38)
+    ====================================================================== -->
+    <section id="sec5" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">5</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Book Case Study: A New Campus for the University of Rummidge</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 34–38 • Rummidge/Splot Scenario (€25m, 12 Months), Fig 4.11 University Governance Structure &amp; Case Questions 1, 2 &amp; 3</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 34 & SLIDE 35 (FIGURE 4.11 UNIVERSITY GOVERNANCE) -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 34</span>
+            <span class="slide-badge">Slide 35 • Figure 4.11</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">University of Rummidge / Splot Case &amp; Governance Structure</span>
+        </div>
+
+        <!-- Slide 34 -->
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold">Slide 34: Book case – A new campus for Rummidge</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">1. Opportunity</strong>
+              The <mark class="hl-green">university cannot expand easily at its existing site</mark>; the <mark class="hl-green">town (Splot) seeks prestige and higher education provision</mark>.
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">2. Proposal</strong>
+              <mark class="hl-yellow">Convert former school premises for courses the following September; suggested budget €25 million.</mark>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">3. Challenge</strong>
+              The team has <mark class="hl-pink">12 months, conditional funding, staff concerns, travel distance and uncertainty about local support</mark>.
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 35: Figure 4.11 -->
+        <div class="pt-4 border-t space-y-4" style="border-color: var(--border-line);">
+          <h3 class="text-xl font-bold">Slide 35: University governance affects the project (Figure 4.11 Outline structure – University of Rummidge)</h3>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <!-- SVG Org Chart of Figure 4.11 -->
+            <div class="lg:col-span-7 p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 270" class="w-full min-w-[460px]" aria-label="Figure 4.11 Outline structure University of Rummidge">
+                <defs>
+                  <marker id="govArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#334155"/>
+                  </marker>
+                </defs>
+
+                <!-- Lines -->
+                <g stroke="#334155" stroke-width="2" fill="none">
+                  <path d="M210,52 L210,82 M95,82 L395,82 M95,82 L95,112 M245,82 L245,112 M395,82 L395,112"/>
+                  <line x1="95" y1="164" x2="95" y2="202"/>
+                  <line x1="395" y1="164" x2="395" y2="202"/>
+                </g>
+
+                <!-- Vice-Chancellor -->
+                <rect x="135" y="12" width="150" height="40" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2"/>
+                <text x="210" y="37" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Vice-Chancellor</text>
+
+                <!-- Arrow from Senate up to Vice-Chancellor -->
+                <path d="M265,112 L265,45" fill="none" stroke="#be123c" stroke-width="1.8" stroke-dasharray="4,3" marker-end="url(#govArr)"/>
+                <text x="375" y="45" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">Senate appoints the Vice-Chancellor</text>
+
+                <!-- Row 2: Heads of Academic / Senate / Heads of Admin -->
+                <rect x="20" y="112" width="150" height="52" rx="4" fill="#fed7aa" stroke="#334155" stroke-width="1.8"/>
+                <text x="95" y="134" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Heads of Academic</text>
+                <text x="95" y="150" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Departments</text>
+
+                <rect x="190" y="112" width="110" height="52" rx="4" fill="#fbcfe8" stroke="#be185d" stroke-width="2"/>
+                <text x="245" y="143" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Senate</text>
+
+                <rect x="320" y="112" width="150" height="52" rx="4" fill="#fed7aa" stroke="#334155" stroke-width="1.8"/>
+                <text x="395" y="134" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Heads of Administrative</text>
+                <text x="395" y="150" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Departments</text>
+
+                <!-- Row 3: Academic Departments & Administrative Departments -->
+                <rect x="20" y="202" width="150" height="48" rx="4" fill="#fef3c7" stroke="#334155" stroke-width="1.8"/>
+                <text x="95" y="223" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Academic</text>
+                <text x="95" y="239" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Departments</text>
+
+                <rect x="320" y="202" width="150" height="48" rx="4" fill="#fef3c7" stroke="#334155" stroke-width="1.8"/>
+                <text x="395" y="223" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Administrative</text>
+                <text x="395" y="239" text-anchor="middle" font-size="11.5" font-weight="700" fill="#0f172a">Departments</text>
+              </svg>
+            </div>
+
+            <!-- 3 Exact Governance Notes from Figure 4.11 -->
+            <div class="lg:col-span-5 space-y-3 text-xs">
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-rose-600 dark:text-rose-400 block mb-0.5">1. Senate Election &amp; Turnover:</strong>
+                "The <mark class="hl-purple">senate are elected by the staff of the university</mark>, with <mark class="hl-pink">25 per cent of members being required to stand down each year and be replaced</mark>."
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-amber-700 dark:text-amber-400 block mb-0.5">2. Heads of Academic Departments:</strong>
+                "Heads of academic departments are nominated from the Professoriate of their department, <mark class="hl-pink">but with little direct control over the academic staff</mark>."
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-0.5">3. Heads of Administrative Departments:</strong>
+                "Heads of administrative departments are <mark class="hl-purple">functional specialists in their particular area, e.g. finance</mark>."
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 35)</strong>
+            The book's outline shows a vice-chancellor, senate and academic and administrative departments. <mark class="hl-pink">Academic staff had limited input to negotiations.</mark> <mark class="hl-yellow">Identify whose agreement is required and who can make operational changes.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 36, SLIDE 37 & SLIDE 38: THREE CASE QUESTIONS & SUGGESTED ANALYSES -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- SLIDE 36: QUESTION 1 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between" style="border-top: 4px solid #4f46e5;">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 36 • Case Question 1</span>
+            </div>
+            <h3 class="text-lg font-bold">Question 1: Objectives and benefits map</h3>
+
+            <div class="callout-quote text-xs">
+              <p class="italic font-medium">
+                "What are the strategic objectives for each of the organisations involved? Provide a high-level benefits map to structure the objectives and necessary changes."
+              </p>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong>University:</strong> List the strategic benefit it seeks, one organisational change and one enabling action.
+              </div>
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong>Town council:</strong> Do the same. Where do objectives align, and where could they conflict?
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong class="block uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Suggested Analysis (Slide 36)</strong>
+            The <mark class="hl-green">university seeks capacity and income beyond its current site</mark>; the <mark class="hl-green">town seeks education provision, redevelopment and prestige</mark>. Both need <mark class="hl-yellow">viable courses, staffing, facilities and funding</mark>.
+          </div>
+        </div>
+
+        <!-- SLIDE 37: QUESTION 2 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between" style="border-top: 4px solid #0d9488;">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 37 • Case Question 2</span>
+            </div>
+            <h3 class="text-lg font-bold">Question 2: Stakeholder strategy</h3>
+
+            <div class="callout-quote text-xs">
+              <p class="italic font-medium">
+                "Who are the key stakeholders in such a project? Show how each group should be managed."
+              </p>
+            </div>
+
+            <div class="space-y-2 text-sm">
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong>Identify:</strong> Include <mark class="hl-purple">students, staff, university leadership, senate, town council, local residents, employers, funders and regulators</mark>.
+              </div>
+              <div class="p-3 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong>Engage:</strong> For three groups, state their need, potential influence and an appropriate way to involve them.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong class="block uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Suggested Analysis (Slide 37)</strong>
+            <mark class="hl-purple">Academic and administrative staff</mark> require early dialogue on workload and course design; <mark class="hl-purple">students</mark> need clear information and usable services; <mark class="hl-purple">funders</mark> need evidence of viability. <mark class="hl-yellow">Update the map as positions change.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 38: QUESTION 3 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between" style="border-top: 4px solid #10b981;">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 38 • Case Question 3</span>
+            </div>
+            <h3 class="text-lg font-bold">Question 3: What would success look like?</h3>
+
+            <div class="callout-quote text-xs">
+              <p class="italic font-medium">
+                "What would appropriate success measures be for the project?"
+              </p>
+            </div>
+
+            <div class="space-y-2 text-xs">
+              <div class="p-2.5 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-700 dark:text-sky-400">1. At opening:</strong> <mark class="hl-blue">Safe, accessible, equipped facilities; approved courses; prepared staff and support services.</mark>
+              </div>
+              <div class="p-2.5 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400">2. After one year:</strong> <mark class="hl-green">Student demand, course quality, employer participation, staff workload and financial performance.</mark>
+              </div>
+              <div class="p-2.5 rounded-lg border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-purple-700 dark:text-purple-400">3. Longer term:</strong> <mark class="hl-green">Sustainable provision, regional contribution and value for both university and town.</mark>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong class="block uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 38)</strong>
+            Suggested measures should be defined with <mark class="hl-yellow">target, data source, owner and review date</mark>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4">
+      Complete Study Guide for <strong>Week 04 (Lesson 04): Setting up for Success</strong> (Slides 01–38) • Prof. Naghdali Choupani • İstanbul Aydın University • Based on Harvey Maylor &amp; Neil Turner, <em>Project Management</em> (5th Edition, Pearson).
+    </div>
+  </footer>
+
+  <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var text = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          icon.textContent = "☀️";
+          text.textContent = "Light Notebook Mode";
+        } else {
+          root.removeAttribute("data-theme");
+          icon.textContent = "🌙";
+          text.textContent = "Dark Study Mode";
+        }
+      }
+
+      btn.addEventListener("click", function() {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
+    })();
+  </script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

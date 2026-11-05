@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 01 (Week 01) – Introduction to Project Management | Exam Study Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1e293b;
+      --ink-muted: #64748b;
+      --border-line: #e2dcd0;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.28);
+
+      /* 5-Color Highlighter Marker System - Light Mode */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+
+      /* Callout backgrounds */
+      --quote-bg: #fffbeb;
+      --quote-border: #f59e0b;
+      --teach-bg: #eef2ff;
+      --teach-border: #4f46e5;
+      --read-bg: #ecfdf5;
+      --read-border: #10b981;
+      --trap-bg: #fff1f2;
+      --trap-border: #e11d48;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #121316;
+      --bg-card: #1c1e24;
+      --bg-subtle: #16181d;
+      --ink-main: #f1f5f9;
+      --ink-muted: #94a3b8;
+      --border-line: #2e323b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      /* 5-Color Highlighter Marker System - Dark Mode */
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+
+      /* Callout backgrounds */
+      --quote-bg: rgba(245, 158, 11, 0.12);
+      --quote-border: #fbbf24;
+      --teach-bg: rgba(99, 102, 241, 0.14);
+      --teach-border: #818cf8;
+      --read-bg: rgba(16, 185, 129, 0.12);
+      --read-border: #34d399;
+      --trap-bg: rgba(244, 63, 94, 0.14);
+      --trap-border: #fb7185;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Highlighter Marker Styles */
+    mark.y, mark.hl-yellow {
+      background: var(--hl-yellow);
+      color: var(--hl-yellow-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.g, mark.hl-green {
+      background: var(--hl-green);
+      color: var(--hl-green-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.p, mark.hl-pink {
+      background: var(--hl-pink);
+      color: var(--hl-pink-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.b, mark.hl-blue {
+      background: var(--hl-blue);
+      color: var(--hl-blue-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.u, mark.hl-purple {
+      background: var(--hl-purple);
+      color: var(--hl-purple-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Study Note Cards & Containers */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-line);
+    }
+
+    /* Callout Boxes */
+    .callout-quote {
+      background-color: var(--quote-bg);
+      border-left: 4px solid var(--quote-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-teach {
+      background-color: var(--teach-bg);
+      border-left: 4px solid var(--teach-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-read {
+      background-color: var(--read-bg);
+      border-left: 4px solid var(--read-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-trap {
+      background-color: var(--trap-bg);
+      border-left: 4px solid var(--trap-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Study Tables */
+    .study-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .study-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .study-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Section Number Pill */
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body data-lesson="week01" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- STICKY TOP STUDY BAR & NAVIGATION -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Week 01 / Lesson 01</span>
+        <span class="font-bold text-sm sm:text-base truncate">Introduction to Project Management — Complete Study Notes (Slides 01–44)</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Jump Pills -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
+        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Course Route &amp; Aims (S1–4)</a>
+        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. Definitions &amp; Characteristics (S5–12)</a>
+        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Process &amp; Volume vs. Variety (S13–17)</a>
+        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. PBOs &amp; Line vs. Project (S18–27)</a>
+        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. History, 5 Generations &amp; Traps (S28–35)</a>
+        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. Case Workshop: 4 Managers (S36–43)</a>
+        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Exit Check (S44)</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO HEADER (SLIDE 01) -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #4f46e5;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="slide-badge">📌 Slide 01 • Title &amp; Source</span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          İSTANBUL AYDIN UNIVERSITY • PROJECT MANAGEMENT
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Week 01 (Lesson 01): <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Introduction to Project Management</span>
+      </h1>
+      <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
+        <strong>Instructor:</strong> Prof. Naghdali Choupani &nbsp;|&nbsp;
+        <strong>Textbook:</strong> <em>Project Management</em> (Fifth Edition, 2022, Chapter 1) by Harvey Maylor &amp; Neil Turner (Pearson)
+      </p>
+
+      <!-- Highlighter Color Legend Bar -->
+      <div class="p-4 rounded-xl border flex flex-wrap items-center gap-3 text-xs sm:text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <span class="font-bold uppercase tracking-wider mr-1">🖍️ Study Highlighter Key:</span>
+        <span><mark class="y">Core Definition / Book Quote</mark></span>
+        <span><mark class="g">Project Characteristic / Benefit / Value</mark></span>
+        <span><mark class="b">Process / Classification / Metric</mark></span>
+        <span><mark class="p">Exam Trap / Uncertainty / Limitation</mark></span>
+        <span><mark class="u">Managerial Role / Organisation / Career Path</mark></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- =====================================================================
+         SECTION 1: COURSE ROUTE & LEARNING OBJECTIVES (SLIDES 01–04)
+    ====================================================================== -->
+    <section id="sec1" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">1</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Course Route &amp; Learning Objectives</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 01–04 • 14-Week Syllabus Route, Chapter 1 Objectives &amp; Why Projects Matter</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 02: 14-WEEK ROUTE -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 02</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Course Syllabus Overview</span>
+        </div>
+        <h3 class="text-xl font-bold">Your route through 14 weeks</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="overflow-x-auto">
+            <table class="study-table text-xs sm:text-sm">
+              <thead>
+                <tr>
+                  <th class="w-16">Week</th>
+                  <th>Topic</th>
+                  <th class="w-24">Chapter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style="background-color: var(--teach-bg);">
+                  <td class="mono-font font-extrabold text-indigo-600 dark:text-indigo-400">01</td>
+                  <td class="font-bold"><mark class="y">Introduction</mark></td>
+                  <td class="mono-font font-bold">Ch. 1</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">02</td>
+                  <td>Structures and frameworks</td>
+                  <td class="mono-font">Ch. 2</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">03</td>
+                  <td>Projects and organisations</td>
+                  <td class="mono-font">Ch. 3</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">04</td>
+                  <td>Setting up for success</td>
+                  <td class="mono-font">Ch. 4</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">05</td>
+                  <td>Planning for success</td>
+                  <td class="mono-font">Ch. 5</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">06</td>
+                  <td>Time planning and scheduling</td>
+                  <td class="mono-font">Ch. 6</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">07</td>
+                  <td>Advanced Project Thinking</td>
+                  <td class="mono-font">Ch. 7</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="overflow-x-auto">
+            <table class="study-table text-xs sm:text-sm">
+              <thead>
+                <tr>
+                  <th class="w-16">Week</th>
+                  <th>Topic</th>
+                  <th class="w-24">Chapter</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="mono-font font-bold">08</td>
+                  <td>Business case</td>
+                  <td class="mono-font">Ch. 8</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">09</td>
+                  <td>Stakeholders and quality</td>
+                  <td class="mono-font">Ch. 9</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">10</td>
+                  <td>Risks and opportunities</td>
+                  <td class="mono-font">Ch. 10</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">11</td>
+                  <td>Organising and leading people</td>
+                  <td class="mono-font">Ch. 11–12</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">12</td>
+                  <td>Monitoring and control</td>
+                  <td class="mono-font">Ch. 13</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">13</td>
+                  <td>Supply chains and problem-solving</td>
+                  <td class="mono-font">Ch. 14–15</td>
+                </tr>
+                <tr>
+                  <td class="mono-font font-bold">14</td>
+                  <td>Completion and learning</td>
+                  <td class="mono-font">Ch. 16</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 03 & SLIDE 04 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 03 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 03</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Chapter 1 Learning Objectives</span>
+            </div>
+            <h3 class="text-xl font-bold">What you will learn today</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400 mb-1">1. Identify</div>
+                <p>Identify the <mark class="y">definitions of a project</mark> and the <mark class="u">task of management</mark> within a range of projects.</p>
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">2. Explain</div>
+                <p>Demonstrate the <mark class="g">importance of successful project management</mark> to individuals, organisations and economies.</p>
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400 mb-1">3. Recognise</div>
+                <p>Recognise the <mark class="b">development of the modern subject</mark> along with some of the <mark class="p">challenges and limitations</mark>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            By the end, you will <mark class="u">apply these ideas to the four managers in the chapter's case study</mark>.
+          </div>
+        </div>
+
+        <!-- SLIDE 04 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 04</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Scale &amp; Impact</span>
+            </div>
+            <h3 class="text-xl font-bold">Why begin with projects?</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "Projects can range from the <mark class="b">small and relatively mundane</mark>, to those that <mark class="g">impact the very fabric of our civilization</mark>. <mark class="y">Getting them right matters.</mark>"
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            A kitchen improvement and a global development initiative differ greatly in scale and consequences. <mark class="y">Both require people to turn an aspiration into an outcome.</mark>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: DEFINING A PROJECT & ITS CORE CHARACTERISTICS (SLIDES 05–12)
+    ====================================================================== -->
+    <section id="sec2" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">2</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Defining a Project &amp; Its Core Characteristics</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 05–12 • Why "Start and Finish" Is Not Enough, 4 Professional Definitions, Unique/Temporary/Focused, Mission &amp; Benefits, Emergence vs. Uncertainty, Social Construction &amp; Fig 1.1</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 05 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 05</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Limits of the Basic Definition</span>
+        </div>
+        <h3 class="text-xl font-bold">A start and finish are not enough</h3>
+
+        <div class="callout-quote">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Book Excerpt Exact Wording</strong>
+          <p class="italic text-base font-medium">
+            "One step on from this is the most basic of accepted definitions: <mark class="p">a project is a task that has a beginning and an end. This is insufficient</mark>, as the two examples below will demonstrate."
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">Example 1: Food inspection (Too narrow/repetitive)</strong>
+            <p><mark class="b">Repeated operational work.</mark> A routine inspection starts and finishes, but <mark class="p">repeats an established process</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">Example 2: Ship's whole life (Too broad)</strong>
+            <p><mark class="b">Multiple projects and ongoing activities.</mark> A ship's <mark class="p">60-year life contains many different projects and operations</mark> (design, build, refits, daily voyages, decommissioning).</p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+          <mark class="y">Choose a useful unit of work before choosing a management approach.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 06 & SLIDE 07: FOUR DEFINITIONS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 06</span>
+            <span class="slide-badge">Slide 07</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Four Formal Definitions of a Project</span>
+        </div>
+        <h3 class="text-xl font-bold">Professional definitions &amp; Environment / Organisation views</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="text-xs font-extrabold uppercase text-indigo-600 dark:text-indigo-400">Slide 06 • Definition 1 (Change &amp; Objectives)</span>
+            <p class="italic font-medium">"A <mark class="y">unique, transient endeavour</mark> undertaken to <mark class="g">bring about change and to achieve planned objectives</mark>."</p>
+          </div>
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="text-xs font-extrabold uppercase text-indigo-600 dark:text-indigo-400">Slide 06 • Definition 2 (Product, Service or Result)</span>
+            <p class="italic font-medium">"A project is a <mark class="y">temporary endeavour</mark> undertaken to <mark class="g">create a unique product, service or result</mark>."</p>
+          </div>
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="text-xs font-extrabold uppercase text-emerald-600 dark:text-emerald-400">Slide 07 • Definition 3 (Management Environment)</span>
+            <p class="italic font-medium">"<mark class="b">Temporary management environment, usually undertaken in phases</mark>, created for the purpose of delivering one or more <mark class="g">business outputs or outcomes</mark>."</p>
+          </div>
+          <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="text-xs font-extrabold uppercase text-purple-600 dark:text-purple-400">Slide 07 • Definition 4 (Temporary Organisation)</span>
+            <p class="italic font-medium">"A <mark class="u">temporary organisation</mark> that is created for the purpose of delivering one or more <mark class="g">business products according to an agreed business case</mark>."</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 08 & SLIDE 09 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 08 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 08</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Unique • Temporary • Focused</span>
+            </div>
+            <h3 class="text-xl font-bold">Three common themes</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Unique</strong>
+                The exact project has not been performed before. Has a <mark class="g">degree of novelty</mark> in time, place, team, product or service.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-amber-700 dark:text-amber-400 block mb-1">2. Temporary</strong>
+                When finished, the <mark class="u">team moves on</mark>. Financial resources are <mark class="p">temporary and almost always finite</mark>—when completed, funding ceases.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">3. Focused</strong>
+                Task is to deliver a particular product, service or result (<mark class="y">the specific mission</mark>), even if not every detail is clear at the start.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-trap text-xs">
+            <strong>⚠️ Teaching Note (Slide 08 – Exam Trap):</strong> <mark class="p">Unique does NOT mean that every activity is new.</mark> <mark class="g">Temporary describes the delivery effort; its benefits may last much longer.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 09 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 09</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">What vs. Why</span>
+            </div>
+            <h3 class="text-xl font-bold">Mission and benefits</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "It is useful to look further than this, with the <mark class="y">mission being a means to an end</mark>. We say that <mark class="g">projects are undertaken to deliver benefits</mark>. This characteristic is evident in both commercial and non-commercial projects."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note (Slide 09):</strong> A <mark class="y">mission explains what</mark> the project is trying to achieve. <mark class="g">Benefits explain why</mark> the result matters. In the book's relief example, the <strong>benefit is saving lives</strong>; the immediate work (mission) may include medical treatment or shelter.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 10 & SLIDE 11 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 10 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 10</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Crucial Exam Distinction</span>
+            </div>
+            <h3 class="text-xl font-bold">Emergence is different from uncertainty</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Emergence (Requirements)</strong>
+                High-level benefits were known (save lives), but <mark class="y">exact objectives and means to achieve them could be determined only once a certain amount of work had been done</mark>.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Uncertainty (Environment)</strong>
+                Where emergence referred to the requirements of the project, <mark class="p">uncertainty covers all of the environmental conditions in which a project has to operate</mark>.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Example (Slide 10):</strong> Discovering that residents need shelter changes your understanding of requirements (<mark class="y">emergence</mark>). Not knowing when supplies will arrive is <mark class="p">uncertainty</mark> about delivery conditions.
+          </div>
+        </div>
+
+        <!-- SLIDE 11 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 11</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Social Construction &amp; Integration</span>
+            </div>
+            <h3 class="text-xl font-bold">Projects are social and integrating</h3>
+
+            <div class="callout-quote text-xs sm:text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "We say that unlike a machine that is real and tangible, a <mark class="y">project is a social construction — it was literally devised by people</mark>. It involves <mark class="u">people and systems of people</mark>, both in the project team and associated with the project as customers, for instance. It is intangible."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note (Slide 11 – Electric-Vehicle Example):</strong> Connects <mark class="b">vehicles, charging, servicing and users</mark>. Technical performance alone cannot make the change work: people, organisations and supporting systems must fit together.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 12: FIGURE 1.1 PROJECT CHARACTERISTICS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 12 • Figure 1.1</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Project characteristics</span>
+        </div>
+        <h3 class="text-xl font-bold">Project characteristics: the complete picture (Figure 1.1)</h3>
+
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 880 510" class="w-full min-w-[740px]" aria-label="Figure 1.1 Project characteristics">
+            <!-- Connecting Lines from Center to 7 Ovals and Outer Boxes -->
+            <g stroke="#334155" stroke-width="1.8" fill="none">
+              <!-- 1. Emergence & uncertainty (Top Left) -->
+              <line x1="360" y1="235" x2="235" y2="215"/>
+              <line x1="175" y1="190" x2="145" y2="140"/>
+              <!-- 2. Aspects of uniqueness (Top Center-Left) -->
+              <line x1="400" y1="222" x2="365" y2="178"/>
+              <line x1="355" y1="145" x2="355" y2="105"/>
+              <!-- 3. Change (Top Center-Right) -->
+              <line x1="475" y1="222" x2="525" y2="178"/>
+              <line x1="555" y1="145" x2="575" y2="115"/>
+              <!-- 4. Mission focused (Middle Right) -->
+              <line x1="525" y1="240" x2="645" y2="215"/>
+              <line x1="715" y1="192" x2="755" y2="168"/>
+              <!-- 5. Temporary (Bottom Right) -->
+              <line x1="515" y1="272" x2="635" y2="305"/>
+              <line x1="695" y1="330" x2="735" y2="365"/>
+              <!-- 6. Integrating (Bottom Center) -->
+              <line x1="440" y1="285" x2="440" y2="330"/>
+              <line x1="440" y1="370" x2="440" y2="395"/>
+              <!-- 7. Social construction (Bottom Left) -->
+              <line x1="365" y1="272" x2="265" y2="305"/>
+              <line x1="215" y1="328" x2="175" y2="365"/>
+            </g>
+
+            <!-- CENTER OVAL: Project characteristics -->
+            <ellipse cx="440" cy="252" rx="108" ry="34" fill="#7dd3fc" stroke="#0369a1" stroke-width="2.2"/>
+            <text x="440" y="257" text-anchor="middle" font-size="14.5" font-weight="800" fill="#0f172a">Project characteristics</text>
+
+            <!-- 7 SURROUNDING OVALS (Light Blue) -->
+            <!-- 1. Emergence and uncertainty -->
+            <ellipse cx="205" cy="212" rx="82" ry="25" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="205" y="208" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Emergence and</text>
+            <text x="205" y="223" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">uncertainty</text>
+
+            <!-- 2. Aspects of uniqueness -->
+            <ellipse cx="355" cy="162" rx="86" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="355" y="166" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Aspects of uniqueness</text>
+
+            <!-- 3. Change -->
+            <ellipse cx="538" cy="162" rx="76" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="538" y="166" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Change</text>
+
+            <!-- 4. Mission focused -->
+            <ellipse cx="675" cy="212" rx="82" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="675" y="216" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Mission focused</text>
+
+            <!-- 5. Temporary -->
+            <ellipse cx="655" cy="312" rx="78" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="655" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Temporary</text>
+
+            <!-- 6. Integrating -->
+            <ellipse cx="440" cy="350" rx="78" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="440" y="354" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Integrating</text>
+
+            <!-- 7. Social construction -->
+            <ellipse cx="235" cy="312" rx="82" ry="22" fill="#bae6fd" stroke="#0284c7" stroke-width="1.8"/>
+            <text x="235" y="316" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Social construction</text>
+
+            <!-- 7 OUTER RECTANGULAR BOXES (Amber/Peach) -->
+            <!-- Box 1: Emergence & uncertainty -->
+            <rect x="16" y="55" width="225" height="85" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="26" y="75">• Detailed requirements may</text>
+              <text x="36" y="90">not be known in advance</text>
+              <text x="26" y="110">• Project manager has to</text>
+              <text x="36" y="125">deal with uncertainty</text>
+            </g>
+
+            <!-- Box 2: Aspects of uniqueness -->
+            <rect x="260" y="16" width="210" height="90" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="270" y="36">• Exact project not been</text>
+              <text x="280" y="51">done before</text>
+              <text x="270" y="70">• Many aspects of the</text>
+              <text x="280" y="85">project have been done</text>
+              <text x="280" y="99">before</text>
+            </g>
+
+            <!-- Box 3: Change -->
+            <rect x="495" y="25" width="215" height="90" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="505" y="46">• Impacts people delivering</text>
+              <text x="505" y="66">• Impacts people and</text>
+              <text x="515" y="81">organisations being</text>
+              <text x="515" y="96">delivered to</text>
+            </g>
+
+            <!-- Box 4: Mission focused -->
+            <rect x="705" y="132" width="160" height="38" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <text x="718" y="156" font-size="12" font-weight="700" fill="#0f172a">• Delivers benefits</text>
+
+            <!-- Box 5: Temporary -->
+            <rect x="635" y="365" width="225" height="78" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="645" y="388">• Team finishes when</text>
+              <text x="655" y="403">project finishes</text>
+              <text x="645" y="422">• Funding goes with</text>
+              <text x="655" y="436">project</text>
+            </g>
+
+            <!-- Box 6: Integrating -->
+            <rect x="315" y="395" width="250" height="98" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="325" y="416">• Requires interlinking of</text>
+              <text x="335" y="431">activities</text>
+              <text x="325" y="451">• Requires knowledge and</text>
+              <text x="335" y="466">resources to be brought</text>
+              <text x="335" y="481">together in a process</text>
+            </g>
+
+            <!-- Box 7: Social construction -->
+            <rect x="20" y="365" width="225" height="72" rx="4" fill="#fde68a" stroke="#334155" stroke-width="1.6"/>
+            <g font-size="11.5" font-weight="600" fill="#0f172a">
+              <text x="30" y="388">• Doesn't behave like a machine</text>
+              <text x="30" y="408">• Involves people and</text>
+              <text x="40" y="423">organisations</text>
+            </g>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 12)</strong>
+          Read the centre first, then the <mark class="g">seven characteristics</mark>. The outer boxes show what each characteristic means for management. <mark class="y">Use this figure as a checklist, not a guarantee that every project has the same difficulty.</mark>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: PROCESS THINKING & VOLUME VS. VARIETY (SLIDES 13–17)
+    ====================================================================== -->
+    <section id="sec3" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">3</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Process Thinking &amp; Volume vs. Variety</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 13–17 • System of Delivery, Fig 1.2 (Volume vs. Variety Spectrum), 24-Hour Modular McDonald's Restaurant Case &amp; Work Classification</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 13 & SLIDE 14 (FIGURE 1.2) -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 13</span>
+            <span class="slide-badge">Slide 14 • Figure 1.2</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Process Thinking &amp; Volume vs. Variety Spectrum</span>
+        </div>
+
+        <h3 class="text-xl font-bold">A project can be studied as a process &amp; Volume, variety and three types of project (Figure 1.2)</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 13)</strong>
+            <p class="italic font-medium">
+              "Further description of a project comes from <mark class="b">analysing the system of delivery</mark>, including consideration of how <mark class="y">activities in the project are identified, planned and executed, and how issues such as change and uncertainty are handled</mark> by the project team."
+            </p>
+          </div>
+          <div class="callout-teach text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 13)</strong>
+            <mark class="b">Process thinking</mark> asks how work is identified, planned and executed, and how the team responds when circumstances change. <mark class="g">It makes delivery practices visible so they can be improved.</mark>
+          </div>
+        </div>
+
+        <!-- Figure 1.2 Custom SVG -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 720 310" class="w-full min-w-[580px]" aria-label="Figure 1.2 Volume versus variety and projects">
+            <defs>
+              <marker id="axArr12" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"/>
+              </marker>
+              <marker id="tealArr12" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#0d9488"/>
+              </marker>
+              <pattern id="vertStripes" width="8" height="8" patternUnits="userSpaceOnUse">
+                <line x1="4" y1="0" x2="4" y2="8" stroke="#0284c7" stroke-width="1.5"/>
+              </pattern>
+              <pattern id="horizStripes" width="8" height="8" patternUnits="userSpaceOnUse">
+                <line x1="0" y1="4" x2="8" y2="4" stroke="#0369a1" stroke-width="1.5"/>
+              </pattern>
+            </defs>
+
+            <!-- Axes -->
+            <line x1="110" y1="265" x2="110" y2="20" stroke="currentColor" stroke-width="2" marker-end="url(#axArr12)"/>
+            <line x1="110" y1="265" x2="435" y2="265" stroke="currentColor" stroke-width="2" marker-end="url(#axArr12)"/>
+            <text x="95" y="38" text-anchor="end" font-size="14" font-weight="800" fill="currentColor">Volume</text>
+            <text x="385" y="290" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">Variety</text>
+
+            <!-- Diagonal Spectrum Oval (Top-left = Repetitive operations, Bottom-right = Projects) -->
+            <g transform="rotate(42 265 145)">
+              <ellipse cx="265" cy="145" rx="165" ry="26" fill="#bae6fd" stroke="#0369a1" stroke-width="2"/>
+              <ellipse cx="195" cy="145" rx="95" ry="24" fill="url(#vertStripes)"/>
+              <ellipse cx="335" cy="145" rx="95" ry="24" fill="url(#horizStripes)"/>
+            </g>
+
+            <!-- Point A and Point B -->
+            <text x="242" y="65" font-size="15" font-weight="800" fill="currentColor">A</text>
+            <text x="412" y="248" font-size="15" font-weight="800" fill="currentColor">B</text>
+
+            <!-- 3 Dashed Circles on the Projects Spectrum -->
+            <circle cx="288" cy="158" r="34" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="5,4"/>
+            <circle cx="328" cy="192" r="34" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="5,4"/>
+            <circle cx="368" cy="226" r="34" fill="none" stroke="#1e293b" stroke-width="2" stroke-dasharray="5,4"/>
+
+            <!-- Pointers & Labels for the 3 Project Types -->
+            <text x="365" y="42" font-size="14" font-weight="800" fill="currentColor">'Painting by numbers'</text>
+            <line x1="358" y1="45" x2="292" y2="152" stroke="currentColor" stroke-width="1.6" marker-end="url(#axArr12)"/>
+
+            <text x="415" y="82" font-size="14" font-weight="800" fill="currentColor">As . . . but . . .</text>
+            <line x1="408" y1="85" x2="332" y2="186" stroke="currentColor" stroke-width="1.6" marker-end="url(#axArr12)"/>
+
+            <text x="462" y="122" font-size="14" font-weight="800" fill="currentColor">First-timers</text>
+            <line x1="455" y1="125" x2="372" y2="220" stroke="currentColor" stroke-width="1.6" marker-end="url(#axArr12)"/>
+
+            <!-- Upward-Left Arrow: Reduced risk and uncertainty -->
+            <line x1="315" y1="255" x2="225" y2="165" stroke="#0d9488" stroke-width="3" marker-end="url(#tealArr12)"/>
+            <text x="205" y="205" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Reduced</text>
+            <text x="205" y="222" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">risk and</text>
+            <text x="205" y="239" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">uncertainty</text>
+
+            <!-- Legend -->
+            <rect x="495" y="195" width="22" height="18" fill="#bae6fd" stroke="#0369a1" stroke-width="1.5"/>
+            <rect x="495" y="195" width="22" height="18" fill="url(#vertStripes)"/>
+            <text x="526" y="209" font-size="13.5" font-weight="700" fill="currentColor">Repetitive operations</text>
+
+            <rect x="495" y="225" width="22" height="18" fill="#bae6fd" stroke="#0369a1" stroke-width="1.5"/>
+            <rect x="495" y="225" width="22" height="18" fill="url(#horizStripes)"/>
+            <text x="526" y="239" font-size="13.5" font-weight="700" fill="currentColor">Projects</text>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 14)</strong>
+          <mark class="b">Volume means throughput; variety means the different process variations.</mark>
+          • <mark class="p">First-timers</mark> have high novelty.<br>
+          • <mark class="y">"As ... but ..." work</mark> resembles previous work with changes.<br>
+          • <mark class="g">"Painting by numbers"</mark> has a well-known process and outcome.<br>
+          • Point <strong>A</strong> marks <em>routine inspections</em>; Point <strong>B</strong> marks the <em>whole ship lifecycle</em>. Moving up and left toward repeatable processes brings <mark class="g">reduced risk and uncertainty</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 15, SLIDE 16 & SLIDE 17: McDONALD'S MODULAR RESTAURANT & CLASSIFICATION -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 15 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 15</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Real World Process Thinking</span>
+            </div>
+            <h3 class="text-lg font-bold">Original example: building a restaurant in 24–48 hours</h3>
+
+            <div class="p-3.5 rounded-xl border text-xs sm:text-sm space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <p>• It is possible to build a <strong>McDonald's drive-through restaurant in just <mark class="b">24 hours</mark></strong> (one went from 'clear site' to 'open for business' in <mark class="b">less than 48 hours</mark>, including foundations).</p>
+              <p>• Built by contractors <strong>Yorkon and Britspace</strong> (<mark class="b">over 300 times in the UK alone</mark>).</p>
+              <p>• Instead of treating each site as a slow, unique build taking months, they made the building <mark class="g">modular (typically 6 modules manufactured off-site and assembled on-site)</mark>, improving the process each time.</p>
+            </div>
+
+            <div class="callout-quote text-xs">
+              "Recognising that this was likely to be a <mark class="y">project that was repeated meant that it was worth the companies investing in finding ways to improve the process</mark>."
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note (Slide 15):</strong> The lesson is to <mark class="g">identify what can be reused, even when each location is different</mark>.
+          </div>
+        </div>
+
+        <!-- SLIDE 16 & SLIDE 17 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 16</span>
+                <span class="slide-badge">Slide 17</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Work Classification Activity</span>
+            </div>
+            <h3 class="text-lg font-bold">Activity &amp; Debrief: Classification changes management</h3>
+
+            <div class="overflow-x-auto">
+              <table class="study-table text-xs sm:text-sm">
+                <thead>
+                  <tr>
+                    <th>Example Work</th>
+                    <th>Classification (Fig 1.2)</th>
+                    <th>Management Implication</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-bold">1. Routine food inspections</td>
+                    <td><mark class="b">Operations</mark></td>
+                    <td>The same visit–report–follow-up process is repeated.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">2. Disease-outbreak response</td>
+                    <td><mark class="y">Project (As ... but ...)</mark></td>
+                    <td>A rare response with its own characteristics, supported by advance preparation.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">3. Repeat restaurant build</td>
+                    <td><mark class="g">Painting by numbers</mark></td>
+                    <td>Use a known delivery process and continuously improve it.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-bold">4. First moon landing</td>
+                    <td><mark class="p">First-timer</mark></td>
+                    <td>The book's example of substantial novelty and high uncertainty.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Key Takeaway (Slides 16–17):</strong> How you classify work changes the <mark class="y">amount of planning, learning and coordination needed</mark>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: ECONOMIC IMPORTANCE, PBOs & LINE VS. PROJECT MANAGEMENT (SLIDES 18–27)
+    ====================================================================== -->
+    <section id="sec4" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">4</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Economic Importance, PBOs &amp; Line vs. Project Management</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 18–27 • UK Economic Data, PBOs, iPhone Coordinated Work, Accidental vs. Choice Profession, Fig 1.3 Cross-Functional Structure, General vs. Project Management, Fig 1.4 &amp; 4 Career Paths</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 18, SLIDE 19 & SLIDE 20 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 18</span>
+            <span class="slide-badge">Slide 19</span>
+            <span class="slide-badge">Slide 20</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Macroeconomic Scale, Project-Based Organisations &amp; Coordinated Projects</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Projects matter economically &amp; Project-based organisations (PBOs)</h3>
+
+        <!-- Slide 18 Stats & Quote -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+          <div class="lg:col-span-6 callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 18 Quote (2019 UK Report)</strong>
+            <p class="italic font-medium">
+              "Their data showed over <mark class="b">2 million full-time equivalent workers (7.9 percent of UK employment)</mark> and over <mark class="b">£150 billion of gross value added (GVA), representing 8.9 percent of UK GVA</mark>."
+            </p>
+          </div>
+          <div class="lg:col-span-6 grid grid-cols-3 gap-3 text-center">
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xl sm:text-2xl font-extrabold mono-font text-indigo-600 dark:text-indigo-400">2 million+</div>
+              <div class="text-xs font-bold mt-1">FTE workers (7.9% UK jobs)</div>
+            </div>
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xl sm:text-2xl font-extrabold mono-font text-emerald-600 dark:text-emerald-400">£150bn+</div>
+              <div class="text-xs font-bold mt-1">GVA (8.9% of UK GVA)</div>
+            </div>
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xl sm:text-2xl font-extrabold mono-font text-amber-600 dark:text-amber-400">2019</div>
+              <div class="text-xs font-bold mt-1">report cited by the book</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 19: PBOs -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t" style="border-color: var(--border-line);">
+          <div class="callout-quote text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 19: Project-Based Organisations (PBOs)</strong>
+            <p class="italic font-medium">
+              "Whole sectors of industry are <mark class="u">project-based organisations (PBOs)</mark>, including much of the <mark class="g">engineering and construction sectors, consultancy, many public-sector bodies and much of the IT industry</mark>."
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 19)</strong>
+            In these organisations, successful project delivery is central to how value is created. <mark class="p">A project failure can affect revenue, clients, reputation and the organisation's ability to continue operating.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 20: iPhone Coordinated Work -->
+        <div class="pt-3 border-t space-y-3" style="border-color: var(--border-line);">
+          <h4 class="text-base font-bold">Slide 20: The iPhone example — 5 coordinated projects with a common goal</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Hardware</strong>
+              Development of the hardware – from electronics to the 'look and feel' of the product.
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">2. Software</strong>
+              Development of the software – the user interface, and the firmware.
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">3. Production</strong>
+              Production set-up – tooling up to produce prototypes to final product and upgrades.
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">4. Ecosystem</strong>
+              Apps, music, films, a network of content creators – all of these add value.
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-amber-700 dark:text-amber-400 block mb-1">5. Marketing</strong>
+              From identification of market needs to promotion of the product.
+            </div>
+          </div>
+          <p class="text-xs italic" style="color: var(--ink-muted);">
+            <strong>Teaching Note (Slide 20):</strong> The commercial result depends on <mark class="g">their combination, suppliers and wider technological change</mark>.
+          </p>
+        </div>
+      </div>
+
+      <!-- SLIDE 21, SLIDE 22 (FIGURE 1.3) & SLIDE 23 -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 21</span>
+            <span class="slide-badge">Slide 22 • Figure 1.3</span>
+            <span class="slide-badge">Slide 23</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Accidental vs. Choice Profession, Matrix Structure &amp; General vs. Project Management</span>
+        </div>
+
+        <!-- Slide 21 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">Accidental profession (Slide 21)</strong>
+            <em>"I still really want to be an engineer – it's the technology that I find really interesting."</em>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">Profession of choice (Slide 21)</strong>
+            <em>"I did my first PM professional qualification and then joined the programme management office. After a short time as a planner, I moved into project management."</em>
+          </div>
+          <div class="callout-teach text-xs flex flex-col justify-center">
+            <strong>🎓 Teaching Note (Slide 21):</strong> <mark class="p">Being strong in a technical subject does not automatically prepare someone to coordinate a project.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 22 (Figure 1.3) & Slide 23 Comparison Table -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center pt-3 border-t" style="border-color: var(--border-line);">
+          <!-- Figure 1.3 SVG -->
+          <div class="lg:col-span-6 space-y-3">
+            <h3 class="text-lg font-bold">Slide 22: Working across functional boundaries (Figure 1.3)</h3>
+            <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 270" class="w-full min-w-[440px]" aria-label="Figure 1.3 Project organisational structure">
+                <!-- Board of directors -->
+                <rect x="175" y="10" width="170" height="34" rx="3" fill="#d9f99d" stroke="#15803d" stroke-width="1.8"/>
+                <text x="260" y="32" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Board of directors</text>
+
+                <!-- Tree lines to 6 functional managers -->
+                <path d="M260,44 L260,64 M110,64 L410,64 M110,64 L110,76 M170,64 L170,76 M230,64 L230,76 M290,64 L290,76 M350,64 L350,76 M410,64 L410,76" stroke="#334155" stroke-width="1.6" fill="none"/>
+
+                <text x="48" y="68" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor">Line/functional</text>
+                <text x="48" y="83" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor">managers</text>
+
+                <!-- Horizontal Project Manager Bar cutting across functions -->
+                <rect x="75" y="182" width="375" height="32" fill="#fef3c7" stroke="#b45309" stroke-width="1.8"/>
+                <text x="492" y="195" text-anchor="middle" font-size="12.5" font-weight="800" fill="currentColor">Project</text>
+                <text x="492" y="210" text-anchor="middle" font-size="12.5" font-weight="800" fill="currentColor">manager</text>
+
+                <!-- 6 Functional Columns -->
+                <!-- 1. Marketing -->
+                <rect x="101" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="110" y1="92" x2="110" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="96" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="114" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 114 177)">Marketing</text>
+
+                <!-- 2. Quality -->
+                <rect x="161" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="170" y1="92" x2="170" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="156" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="174" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 174 177)">Quality</text>
+
+                <!-- 3. Finance -->
+                <rect x="221" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="230" y1="92" x2="230" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="216" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="234" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 234 177)">Finance</text>
+
+                <!-- 4. Operations -->
+                <rect x="281" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="290" y1="92" x2="290" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="276" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="294" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 294 177)">Operations</text>
+
+                <!-- 5. Human resources -->
+                <rect x="341" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="350" y1="92" x2="350" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="336" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="354" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 354 177)">Human resources</text>
+
+                <!-- 6. Purchasing -->
+                <rect x="401" y="76" width="18" height="16" fill="#d9f99d" stroke="#15803d" stroke-width="1.5"/>
+                <line x1="410" y1="92" x2="410" y2="102" stroke="#334155" stroke-width="1.5"/>
+                <rect x="396" y="102" width="28" height="150" fill="#d9f99d" stroke="#15803d" stroke-width="1.6"/>
+                <text x="414" y="177" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a" transform="rotate(-90 414 177)">Purchasing</text>
+              </svg>
+            </div>
+            <div class="callout-read text-xs">
+              <strong>🔍 How to Read It (Slide 22):</strong> Vertical reporting lines connect staff to functional managers. <mark class="u">Project work brings people from different functions together.</mark> The project manager must coordinate their contributions <mark class="p">even when authority is shared or unclear</mark>.
+            </div>
+          </div>
+
+          <!-- Slide 23 Table -->
+          <div class="lg:col-span-6 space-y-3">
+            <h3 class="text-lg font-bold">Slide 23: General management vs. project management</h3>
+            <div class="overflow-x-auto">
+              <table class="study-table text-xs">
+                <thead>
+                  <tr>
+                    <th>General management</th>
+                    <th>Project management</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Responsible for <mark class="b">managing the current situation</mark></td>
+                    <td>Responsible for <mark class="g">overseeing change</mark></td>
+                  </tr>
+                  <tr>
+                    <td>Authority <mark class="b">defined by management structure</mark></td>
+                    <td>Lines of authority <mark class="p">'fuzzy'</mark></td>
+                  </tr>
+                  <tr>
+                    <td><mark class="b">Consistent</mark> set of tasks</td>
+                    <td><mark class="y">Ever-changing</mark> set of tasks</td>
+                  </tr>
+                  <tr>
+                    <td>Responsibility <mark class="b">limited to their own function</mark></td>
+                    <td>Responsibility for <mark class="u">cross-functional activities</mark></td>
+                  </tr>
+                  <tr>
+                    <td>Main task is <mark class="b">optimisation</mark></td>
+                    <td>Main task is the <mark class="p">resolution of conflict</mark></td>
+                  </tr>
+                  <tr>
+                    <td><mark class="b">Limited</mark> set of variables</td>
+                    <td>Contains <mark class="p">intrinsic uncertainties</mark></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="text-xs italic" style="color: var(--ink-muted);">
+              <strong>Teaching Note (Slide 23):</strong> Many managers perform both roles.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 24 (FIGURE 1.4), SLIDE 25, SLIDE 26 & SLIDE 27 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 24: FIGURE 1.4 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 24 • Figure 1.4</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Innovation &amp; maintenance overlap</span>
+            </div>
+            <h3 class="text-lg font-bold">Innovation and maintenance overlap (Figure 1.4)</h3>
+
+            <div class="p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 420 220" class="w-full max-w-sm" aria-label="Figure 1.4 Innovation and maintenance activities">
+                <text x="210" y="18" text-anchor="middle" font-size="13.5" font-weight="800" fill="currentColor">Role</text>
+                <rect x="115" y="25" width="190" height="175" fill="#bae6fd" stroke="#0f172a" stroke-width="2"/>
+                <line x1="115" y1="55" x2="305" y2="55" stroke="#0f172a" stroke-width="1.5"/>
+                <line x1="115" y1="170" x2="305" y2="170" stroke="#0f172a" stroke-width="1.5"/>
+
+                <text x="210" y="45" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Innovation</text>
+                <text x="210" y="190" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">Maintenance</text>
+
+                <!-- Left & Right Labels -->
+                <text x="60" y="128" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Line</text>
+                <text x="60" y="144" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">management</text>
+
+                <text x="362" y="102" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Project</text>
+                <text x="362" y="118" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">management</text>
+
+                <!-- Diagonal Line A-B shifting downwards -->
+                <line x1="115" y1="82" x2="305" y2="142" stroke="#0369a1" stroke-width="2.5"/>
+                <text x="103" y="86" text-anchor="end" font-size="13" font-weight="800" fill="currentColor">A</text>
+                <text x="315" y="146" text-anchor="start" font-size="13" font-weight="800" fill="currentColor">B</text>
+
+                <!-- Downward shift arrows -->
+                <line x1="145" y1="92" x2="145" y2="128" stroke="#0f172a" stroke-width="1.8" marker-end="url(#axArr12)"/>
+                <line x1="255" y1="126" x2="255" y2="162" stroke="#0f172a" stroke-width="1.8" marker-end="url(#axArr12)"/>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 24)</strong>
+            The book describes <mark class="b">line AB moving downwards</mark>: <mark class="u">line managers do more innovation alongside maintaining current operations</mark>. This helps explain why project skills matter even without a "project manager" job title.
+          </div>
+        </div>
+
+        <!-- SLIDES 25, 26 & 27 -->
+        <div class="lg:col-span-6 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="slide-badge">Slide 25</span>
+                <span class="slide-badge">Slide 26</span>
+                <span class="slide-badge">Slide 27</span>
+              </div>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Career Paths &amp; Everyday Work</span>
+            </div>
+
+            <h3 class="text-lg font-bold">Slide 25: Four related career paths</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs">
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block">01. Project manager</strong>
+                Delivery of one project.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-600 dark:text-emerald-400 block">02. Programme manager</strong>
+                Coordination of related work for combined benefits.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-600 dark:text-sky-400 block">03. Project / Programme support office (PMO) manager</strong>
+                Organisational support, governance &amp; learning.
+              </div>
+              <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-purple-600 dark:text-purple-400 block">04. Portfolio manager</strong>
+                Strategic oversight &amp; selection of a collection of projects.
+              </div>
+            </div>
+
+            <!-- Slides 26 & 27 -->
+            <div class="pt-3 border-t space-y-2 text-xs" style="border-color: var(--border-line);">
+              <h4 class="font-bold text-sm">Slides 26 &amp; 27: Locate your own project work &amp; Debrief</h4>
+              <div class="callout-quote">
+                "Their line responsibilities (finance, marketing, design) involve them in a <mark class="y">variety of day-to-day activities plus longer-term projects</mark>."
+              </div>
+              <p>
+                <strong>Debrief Example (Slide 27):</strong> Regularly running student society meetings is <mark class="b">ongoing work (operations)</mark>; launching a new conference is a <mark class="g">project</mark>. <mark class="p">Both may compete for the same people and time.</mark>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: HISTORY, FIVE GENERATIONS & PERSISTENT TRAPS (SLIDES 28–35)
+    ====================================================================== -->
+    <section id="sec5" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">5</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">History, Five Generations &amp; Persistent Traps</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 28–35 • Learning from History, 5 Generations (1950s–2020s), Project Integrators, Diversity of Settings, 3 Structure Traps, Qualifications &amp; Project X Research</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 28 & SLIDE 29 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 28</span>
+            <span class="slide-badge">Slide 29</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Historical Perspective &amp; The 5 Generations of PM</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 28: Why Look at the History?</strong>
+            <p class="italic font-medium">
+              "History should provide us with lessons that we can draw upon to improve our management of the present and the future... <mark class="y">Projects are rarely totally unique and should avoid repeating the mistakes of the past.</mark>"
+            </p>
+          </div>
+          <div class="callout-trap text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note (Slide 28 – Survivor Bias)</strong>
+            The chapter cautions against simple comparisons with ancient projects: <mark class="p">resources, timescales and expectations differed, and successful survivors are easier to see than failures</mark>. History should support <strong>learning, not imitation</strong>.
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold pt-2">Slide 29: Five generations of project management</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs">
+          <div class="p-3.5 rounded-xl border-t-4 border-slate-500" style="background-color: var(--bg-subtle);">
+            <div class="mono-font font-extrabold text-slate-600 dark:text-slate-300">1950s–1980s</div>
+            <div class="font-extrabold text-sm my-1">First generation</div>
+            <p><mark class="b">Planning tools and large engineering projects</mark></p>
+          </div>
+          <div class="p-3.5 rounded-xl border-t-4 border-sky-500" style="background-color: var(--bg-subtle);">
+            <div class="mono-font font-extrabold text-sky-700 dark:text-sky-300">1990s</div>
+            <div class="font-extrabold text-sm my-1">Second generation</div>
+            <p><mark class="b">Standards and wider professional recognition</mark></p>
+          </div>
+          <div class="p-3.5 rounded-xl border-t-4 border-emerald-500" style="background-color: var(--bg-subtle);">
+            <div class="mono-font font-extrabold text-emerald-700 dark:text-emerald-300">2000s</div>
+            <div class="font-extrabold text-sm my-1">Third generation</div>
+            <p><mark class="g">Strategy, integration, lean and agile approaches</mark></p>
+          </div>
+          <div class="p-3.5 rounded-xl border-t-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+            <div class="mono-font font-extrabold text-indigo-700 dark:text-indigo-300">2010s</div>
+            <div class="font-extrabold text-sm my-1">Fourth generation</div>
+            <p><mark class="u">Approaches shaped by context and new work modes</mark></p>
+          </div>
+          <div class="p-3.5 rounded-xl border-t-4 border-rose-500" style="background-color: var(--bg-subtle);">
+            <div class="mono-font font-extrabold text-rose-700 dark:text-rose-300">2020s</div>
+            <div class="font-extrabold text-sm my-1">Fifth generation</div>
+            <p><mark class="y">Combining approaches, complexity, leadership and AI</mark></p>
+          </div>
+        </div>
+        <p class="text-xs italic" style="color: var(--ink-muted);">
+          <strong>Teaching Note (Slide 29):</strong> These are <mark class="y">overlapping developments, not five mutually exclusive methods</mark> from which to choose one.
+        </p>
+      </div>
+
+      <!-- SLIDES 30, 31 & 32: INTEGRATORS, CONTEXT & THREE PERSISTENT TRAPS -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 30</span>
+            <span class="slide-badge">Slide 31</span>
+            <span class="slide-badge">Slide 32</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Project Integrators, Context Fit &amp; The 3 Structure Traps</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 30: Project Managers as Integrators</strong>
+            <p class="italic font-medium">
+              "In this new approach, <mark class="u">project managers became project integrators</mark>, responsible for <mark class="y">integrating the required resources, knowledge and processes from the project's beginning to end</mark>."
+            </p>
+          </div>
+          <div class="callout-quote text-xs sm:text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Slide 31: No Single Approach Fits Every Setting</strong>
+            <p class="italic font-medium">
+              "<mark class="y">One single approach to managing projects is never going to fit with this diversity of settings</mark> in which work is carried out." (Uncertainty, outsourcing, virtual teams, limited direct authority).
+            </p>
+          </div>
+        </div>
+
+        <!-- Slide 32: Three Persistent Traps -->
+        <h3 class="text-xl font-bold pt-2">Slide 32: Persistent traps — too little or too much structure</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border-2 border-rose-500/70" style="background-color: var(--trap-bg);">
+            <div class="font-extrabold text-base text-rose-700 dark:text-rose-300 mb-1">1. "Ready, fire, aim."</div>
+            <p>A project is <mark class="p">started with no clear objectives</mark> (no shared direction).</p>
+          </div>
+          <div class="p-4 rounded-xl border-2 border-amber-500/70" style="background-color: var(--quote-bg);">
+            <div class="font-extrabold text-base text-amber-800 dark:text-amber-300 mb-1">2. "It's all in my head."</div>
+            <p>The project manager sets out with <mark class="p">all the information in their head</mark> (dangerous dependence on one person).</p>
+          </div>
+          <div class="p-4 rounded-xl border-2 border-rose-500/70" style="background-color: var(--trap-bg);">
+            <div class="font-extrabold text-base text-rose-700 dark:text-rose-300 mb-1">3. "Project management – we have a procedure for that."</div>
+            <p><mark class="p">Decision making can be very slow and the overhead costs associated with such systems significant</mark> (excessive bureaucracy).</p>
+          </div>
+        </div>
+        <div class="callout-teach text-xs">
+          <strong>🎓 Teaching Note (Slide 32):</strong> <mark class="y">Adapt the level of formalisation to the project.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDES 33, 34 & 35 -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="note-card p-5 space-y-3 flex flex-col justify-between">
+          <div>
+            <span class="slide-badge mb-2">Slide 33 • Qualifications</span>
+            <h4 class="font-bold text-base">Knowing a method ≠ applying it</h4>
+            <div class="callout-quote text-xs mt-2">
+              "Such courses are valuable as first steps on the way to becoming a professional project manager... <mark class="y">however, they are only a starting point</mark>."
+            </div>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);">Separates acquiring knowledge from applying it well in context.</p>
+        </div>
+
+        <div class="note-card p-5 space-y-3 flex flex-col justify-between">
+          <div>
+            <span class="slide-badge mb-2">Slide 34 • Research &amp; Project X</span>
+            <h4 class="font-bold text-base">Research improves practice</h4>
+            <div class="callout-quote text-xs mt-2">
+              "It offers insight into, and explanations of, processes and outcomes. Additionally, it <mark class="g">helps practitioners conceptualise their work differently, and think more critically</mark>."
+            </div>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);"><strong>Project X</strong> (p. 18) studies value, practices, data, assurance, capability and transformation.</p>
+        </div>
+
+        <div class="note-card p-5 space-y-3 flex flex-col justify-between" style="border-top: 4px solid #e11d48;">
+          <div>
+            <span class="slide-badge mb-2">Slide 35 • Concept Check</span>
+            <h4 class="font-bold text-base">Check: Adapt without losing direction</h4>
+            <p class="text-xs mt-1"><strong>Prompt:</strong> <em>"Requirements will emerge, so we do not need objectives or a shared plan."</em> Sound conclusion?</p>
+          </div>
+          <div class="callout-trap text-xs">
+            <strong>Suggested Response:</strong> <mark class="p">No!</mark> An <mark class="y">initial mission and desired benefits can guide action while detailed requirements develop</mark>. Revisit plans as evidence changes.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: CASE WORKSHOP — FOUR DIFFERENT MANAGERS (SLIDES 36–43)
+    ====================================================================== -->
+    <section id="sec6" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">6</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Case Workshop: Four Different Managers</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 36–43 • Housing Development, Total Quality Management (TQM), Financial IT Systems &amp; Government Trade Portfolio</p>
+        </div>
+      </div>
+
+      <!-- SLIDES 36–40: THE FOUR CASES -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- CASE 1 (SLIDE 37) -->
+        <div class="note-card p-6 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 37 • Case 1</span>
+              <span class="text-xs font-bold text-indigo-600 dark:text-indigo-400">Site / Project Manager</span>
+            </div>
+            <h3 class="text-lg font-bold">Case 1: Housing development</h3>
+            <div class="callout-quote text-xs">
+              "Most of the work is <mark class="b">supervisory, ensuring that orders are placed and materials arrive on time, people turn up, do the job properly and get paid</mark> for it at the end of the week. There are always <mark class="p">arguments between the various tradespeople to resolve</mark> and problems just get dumped on the desk."
+            </div>
+          </div>
+          <div class="callout-teach text-xs">
+            <strong>🎓 Context:</strong> Takes buildings from drawings and schedules to handover. Focuses on <mark class="b">materials, tradespeople, quality and daily problems</mark>.
+          </div>
+        </div>
+
+        <!-- CASE 2 (SLIDE 38) -->
+        <div class="note-card p-6 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 38 • Case 2</span>
+              <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400">Change Leader → Sponsor</span>
+            </div>
+            <h3 class="text-lg font-bold">Case 2: Introducing Total Quality Management (TQM)</h3>
+            <div class="callout-quote text-xs">
+              "The complexity came because the project would hopefully <mark class="y">change the way that everyone in the company thought and worked [i.e. both attitude and procedures]</mark>. This would have to be done through <mark class="g">consultation, training and the demonstration through piloting small-scale improvement activities</mark>, that the move towards TQ was worthwhile."
+            </div>
+          </div>
+          <div class="callout-teach text-xs">
+            <strong>🎓 Context:</strong> Quality Director begins with an audit, uses training and pilots, then cascades learning and develops into <mark class="u">sponsoring improvement subprojects</mark>.
+          </div>
+        </div>
+
+        <!-- CASE 3 (SLIDE 39) -->
+        <div class="note-card p-6 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 39 • Case 3</span>
+              <span class="text-xs font-bold text-sky-600 dark:text-sky-400">Programme Manager</span>
+            </div>
+            <h3 class="text-lg font-bold">Case 3: Financial management systems</h3>
+            <div class="callout-quote text-xs">
+              "This was a manager responsible for a <mark class="b">large-scale IT change</mark>. She was in charge of a <mark class="u">multi-year piece of work with numerous interlinked IT projects</mark> that needed to be completed to bring about an <mark class="g">update and consolidation of her organisation's (rather old and previously fragmented) IT systems</mark>."
+            </div>
+          </div>
+          <div class="callout-teach text-xs">
+            <strong>🎓 Context:</strong> Includes system design, network upgrades, support, training, monitoring and security. Must coordinate internal teams, suppliers and users.
+          </div>
+        </div>
+
+        <!-- CASE 4 (SLIDE 40) -->
+        <div class="note-card p-6 space-y-3 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 40 • Case 4</span>
+              <span class="text-xs font-bold text-purple-600 dark:text-purple-400">Portfolio Manager</span>
+            </div>
+            <h3 class="text-lg font-bold">Case 4: Government trade portfolio</h3>
+            <div class="callout-quote text-xs">
+              "The <mark class="p">commitment to a particular condition with one country may preclude a deal with another</mark>. So, while one project or negotiation in the portfolio might be important, it <mark class="y">needed to align with the others, both current and future</mark>."
+            </div>
+          </div>
+          <div class="callout-teach text-xs">
+            <strong>🎓 Context:</strong> Post-EU exit trade negotiations portfolio facing a <mark class="p">shortage of negotiators</mark> and the need to establish support capacity.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDES 36, 41, 42 & 43: COMPLETE COMPARISON TABLE OF ALL FOUR MANAGERS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 36</span>
+            <span class="slide-badge">Slide 41</span>
+            <span class="slide-badge">Slide 42</span>
+            <span class="slide-badge">Slide 43</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Complete Synthesis Table of the 4 Management Roles</span>
+        </div>
+        <h3 class="text-xl font-bold">Suggested Analysis: Comparing All Four Management Roles (Slides 42–43)</h3>
+
+        <div class="overflow-x-auto">
+          <table class="study-table text-xs sm:text-sm">
+            <thead>
+              <tr>
+                <th>Case</th>
+                <th>Possible Role Title</th>
+                <th>What Must Be Coordinated</th>
+                <th>Desirable Characteristics &amp; Case Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold">1. Housing development</td>
+                <td><mark class="u">Site / project manager</mark></td>
+                <td>Coordinate <mark class="b">trades, materials and task dependencies</mark> from drawings to handover.</td>
+                <td><mark class="g">Clear communication, practical judgement and conflict resolution.</mark> <em>Evidence:</em> late/incomplete work delays others; daily tradespeople arguments.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">2. Quality transformation (TQM)</td>
+                <td><mark class="u">Change-project leader</mark> (developing into <mark class="u">sponsor</mark>)</td>
+                <td>Coordinate <mark class="b">attitudes, procedures, training and improvement subprojects</mark>.</td>
+                <td><mark class="g">Influence and patience.</mark> <em>Evidence:</em> adoption across the company requires consultation, training and pilot demonstration.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">3. Financial management systems</td>
+                <td><mark class="u">Programme manager</mark></td>
+                <td>Coordinate <mark class="b">numerous interlinked IT projects, technical delivery, training, security and changing needs</mark>.</td>
+                <td><mark class="g">Integration, communication and patience.</mark> <em>Evidence:</em> multi-year consolidation of fragmented systems across teams, suppliers and users.</td>
+              </tr>
+              <tr>
+                <td class="font-bold">4. Government trade</td>
+                <td><mark class="u">Portfolio manager</mark></td>
+                <td>Coordinate <mark class="b">multiple negotiations, strategic commitments and scarce negotiator expertise</mark>.</td>
+                <td><mark class="g">Strategic judgement and negotiation.</mark> <em>Evidence:</em> a condition agreed with one country can constrain or preclude deals with others.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 7: EXIT CHECK — EXPLAIN, DO NOT JUST NAME (SLIDE 44)
+    ====================================================================== -->
+    <section id="sec7" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">7</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Exit Check: Explain, Do Not Just Name</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slide 44 • Final Exam Self-Test &amp; Complete Suggested Answers</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-4" style="border-top: 5px solid #10b981;">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 44 • Final Review</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Three High-Yield Exam Questions</span>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">1. Why does a beginning and an end not prove that work is a project?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> Because <mark class="p">routine operational work (such as a food inspection) also starts and ends</mark>, and a multi-decade asset lifecycle (such as a ship's 60-year life) contains many separate projects and operations. You must consider the <mark class="y">nature of the task (uniqueness/novelty, temporary organisation/funding, and focused mission/change)</mark>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">2. How can a unique project still use a repeated delivery process?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> <mark class="g">Circumstances, time, team, or site location can differ while the underlying delivery methods and modules are reused and improved</mark> (as in "painting by numbers" projects like the modular 24-hour McDonald's restaurant builds).
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">3. Why might a project manager need a different approach from a line manager?</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> Because <mark class="u">temporary, cross-functional project work oversees change rather than maintaining the status quo</mark>, introducing <mark class="p">changing tasks, 'fuzzy' lines of authority, cross-departmental conflict resolution, and intrinsic uncertainties</mark>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4">
+      Complete Study Guide for <strong>Week 01 (Lesson 01): Introduction to Project Management</strong> (Slides 01–44) • Prof. Naghdali Choupani • İstanbul Aydın University • Based on Harvey Maylor &amp; Neil Turner, <em>Project Management</em> (5th Edition, 2022, Chapter 1, Pearson).
+    </div>
+  </footer>
+
+  <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var text = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          icon.textContent = "☀️";
+          text.textContent = "Light Notebook Mode";
+        } else {
+          root.removeAttribute("data-theme");
+          icon.textContent = "🌙";
+          text.textContent = "Dark Study Mode";
+        }
+      }
+
+      btn.addEventListener("click", function() {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
+    })();
+  </script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

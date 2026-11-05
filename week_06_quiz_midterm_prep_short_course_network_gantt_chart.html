@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Week 06 Quiz &amp; Midterm Prep – Short Course Network &amp; Gantt Chart (Table 6.5)</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1c1917;
+      --ink-muted: #57534e;
+      --border-line: #d6d0c4;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.30);
+
+      /* 5-Color Highlighter Marker System - Light Mode */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+
+      /* Callout backgrounds */
+      --quote-bg: #fffbeb;
+      --quote-border: #f59e0b;
+      --teach-bg: #eef2ff;
+      --teach-border: #4f46e5;
+      --read-bg: #ecfdf5;
+      --read-border: #10b981;
+      --trap-bg: #fff1f2;
+      --trap-border: #e11d48;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #121316;
+      --bg-card: #1c1e24;
+      --bg-subtle: #16181d;
+      --ink-main: #f3f4f6;
+      --ink-muted: #9ca3af;
+      --border-line: #2e323b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      /* 5-Color Highlighter Marker System - Dark Mode */
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+
+      /* Callout backgrounds */
+      --quote-bg: rgba(245, 158, 11, 0.12);
+      --quote-border: #fbbf24;
+      --teach-bg: rgba(99, 102, 241, 0.14);
+      --teach-border: #818cf8;
+      --read-bg: rgba(16, 185, 129, 0.12);
+      --read-border: #34d399;
+      --trap-bg: rgba(244, 63, 94, 0.14);
+      --trap-border: #fb7185;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 20px 20px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Highlighter Marker Styles */
+    mark.y, mark.hl-yellow {
+      background: var(--hl-yellow);
+      color: var(--hl-yellow-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.g, mark.hl-green {
+      background: var(--hl-green);
+      color: var(--hl-green-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.p, mark.hl-pink {
+      background: var(--hl-pink);
+      color: var(--hl-pink-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.b, mark.hl-blue {
+      background: var(--hl-blue);
+      color: var(--hl-blue-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.u, mark.hl-purple {
+      background: var(--hl-purple);
+      color: var(--hl-purple-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Study Note Cards & Containers */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-line);
+    }
+
+    /* Callout Boxes */
+    .callout-quote {
+      background-color: var(--quote-bg);
+      border-left: 4px solid var(--quote-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-teach {
+      background-color: var(--teach-bg);
+      border-left: 4px solid var(--teach-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-read {
+      background-color: var(--read-bg);
+      border-left: 4px solid var(--read-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-trap {
+      background-color: var(--trap-bg);
+      border-left: 4px solid var(--trap-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Study Tables */
+    .study-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .study-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.7rem 0.95rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .study-table td {
+      padding: 0.7rem 0.95rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Formula Box */
+    .formula-box {
+      font-family: 'JetBrains Mono', monospace;
+      background-color: var(--bg-subtle);
+      border: 2px dashed var(--accent-primary);
+      border-radius: 0.75rem;
+      padding: 0.85rem 1.25rem;
+      font-weight: 600;
+    }
+
+    /* Section Number Pill */
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    /* Squared Graph Paper Gantt Table */
+    .gantt-grid-table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 920px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      background-color: var(--bg-card);
+    }
+    .gantt-grid-table th,
+    .gantt-grid-table td {
+      border: 1px solid var(--border-line);
+      text-align: center;
+      padding: 0;
+      height: 30px;
+    }
+    .gantt-grid-table th.wk-head {
+      background-color: var(--bg-subtle);
+      font-weight: 700;
+      width: 21px;
+      min-width: 21px;
+      color: var(--ink-muted);
+    }
+    .gantt-grid-table td.act-label {
+      text-align: left;
+      padding: 0 10px;
+      font-weight: 800;
+      white-space: nowrap;
+      background-color: var(--bg-subtle);
+      width: 130px;
+      min-width: 130px;
+    }
+  </style>
+</head>
+<body data-lesson="week06_quiz" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- STICKY TOP STUDY BAR & NAVIGATION -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-rose-600 text-white">Quiz &amp; Midterm Prep</span>
+        <span class="font-bold text-sm sm:text-base truncate">Week 06 (Slide 39): Short Course Network &amp; Gantt Chart Master Guide</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Jump Pills -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
+        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. The Quiz Task &amp; Table 6.5</a>
+        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. Step 1: Dependencies &amp; 4 Paths</a>
+        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Step 2: Forward &amp; Reverse Math</a>
+        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. Step 3: Full 6-Number AoN Diagram</a>
+        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. Step 4: 37-Week Gantt Chart</a>
+        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. Theory &amp; Realism Questions</a>
+        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Exam-Day Checklist</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO HEADER -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #e11d48;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="slide-badge">🎯 Lesson 06 • Slides 39–44 + Class Handwritten Notes</span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          İSTANBUL AYDIN UNIVERSITY • PROJECT MANAGEMENT
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Week 06 Quiz &amp; Midterm Prep: <span class="text-transparent bg-clip-text bg-gradient-to-r from-rose-600 to-indigo-600">Develop a Short Course (Table 6.5)</span>
+      </h1>
+      <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
+        Everything you need to solve the <strong>Slide 39 Book Exercise (Table 6.5)</strong> from scratch: finding all 4 paths, filling all 10 <strong>6-number activity boxes</strong>, and drawing the <strong>37-week Gantt chart</strong> on graph paper.
+      </p>
+
+      <!-- Highlighter Color Legend Bar -->
+      <div class="p-4 rounded-xl border flex flex-wrap items-center gap-3 text-xs sm:text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <span class="font-bold uppercase tracking-wider mr-1">🖍️ Study Highlighter Key:</span>
+        <span><mark class="y">Core Rules &amp; Merge/Burst Logic</mark></span>
+        <span><mark class="g">Publicity vs. Teaching Branches</mark></span>
+        <span><mark class="b">Formulas &amp; Week Calculations</mark></span>
+        <span><mark class="p">Critical Path (37 Wks) &amp; Exam Traps</mark></span>
+        <span><mark class="u">Gantt Chart Drawing Instructions</mark></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- =====================================================================
+         SECTION 1: WHAT IS ON THE QUIZ & INPUT DATA (TABLE 6.5 – SLIDES 39–40)
+    ====================================================================== -->
+    <section id="sec1" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">1</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">The Quiz Task &amp; Input Data (Table 6.5)</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Lesson 06 Slides 39–40 &amp; Class Handout Page 1 • What You Will Be Given &amp; What You Must Produce</p>
+        </div>
+      </div>
+
+      <!-- What You Must Do in the Quiz -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Quiz / Midterm Format</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Based on Slide 39 &amp; Class Handout</span>
+        </div>
+        <h3 class="text-xl font-bold">What you are given vs. the 4 things you must write/draw</h3>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400 mb-1">Task 1</div>
+            <div class="font-extrabold text-base mb-1">List the 4 Paths</div>
+            <p>Sketch the precedence arrows from <code>Start</code> to <code>Finish</code>, sum the weeks along <mark class="b">all 4 paths</mark>, and identify the <mark class="p">37-week Critical Path</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400 mb-1">Task 2</div>
+            <div class="font-extrabold text-base mb-1">6-Number Activity Boxes</div>
+            <p>Draw the 10 Activity-on-Node boxes (<code>A</code> to <code>K</code>) and compute <mark class="b">EST, Dur, EFT</mark> (top row) and <mark class="u">LST, Float, LFT</mark> (bottom row).</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400 mb-1">Task 3</div>
+            <div class="font-extrabold text-base mb-1">Draw the Gantt Chart</div>
+            <p>Plot horizontal time bars for activities <code>A</code> through <code>K</code> across a <mark class="u">37-week horizontal timeline</mark> from <code>START</code> (Week 0) to <code>END</code> (Week 37).</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400 mb-1">Task 4</div>
+            <div class="font-extrabold text-base mb-1">Realism &amp; Float Check</div>
+            <p>Explain why <mark class="p">float is shared</mark> along a branch and state the 3 factors (<mark class="y">Capacity, Calendar, Uncertainty</mark>) that affect whether Week 37 is realistic.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 39 (TABLE 6.5) & SLIDE 40 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 39 • Table 6.5</span>
+            <span class="slide-badge">Slide 40 • Branches</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Book exercise: develop a short course</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Table 6.5: Project activities, precedence and duration</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
+          <div class="lg:col-span-7 overflow-x-auto">
+            <table class="study-table">
+              <thead>
+                <tr>
+                  <th>Activity</th>
+                  <th>Description</th>
+                  <th>Duration (weeks)</th>
+                  <th>Preceding activity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-extrabold mono-font"><mark class="p">A</mark></td>
+                  <td>Design course overview and publicity</td>
+                  <td class="mono-font font-bold">4</td>
+                  <td class="mono-font">–</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">B</td>
+                  <td>Identify potential staff to teach on course</td>
+                  <td class="mono-font font-bold">2</td>
+                  <td class="mono-font">–</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">C</td>
+                  <td>Construct detailed syllabus</td>
+                  <td class="mono-font font-bold">6</td>
+                  <td class="mono-font">–</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font"><mark class="p">D</mark></td>
+                  <td>Send out publicity and application forms</td>
+                  <td class="mono-font font-bold">10</td>
+                  <td class="mono-font font-bold">A</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">E</td>
+                  <td>Confirm staff availability</td>
+                  <td class="mono-font font-bold">2</td>
+                  <td class="mono-font font-bold">B</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">F</td>
+                  <td>Select staff to teach on course</td>
+                  <td class="mono-font font-bold">1</td>
+                  <td class="mono-font font-bold"><mark class="y">C, E</mark></td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font"><mark class="p">G</mark></td>
+                  <td>Acknowledge student applications</td>
+                  <td class="mono-font font-bold">3</td>
+                  <td class="mono-font font-bold">D</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">H</td>
+                  <td>Identify course written material</td>
+                  <td class="mono-font font-bold">2</td>
+                  <td class="mono-font font-bold">F</td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font"><mark class="p">J</mark></td>
+                  <td>Preparation of teaching material</td>
+                  <td class="mono-font font-bold">20</td>
+                  <td class="mono-font font-bold"><mark class="y">G, H</mark></td>
+                </tr>
+                <tr>
+                  <td class="font-extrabold mono-font">K</td>
+                  <td>Prepare room for the course</td>
+                  <td class="mono-font font-bold">1</td>
+                  <td class="mono-font font-bold">G</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="lg:col-span-5 space-y-4">
+            <div class="callout-read text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 39)</strong>
+              Use the book's <strong>ten activities</strong>: <code>A, B, C, D, E, F, G, H, J</code> and <code>K</code> (<mark class="p">there is no I!</mark> Do not accidentally invent an activity I). Durations are in <strong>weeks</strong>. Draw arrows from every listed predecessor before calculating earliest and latest times.
+            </div>
+
+            <div class="p-4 rounded-xl border space-y-3 text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="font-extrabold uppercase text-xs tracking-wider text-indigo-600 dark:text-indigo-400">Slide 40: Map the Course-Development Branches</div>
+              <p>• <strong>Publicity branch:</strong> <mark class="g">A (4) → D (10) → G (3) → J (20)</mark>; <code>G</code> also leads to <mark class="g">K (1)</mark>.</p>
+              <p>• <strong>Teaching branch:</strong> <mark class="b">B (2) → E (2)</mark>; <mark class="b">C (6)</mark>; both <code>E</code> and <code>C</code> precede <mark class="b">F (1) → H (2) → J (20)</mark>.</p>
+              <p>• <strong>Finish rule:</strong> The project finishes when <mark class="y">both terminal activities J and K are complete</mark>.</p>
+              <p class="text-xs pt-2 border-t font-medium" style="border-color: var(--border-line);">
+                ⚠️ <strong>Crucial Rule:</strong> Drawing <mark class="p">both arrows into F (from C and E)</mark> and <mark class="p">both arrows into J (from G and H)</mark> is essential!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: STEP 1 – SIMPLE DEPENDENCY DIAGRAM & THE 4 PATHS (HANDWRITTEN PAGE 2 TOP)
+    ====================================================================== -->
+    <section id="sec2" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">2</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Step 1: Simple Dependency Diagram &amp; All 4 Paths</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">From Class Handwritten Notes (Page 2 Top) • Draw the Quick Topology &amp; Sum Every Path from Start to Finish</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="slide-badge">Handwritten Notes • Page 2 (Top)</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Quick Topology Sketch + Path Enumeration</span>
+        </div>
+
+        <h3 class="text-xl font-bold">First sketch the simple dependencies (Start → Finish) and add up all 4 paths</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Custom SVG reproducing the top-left handwritten dependency sketch -->
+          <div class="lg:col-span-7 p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--ink-muted);">
+              Simple Dependency Sketch (Activity Letter + Duration in Weeks)
+            </div>
+            <svg viewBox="0 0 640 270" class="w-full min-w-[520px]" aria-label="Simple dependency diagram">
+              <defs>
+                <marker id="depArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#475569"/>
+                </marker>
+                <marker id="critDepArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                  <path d="M0,0 L7,3.5 L0,7 Z" fill="#e11d48"/>
+                </marker>
+              </defs>
+
+              <!-- Start Node -->
+              <rect x="12" y="112" width="64" height="36" rx="18" fill="#e2e8f0" stroke="#334155" stroke-width="2"/>
+              <text x="44" y="135" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">Start</text>
+
+              <!-- Start -> A, B, C -->
+              <line x1="76" y1="122" x2="122" y2="52" stroke="#e11d48" stroke-width="2.5" marker-end="url(#critDepArr)"/>
+              <line x1="76" y1="130" x2="122" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+              <line x1="76" y1="138" x2="122" y2="210" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+
+              <!-- Col 1: A(4), B(2), C(6) -->
+              <circle cx="148" cy="45" r="24" fill="#ffe4e6" stroke="#e11d48" stroke-width="2.5"/>
+              <text x="148" y="43" text-anchor="middle" font-size="13" font-weight="800" fill="#881337">A</text>
+              <text x="148" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">4 wks</text>
+
+              <circle cx="148" cy="130" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+              <text x="148" y="128" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">B</text>
+              <text x="148" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">2 wks</text>
+
+              <circle cx="148" cy="215" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+              <text x="148" y="213" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">C</text>
+              <text x="148" y="228" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">6 wks</text>
+
+              <!-- Col 1 -> Col 2 -->
+              <line x1="172" y1="45" x2="232" y2="45" stroke="#e11d48" stroke-width="2.5" marker-end="url(#critDepArr)"/>
+              <line x1="172" y1="130" x2="232" y2="130" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+              <!-- C goes to F -->
+              <line x1="172" y1="215" x2="342" y2="182" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+
+              <!-- Col 2: D(10), E(2) -->
+              <circle cx="260" cy="45" r="24" fill="#ffe4e6" stroke="#e11d48" stroke-width="2.5"/>
+              <text x="260" y="43" text-anchor="middle" font-size="13" font-weight="800" fill="#881337">D</text>
+              <text x="260" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">10 wks</text>
+
+              <circle cx="260" cy="130" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+              <text x="260" y="128" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">E</text>
+              <text x="260" y="143" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">2 wks</text>
+
+              <!-- Col 2 -> Col 3 -->
+              <line x1="284" y1="45" x2="342" y2="45" stroke="#e11d48" stroke-width="2.5" marker-end="url(#critDepArr)"/>
+              <line x1="284" y1="138" x2="342" y2="164" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+
+              <!-- Col 3: G(3), F(1) -->
+              <circle cx="370" cy="45" r="24" fill="#ffe4e6" stroke="#e11d48" stroke-width="2.5"/>
+              <text x="370" y="43" text-anchor="middle" font-size="13" font-weight="800" fill="#881337">G</text>
+              <text x="370" y="58" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">3 wks</text>
+
+              <circle cx="370" cy="172" r="24" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+              <text x="370" y="170" text-anchor="middle" font-size="13" font-weight="800" fill="#0f172a">F</text>
+              <text x="370" y="185" text-anchor="middle" font-size="11" font-weight="700" fill="#78350f">1 wk</text>
+
+              <!-- Col 3 -> Col 4 -->
+              <!-- G -> K (top) and G -> J (middle) -->
+              <line x1="394" y1="38" x2="458" y2="30" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+              <line x1="392" y1="56" x2="460" y2="100" stroke="#e11d48" stroke-width="2.5" marker-end="url(#critDepArr)"/>
+              <!-- F -> H -->
+              <line x1="394" y1="172" x2="458" y2="172" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+
+              <!-- Col 4: K(1), J(20), H(2) -->
+              <circle cx="486" cy="28" r="22" fill="#dcfce7" stroke="#15803d" stroke-width="2"/>
+              <text x="486" y="26" text-anchor="middle" font-size="12.5" font-weight="800" fill="#14532d">K</text>
+              <text x="486" y="40" text-anchor="middle" font-size="10.5" font-weight="700" fill="#14532d">1 wk</text>
+
+              <circle cx="486" cy="108" r="26" fill="#ffe4e6" stroke="#e11d48" stroke-width="2.5"/>
+              <text x="486" y="106" text-anchor="middle" font-size="13.5" font-weight="800" fill="#881337">J</text>
+              <text x="486" y="121" text-anchor="middle" font-size="11" font-weight="700" fill="#be123c">20 wks</text>
+
+              <circle cx="486" cy="182" r="22" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+              <text x="486" y="180" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">H</text>
+              <text x="486" y="194" text-anchor="middle" font-size="10.5" font-weight="700" fill="#78350f">2 wks</text>
+
+              <!-- H -> J (upward arrow) -->
+              <line x1="486" y1="160" x2="486" y2="138" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+
+              <!-- K & J -> Finish -->
+              <line x1="508" y1="32" x2="564" y2="62" stroke="#475569" stroke-width="2" marker-end="url(#depArr)"/>
+              <line x1="512" y1="102" x2="564" y2="82" stroke="#e11d48" stroke-width="2.5" marker-end="url(#critDepArr)"/>
+
+              <!-- Finish Node -->
+              <rect x="568" y="54" width="62" height="36" rx="18" fill="#ffe4e6" stroke="#e11d48" stroke-width="2.2"/>
+              <text x="599" y="77" text-anchor="middle" font-size="12.5" font-weight="800" fill="#881337">Finish</text>
+            </svg>
+          </div>
+
+          <!-- All 4 Paths Listed Exactly Like Handwritten Page 2 Top-Right -->
+          <div class="lg:col-span-5 space-y-3">
+            <div class="text-xs font-bold uppercase tracking-wider" style="color: var(--ink-muted);">
+              All 4 Paths from Start to Finish (Write This Table on Your Quiz!)
+            </div>
+
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="flex items-center justify-between">
+                <span class="mono-font font-bold text-sm">1. A → D → G → K</span>
+                <span class="mono-font font-extrabold text-sm px-2.5 py-0.5 rounded bg-emerald-100 text-emerald-900">18 weeks</span>
+              </div>
+              <p class="text-xs mt-1 mono-font" style="color: var(--ink-muted);">4 + 10 + 3 + 1 = 18 weeks (Room prep terminal branch)</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border-2 border-rose-500" style="background-color: var(--trap-bg);">
+              <div class="flex items-center justify-between">
+                <span class="mono-font font-extrabold text-sm text-rose-700 dark:text-rose-300">2. A → D → G → J</span>
+                <span class="mono-font font-extrabold text-sm px-2.5 py-0.5 rounded bg-rose-600 text-white">37 weeks ★ CRITICAL PATH</span>
+              </div>
+              <p class="text-xs mt-1 mono-font font-semibold">4 + 10 + 3 + 20 = <mark class="p">37 weeks (Longest Path = Critical Path)</mark></p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="flex items-center justify-between">
+                <span class="mono-font font-bold text-sm">3. B → E → F → H → J</span>
+                <span class="mono-font font-extrabold text-sm px-2.5 py-0.5 rounded bg-sky-100 text-sky-900">27 weeks</span>
+              </div>
+              <p class="text-xs mt-1 mono-font" style="color: var(--ink-muted);">2 + 2 + 1 + 2 + 20 = 27 weeks (Staff availability branch)</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="flex items-center justify-between">
+                <span class="mono-font font-bold text-sm">4. C → F → H → J</span>
+                <span class="mono-font font-extrabold text-sm px-2.5 py-0.5 rounded bg-amber-100 text-amber-900">29 weeks</span>
+              </div>
+              <p class="text-xs mt-1 mono-font" style="color: var(--ink-muted);">6 + 1 + 2 + 20 = 29 weeks (Syllabus branch)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: STEP 2 – FORWARD PASS & REVERSE PASS STEP-BY-STEP MATH (SLIDES 41–43)
+    ====================================================================== -->
+    <section id="sec3" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">3</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Step 2: Forward Pass &amp; Reverse Pass Step-by-Step Math</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 41–43 • How Every Single Number Inside the 10 Activity Boxes Is Calculated</p>
+        </div>
+      </div>
+
+      <!-- 6-Number Activity Box Key -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="slide-badge">6-Number Box Notation (Fig 6.10)</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Memorize This Box Layout Before the Quiz</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <div class="lg:col-span-5 p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <svg viewBox="0 0 380 155" class="w-full max-w-sm" aria-label="Activity box 6-number layout">
+              <rect x="75" y="25" width="230" height="105" rx="6" fill="#fde68a" stroke="#334155" stroke-width="2.5"/>
+              <line x1="75" y1="60" x2="305" y2="60" stroke="#334155" stroke-width="2"/>
+              <line x1="75" y1="95" x2="305" y2="95" stroke="#334155" stroke-width="2"/>
+              <line x1="151" y1="25" x2="151" y2="60" stroke="#334155" stroke-width="2"/>
+              <line x1="228" y1="25" x2="228" y2="60" stroke="#334155" stroke-width="2"/>
+              <line x1="151" y1="95" x2="151" y2="130" stroke="#334155" stroke-width="2"/>
+              <line x1="228" y1="95" x2="228" y2="130" stroke="#334155" stroke-width="2"/>
+
+              <text x="113" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">EST</text>
+              <text x="190" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">Dur</text>
+              <text x="266" y="48" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">EFT</text>
+              <text x="190" y="83" text-anchor="middle" font-size="15" font-weight="800" fill="#0f172a">Activity Letter</text>
+              <text x="113" y="118" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">LST</text>
+              <text x="190" y="118" text-anchor="middle" font-size="14" font-weight="800" fill="#be123c">Float</text>
+              <text x="266" y="118" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">LFT</text>
+            </svg>
+          </div>
+
+          <div class="lg:col-span-7 space-y-3 text-sm">
+            <div class="formula-box text-xs sm:text-sm space-y-1">
+              <div>• <strong>Top Row (Forward Pass → Left to Right):</strong> <code>EFT = EST + Duration</code></div>
+              <div>&nbsp;&nbsp;If a task has multiple predecessors: <mark class="y">EST = MAX(all predecessor EFTs)</mark></div>
+              <div>• <strong>Bottom Row (Reverse Pass ← Right to Left):</strong> <code>LST = LFT − Duration</code></div>
+              <div>&nbsp;&nbsp;If a task has multiple successors: <mark class="y">LFT = MIN(all successor LSTs)</mark></div>
+              <div>• <strong>Bottom Middle (Total Float):</strong> <mark class="b">Float = LFT − EFT = LST − EST</mark></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Forward Pass vs Reverse Pass Side-by-Side Walkthrough -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-3">
+          <!-- Forward Pass -->
+          <div class="p-5 rounded-xl border space-y-3 text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-base text-indigo-600 dark:text-indigo-400">1. Forward Pass (Left → Right)</span>
+              <span class="slide-badge">Slides 41–42</span>
+            </div>
+            <ul class="space-y-2 mono-font text-xs sm:text-sm">
+              <li>• <strong>Start Tasks (A, B, C start at Week 0):</strong><br>
+                <code>A: EST=0, Dur=4 ➔ EFT = 4</code><br>
+                <code>B: EST=0, Dur=2 ➔ EFT = 2</code><br>
+                <code>C: EST=0, Dur=6 ➔ EFT = 6</code>
+              </li>
+              <li>• <strong>Single Predecessor (D after A; E after B):</strong><br>
+                <code>D: EST=4, Dur=10 ➔ EFT = 14</code><br>
+                <code>E: EST=2, Dur=2  ➔ EFT = 4</code>
+              </li>
+              <li class="p-2 rounded bg-amber-100/80 dark:bg-amber-950/40 border border-amber-300">
+                ★ <strong>Join 1 at F (preceded by C and E):</strong><br>
+                <code>EST(F) = max[EFT(C)=6, EFT(E)=4] = <mark class="y">6</mark></code> <em>(C controls F!)</em><br>
+                <code>EFT(F) = 6 + 1 = 7</code>
+              </li>
+              <li>• <strong>Next Tasks (G after D; H after F):</strong><br>
+                <code>G: EST=14, Dur=3 ➔ EFT = 17</code><br>
+                <code>H: EST=7,  Dur=2 ➔ EFT = 9</code>
+              </li>
+              <li class="p-2 rounded bg-rose-100/80 dark:bg-rose-950/40 border border-rose-300">
+                ★ <strong>Join 2 at J (preceded by G and H):</strong><br>
+                <code>EST(J) = max[EFT(G)=17, EFT(H)=9] = <mark class="p">17</mark></code> <em>(G controls J!)</em><br>
+                <code>EFT(J) = 17 + 20 = <mark class="p">37</mark></code>
+              </li>
+              <li>• <strong>Terminal Task K (after G):</strong><br>
+                <code>K: EST=17, Dur=1 ➔ EFT = 18</code><br>
+                <strong>Project Finish:</strong> <code>max[EFT(J)=37, EFT(K)=18] = <mark class="p">37 weeks</mark></code>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Reverse Pass -->
+          <div class="p-5 rounded-xl border space-y-3 text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="flex items-center justify-between">
+              <span class="font-extrabold text-base text-rose-600 dark:text-rose-400">2. Reverse Pass (Right → Left)</span>
+              <span class="slide-badge">Slide 43</span>
+            </div>
+            <ul class="space-y-2 mono-font text-xs sm:text-sm">
+              <li>• <strong>Terminal Tasks (Both J &amp; K get LFT = 37):</strong><br>
+                <code>J: LFT=37, LST = 37 − 20 = 17 ➔ Float = 0</code><br>
+                <code>K: LFT=37, LST = 37 − 1  = <mark class="u">36</mark> ➔ Float = 37 − 18 = <mark class="g">19</mark></code>
+              </li>
+              <li class="p-2 rounded bg-rose-100/80 dark:bg-rose-950/40 border border-rose-300">
+                ★ <strong>Burst at G (G precedes both J and K):</strong><br>
+                <code>LFT(G) = min[LST(J)=17, LST(K)=36] = <mark class="p">17</mark></code><br>
+                <code>LST(G) = 17 − 3 = 14 ➔ Float = 0</code>
+              </li>
+              <li>• <strong>Publicity Branch (D and A):</strong><br>
+                <code>D: LFT=14, LST = 14 − 10 = 4 ➔ Float = 0</code><br>
+                <code>A: LFT=4,  LST = 4 − 4   = 0 ➔ Float = 0</code>
+              </li>
+              <li>• <strong>Teaching Branch (H and F):</strong><br>
+                <code>H (before J): LFT=17, LST = 17 − 2 = 15 ➔ Float = 15 − 7 = <mark class="y">8</mark></code><br>
+                <code>F (before H): LFT=15, LST = 15 − 1 = 14 ➔ Float = 14 − 6 = <mark class="y">8</mark></code>
+              </li>
+              <li>• <strong>Syllabus &amp; Staff Branches (C, E, B):</strong><br>
+                <code>C (before F): LFT=14, LST = 14 − 6 = 8  ➔ Float = 8 − 0  = <mark class="y">8</mark></code><br>
+                <code>E (before F): LFT=14, LST = 14 − 2 = 12 ➔ Float = 12 − 2 = <mark class="b">10</mark></code><br>
+                <code>B (before E): LFT=12, LST = 12 − 2 = <mark class="u">10</mark> ➔ Float = 10 − 0 = <mark class="b">10</mark></code>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Master Summary Table of All 10 Activities -->
+        <div class="overflow-x-auto pt-2">
+          <table class="study-table mono-font text-xs sm:text-sm">
+            <thead>
+              <tr>
+                <th>Act.</th>
+                <th>Predecessors</th>
+                <th>Duration</th>
+                <th>EST (ES)</th>
+                <th>EFT (EF)</th>
+                <th>LST (LS)</th>
+                <th>LFT (LF)</th>
+                <th>Total Float</th>
+                <th>Branch / Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="background-color: var(--trap-bg);">
+                <td class="font-extrabold">A</td><td>–</td><td class="font-bold">4</td><td>0</td><td>4</td><td>0</td><td>4</td>
+                <td><mark class="p">0 weeks</mark></td><td class="font-bold text-rose-600 dark:text-rose-400">CRITICAL PATH</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">B</td><td>–</td><td class="font-bold">2</td><td>0</td><td>2</td><td>10</td><td>12</td>
+                <td><mark class="b">10 weeks</mark></td><td>Staff branch</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">C</td><td>–</td><td class="font-bold">6</td><td>0</td><td>6</td><td>8</td><td>14</td>
+                <td><mark class="y">8 weeks</mark></td><td>Syllabus branch</td>
+              </tr>
+              <tr style="background-color: var(--trap-bg);">
+                <td class="font-extrabold">D</td><td>A</td><td class="font-bold">10</td><td>4</td><td>14</td><td>4</td><td>14</td>
+                <td><mark class="p">0 weeks</mark></td><td class="font-bold text-rose-600 dark:text-rose-400">CRITICAL PATH</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">E</td><td>B</td><td class="font-bold">2</td><td>2</td><td>4</td><td>12</td><td>14</td>
+                <td><mark class="b">10 weeks</mark></td><td>Staff branch</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">F</td><td>C, E</td><td class="font-bold">1</td><td>6</td><td>7</td><td>14</td><td>15</td>
+                <td><mark class="y">8 weeks</mark></td><td>Teaching branch</td>
+              </tr>
+              <tr style="background-color: var(--trap-bg);">
+                <td class="font-extrabold">G</td><td>D</td><td class="font-bold">3</td><td>14</td><td>17</td><td>14</td><td>17</td>
+                <td><mark class="p">0 weeks</mark></td><td class="font-bold text-rose-600 dark:text-rose-400">CRITICAL PATH</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">H</td><td>F</td><td class="font-bold">2</td><td>7</td><td>9</td><td>15</td><td>17</td>
+                <td><mark class="y">8 weeks</mark></td><td>Teaching branch</td>
+              </tr>
+              <tr style="background-color: var(--trap-bg);">
+                <td class="font-extrabold">J</td><td>G, H</td><td class="font-bold">20</td><td>17</td><td>37</td><td>17</td><td>37</td>
+                <td><mark class="p">0 weeks</mark></td><td class="font-bold text-rose-600 dark:text-rose-400">CRITICAL PATH</td>
+              </tr>
+              <tr>
+                <td class="font-extrabold">K</td><td>G</td><td class="font-bold">1</td><td>17</td><td>18</td><td>36</td><td>37</td>
+                <td><mark class="g">19 weeks</mark></td><td>Room prep (2nd terminal)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: STEP 3 – FULL 6-NUMBER AoN NETWORK DIAGRAM & HANDWRITTEN NOTE CORRECTIONS
+    ====================================================================== -->
+    <section id="sec4" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">4</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Step 3: Complete 6-Number AoN Network Diagram</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Handwritten Notes Page 2 (Bottom) • Full Diagram to Draw + 2 Small Handwritten Slips Corrected</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <span class="slide-badge">Complete AoN Network Diagram</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Critical Path A → D → G → J (37 Weeks) Highlighted in Red</span>
+        </div>
+
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg id="svgFullAoN" viewBox="0 0 880 340" class="w-full min-w-[740px]" aria-label="Full 10-activity AoN network diagram"></svg>
+        </div>
+
+        <!-- Crucial Alert: 2 Corrections to the Class Handwritten Notes (Page 2) -->
+        <div class="callout-trap text-sm space-y-2">
+          <strong class="block text-xs uppercase tracking-wider text-rose-600 dark:text-rose-400">
+            ⚠️ Watch Out! 2 Small Arithmetic Slips in the Class Handwritten Sheet (Page 2) — Write the Corrected Numbers on Your Quiz:
+          </strong>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+            <div class="p-3.5 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">1. Bottom Row of Box K:</strong>
+              In the handwritten sheet, the bottom row of Box <code>K</code> was written as <code>17 | 19 | 18</code> (accidentally copying 17 and 18 from the top row).<br>
+              ➔ <strong>Correct Bottom Row for K:</strong> <mark class="p">36 | 19 | 37</mark> because <code>LFT = 37</code> (project finish), <code>LST = 37 − 1 = 36</code>, and <code>Float = 37 − 18 = 19 weeks</code>.
+            </div>
+            <div class="p-3.5 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Bottom Row of Box B (and Box E):</strong>
+              In the handwritten sheet, the student crossed out the bottom of <code>E</code> and wrote the correct numbers <mark class="g">12 | 10 | 14</mark> underneath, but forgot to update Box <code>B</code> (leaving <code>4 | 4 | 8</code>).<br>
+              ➔ <strong>Correct Bottom Row for B:</strong> <mark class="p">10 | 10 | 12</mark> because <code>LFT(B) = LST(E) = 12</code>, <code>LST(B) = 12 − 2 = 10</code>, and <code>Float(B) = 10 weeks</code> (matching Slide 43: <em>"B and E each have 10 weeks"</em>).
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: STEP 4 – HOW TO DRAW THE 37-WEEK GANTT CHART (HANDWRITTEN PAGE 3)
+    ====================================================================== -->
+    <section id="sec5" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">5</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Step 4: The 37-Week Gantt Chart on Squared Graph Paper</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Handwritten Notes Page 3 • Exact Grid-Square Bar Chart from Week 1 to Week 37 + Square-Counting Cheat Sheet</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Handwritten Notes • Page 3</span>
+            <span class="slide-badge">37-Week Grid</span>
+          </div>
+          <div class="flex items-center gap-2 text-xs font-bold">
+            <span class="inline-flex items-center gap-1"><span class="w-3.5 h-3.5 rounded-sm bg-rose-500 inline-block"></span> Critical Activity (0 Float)</span>
+            <span class="inline-flex items-center gap-1"><span class="w-3.5 h-3.5 rounded-sm bg-indigo-500 inline-block"></span> Non-Critical Activity (Early Schedule)</span>
+            <span class="inline-flex items-center gap-1"><span class="w-3.5 h-3.5 rounded-sm border border-dashed border-amber-500 bg-amber-200/50 inline-block"></span> Total Float Buffer (to LFT)</span>
+          </div>
+        </div>
+
+        <h3 class="text-xl font-bold">Interactive-Free Squared Graph-Paper Gantt Chart (Weeks 1 to 37)</h3>
+        <p class="text-sm" style="color: var(--ink-muted);">
+          Each column below is <strong>1 week (1 grid square)</strong> on your exam paper. Solid bars show the scheduled duration from <strong>Earliest Start (EST)</strong> to <strong>Earliest Finish (EFT)</strong>—matching Page 3 of the handwritten notes—and light dashed squares show each non-critical activity's <strong>Total Float</strong> window up to its Latest Finish (LFT).
+        </p>
+
+        <!-- 37-Week Graph Paper Gantt Table Rendered via JS for 100% Precision -->
+        <div class="overflow-x-auto rounded-xl border" style="border-color: var(--border-line);">
+          <table id="ganttTable" class="gantt-grid-table"></table>
+        </div>
+
+        <!-- Exact Square-Counting Cheat Sheet for Drawing by Hand -->
+        <div class="pt-3">
+          <h4 class="text-base font-bold mb-3">📏 Exam-Day Square-Counting Cheat Sheet (How Many Squares to Shade for Each Row)</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 text-xs mono-font">
+            <div class="p-3 rounded-lg border-l-4 border-rose-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row A (4 wks)</div>
+              <div>Start at <strong>0</strong> → End at <strong>4</strong></div>
+              <div class="text-rose-600 dark:text-rose-400 font-bold">Shade Weeks 1–4</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row B (2 wks)</div>
+              <div>Start at <strong>0</strong> → End at <strong>2</strong></div>
+              <div class="text-indigo-600 dark:text-indigo-400 font-bold">Shade Weeks 1–2</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row C (6 wks)</div>
+              <div>Start at <strong>0</strong> → End at <strong>6</strong></div>
+              <div class="text-indigo-600 dark:text-indigo-400 font-bold">Shade Weeks 1–6</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-rose-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row D (10 wks)</div>
+              <div>Start at <strong>4</strong> → End at <strong>14</strong></div>
+              <div class="text-rose-600 dark:text-rose-400 font-bold">Shade Weeks 5–14</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row E (2 wks)</div>
+              <div>Start at <strong>2</strong> → End at <strong>4</strong></div>
+              <div class="text-indigo-600 dark:text-indigo-400 font-bold">Shade Weeks 3–4</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row F (1 wk)</div>
+              <div>Start at <strong>6</strong> → End at <strong>7</strong></div>
+              <div class="text-indigo-600 dark:text-indigo-400 font-bold">Shade Week 7</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-rose-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row G (3 wks)</div>
+              <div>Start at <strong>14</strong> → End at <strong>17</strong></div>
+              <div class="text-rose-600 dark:text-rose-400 font-bold">Shade Weeks 15–17</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-indigo-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row H (2 wks)</div>
+              <div>Start at <strong>7</strong> → End at <strong>9</strong></div>
+              <div class="text-indigo-600 dark:text-indigo-400 font-bold">Shade Weeks 8–9</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-rose-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row J (20 wks)</div>
+              <div>Start at <strong>17</strong> → End at <strong>37</strong></div>
+              <div class="text-rose-600 dark:text-rose-400 font-bold">Shade Weeks 18–37</div>
+            </div>
+            <div class="p-3 rounded-lg border-l-4 border-emerald-500" style="background-color: var(--bg-subtle);">
+              <div class="font-extrabold text-sm">Row K (1 wk)</div>
+              <div>Start at <strong>17</strong> → End at <strong>18</strong></div>
+              <div class="text-emerald-700 dark:text-emerald-400 font-bold">Shade Week 18</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: POSSIBLE SHORT-ANSWER THEORY QUESTIONS ON THE QUIZ (SLIDES 43–45)
+    ====================================================================== -->
+    <section id="sec6" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">6</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Possible Short-Answer Theory Questions on the Quiz</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 43–45 • Shared Float Trap, What Makes Week 37 Realistic? &amp; "Garbage in, Gospel out"</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Slide 43: Shared Float Trap -->
+        <div class="note-card p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="slide-badge">Slide 43 • Shared Float</span>
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">Why Floats Cannot Be Added Together</span>
+          </div>
+          <h3 class="text-lg font-bold">Why can't you add C, F, and H's 8-week floats together?</h3>
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Exam Trap Answer</strong>
+            On the teaching branch, <strong>C, F, and H</strong> each show <mark class="y">8 weeks of total float</mark>, and <strong>B and E</strong> each show <mark class="b">10 weeks of total float</mark>. However, <mark class="p">these are total floats for individual tasks, NOT independent allowances to add together on one path</mark>. If Activity C is delayed by 8 weeks (finishing at week 14 instead of week 6), then F and H have <strong>0 float left</strong>!
+          </div>
+        </div>
+
+        <!-- Slide 44: What makes week 37 realistic? -->
+        <div class="note-card p-6 space-y-4">
+          <div class="flex items-center justify-between">
+            <span class="slide-badge">Slide 44 • Realism Check</span>
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">Beyond the Deterministic Network</span>
+          </div>
+          <h3 class="text-lg font-bold">What makes Week 37 realistic? (3 Factors)</h3>
+          <div class="space-y-2.5 text-sm">
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">1. Capacity:</strong> Can the <mark class="u">same course staff prepare teaching material (J) while teaching other courses</mark>?
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-600 dark:text-emerald-400">2. Calendar:</strong> Do <mark class="y">holidays, application windows and room availability</mark> alter working weeks?
+            </div>
+            <div class="p-3 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400">3. Uncertainty:</strong> Are <mark class="p">publicity response, material approval and content changes</mark> represented?
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 7: 5-MINUTE EXAM-DAY CHECKLIST (SLIDE 45)
+    ====================================================================== -->
+    <section id="sec7" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">7</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">5-Minute Exam-Day Action Checklist</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Follow These 5 Steps in Order When You Receive the Quiz Sheet</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-3" style="border-top: 5px solid #10b981;">
+        <div class="grid grid-cols-1 md:grid-cols-5 gap-3 text-sm">
+          <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-extrabold text-indigo-600 dark:text-indigo-400 block">Step 1 (1 min)</span>
+            Check the 10 activities (<strong>A–K, no I</strong>). Draw the 2 merges carefully: <mark class="y">C &amp; E → F</mark>, and <mark class="y">G &amp; H → J</mark>.
+          </div>
+          <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-extrabold text-indigo-600 dark:text-indigo-400 block">Step 2 (1 min)</span>
+            Write the <strong>4 paths</strong>: <code>ADGK=18</code>, <mark class="p">ADGJ=37 (Critical)</mark>, <code>BEFHJ=27</code>, <code>CFHJ=29</code>.
+          </div>
+          <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-extrabold text-indigo-600 dark:text-indigo-400 block">Step 3 (1 min)</span>
+            Fill <strong>Top Rows (EST | Dur | EFT)</strong> left-to-right. Use <code>max(6,4)=6</code> at F and <code>max(17,9)=17</code> at J.
+          </div>
+          <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-extrabold text-indigo-600 dark:text-indigo-400 block">Step 4 (1 min)</span>
+            Fill <strong>Bottom Rows (LST | Float | LFT)</strong> right-to-left starting from <code>37</code> at both J and K. Use <code>min(17,36)=17</code> at G.
+          </div>
+          <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <span class="font-extrabold text-emerald-600 dark:text-emerald-400 block">Step 5 (1 min)</span>
+            Draw the <strong>Gantt Chart</strong>: list <code>A..K</code> down the left, mark weeks <code>0..37</code> across the bottom, and shade each bar from <code>EST</code> to <code>EFT</code>.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4">
+      Week 06 Quiz &amp; Midterm Preparation Guide • Based on Lesson 06 (Slides 39–45) &amp; Class Handwritten Solution Notes • Prof. Naghdali Choupani • İstanbul Aydın University.
+    </div>
+  </footer>
+
+  <!-- SCRIPT FOR RENDERING FULL AoN SVG, 37-WEEK GANTT TABLE & DARK MODE -->
+  <script>
+    (function() {
+      // 1. Render Complete 10-Activity AoN Network Diagram (Section 4)
+      // Format: [EST, Dur, EFT, LST, Float, LFT, x, y, desc]
+      var nodes = {
+        A: [0, 4, 4, 0, 0, 4, 20, 45, "Overview & publicity"],
+        B: [0, 2, 2, 10, 10, 12, 20, 150, "Identify potential staff"],
+        C: [0, 6, 6, 8, 8, 14, 20, 250, "Detailed syllabus"],
+        D: [4, 10, 14, 4, 0, 14, 195, 45, "Send publicity/forms"],
+        E: [2, 2, 4, 12, 10, 14, 195, 150, "Confirm availability"],
+        F: [6, 1, 7, 14, 8, 15, 370, 200, "Select staff"],
+        G: [14, 3, 17, 14, 0, 17, 370, 45, "Acknowledge apps"],
+        H: [7, 2, 9, 15, 8, 17, 545, 200, "Identify written mat."],
+        J: [17, 20, 37, 17, 0, 37, 720, 115, "Prep teaching mat."],
+        K: [17, 1, 18, 36, 19, 37, 720, 15, "Prepare room"]
+      };
+
+      var links = [
+        ["A", "D"], ["D", "G"], ["G", "K"], ["G", "J"],
+        ["B", "E"], ["E", "F"], ["C", "F"], ["F", "H"], ["H", "J"]
+      ];
+
+      var svgAoN = document.getElementById("svgFullAoN");
+      if (svgAoN) {
+        var bw = 135, bh = 62;
+        var out = '<defs>' +
+          '<marker id="normArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/></marker>' +
+          '<marker id="critArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#e11d48"/></marker>' +
+          '</defs>';
+
+        links.forEach(function(pair) {
+          var n1 = nodes[pair[0]], n2 = nodes[pair[1]];
+          var isCrit = ("ADGJ".indexOf(pair[0]) > -1) && ("ADGJ".indexOf(pair[1]) > -1);
+          var stroke = isCrit ? "#e11d48" : "#64748b";
+          var sw = isCrit ? "3" : "2";
+          var mk = isCrit ? "url(#critArr)" : "url(#normArr)";
+          out += '<line x1="' + (n1[6] + bw) + '" y1="' + (n1[7] + bh/2) + '" x2="' + n2[6] + '" y2="' + (n2[7] + bh/2) + '" stroke="' + stroke + '" stroke-width="' + sw + '" marker-end="' + mk + '"/>';
+        });
+
+        for (var k in nodes) {
+          var n = nodes[k];
+          var x = n[6], y = n[7];
+          var isCrit = "ADGJ".indexOf(k) > -1;
+          var fill = isCrit ? "#ffe4e6" : "#fde68a";
+          var stroke = isCrit ? "#e11d48" : "#334155";
+          var sw = isCrit ? "2.6" : "1.8";
+
+          out += '<rect x="' + x + '" y="' + y + '" width="' + bw + '" height="' + bh + '" rx="5" fill="' + fill + '" stroke="' + stroke + '" stroke-width="' + sw + '"/>';
+          out += '<line x1="' + x + '" y1="' + (y+20) + '" x2="' + (x+bw) + '" y2="' + (y+20) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+          out += '<line x1="' + x + '" y1="' + (y+42) + '" x2="' + (x+bw) + '" y2="' + (y+42) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+          out += '<line x1="' + (x+45) + '" y1="' + y + '" x2="' + (x+45) + '" y2="' + (y+20) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+          out += '<line x1="' + (x+90) + '" y1="' + y + '" x2="' + (x+90) + '" y2="' + (y+20) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+          out += '<line x1="' + (x+45) + '" y1="' + (y+42) + '" x2="' + (x+45) + '" y2="' + (y+bh) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+          out += '<line x1="' + (x+90) + '" y1="' + (y+42) + '" x2="' + (x+90) + '" y2="' + (y+bh) + '" stroke="' + stroke + '" stroke-width="1.4"/>';
+
+          // Top row: EST | Dur | EFT
+          out += '<text x="' + (x+22) + '" y="' + (y+15) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">' + n[0] + '</text>';
+          out += '<text x="' + (x+67) + '" y="' + (y+15) + '" text-anchor="middle" font-size="12.5" font-weight="800" fill="#0f172a">' + n[1] + '</text>';
+          out += '<text x="' + (x+112) + '" y="' + (y+15) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">' + n[2] + '</text>';
+
+          // Middle row: Activity Letter
+          out += '<text x="' + (x+67) + '" y="' + (y+36) + '" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">' + k + '</text>';
+
+          // Bottom row: LST | Float | LFT
+          out += '<text x="' + (x+22) + '" y="' + (y+57) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">' + n[3] + '</text>';
+          out += '<text x="' + (x+67) + '" y="' + (y+57) + '" text-anchor="middle" font-size="12.5" font-weight="800" fill="' + (isCrit ? '#be123c' : '#0f172a') + '">' + n[4] + '</text>';
+          out += '<text x="' + (x+112) + '" y="' + (y+57) + '" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">' + n[5] + '</text>';
+        }
+        svgAoN.innerHTML = out;
+      }
+
+      // 2. Render 37-Week Squared Graph-Paper Gantt Chart (Section 5)
+      var ganttOrder = ["A", "B", "C", "D", "E", "F", "G", "H", "J", "K"];
+      var gTable = document.getElementById("ganttTable");
+      if (gTable) {
+        var html = '<thead><tr><th class="act-label" style="text-align:left; padding-left:10px;">Activity (Wks)</th>';
+        for (var w = 1; w <= 37; w++) {
+          var isMilestone = (w === 4 || w === 6 || w === 7 || w === 9 || w === 14 || w === 17 || w === 18 || w === 37);
+          html += '<th class="wk-head" style="' + (isMilestone ? 'color:#e11d48; font-weight:800;' : '') + '">' + w + '</th>';
+        }
+        html += '</tr></thead><tbody>';
+
+        ganttOrder.forEach(function(k) {
+          var n = nodes[k];
+          var es = n[0], dur = n[1], ef = n[2], lf = n[5];
+          var isCrit = "ADGJ".indexOf(k) > -1;
+          html += '<tr>';
+          html += '<td class="act-label">' + k + ' <span style="font-weight:500; opacity:0.75;">(' + dur + 'w | ' + es + '→' + ef + ')</span></td>';
+
+          for (var w = 1; w <= 37; w++) {
+            var inBar = (w > es && w <= ef);
+            var inFloat = (!isCrit && w > ef && w <= lf);
+            if (inBar) {
+              var bg = isCrit ? '#e11d48' : '#4f46e5';
+              html += '<td style="background-color:' + bg + '; color:#fff; font-weight:700; font-size:9px;">' + (w === es + 1 ? k : '') + '</td>';
+            } else if (inFloat) {
+              html += '<td style="background-color:rgba(245,158,11,0.18); border-bottom:2px dashed #f59e0b;" title="Float up to Week ' + lf + '"></td>';
+            } else {
+              html += '<td></td>';
+            }
+          }
+          html += '</tr>';
+        });
+
+        // Bottom Timeline Row showing START (Week 0) and END (Week 37)
+        html += '<tr><td class="act-label" style="font-size:10px; color:#e11d48;">START (0) → END (37)</td>';
+        for (var w = 1; w <= 37; w++) {
+          var lbl = (w === 1) ? 'START' : (w === 37 ? 'END' : '');
+          html += '<td style="font-size:8.5px; font-weight:800; color:#e11d48; background-color:var(--bg-subtle);">' + lbl + '</td>';
+        }
+        html += '</tr></tbody>';
+        gTable.innerHTML = html;
+      }
+
+      // 3. Dark / Light Study Mode Toggle
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var text = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          icon.textContent = "☀️";
+          text.textContent = "Light Notebook Mode";
+        } else {
+          root.removeAttribute("data-theme");
+          icon.textContent = "🌙";
+          text.textContent = "Dark Study Mode";
+        }
+      }
+
+      btn.addEventListener("click", function() {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
+    })();
+  </script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

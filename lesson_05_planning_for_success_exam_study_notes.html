@@ -1,0 +1,2267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 05 – Planning for Success | Exam Study Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1e293b;
+      --ink-muted: #64748b;
+      --border-line: #e2dcd0;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.28);
+
+      /* Highlighter Marker Colors - Light Mode */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+
+      /* Callout backgrounds */
+      --quote-bg: #fffbeb;
+      --quote-border: #f59e0b;
+      --teach-bg: #eef2ff;
+      --teach-border: #4f46e5;
+      --read-bg: #ecfdf5;
+      --read-border: #10b981;
+      --trap-bg: #fff1f2;
+      --trap-border: #e11d48;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #121316;
+      --bg-card: #1c1e24;
+      --bg-subtle: #16181d;
+      --ink-main: #f1f5f9;
+      --ink-muted: #94a3b8;
+      --border-line: #2e323b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      /* Highlighter Marker Colors - Dark Mode */
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+
+      /* Callout backgrounds */
+      --quote-bg: rgba(245, 158, 11, 0.12);
+      --quote-border: #fbbf24;
+      --teach-bg: rgba(99, 102, 241, 0.14);
+      --teach-border: #818cf8;
+      --read-bg: rgba(16, 185, 129, 0.12);
+      --read-border: #34d399;
+      --trap-bg: rgba(244, 63, 94, 0.14);
+      --trap-border: #fb7185;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 88px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Highlighter Marker Styles (supporting both short & descriptive class names) */
+    mark.hl-y, mark.hl-yellow {
+      background: var(--hl-yellow);
+      color: var(--hl-yellow-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-g, mark.hl-green {
+      background: var(--hl-green);
+      color: var(--hl-green-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-p, mark.hl-pink {
+      background: var(--hl-pink);
+      color: var(--hl-pink-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-b, mark.hl-blue {
+      background: var(--hl-blue);
+      color: var(--hl-blue-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    mark.hl-v, mark.hl-purple {
+      background: var(--hl-purple);
+      color: var(--hl-purple-ink);
+      padding: 0.1em 0.35em;
+      border-radius: 0.25rem;
+      font-weight: 600;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+
+    /* Study Note Cards & Containers */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+    }
+
+    .slide-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--border-line);
+    }
+
+    /* Callout Boxes */
+    .callout-quote {
+      background-color: var(--quote-bg);
+      border-left: 4px solid var(--quote-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-teach {
+      background-color: var(--teach-bg);
+      border-left: 4px solid var(--teach-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-read {
+      background-color: var(--read-bg);
+      border-left: 4px solid var(--read-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+    .callout-trap {
+      background-color: var(--trap-bg);
+      border-left: 4px solid var(--trap-border);
+      border-radius: 0 0.75rem 0.75rem 0;
+      padding: 1rem 1.25rem;
+    }
+
+    /* Study Tables */
+    .study-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .study-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .study-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    /* Section Number Pill */
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+  </style>
+</head>
+<body data-lesson="week05" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- STICKY TOP STUDY BAR & NAVIGATION -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Lesson 05</span>
+        <span class="font-bold text-sm sm:text-base truncate">Planning for Success — Complete Study Notes (Slides 01–43)</span>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Section Jump Pills -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
+        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Overview &amp; Initial Plan (S1–4)</a>
+        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. Idea Funnel &amp; Screening (S5–9)</a>
+        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Scope &amp; Change (S10–16)</a>
+        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. Balance &amp; Stances (S17–23)</a>
+        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. ICOMs, Process &amp; PID (S24–29)</a>
+        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. Stage-Gate &amp; Concurrent Work (S30–35)</a>
+        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Case Study: Mini Event (S36–42)</a>
+        <a href="#sec8" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">8. Exit Check (S43)</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO HEADER (SLIDE 01) -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #4f46e5;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="slide-badge">📌 Slide 01 • Title &amp; Source</span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          İSTANBUL AYDIN UNIVERSITY • PROJECT MANAGEMENT
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Lesson 05: <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Planning for Success</span>
+      </h1>
+      <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
+        <strong>Instructor:</strong> Prof. Naghdali Choupani &nbsp;|&nbsp;
+        <strong>Textbook:</strong> <em>Project Management</em> (Fifth Edition, Chapter 5) by Harvey Maylor &amp; Neil Turner (Pearson)
+      </p>
+
+      <!-- Highlighter Color Legend Bar -->
+      <div class="p-4 rounded-xl border flex flex-wrap items-center gap-3 text-xs sm:text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <span class="font-bold uppercase tracking-wider mr-1">🖍️ Study Highlighter Key:</span>
+        <span><mark class="hl-y">Core Definition / Principle</mark></span>
+        <span><mark class="hl-g">Deliverable / Output / Scope</mark></span>
+        <span><mark class="hl-b">Process / Method / Mechanism</mark></span>
+        <span><mark class="hl-p">Exam Trap / Caution / Risk / Halt Condition</mark></span>
+        <span><mark class="hl-v">People / Role / Gate Authority</mark></span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- =====================================================================
+         SECTION 1: OVERVIEW & INITIAL PLANNING (SLIDES 01–04)
+    ====================================================================== -->
+    <section id="sec1" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">1</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Overview &amp; Initial Planning</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 01–04 • Chapter 5 Objectives, Role of the Plan (D1 Stage) &amp; Figure 5.1 Five Elements of an Initial Plan</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 02 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 02</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Learning Objectives</span>
+        </div>
+        <h3 class="text-xl font-bold">What Chapter 5 asks us to do</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 1</div>
+            <div class="text-lg font-extrabold mb-1">Initial planning and scope</div>
+            <p class="text-sm">Define the <mark class="hl-y">requirements of initial planning</mark>, including the role that <mark class="hl-g">managing scope</mark> plays in this.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 2</div>
+            <div class="text-lg font-extrabold mb-1">Planning process</div>
+            <p class="text-sm">Identify <mark class="hl-b">characteristics of the planning process</mark> and <mark class="hl-y">approaches to planning</mark>.</p>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-1">Objective 3</div>
+            <div class="text-lg font-extrabold mb-1">Project outline</div>
+            <p class="text-sm">Set up a <mark class="hl-g">basic project outline with stages and gates</mark>, with the <mark class="hl-b">overview of the process mapped out</mark>.</p>
+          </div>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Prof. Naghdali Choupani)</strong>
+          By the end, you should be able to <mark class="hl-y">outline a project before detailed scheduling</mark>, decide <mark class="hl-b">how much planning is useful</mark>, and use <mark class="hl-p">stages and gates to test whether work should continue</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 03 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 03</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">D1 "Define it" Stage</span>
+        </div>
+        <h3 class="text-xl font-bold">The plan should serve the project</h3>
+
+        <div class="callout-quote">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+          <p class="italic text-base font-medium">
+            "The <mark class="hl-y">approach to planning</mark> determines the <mark class="hl-g">nature, role and ultimately the utility of the plan</mark>."
+          </p>
+        </div>
+
+        <div class="callout-teach text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+          Planning choices shape what the plan can do: <mark class="hl-b">explore an idea, test feasibility, coordinate work and support decisions</mark>. <mark class="hl-y">Chapter 5 is the D1 "Define it" stage</mark>; detailed time scheduling follows in Chapter 6.
+        </div>
+      </div>
+
+      <!-- SLIDE 04: FIGURE 5.1 -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 04 • Figure 5.1</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Initial planning</span>
+        </div>
+        <h3 class="text-xl font-bold">The five elements of an initial plan (Figure 5.1)</h3>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Custom SVG reproducing Figure 5.1 -->
+          <div class="lg:col-span-6 p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <svg viewBox="0 0 420 360" class="w-full max-w-md" aria-label="Figure 5.1 Initial planning">
+              <defs>
+                <marker id="g51End" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#16a34a"/>
+                </marker>
+                <marker id="g51Start" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto">
+                  <path d="M6,0 L0,3 L6,6 Z" fill="#16a34a"/>
+                </marker>
+                <marker id="b51End" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                  <path d="M0,0 L6,3 L0,6 Z" fill="#0284c7"/>
+                </marker>
+                <marker id="b51Start" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto">
+                  <path d="M6,0 L0,3 L6,6 Z" fill="#0284c7"/>
+                </marker>
+              </defs>
+
+              <!-- Blue Pentagon Links between the 5 Elements -->
+              <line x1="210" y1="68" x2="328" y2="152" stroke="#0284c7" stroke-width="4" marker-start="url(#b51Start)" marker-end="url(#b51End)"/>
+              <line x1="328" y1="152" x2="282" y2="285" stroke="#0284c7" stroke-width="4" marker-start="url(#b51Start)" marker-end="url(#b51End)"/>
+              <line x1="282" y1="285" x2="138" y2="285" stroke="#0284c7" stroke-width="4" marker-start="url(#b51Start)" marker-end="url(#b51End)"/>
+              <line x1="138" y1="285" x2="92" y2="152" stroke="#0284c7" stroke-width="4" marker-start="url(#b51Start)" marker-end="url(#b51End)"/>
+              <line x1="92" y1="152" x2="210" y2="68" stroke="#0284c7" stroke-width="4" marker-start="url(#b51Start)" marker-end="url(#b51End)"/>
+
+              <!-- Green Spokes from Center PLAN (210,185) to the 5 Elements -->
+              <line x1="210" y1="140" x2="210" y2="112" stroke="#16a34a" stroke-width="3.5" marker-start="url(#g51Start)" marker-end="url(#g51End)"/>
+              <line x1="252" y1="172" x2="285" y2="162" stroke="#16a34a" stroke-width="3.5" marker-start="url(#g51Start)" marker-end="url(#g51End)"/>
+              <line x1="236" y1="222" x2="256" y2="248" stroke="#16a34a" stroke-width="3.5" marker-start="url(#g51Start)" marker-end="url(#g51End)"/>
+              <line x1="184" y1="222" x2="164" y2="248" stroke="#16a34a" stroke-width="3.5" marker-start="url(#g51Start)" marker-end="url(#g51End)"/>
+              <line x1="168" y1="172" x2="135" y2="162" stroke="#16a34a" stroke-width="3.5" marker-start="url(#g51Start)" marker-end="url(#g51End)"/>
+
+              <!-- Center Circle: PLAN -->
+              <circle cx="210" cy="185" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="210" y="190" text-anchor="middle" font-size="14" font-weight="800" fill="#1e293b">PLAN</text>
+
+              <!-- 5 Surrounding Circles -->
+              <circle cx="210" cy="65" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="210" y="70" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Product</text>
+
+              <circle cx="330" cy="152" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="330" y="157" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Process</text>
+
+              <circle cx="284" cy="288" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="284" y="293" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Tasks</text>
+
+              <circle cx="136" cy="288" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="136" y="283" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e293b">People/</text>
+              <text x="136" y="298" text-anchor="middle" font-size="11.5" font-weight="700" fill="#1e293b">organisation</text>
+
+              <circle cx="90" cy="152" r="42" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+              <text x="90" y="157" text-anchor="middle" font-size="13" font-weight="700" fill="#1e293b">Costs</text>
+            </svg>
+          </div>
+
+          <div class="lg:col-span-6 space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="block text-emerald-700 dark:text-emerald-400">1. Product</strong>
+                <mark class="hl-g">What outcome/output</mark> is being delivered.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="block text-sky-700 dark:text-sky-400">2. Process</strong>
+                <mark class="hl-b">Delivery process</mark> &amp; stages/gates used.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="block text-amber-700 dark:text-amber-400">3. Tasks</strong>
+                <mark class="hl-y">Constituent activities</mark> required.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="block text-purple-700 dark:text-purple-400">4. People / organisation</strong>
+                <mark class="hl-v">Team, roles &amp; stakeholders</mark> involved.
+              </div>
+              <div class="p-3.5 rounded-xl border sm:col-span-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="block text-rose-700 dark:text-rose-400">5. Costs</strong>
+                <mark class="hl-p">Budget, resources &amp; financial constraints</mark> connected to the plan.
+              </div>
+            </div>
+
+            <div class="callout-read text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It</strong>
+              The initial plan connects <mark class="hl-g">product</mark>, <mark class="hl-b">delivery process</mark>, <mark class="hl-y">tasks</mark>, <mark class="hl-v">people/organisation</mark> and <mark class="hl-p">costs</mark>. It is an <mark class="hl-y">outline that makes detailed planning possible</mark> and lets a <mark class="hl-v">sponsor decide whether further work is justified</mark>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 2: CREATIVITY, IDEA FUNNEL & CONCEPT SCREENING (SLIDES 05–09)
+    ====================================================================== -->
+    <section id="sec2" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">2</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Creativity, Idea Funnel &amp; Concept Screening</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 05–09 • Order &amp; Chaos, Concept Development Funnel, Screening Filters, Route to Reality &amp; Skunk Works</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 05 & SLIDE 06 (IDEA FUNNEL DIAGRAM) -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 05</span>
+            <span class="slide-badge">Slide 06 • Concept Funnel</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Divergent Exploration → Convergent Screening</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Creativity and order both have a place &amp; Ideas expand, then pass through filters</h3>
+
+        <!-- Slide 05 Quote & Note -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 05)</strong>
+            <p class="italic text-base font-medium">
+              "...they are characterised by a <mark class="hl-y">combination of order and chaos</mark>"
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 05)</strong>
+            Early idea generation can be broad; later planning narrows and organises. <mark class="hl-p">Eliminating exploration too soon may miss good alternatives, while never converging leaves an unmanageable project.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 06 SVG: Concept Development & Screening Funnel -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <div class="text-xs font-bold uppercase tracking-wider mb-2" style="color: var(--ink-muted);">
+            Slide 06 Diagram: Concept Development &amp; Product Delivery Funnel
+          </div>
+          <svg viewBox="0 0 780 340" class="w-full min-w-[640px]" aria-label="Ideas expand then pass through filters">
+            <defs>
+              <marker id="arrFunnel" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#1e293b"/>
+              </marker>
+            </defs>
+
+            <!-- Top Banner Arrows -->
+            <polygon points="180,18 355,18 355,8 390,30 355,52 355,42 180,42" fill="#d1fae5" stroke="#0f766e" stroke-width="1.8"/>
+            <text x="268" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">No. of ideas increasing</text>
+
+            <polygon points="392,18 575,18 575,8 610,30 575,52 575,42 392,42" fill="#d1fae5" stroke="#0f766e" stroke-width="1.8"/>
+            <text x="488" y="34" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">No. of ideas decreasing</text>
+
+            <!-- Vertical Dashed Divider Lines -->
+            <line x1="390" y1="30" x2="390" y2="295" stroke="#475569" stroke-width="1.6" stroke-dasharray="4,4"/>
+            <line x1="560" y1="80" x2="560" y2="295" stroke="#475569" stroke-width="1.6" stroke-dasharray="4,4"/>
+
+            <!-- Expanding Curves (Left Half) -->
+            <path d="M235,165 Q310,165 365,110" fill="none" stroke="#0284c7" stroke-width="3"/>
+            <path d="M235,215 Q310,215 365,270" fill="none" stroke="#0284c7" stroke-width="3"/>
+
+            <!-- Narrowing Curves (Right Half) -->
+            <path d="M415,110 Q485,165 560,165" fill="none" stroke="#0284c7" stroke-width="3"/>
+            <path d="M415,270 Q485,215 560,215" fill="none" stroke="#0284c7" stroke-width="3"/>
+
+            <!-- Recycle Ideas Loop Arrow -->
+            <text x="382" y="82" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Recycle ideas</text>
+            <path d="M495,180 C520,85 265,85 305,172" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <!-- 5 Left Inputs -->
+            <text x="145" y="105" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">Staff</text>
+            <line x1="152" y1="102" x2="240" y2="172" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <text x="125" y="148" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">Competitors</text>
+            <line x1="132" y1="145" x2="240" y2="182" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <text x="135" y="192" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">Customers</text>
+            <line x1="142" y1="189" x2="240" y2="192" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <text x="140" y="232" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">Suppliers</text>
+            <line x1="148" y1="228" x2="235" y2="202" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <text x="135" y="275" text-anchor="end" font-size="13" font-weight="700" fill="currentColor">R&amp;D</text>
+            <line x1="142" y1="270" x2="238" y2="212" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+
+            <!-- 4 Right Outputs -->
+            <line x1="468" y1="175" x2="625" y2="100" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+            <text x="632" y="104" font-size="13" font-weight="700" fill="currentColor">License use</text>
+
+            <line x1="490" y1="190" x2="625" y2="146" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+            <text x="632" y="150" font-size="13" font-weight="700" fill="currentColor">Sell idea</text>
+
+            <line x1="560" y1="190" x2="625" y2="190" stroke="#e11d48" stroke-width="2.5" marker-end="url(#arrFunnel)"/>
+            <text x="632" y="195" font-size="13.5" font-weight="800" fill="#e11d48">NEW PRODUCT</text>
+
+            <line x1="532" y1="202" x2="625" y2="245" stroke="#334155" stroke-width="1.8" marker-end="url(#arrFunnel)"/>
+            <text x="632" y="249" font-size="13" font-weight="700" fill="currentColor">New business</text>
+
+            <!-- Bottom Time Axis -->
+            <line x1="230" y1="295" x2="670" y2="295" stroke="#334155" stroke-width="2" marker-end="url(#arrFunnel)"/>
+            <text x="678" y="300" font-size="13" font-weight="700" fill="currentColor">Time</text>
+
+            <text x="235" y="316" font-size="13" font-weight="800" fill="currentColor">Concept</text>
+            <text x="235" y="332" font-size="13" font-weight="800" fill="currentColor">development</text>
+
+            <text x="565" y="316" font-size="13" font-weight="800" fill="currentColor">Product</text>
+            <text x="565" y="332" font-size="13" font-weight="800" fill="currentColor">delivery</text>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 06)</strong>
+          Inputs include <mark class="hl-v">staff, customers, suppliers, competitors and R&amp;D</mark>. The number of ideas <mark class="hl-b">first rises, then falls as concepts are screened</mark>. Some ideas become <mark class="hl-g">products, licenses or new businesses</mark>; others are <mark class="hl-y">recycled or rejected</mark>.
+        </div>
+      </div>
+
+      <!-- SLIDE 07, SLIDE 08 & SLIDE 09 -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <!-- SLIDE 07 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 07</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Early Screening Filters</span>
+            </div>
+            <h3 class="text-lg font-bold">Screen ideas before committing resources</h3>
+
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Student dissertation filters:</strong>
+              <mark class="hl-y">Interest</mark>, <mark class="hl-b">feasibility with available time/resources</mark>, and <mark class="hl-g">enough theory to support the study</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">2. New product filters:</strong>
+              <mark class="hl-g">Market appeal</mark>, <mark class="hl-y">financial return</mark>, <mark class="hl-v">fit with mission</mark> and <mark class="hl-b">technical possibility</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">3. Decision rule:</strong>
+              Keep evidence and assumptions visible; <mark class="hl-p">a promising idea can still fail a feasibility or strategy test</mark>.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> Screening is an <mark class="hl-y">early gate</mark>, not a verdict that every rejected idea lacks value.
+          </div>
+        </div>
+
+        <!-- SLIDE 08 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 08</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Creative Concept Development</span>
+            </div>
+            <h3 class="text-lg font-bold">Give good ideas a route to reality</h3>
+
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Explore and test:</strong>
+              Allow time to investigate; <mark class="hl-b">prototype early and rehearse how an idea works</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">2. Support:</strong>
+              <mark class="hl-v">Protect idea ownership</mark> and identify a <mark class="hl-v">senior champion who can seek resources</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">3. Develop:</strong>
+              Use <mark class="hl-y">clear criteria and a rapid development route</mark> for ideas with potential.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> The book lists these as common features of creative concept development. <mark class="hl-g">A process can preserve creativity when it makes testing and progression possible.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 09 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 09</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Historical Lockheed Case</span>
+            </div>
+            <h3 class="text-lg font-bold">Skunk Works: freedom with backing</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "Its experts were given the <mark class="hl-y">freedom to try completely new ideas</mark> and they achieved huge successes."
+              </p>
+            </div>
+
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="block text-xs uppercase tracking-wider mb-1" style="color: var(--ink-muted);">Teaching Context (Lockheed Example)</strong>
+              Pairs a <mark class="hl-v">small team's freedom</mark> to try new technologies with <mark class="hl-g">support from a larger organisation</mark>. Ask what constraints should remain visible even when bureaucracy is reduced.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Point:</strong> <mark class="hl-y">Autonomy helps exploration</mark>, while <mark class="hl-p">funding, technical capability and review are still needed</mark> to decide what progresses.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 3: MANAGING SCOPE & CHANGE (SLIDES 10–16)
+    ====================================================================== -->
+    <section id="sec3" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">3</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Managing Scope &amp; Change</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 10–16 • Product vs. Process Scope, Sinclair C5 Scope Creep (Fig 5.3), Freeze Point, Late Change Dilemma &amp; Career Fair Scope Statement</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 10 & SLIDE 11 (FIGURE 5.3 SINCLAIR C5) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 10 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 10</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Definition of Scope</span>
+            </div>
+            <h3 class="text-xl font-bold">Scope describes the project output</h3>
+
+            <div class="callout-quote">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic text-base font-medium">
+                "The <mark class="hl-g">product of the project, the outcome or output</mark>, is described as <mark class="hl-y">'the scope'</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            Scope should say <mark class="hl-g">what will be delivered and what will be excluded</mark>. The chapter also stresses <mark class="hl-b">process scope: how work and stakeholder commitments will be handled</mark>. <mark class="hl-p">A change can improve value but has time and cost consequences.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 11: FIGURE 5.3 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 11 • Figure 5.3</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Scope creep</span>
+            </div>
+            <h3 class="text-xl font-bold">The Sinclair C5: scope can drift (Figure 5.3)</h3>
+
+            <!-- Visual SVG contrasting initial 4-seat EV concept with final electrically assisted tricycle -->
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 155" class="w-full" aria-label="Figure 5.3 Scope creep Sinclair C5">
+                <!-- Left Box: Initial Concept -->
+                <rect x="10" y="10" width="210" height="135" rx="10" fill="#ffffff" stroke="#0284c7" stroke-width="2"/>
+                <text x="115" y="30" text-anchor="middle" font-size="11.5" font-weight="800" fill="#0369a1">INITIAL CONCEPT</text>
+                <!-- Stylized 4-Seat Compact Car Icon -->
+                <path d="M55,95 L72,62 L158,62 L175,95 L185,95 L185,115 L45,115 L45,95 Z" fill="#bae6fd" stroke="#0284c7" stroke-width="2"/>
+                <rect x="78" y="67" width="34" height="22" rx="2" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+                <rect x="118" y="67" width="34" height="22" rx="2" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5"/>
+                <circle cx="72" cy="115" r="12" fill="#334155"/>
+                <circle cx="72" cy="115" r="5" fill="#cbd5e1"/>
+                <circle cx="158" cy="115" r="12" fill="#334155"/>
+                <circle cx="158" cy="115" r="5" fill="#cbd5e1"/>
+                <text x="115" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Four-seat electric vehicle</text>
+
+                <!-- Center Teal Arrow -->
+                <polygon points="235,68 282,68 282,55 305,78 282,101 282,88 235,88" fill="#0d9488"/>
+                <text x="270" y="46" text-anchor="middle" font-size="10" font-weight="800" fill="#be123c">Repeated</text>
+                <text x="270" y="118" text-anchor="middle" font-size="10" font-weight="800" fill="#be123c">scope drift</text>
+
+                <!-- Right Box: Final Output -->
+                <rect x="320" y="10" width="210" height="135" rx="10" fill="#ffffff" stroke="#e11d48" stroke-width="2"/>
+                <text x="425" y="30" text-anchor="middle" font-size="11.5" font-weight="800" fill="#be123c">FINAL OUTPUT (SINCLAIR C5)</text>
+                <!-- Stylized Low Recumbent Tricycle Icon -->
+                <path d="M365,72 L390,72 L405,102 L445,102 L428,76 L485,104 L485,114 L365,114 Z" fill="#fecdd3" stroke="#e11d48" stroke-width="2"/>
+                <circle cx="380" cy="114" r="13" fill="#334155"/>
+                <circle cx="380" cy="114" r="6" fill="#cbd5e1"/>
+                <circle cx="472" cy="116" r="9" fill="#334155"/>
+                <circle cx="472" cy="116" r="4" fill="#cbd5e1"/>
+                <text x="425" y="138" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Electrically assisted tricycle</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It</strong>
+            The book contrasts an <mark class="hl-g">initial four-seat electric-vehicle concept</mark> with the <mark class="hl-p">final electrically assisted tricycle</mark>. Repeated scope changes altered the product and it was not accepted by consumers. <mark class="hl-y">Treat it as a historical caution, not proof that all change is bad.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 12 & SLIDE 13 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 12 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 12</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Product Scope, Process Scope &amp; Freeze Point</span>
+            </div>
+            <h3 class="text-lg font-bold">Product scope and process scope both need agreement</h3>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400">1. Product scope:</strong> <mark class="hl-g">What the outcome must do</mark>; its boundaries, requirements and exclusions.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-700 dark:text-sky-400">2. Process scope:</strong> <mark class="hl-b">How the work will be done</mark>, including access, decisions, reviews and stakeholder contributions.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-amber-700 dark:text-amber-400">3. Freeze point:</strong> <mark class="hl-y">Agree when a version of scope becomes the planning basis</mark> and how later changes will be considered.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note (Baseline Changes)</strong>
+            The book explicitly distinguishes product and process scope. <mark class="hl-p">A frozen baseline can be changed, but not silently: assess expected benefit, cost, time and stakeholder effects first.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 13 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 13</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Change Control Dilemma</span>
+            </div>
+            <h3 class="text-lg font-bold">Activity: would you accept a late change?</h3>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400">Book scenario:</strong> An oil-and-gas plant refurbishment is ready for detailed design when an improved technology appears. It may <mark class="hl-g">save substantial operating cost</mark> but <mark class="hl-p">delays the project</mark>.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400">Decision:</strong> Identify information needed before accepting or rejecting the change: <mark class="hl-y">likely savings, delay, re-engineering cost, safety and stakeholder effects</mark>.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400">Record:</strong> State the decision and <mark class="hl-b">update needed in scope, estimate and approval record</mark>.
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            The book poses this dilemma without a single automatic answer. A good response <mark class="hl-y">compares the incremental lifetime value with delay and change cost</mark>, and secures a <mark class="hl-v">conscious decision by the right authority</mark>.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 14, SLIDE 15 & SLIDE 16 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 14</span>
+            <span class="slide-badge">Slide 15</span>
+            <span class="slide-badge">Slide 16</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Written Scope Agreement &amp; Career-Fair Scope Exercise</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Write down and agree the scope &amp; Career-fair scope statement</h3>
+
+        <!-- Slide 14 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="callout-quote">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 14)</strong>
+            <p class="italic text-sm font-medium">
+              "...if you don't produce a <mark class="hl-y">clear statement of scope that can be discussed and agreed by the key stakeholders</mark>, <mark class="hl-p">one will almost certainly emerge that will not be what you thought it would be</mark>."
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 14 – Sponsored Student-Project Case)</strong>
+            In the book's sponsored student-project case, <mark class="hl-p">verbal promises and missing access to people/data led to conflicting expectations</mark>. Record <mark class="hl-g">deliverables, support needed, acceptance criteria and responsibilities</mark>, then obtain <mark class="hl-v">stakeholder agreement</mark>.
+          </div>
+        </div>
+
+        <!-- Slide 15 & Slide 16 Table -->
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th>Slide 15 Prompt (Draft a One-Page Scope Statement)</th>
+                <th>Slide 16 Suggested Scope Response (Career Fair)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <strong>Teaching scenario:</strong> A student team plans a one-day career fair. The aim is employer contact and useful information for students, within a modest budget.
+                </td>
+                <td>
+                  <strong>Deliverable:</strong> <mark class="hl-g">One-day fair with booked employers, accessible venue, schedule and student information.</mark>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Write (4 min):</strong> Define the product, three inclusions, two exclusions, one acceptance criterion and the stakeholder who signs off.
+                </td>
+                <td>
+                  <strong>Boundary:</strong> <mark class="hl-g">Include registration and event communications</mark>; <mark class="hl-p">exclude entertainment and ongoing placement services</mark>.<br>
+                  <strong>Acceptance:</strong> <mark class="hl-v">Sponsor approves scope</mark>; <mark class="hl-y">venue and safety requirements are met; agreed employer participation is confirmed</mark>.
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <strong>Challenge (3 min):</strong> A sponsor asks for an <mark class="hl-p">evening concert two weeks before the event</mark>. What changes to scope, cost, safety, staffing and approvals would you assess?
+                </td>
+                <td>
+                  <strong>Late Change Response:</strong> <mark class="hl-p">A late concert should be assessed as a new request, not assumed to be included.</mark> Ask whether it supports the fair's benefit and whether resources and approvals can safely accommodate it.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 4: PLANNING BALANCE, UNCERTAINTY & STANCES (SLIDES 17–23)
+    ====================================================================== -->
+    <section id="sec4" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">4</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Planning Balance, Uncertainty &amp; Planning Stances</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 17–23 • Fig 5.4 Costs vs. Benefits, Working Tool, Product/Process Uncertainty, 4 Planning Stances, Fig 5.5 Rolling Wave, Agile Sprints &amp; Accuracy vs. Precision</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 17 (FIGURE 5.4) & SLIDE 18 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 17 • Figure 5.4</span>
+            <span class="slide-badge">Slide 18</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Balancing Costs and Benefits of Planning</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Planning effort should earn its cost (Figure 5.4) &amp; A plan is a working tool</h3>
+
+        <!-- Figure 5.4 Visual Seesaw / Balance Comparison -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          <!-- Misuse of planning -->
+          <div class="p-5 rounded-xl border-2 border-rose-500/70 space-y-3" style="background-color: var(--trap-bg);">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded bg-rose-600 text-white">❌ Misuse of Planning</span>
+              <span class="text-xs font-bold text-rose-700 dark:text-rose-300">Costs Outweigh Benefits</span>
+            </div>
+
+            <svg viewBox="0 0 360 115" class="w-full" aria-label="Misuse of planning seesaw">
+              <!-- Tilted beam: Costs down (heavy), Benefits up (light) -->
+              <line x1="45" y1="82" x2="315" y2="38" stroke="#be123c" stroke-width="4"/>
+              <polygon points="180,60 162,102 198,102" fill="#be123c"/>
+              <rect x="35" y="46" width="90" height="32" rx="5" fill="#fecdd3" stroke="#be123c" stroke-width="2"/>
+              <text x="80" y="67" text-anchor="middle" font-size="13" font-weight="800" fill="#881337">Costs</text>
+              <rect x="235" y="6" width="90" height="32" rx="5" fill="#ffffff" stroke="#be123c" stroke-width="1.5"/>
+              <text x="280" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="#881337">Benefits</text>
+            </svg>
+
+            <ul class="text-sm space-y-1.5 font-medium">
+              <li>• <mark class="hl-p">Plan as a straitjacket</mark> (rigid defence of an obsolete course)</li>
+              <li>• <mark class="hl-p">Focus on precision</mark> (false decimal places over weak assumptions)</li>
+              <li>• <mark class="hl-p">Generation of data</mark> (volume of charts without decision value)</li>
+            </ul>
+          </div>
+
+          <!-- Good use of planning -->
+          <div class="p-5 rounded-xl border-2 border-emerald-500/70 space-y-3" style="background-color: var(--read-bg);">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-extrabold uppercase tracking-wider px-2.5 py-1 rounded bg-emerald-600 text-white">✅ Good Use of Planning</span>
+              <span class="text-xs font-bold text-emerald-700 dark:text-emerald-300">Benefits Outweigh Costs</span>
+            </div>
+
+            <svg viewBox="0 0 360 115" class="w-full" aria-label="Good use of planning seesaw">
+              <!-- Tilted beam: Costs up (light), Benefits down (heavy) -->
+              <line x1="45" y1="38" x2="315" y2="82" stroke="#15803d" stroke-width="4"/>
+              <polygon points="180,60 162,102 198,102" fill="#15803d"/>
+              <rect x="35" y="6" width="90" height="32" rx="5" fill="#ffffff" stroke="#15803d" stroke-width="1.5"/>
+              <text x="80" y="27" text-anchor="middle" font-size="13" font-weight="700" fill="#14532d">Costs</text>
+              <rect x="235" y="46" width="90" height="32" rx="5" fill="#bbf7d0" stroke="#15803d" stroke-width="2"/>
+              <text x="280" y="67" text-anchor="middle" font-size="13" font-weight="800" fill="#14532d">Benefits</text>
+            </svg>
+
+            <ul class="text-sm space-y-1.5 font-medium">
+              <li>• <mark class="hl-g">Plan as a working tool</mark> (helps decision-making &amp; guides action)</li>
+              <li>• <mark class="hl-g">Focus on accuracy</mark> (testing fundamental soundness first)</li>
+              <li>• <mark class="hl-g">Provision of information</mark> (avoiding disorder, finding problems early)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 17)</strong>
+          Planning uses <mark class="hl-p">labour, tools, document preparation and opportunity cost</mark>. Its benefits include <mark class="hl-g">avoiding disorder, evaluating ideas and finding problems early</mark>. <mark class="hl-y">The goal is useful information, not the largest possible plan.</mark>
+        </div>
+
+        <!-- Slide 18 Quote & Note -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2 border-t" style="border-color: var(--border-line);">
+          <div class="callout-quote">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote (Slide 18)</strong>
+            <p class="italic text-sm font-medium">
+              "As a <mark class="hl-y">working tool</mark>, plans are used to <mark class="hl-g">help decision-making and guide future activities</mark>."
+            </p>
+          </div>
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note (Slide 18)</strong>
+            <mark class="hl-b">Update the plan when circumstances change.</mark> A plan should support decisions, <mark class="hl-p">not become a rigid defence of an obsolete course of action</mark>. The objectives remain the reason for planning.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 19 & SLIDE 20 -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 19 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 19</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Sources of Uncertainty</span>
+            </div>
+            <h3 class="text-lg font-bold">Uncertainty can be in the product or process</h3>
+
+            <div class="space-y-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-700 dark:text-emerald-400">1. Product uncertainty:</strong>
+                <mark class="hl-g">Requirements or benefits change</mark> while the output is being developed (e.g., <mark class="hl-g">IT requirements change</mark>).
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-700 dark:text-sky-400">2. Process uncertainty:</strong>
+                <mark class="hl-b">Work is disrupted by discoveries, resources or team interactions</mark> (e.g., <mark class="hl-b">unexpected archaeological discovery</mark>).
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-amber-700 dark:text-amber-400">3. Planning implication:</strong>
+                <mark class="hl-y">State assumptions and choose a plan with appropriate review and contingency.</mark>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> Both product and process uncertainty can affect <mark class="hl-p">sequence, duration and resources</mark>.
+          </div>
+        </div>
+
+        <!-- SLIDE 20 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 20</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Selecting a Planning Approach</span>
+            </div>
+            <h3 class="text-lg font-bold">Four broad planning stances</h3>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">1. Claim to know everything</strong>
+                Works best for <mark class="hl-y">genuinely repeatable work</mark>; <mark class="hl-p">challenge optimism bias</mark>.
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Claim to know nothing</strong>
+                <mark class="hl-p">Milestones without a credible route can become wishful thinking.</mark>
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">3. Rolling wave</strong>
+                <mark class="hl-b">Plan near work in detail while keeping later work at overview level.</mark>
+              </div>
+              <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <strong class="text-sky-600 dark:text-sky-400 block mb-1">4. Agile sprints</strong>
+                <mark class="hl-g">Fix near-term outputs for a short sprint, keep a backlog, then integrate results.</mark>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            These are the chapter's four categories. <mark class="hl-y">Select by evidence about uncertainty and repeatability, not by a fashionable label.</mark> <mark class="hl-p">Agile short cycles still require integration at project level.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 21 (FIGURE 5.5), SLIDE 22 & SLIDE 23 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 21 • Figure 5.5</span>
+            <span class="slide-badge">Slide 22</span>
+            <span class="slide-badge">Slide 23</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Rolling-Wave Detail, Agile Sprints &amp; Accuracy Before False Precision</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+          <!-- Slide 21: Figure 5.5 Rolling-wave SVG Graph -->
+          <div class="lg:col-span-7 space-y-3">
+            <h3 class="text-lg font-bold">Slide 21: Rolling-wave detail grows over time (Figure 5.5)</h3>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 520 250" class="w-full" aria-label="Figure 5.5 Rolling wave planning">
+                <defs>
+                  <marker id="axisArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="currentColor"/>
+                  </marker>
+                </defs>
+                <!-- Axes -->
+                <line x1="95" y1="215" x2="95" y2="18" stroke="currentColor" stroke-width="2" marker-end="url(#axisArr)"/>
+                <line x1="95" y1="215" x2="495" y2="215" stroke="currentColor" stroke-width="2" marker-end="url(#axisArr)"/>
+
+                <!-- Y-axis label -->
+                <text x="12" y="32" font-size="11.5" font-weight="700" fill="currentColor">Percentage of</text>
+                <text x="12" y="47" font-size="11.5" font-weight="700" fill="currentColor">project having</text>
+                <text x="12" y="62" font-size="11.5" font-weight="700" fill="currentColor">detailed plans</text>
+
+                <!-- X-axis label -->
+                <text x="485" y="238" text-anchor="end" font-size="12" font-weight="700" fill="currentColor">Time</text>
+
+                <!-- Phase Dividers -->
+                <line x1="225" y1="22" x2="225" y2="215" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5,4"/>
+                <line x1="355" y1="22" x2="355" y2="215" stroke="#64748b" stroke-width="1.6" stroke-dasharray="5,4"/>
+
+                <!-- Phase Headers -->
+                <text x="160" y="38" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Phase 1</text>
+                <text x="290" y="38" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Phase 2</text>
+                <text x="425" y="38" text-anchor="middle" font-size="13" font-weight="800" fill="currentColor">Phase 3</text>
+
+                <!-- Stepped Rolling-Wave Line -->
+                <polyline points="95,165 225,132 225,102 355,68 355,48 485,18" fill="none" stroke="#0284c7" stroke-width="3.5"/>
+              </svg>
+            </div>
+            <div class="callout-read text-xs">
+              <strong>🔍 How to Read It (Slide 21):</strong> The graph shows <mark class="hl-b">detailed planning increasing as each phase approaches</mark>. Set the planning horizon to the <mark class="hl-y">pace of work, resource lead-times and next milestone</mark>. Keep the overall purpose and major dates visible throughout.
+            </div>
+          </div>
+
+          <!-- Slide 22 & Slide 23 -->
+          <div class="lg:col-span-5 space-y-4">
+            <!-- Slide 22 -->
+            <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="slide-badge">Slide 22 • Agile Sprints</span>
+              <h4 class="font-bold text-base">Agile work is planned in short cycles</h4>
+              <div class="callout-quote text-xs">
+                "...an agile project is broken down into <mark class="hl-b">short sprints lasting a number of weeks (1–6 is common)</mark>"
+              </div>
+              <p class="text-xs">
+                <strong>Teaching Note:</strong> At the start of each sprint, define <mark class="hl-g">intended outputs</mark>; unfinished items go to a <mark class="hl-y">backlog</mark>. The chapter warns that <mark class="hl-p">outputs from separate sprints still need integration, especially in a complex project</mark>.
+              </p>
+            </div>
+
+            <!-- Slide 23 -->
+            <div class="p-4 rounded-xl border space-y-2" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="slide-badge">Slide 23 • Accuracy vs. Precision</span>
+              <h4 class="font-bold text-base">Accuracy before false precision</h4>
+              <div class="callout-quote text-xs">
+                "<mark class="hl-y">would you rather be roughly right or precisely wrong?</mark>"
+              </div>
+              <p class="text-xs">
+                <strong>Teaching Note:</strong> <mark class="hl-y">Test the overview for fundamental technical or financial flaws before spending time on detailed estimates.</mark> <mark class="hl-p">More decimal places do not cure weak assumptions.</mark> Revise the outline before refining details.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 5: THE PLANNING PROCESS, ICOMs & PID (SLIDES 24–29)
+    ====================================================================== -->
+    <section id="sec5" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">5</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">The Planning Process, ICOM Model &amp; PID</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 24–29 • Fig 5.6 ICOM Model, Tactical "What" vs. Operational "How", Fig 5.7 Planning Sequence, Brief vs. PID vs. Charter &amp; 12 PRINCE2 PID Contents</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 24: FIGURE 5.6 ICOM MODEL -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 24 • Figure 5.6</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Activity model using ICOMs (Inputs, Controls, Outputs, Mechanisms)</span>
+        </div>
+        <h3 class="text-xl font-bold">The planning process has inputs and controls (Figure 5.6)</h3>
+
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 740 280" class="w-full min-w-[600px]" aria-label="Figure 5.6 Activity model using ICOMs">
+            <defs>
+              <marker id="icomArr" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+                <path d="M0,0 L8,4 L0,8 Z" fill="#0d9488"/>
+              </marker>
+            </defs>
+
+            <!-- TOP CONTROLS -->
+            <text x="275" y="42" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Standards/</text>
+            <text x="275" y="58" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">procedures</text>
+            <line x1="275" y1="68" x2="275" y2="108" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+
+            <text x="455" y="22" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">Financial/time/</text>
+            <text x="455" y="38" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">legal/ethical/strategic/</text>
+            <text x="455" y="54" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">environmental/cultural</text>
+            <text x="455" y="70" text-anchor="middle" font-size="12.5" font-weight="700" fill="currentColor">constraints</text>
+            <line x1="455" y1="78" x2="455" y2="108" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+
+            <!-- LEFT INPUTS -->
+            <text x="55" y="145" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">Inputs</text>
+            <text x="140" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Project</text>
+            <text x="140" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">brief</text>
+            <line x1="175" y1="142" x2="225" y2="142" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+
+            <!-- CENTER PROCESS BOX -->
+            <rect x="230" y="112" width="270" height="60" rx="4" fill="#fde68a" stroke="#334155" stroke-width="2.2"/>
+            <text x="365" y="147" text-anchor="middle" font-size="16" font-weight="800" fill="#0f172a">Planning process</text>
+
+            <!-- RIGHT OUTPUTS -->
+            <line x1="500" y1="142" x2="550" y2="142" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+            <text x="605" y="136" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Project</text>
+            <text x="605" y="152" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">plan/proposal</text>
+            <text x="690" y="145" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">Outputs</text>
+
+            <!-- BOTTOM MECHANISMS -->
+            <line x1="275" y1="215" x2="275" y2="176" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+            <text x="275" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Tools and</text>
+            <text x="275" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">techniques</text>
+
+            <line x1="455" y1="215" x2="455" y2="176" stroke="#0d9488" stroke-width="2.5" marker-end="url(#icomArr)"/>
+            <text x="455" y="232" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">Project manager</text>
+            <text x="455" y="248" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">and team</text>
+
+            <text x="365" y="272" text-anchor="middle" font-size="14" font-weight="800" fill="currentColor">Mechanisms</text>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 24)</strong>
+          The <strong>ICOM model</strong> shows the <mark class="hl-g">brief as input</mark>, <mark class="hl-g">proposal as output</mark>, <mark class="hl-p">standards/constraints as controls</mark>, and <mark class="hl-v">people</mark>/<mark class="hl-b">tools as mechanisms</mark>. Use it to ask what the planning team needs, what limits it, and what it must produce.
+        </div>
+      </div>
+
+      <!-- SLIDE 25 & SLIDE 26 (FIGURE 5.7) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- SLIDE 25 -->
+        <div class="lg:col-span-5 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 25</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Tactical vs. Operational</span>
+            </div>
+            <h3 class="text-lg font-bold">Tactical "what" becomes operational "how"</h3>
+
+            <div class="callout-quote text-sm">
+              <strong class="block text-xs uppercase tracking-wider mb-1 text-amber-700 dark:text-amber-400">📖 Exact Book Quote</strong>
+              <p class="italic font-medium">
+                "At one level it has to be decided <mark class="hl-y">'what' happens</mark>. This, the <mark class="hl-y">tactical-level plan</mark>, then needs to be converted into a statement of <mark class="hl-b">'how' it is going to be carried out (or operationalised) at the operational level</mark>."
+              </p>
+            </div>
+          </div>
+
+          <div class="callout-teach text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-indigo-600 dark:text-indigo-400">🎓 Teaching Note</strong>
+            First agree the <mark class="hl-g">major work and intended result</mark>. Then decide <mark class="hl-b">sequence, resources, roles and methods</mark>. <mark class="hl-p">The proposal should go through substantial revisions before small refinements.</mark>
+          </div>
+        </div>
+
+        <!-- SLIDE 26: FIGURE 5.7 -->
+        <div class="lg:col-span-7 note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 26 • Figure 5.7</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">The project planning process</span>
+            </div>
+            <h3 class="text-lg font-bold">A simple planning sequence (Figure 5.7)</h3>
+
+            <!-- SVG reproducing Figure 5.7 -->
+            <div class="p-4 rounded-xl border flex justify-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 225" class="w-full" aria-label="Figure 5.7 The project planning process">
+                <defs>
+                  <marker id="f57Arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                    <path d="M0,0 L7,3.5 L0,7 Z" fill="#1e293b"/>
+                  </marker>
+                </defs>
+
+                <!-- Step 1 -->
+                <rect x="275" y="10" width="245" height="46" rx="4" fill="#d9f99d" stroke="#15803d" stroke-width="1.8"/>
+                <text x="397" y="30" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Identify</text>
+                <text x="397" y="46" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">constituent activities</text>
+
+                <line x1="397" y1="56" x2="397" y2="76" stroke="#1e293b" stroke-width="1.8" marker-end="url(#f57Arr)"/>
+
+                <!-- Step 2 -->
+                <rect x="275" y="80" width="245" height="46" rx="4" fill="#d9f99d" stroke="#15803d" stroke-width="1.8"/>
+                <text x="397" y="100" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Determine logical</text>
+                <text x="397" y="116" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">sequence of activities</text>
+
+                <line x1="397" y1="126" x2="397" y2="146" stroke="#1e293b" stroke-width="1.8" marker-end="url(#f57Arr)"/>
+
+                <!-- Step 3 -->
+                <rect x="275" y="150" width="245" height="54" rx="4" fill="#d9f99d" stroke="#15803d" stroke-width="1.8"/>
+                <text x="397" y="169" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Prepare estimates of</text>
+                <text x="397" y="184" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">time and resources</text>
+                <text x="397" y="199" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">required to complete project</text>
+
+                <!-- Arrow from Step 3 to Step 4 -->
+                <path d="M397,204 L397,218 L125,218 L125,164" fill="none" stroke="#1e293b" stroke-width="1.8" marker-end="url(#f57Arr)"/>
+
+                <!-- Step 4 -->
+                <rect x="20" y="102" width="215" height="56" rx="4" fill="#d9f99d" stroke="#15803d" stroke-width="1.8"/>
+                <text x="127" y="122" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Present the plan in a</text>
+                <text x="127" y="138" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">readily intelligible</text>
+                <text x="127" y="154" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">format</text>
+              </svg>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It</strong>
+            (1) <mark class="hl-y">Identify constituent activities</mark>, (2) <mark class="hl-b">determine logical sequence</mark>, (3) <mark class="hl-b">estimate time/resources</mark>, and (4) <mark class="hl-g">present the plan clearly</mark>. The figure is an overview; detailed scheduling techniques arrive in Chapter 6.
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 27, SLIDE 28 & SLIDE 29 -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 27</span>
+            <span class="slide-badge">Slide 28</span>
+            <span class="slide-badge">Slide 29</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Brief vs. PID vs. Charter &amp; The 12 PRINCE2 PID Contents</span>
+        </div>
+
+        <!-- Slide 27 -->
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold">Slide 27: Brief, PID (Project Initiation Document) and charter serve different roles</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xs font-bold uppercase text-indigo-600 dark:text-indigo-400">1. Brief (Request)</div>
+              <p class="text-sm mt-1">The <mark class="hl-v">client's or sponsor's</mark> <mark class="hl-y">initial request or terms of reference</mark>.</p>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xs font-bold uppercase text-emerald-600 dark:text-emerald-400">2. PID / Proposal (Response)</div>
+              <p class="text-sm mt-1">The <mark class="hl-v">project team's</mark> <mark class="hl-g">outline response: scope, approach, justification, roles, plan and controls</mark>.</p>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <div class="text-xs font-bold uppercase text-rose-600 dark:text-rose-400">3. Charter (Authorisation)</div>
+              <p class="text-sm mt-1">The <mark class="hl-v">sponsor's</mark> <mark class="hl-y">formal authorisation to start and use organisational resources</mark>.</p>
+            </div>
+          </div>
+          <p class="text-xs italic" style="color: var(--ink-muted);">
+            <strong>Slide 27 Teaching Note:</strong> The book contrasts a PID prepared in answer to a brief with a charter that officially authorises the project. The formality should match complexity, organisational practice and audience.
+          </p>
+        </div>
+
+        <!-- Slide 28 -->
+        <div class="space-y-3 pt-4 border-t" style="border-color: var(--border-line);">
+          <h3 class="text-xl font-bold">Slide 28: What belongs in the PID? (12 PRINCE2 PID Contents Grouped)</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-700 dark:text-emerald-400 block mb-1">1. Purpose and value</strong>
+              <mark class="hl-g">Definition, desired outcomes, scope/exclusions, constraints, approach and business case.</mark>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-purple-700 dark:text-purple-400 block mb-1">2. People and standards</strong>
+              <mark class="hl-v">Management structure, role descriptions</mark>, <mark class="hl-b">quality and communication approaches</mark>.
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-sky-700 dark:text-sky-400 block mb-1">3. Controls and delivery</strong>
+              <mark class="hl-b">Change and risk approaches, main plan, stage boundaries, reporting and tailoring.</mark>
+            </div>
+          </div>
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note (Slide 28):</strong> This groups the twelve PRINCE2 PID contents listed in the book. Add the <mark class="hl-y">stakeholder interests and performance objectives</mark> the chapter recommends.
+          </div>
+        </div>
+
+        <!-- Slide 29 Activity -->
+        <div class="space-y-3 pt-4 border-t" style="border-color: var(--border-line);">
+          <h3 class="text-lg font-bold">Slide 29 Activity: Turn a brief into a proposal outline</h3>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-3 text-sm">
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong>Brief:</strong> A sponsor requests the student career fair. No venue, employers or funding have yet been confirmed.
+            </div>
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong>Prepare:</strong> Write a 1-min executive summary, assumptions to verify, main deliverables, a rough sequence and <mark class="hl-p">one gate before committing the venue</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong>Review &amp; Suggested Response:</strong> <mark class="hl-y">Confirm demand, sponsor budget, accessible venue and employer interest before detailed bookings.</mark> The proposal shows benefits, scope, risk and decision points; the <mark class="hl-v">charter then authorises work</mark>.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 6: STAGE-GATE MODEL & CONCURRENT ENGINEERING (SLIDES 30–35)
+    ====================================================================== -->
+    <section id="sec6" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">6</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Stage-Gate Model &amp; Concurrent Engineering</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 30–35 • Fig 5.8 Stage-Gate Model, 7 Reasons to Halt, Table 5.1 Gate Questions, Fig 5.10 Miscommunication &amp; Fig 5.12 Sequential vs. Concurrent Work</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 30 (FIGURE 5.8) & SLIDE 31 -->
+      <div class="note-card p-6 space-y-5">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 30 • Figure 5.8</span>
+            <span class="slide-badge">Slide 31</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Stage-Gate Model (After Cooper, 1988) &amp; Reasons for Calling a Halt</span>
+        </div>
+
+        <h3 class="text-xl font-bold">Stages create natural review points (Figure 5.8) &amp; Stopping can be the responsible decision</h3>
+
+        <!-- Figure 5.8 Stage-Gate SVG -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 780 140" class="w-full min-w-[660px]" aria-label="Figure 5.8 Stage-gate model of projects">
+            <defs>
+              <marker id="sgArr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="#1e293b"/>
+              </marker>
+            </defs>
+
+            <!-- Concept Circle -->
+            <circle cx="48" cy="70" r="34" fill="#bae6fd" stroke="#0284c7" stroke-width="2"/>
+            <text x="48" y="74" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Concept</text>
+            <line x1="82" y1="70" x2="104" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Gate 1 Diamond -->
+            <polygon points="150,22 192,70 150,118 108,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
+            <text x="150" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 1</text>
+            <line x1="192" y1="70" x2="214" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Stage 1 Box -->
+            <rect x="218" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+            <text x="246" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
+            <text x="246" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">1</text>
+            <line x1="274" y1="70" x2="296" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Gate 2 Diamond -->
+            <polygon points="342,22 384,70 342,118 300,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
+            <text x="342" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 2</text>
+            <line x1="384" y1="70" x2="406" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Stage 2 Box -->
+            <rect x="410" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+            <text x="438" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
+            <text x="438" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">2</text>
+            <line x1="466" y1="70" x2="488" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Gate 3 Diamond -->
+            <polygon points="534,22 576,70 534,118 492,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
+            <text x="534" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 3</text>
+            <line x1="576" y1="70" x2="598" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Stage 3 Box -->
+            <rect x="602" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
+            <text x="630" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
+            <text x="630" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">3</text>
+            <line x1="658" y1="70" x2="680" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+
+            <!-- Gate 4 Diamond -->
+            <polygon points="726,22 768,70 726,118 684,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
+            <text x="726" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 4</text>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 30)</strong>
+          A stage-gate plan separates work into phases with review decisions between them. <mark class="hl-y">Set pass criteria before work begins.</mark> <mark class="hl-p">Each gate asks whether the next commitment is still justified, not only whether the previous work finished.</mark>
+        </div>
+
+        <!-- Slide 31: Stopping can be the responsible decision -->
+        <div class="pt-3 border-t space-y-3" style="border-color: var(--border-line);">
+          <h4 class="text-lg font-bold">Slide 31: Stopping can be the responsible decision (7 Reasons Grouped into 3 Categories)</h4>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">1. Value changed</strong>
+              <mark class="hl-p">Most benefit is already obtained</mark>, or a <mark class="hl-g">better alternative has appeared</mark>.
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Assumptions failed</strong>
+              <mark class="hl-p">Estimates are badly wrong, needed capability is absent or key people leave.</mark>
+            </div>
+            <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400 block mb-1">3. Strategic or financial fit</strong>
+              <mark class="hl-p">Strategy changes, or continuing would endanger the organisation financially.</mark>
+            </div>
+          </div>
+
+          <div class="callout-trap text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-rose-600 dark:text-rose-400">⚠️ Teaching Note &amp; Sunk-Cost Warning (Slide 31)</strong>
+            These group the chapter's seven reasons for calling a halt. A gate may also lead to <mark class="hl-b">re-scope, partnership or licensing</mark> rather than immediate cancellation. <mark class="hl-p">Past expenditure alone does not justify more spending.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 32: TABLE 5.1 STAGE GATE QUESTIONS -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 32 • Table 5.1</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Stage gate questions based on the IDeA Foundation</span>
+        </div>
+        <h3 class="text-xl font-bold">The gate question evolves (Table 5.1)</h3>
+
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th>Gate</th>
+                <th>Gate 0</th>
+                <th>Gate 1</th>
+                <th>Gate 2</th>
+                <th>Gate 3</th>
+                <th>Gate 4</th>
+                <th>Gate 5</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold">Focus Area</td>
+                <td><mark class="hl-y">Strategic assessment</mark></td>
+                <td><mark class="hl-b">Funding assessment</mark></td>
+                <td><mark class="hl-g">Delivery strategy</mark></td>
+                <td><mark class="hl-b">Financing decision</mark></td>
+                <td><mark class="hl-v">Execution readiness</mark></td>
+                <td><mark class="hl-g">Operations readiness</mark></td>
+              </tr>
+              <tr>
+                <td class="font-bold">Focusing question</td>
+                <td class="font-semibold">Do we <mark class="hl-y">start</mark> this project?</td>
+                <td class="font-semibold">Do we <mark class="hl-b">continue</mark> with this project?</td>
+                <td class="font-semibold">Do we continue with this project, <mark class="hl-g">with current scope</mark>?</td>
+                <td class="font-semibold">Do we continue with this project, <mark class="hl-g">with current scope</mark>?</td>
+                <td class="font-semibold">Do we <mark class="hl-b">continue</mark> with this project?</td>
+                <td class="font-semibold">Is everything <mark class="hl-g">ready for handover</mark>?</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It</strong>
+          The original table moves from <mark class="hl-y">"Do we start?"</mark> through repeated <mark class="hl-b">"Do we continue?"</mark> questions to <mark class="hl-g">"Is everything ready for handover?"</mark> Evidence grows across gates: <strong>viability, scope, financing, execution and operations readiness</strong>.
+        </div>
+      </div>
+
+      <!-- SLIDE 33 (FIGURE 5.10), SLIDE 34 (FIGURE 5.12) & SLIDE 35 -->
+      <div class="note-card p-6 space-y-6">
+        <div class="flex flex-wrap items-center justify-between gap-2">
+          <div class="flex items-center gap-2">
+            <span class="slide-badge">Slide 33 • Figure 5.10</span>
+            <span class="slide-badge">Slide 34 • Figure 5.12</span>
+            <span class="slide-badge">Slide 35</span>
+          </div>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Cross-Functional Miscommunication, Concurrent Engineering &amp; Gate 1 Design</span>
+        </div>
+
+        <!-- Slide 33: Figure 5.10 4-Panel Miscommunication Illustration -->
+        <div class="space-y-3">
+          <h3 class="text-xl font-bold">Slide 33: Miscommunication compounds across functions (Figure 5.10)</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <!-- Panel 1: Marketing -->
+            <div class="p-4 rounded-xl border text-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-200 text-amber-900 font-extrabold text-xs mb-1">1</span>
+              <div class="font-bold text-sm mb-2">How marketing described it</div>
+              <svg viewBox="0 0 120 110" class="w-24 h-24 mx-auto" aria-label="Cocktail glass">
+                <polygon points="25,25 95,25 60,65" fill="#fde68a" stroke="#1e293b" stroke-width="2.2"/>
+                <line x1="60" y1="65" x2="60" y2="95" stroke="#1e293b" stroke-width="2.5"/>
+                <ellipse cx="60" cy="95" rx="22" ry="5" fill="#cbd5e1" stroke="#1e293b" stroke-width="2"/>
+                <circle cx="25" cy="25" r="9" fill="#fef08a" stroke="#ca8a04" stroke-width="2"/>
+                <line x1="45" y1="45" x2="82" y2="12" stroke="#15803d" stroke-width="2"/>
+                <circle cx="70" cy="23" r="5" fill="#84cc16" stroke="#15803d" stroke-width="1.5"/>
+              </svg>
+              <p class="text-xs mt-1" style="color: var(--ink-muted);">Fancy cocktail glass</p>
+            </div>
+
+            <!-- Panel 2: Engineering -->
+            <div class="p-4 rounded-xl border text-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-200 text-amber-900 font-extrabold text-xs mb-1">2</span>
+              <div class="font-bold text-sm mb-2">How engineering saw it</div>
+              <svg viewBox="0 0 120 110" class="w-24 h-24 mx-auto" aria-label="Bucket">
+                <polygon points="28,32 92,32 82,95 38,95" fill="#e2e8f0" stroke="#1e293b" stroke-width="2.2"/>
+                <ellipse cx="60" cy="32" rx="32" ry="8" fill="#cbd5e1" stroke="#1e293b" stroke-width="2.2"/>
+                <path d="M26,34 Q60,62 94,34" fill="none" stroke="#1e293b" stroke-width="2"/>
+              </svg>
+              <p class="text-xs mt-1" style="color: var(--ink-muted);">Heavy utility bucket</p>
+            </div>
+
+            <!-- Panel 3: Production -->
+            <div class="p-4 rounded-xl border text-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-200 text-amber-900 font-extrabold text-xs mb-1">3</span>
+              <div class="font-bold text-sm mb-2">What production produced</div>
+              <svg viewBox="0 0 120 110" class="w-24 h-24 mx-auto" aria-label="Teacup">
+                <path d="M50,15 Q45,25 52,35 M65,12 Q60,24 67,35" fill="none" stroke="#64748b" stroke-width="2"/>
+                <ellipse cx="58" cy="88" rx="34" ry="7" fill="#e2e8f0" stroke="#1e293b" stroke-width="2"/>
+                <path d="M34,48 L82,48 Q80,84 58,84 Q36,84 34,48 Z" fill="#fde68a" stroke="#1e293b" stroke-width="2.2"/>
+                <path d="M82,54 Q96,54 96,65 Q96,76 80,74" fill="none" stroke="#1e293b" stroke-width="2.2"/>
+              </svg>
+              <p class="text-xs mt-1" style="color: var(--ink-muted);">Hot teacup on saucer</p>
+            </div>
+
+            <!-- Panel 4: Customer -->
+            <div class="p-4 rounded-xl border text-center" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <span class="inline-flex items-center justify-center w-7 h-7 rounded-full bg-amber-200 text-amber-900 font-extrabold text-xs mb-1">4</span>
+              <div class="font-bold text-sm mb-2">What the customer wanted</div>
+              <svg viewBox="0 0 120 110" class="w-24 h-24 mx-auto" aria-label="Foaming pint mug">
+                <rect x="35" y="34" width="44" height="60" rx="4" fill="#b45309" stroke="#1e293b" stroke-width="2.2"/>
+                <path d="M79,44 L92,44 L92,80 L79,80" fill="none" stroke="#1e293b" stroke-width="2.5"/>
+                <path d="M32,34 Q35,22 46,26 Q56,18 68,26 Q80,22 82,34 Z" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+              </svg>
+              <p class="text-xs mt-1" style="color: var(--ink-muted);">Foaming pint mug</p>
+            </div>
+          </div>
+
+          <div class="callout-read text-sm">
+            <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 33)</strong>
+            The book's four-panel illustration contrasts what <mark class="hl-v">marketing described, engineering understood, production made and the customer wanted</mark>. <mark class="hl-y">Reviews involving users and downstream teams can catch divergent interpretations early.</mark>
+          </div>
+        </div>
+
+        <!-- Slide 34: Figure 5.12 Sequential vs Concurrent Models -->
+        <div class="pt-4 border-t space-y-4" style="border-color: var(--border-line);">
+          <h3 class="text-xl font-bold">Slide 34: Sequential versus concurrent work (Figure 5.12)</h3>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            <div class="lg:col-span-7 p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <svg viewBox="0 0 540 290" class="w-full min-w-[460px]" aria-label="Figure 5.12 Sequential versus concurrent models">
+                <defs>
+                  <marker id="seqArr" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#1e293b"/>
+                  </marker>
+                  <marker id="seqStart" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto">
+                    <path d="M6,0 L0,3 L6,6 Z" fill="#1e293b"/>
+                  </marker>
+                </defs>
+
+                <!-- TOP: SEQUENTIAL MODEL -->
+                <text x="55" y="15" font-size="11" font-weight="800" fill="currentColor">1. Sequential Model (End-to-End)</text>
+                <line x1="45" y1="18" x2="45" y2="128" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="45" y1="128" x2="510" y2="128" stroke="currentColor" stroke-width="1.8" marker-end="url(#seqArr)"/>
+
+                <rect x="65" y="24" width="85" height="24" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
+                <text x="107" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Marketing</text>
+                <path d="M150,36 L165,36 L165,52" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+
+                <rect x="165" y="52" width="75" height="24" fill="#bae6fd" stroke="#334155" stroke-width="1.5"/>
+                <text x="202" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Design</text>
+                <path d="M240,64 L255,64 L255,80" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+
+                <rect x="255" y="80" width="95" height="24" fill="#d9f99d" stroke="#334155" stroke-width="1.5"/>
+                <text x="302" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Engineering</text>
+                <path d="M350,92 L365,92 L365,104" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+
+                <rect x="365" y="98" width="110" height="24" fill="#fecdd3" stroke="#334155" stroke-width="1.5"/>
+                <text x="420" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Manufacturing</text>
+
+                <!-- Vertical Dashed Line from Sequential Finish -->
+                <line x1="475" y1="122" x2="475" y2="268" stroke="#64748b" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+                <!-- BOTTOM: CONCURRENT MODEL -->
+                <text x="55" y="150" font-size="11" font-weight="800" fill="currentColor">2. Concurrent Engineering Model (Overlapping + Two-Way Communication)</text>
+                <line x1="45" y1="154" x2="45" y2="255" stroke="currentColor" stroke-width="1.8"/>
+                <line x1="45" y1="255" x2="510" y2="255" stroke="currentColor" stroke-width="1.8" marker-end="url(#seqArr)"/>
+
+                <rect x="65" y="158" width="85" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
+                <text x="107" y="173" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Marketing</text>
+
+                <line x1="130" y1="180" x2="130" y2="188" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+
+                <rect x="110" y="186" width="75" height="22" fill="#bae6fd" stroke="#334155" stroke-width="1.5"/>
+                <text x="147" y="201" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Design</text>
+
+                <line x1="168" y1="208" x2="168" y2="216" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+
+                <rect x="145" y="214" width="95" height="22" fill="#d9f99d" stroke="#334155" stroke-width="1.5"/>
+                <text x="192" y="229" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Engineering</text>
+
+                <line x1="215" y1="236" x2="215" y2="244" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+
+                <rect x="195" y="230" width="110" height="22" fill="#fecdd3" stroke="#334155" stroke-width="1.5"/>
+                <text x="250" y="245" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Manufacturing</text>
+
+                <!-- Time Saved Double Arrow -->
+                <line x1="308" y1="272" x2="472" y2="272" stroke="#e11d48" stroke-width="2" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+                <text x="390" y="286" text-anchor="middle" font-size="11.5" font-weight="800" fill="#e11d48">Time saved</text>
+                <text x="275" y="286" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor">Time</text>
+              </svg>
+            </div>
+
+            <div class="lg:col-span-5 space-y-4">
+              <div class="callout-read text-sm">
+                <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 34)</strong>
+                <mark class="hl-b">Concurrent engineering overlaps activities</mark> and can <mark class="hl-g">reduce rework and elapsed time when functions communicate early</mark>. It can also <mark class="hl-p">raise coordination and co-location costs</mark>. <mark class="hl-p">Do not overlap work before the basic requirements are stable.</mark>
+              </div>
+
+              <!-- Slide 35 Activity -->
+              <div class="p-4 rounded-xl border space-y-2 text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+                <span class="slide-badge">Slide 35 • Design a First Gate</span>
+                <p>• <strong>Set criteria:</strong> For the career fair, require <mark class="hl-y">sponsor budget, employer interest, venue feasibility and a basic safety/accessibility review</mark>.</p>
+                <p>• <strong>Decide (Go / Revise / Stop):</strong> Hold concept until essential feasibility is shown; <mark class="hl-b">revise</mark> if venue/date can change; <mark class="hl-p">stop</mark> if no affordable, safe arrangement exists. A gate protects resources and provides a deliberate choice.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 7: BOOK CASE STUDY – THE MINI CHARITY EVENT (SLIDES 36–42)
+    ====================================================================== -->
+    <section id="sec7" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">7</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Book Case Study: The Mini World Record Challenge</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slides 36–42 • Brief, Testable PID Objectives, Fig 5.14 WBS, Fig 5.15 Four-Fields Map, Fig 5.16 Gantt Chart, Table 5.4 Risk Table &amp; Proposal Critique</p>
+        </div>
+      </div>
+
+      <!-- SLIDE 36 & SLIDE 37 -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- SLIDE 36 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 36</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Case Study Brief</span>
+            </div>
+            <h3 class="text-lg font-bold">Book case: the Mini charity-event brief</h3>
+
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">1. Task:</strong> Student group <mark class="hl-g">organises a charity event</mark> and <mark class="hl-b">reports on project-management processes used</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">2. Boundaries:</strong> The team is <mark class="hl-p">financially responsible</mark>; <mark class="hl-v">tutor approval is required at two gates</mark>; <mark class="hl-y">logos need permission</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">3. Output:</strong> A <mark class="hl-g">PID explains the proposed event before full planning</mark> and the <mark class="hl-g">final report reflects on the process</mark>.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> This is the book's historical classroom case. The crowding record described in the source is analysed here as planning evidence only.
+          </div>
+        </div>
+
+        <!-- SLIDE 37 -->
+        <div class="note-card p-6 space-y-4 flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="slide-badge">Slide 37</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">Testable Objectives &amp; Constraints</span>
+            </div>
+            <h3 class="text-lg font-bold">The Mini PID makes objectives testable</h3>
+
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-emerald-700 dark:text-emerald-400">Primary benefit:</strong> <mark class="hl-g">Provide a fun, unusual experience for students.</mark>
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-indigo-600 dark:text-indigo-400">Desired outcomes (5 testable targets):</strong>
+              <mark class="hl-y">Event on agreed day</mark>; <mark class="hl-g">five teams enter</mark>; <mark class="hl-p">no injury/damage</mark>; <mark class="hl-g">record attempt</mark>; <mark class="hl-g">at least £250 for charity</mark>.
+            </div>
+            <div class="p-3.5 rounded-xl border text-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+              <strong class="text-rose-600 dark:text-rose-400">Constraints:</strong>
+              <mark class="hl-p">Fixed report-driven date</mark>; <mark class="hl-p">no external funding</mark>; <mark class="hl-p">team's maximum stated loss is £180</mark>.
+            </div>
+          </div>
+
+          <div class="callout-teach text-xs">
+            <strong>🎓 Teaching Note:</strong> The book <mark class="hl-y">prioritises time because the event date is constrained</mark>. The record and fundraising are also objectives. <mark class="hl-p">Safety and insurance remain requirements regardless of time pressure.</mark>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 38: FIGURE 5.14 WORK BREAKDOWN STRUCTURE -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 38 • Figure 5.14</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Work breakdown structure (The Mini World Record Challenge)</span>
+        </div>
+        <h3 class="text-xl font-bold">The WBS decomposes the event (Figure 5.14)</h3>
+
+        <!-- Complete Visual Tree of Figure 5.14 -->
+        <div class="p-4 rounded-xl border space-y-4" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <div class="text-center">
+            <span class="inline-block px-6 py-2.5 rounded-lg font-extrabold text-sm sm:text-base border-2 border-amber-700 bg-amber-200 text-slate-900 shadow-sm">
+              The Mini World Record Challenge
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
+            <!-- Branch 1: Obtain car -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">1. Obtain car</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Contact local dealers</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Present dealer with proposal</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Arrange conditions for borrowing car</li>
+              </ul>
+            </div>
+
+            <!-- Branch 2: Alert Guinness & Branch 7: Select charity -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-3" style="border-color: var(--border-line);">
+              <div>
+                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">2. Alert Guinness</div>
+                <p class="text-[11px] mt-1 pl-2" style="color: var(--ink-muted);">Direct work package (record rules/pack)</p>
+              </div>
+              <div class="pt-2 border-t" style="border-color: var(--border-line);">
+                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">7. Select charity</div>
+                <p class="text-[11px] mt-1 pl-2" style="color: var(--ink-muted);">Direct work package (beneficiary)</p>
+              </div>
+            </div>
+
+            <!-- Branch 3: Arrange insurance -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">3. Arrange insurance</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Meet with university insurance department</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Arrange insurance for event and driving car to and from site</li>
+              </ul>
+            </div>
+
+            <!-- Branch 4: Organise barbeque -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">4. Organise barbeque</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Contact university catering</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Obtain barbeque</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Ask supermarkets for free food</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Collect/purchase food</li>
+              </ul>
+            </div>
+
+            <!-- Branch 5: Satisfy health and safety -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">5. Satisfy health and safety</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert security</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Meet with health and safety</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Carry out risk assessment</li>
+              </ul>
+            </div>
+
+            <!-- Branch 6: Promote event -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2 sm:col-span-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">6. Promote event</div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 pl-2 border-l-2 border-amber-400">
+                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Design and produce posters</div>
+                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert local radio</div>
+                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert local newspaper</div>
+                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Set up stall on university walkway</div>
+                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60 sm:col-span-2">Advertise on university intranet</div>
+              </div>
+            </div>
+
+            <!-- Branch 8: Arrange venue -->
+            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">8. Arrange venue</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Look for suitable venues</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Select venue and back-up venue</li>
+                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Check venues for access and check with security</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 38)</strong>
+          The original work breakdown structure groups work such as <mark class="hl-g">vehicle, insurance, catering, safety, promotion, charity and venue</mark>. Read from the total event to smaller deliverables and tasks. <mark class="hl-p">Check for missing work before estimating duration.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 39: FIGURE 5.15 FOUR-FIELDS MAP -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 39 • Figure 5.15</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Four fields map (Team Roles + Process + Gate 1 Criteria + Standards)</span>
+        </div>
+        <h3 class="text-xl font-bold">The four-fields map joins work and gates (Figure 5.15)</h3>
+
+        <!-- Structured Visual Replica of Figure 5.15 -->
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <div class="min-w-[720px] grid grid-cols-12 gap-2.5 text-xs">
+            <!-- Left Vertical Phase Banner -->
+            <div class="col-span-1 rounded-lg bg-amber-300 text-slate-900 font-extrabold flex items-center justify-center p-2 text-center tracking-widest" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+              EARLY PLANNING PHASE
+            </div>
+
+            <!-- Center 6 Team Member Columns -->
+            <div class="col-span-9 space-y-2.5">
+              <!-- Team Member Headers -->
+              <div class="grid grid-cols-6 gap-2 text-center font-extrabold">
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Antony</div>
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Matthew</div>
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Amrit</div>
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Katherine</div>
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Emil</div>
+                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Nikolaos</div>
+              </div>
+
+              <!-- Full-Width Bar: Initial meetings -->
+              <div class="p-2 rounded bg-amber-200/90 text-slate-900 font-bold text-center border border-amber-500">
+                Initial meetings
+              </div>
+
+              <!-- Swimlane Tasks Row 1 -->
+              <div class="grid grid-cols-6 gap-2 items-stretch">
+                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Contact BMW Mini dealers
+                </div>
+                <div class="col-span-1 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Alert Guinness
+                </div>
+                <div class="col-span-1 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Contact catering
+                </div>
+                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Look for suitable venues
+                </div>
+              </div>
+
+              <!-- Swimlane Tasks Row 2 -->
+              <div class="grid grid-cols-6 gap-2 items-stretch">
+                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Present dealer with proposal
+                </div>
+                <div class="col-span-2"></div>
+                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Contact security
+                </div>
+              </div>
+
+              <!-- Swimlane Tasks Row 3 -->
+              <div class="grid grid-cols-6 gap-2 items-stretch">
+                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Meet with university insurance representatives
+                </div>
+                <div class="col-span-3 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                  Meet with health and safety &nbsp;➔&nbsp; Draw up risk assessment
+                </div>
+                <div class="col-span-1"></div>
+              </div>
+
+              <!-- Full-Width Bar: Review meetings -->
+              <div class="p-2 rounded bg-amber-200/90 text-slate-900 font-bold text-center border border-amber-500">
+                Review meetings
+              </div>
+
+              <!-- GATE 1 Diamond -->
+              <div class="flex justify-center py-1">
+                <div class="px-6 py-2 rounded-full bg-rose-600 text-white font-extrabold tracking-wider shadow">
+                  ◆ GATE 1 ◆
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Vertical Standards Column -->
+            <div class="col-span-2 flex flex-col gap-2">
+              <div class="p-2 rounded bg-amber-100 text-slate-900 font-extrabold text-center border border-amber-400">
+                Standards
+              </div>
+              <div class="flex-1 p-3 rounded-lg bg-amber-50 dark:bg-slate-800 border border-amber-300 flex flex-col justify-around text-center font-semibold">
+                <span>See venue standards</span>
+                <span>See car standards</span>
+                <span>See insurance standards</span>
+                <span>See health and safety standards</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Gate 1 Criteria & Standards Details Boxes -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-3 border-t" style="border-color: var(--border-line);">
+            <div class="p-4 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+              <strong class="block text-sm font-extrabold text-rose-600 dark:text-rose-400 mb-2">Gate 1 Criteria (5 Pass Questions):</strong>
+              <ul class="text-xs space-y-1.5 list-disc list-inside">
+                <li><mark class="hl-y">Can a car be obtained?</mark></li>
+                <li><mark class="hl-p">Will the event be covered by university insurance?</mark></li>
+                <li><mark class="hl-g">Is there a suitable site on campus?</mark></li>
+                <li><mark class="hl-p">Do health and safety give consent?</mark></li>
+                <li><mark class="hl-b">Will catering allow us to run our own barbeque?</mark></li>
+              </ul>
+            </div>
+
+            <div class="p-4 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+              <strong class="block text-sm font-extrabold text-indigo-600 dark:text-indigo-400 mb-2">Standards (4 Mandatory Specifications):</strong>
+              <ul class="text-xs space-y-1.5 list-disc list-inside">
+                <li><strong>Venue:</strong> Must be accessible for a vehicle, central location, visible for spectators, large enough to accommodate a large number of people.</li>
+                <li><strong>Car:</strong> Must be a standard BMW Mini, available for borrowing for one whole day.</li>
+                <li><strong>Insurance:</strong> Event must be completely covered by university insurance such that <mark class="hl-p">group members are not liable for any damage to the car</mark>.</li>
+                <li><strong>Health &amp; safety:</strong> Procedures must be established such that <mark class="hl-p">group members are not responsible for any injury to participants</mark>.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 39)</strong>
+          The book maps <mark class="hl-v">who does what across the early planning phase</mark>, with <mark class="hl-y">standards and Gate 1 criteria</mark>. The gate asks whether a car, insurance, venue, safety consent and catering arrangement are feasible. <mark class="hl-g">This makes dependencies and exit conditions visible.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 40: FIGURE 5.16 GANTT CHART -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 40 • Figure 5.16</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Gantt chart (7-Week High-Level Overview)</span>
+        </div>
+        <h3 class="text-xl font-bold">Time and risk stay visible (Figure 5.16)</h3>
+
+        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+          <svg viewBox="0 0 680 220" class="w-full min-w-[540px]" aria-label="Figure 5.16 Gantt chart">
+            <!-- Stage 1: Early planning -->
+            <rect x="60" y="15" width="230" height="28" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <text x="175" y="34" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Early planning</text>
+            <polygon points="304,15 318,29 304,43 290,29" fill="#fed7aa" stroke="#334155" stroke-width="1.6"/>
+
+            <!-- Stage 2: Detailed planning -->
+            <rect x="290" y="55" width="145" height="28" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <text x="362" y="74" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Detailed planning</text>
+            <polygon points="449,55 463,69 449,83 435,69" fill="#fed7aa" stroke="#334155" stroke-width="1.6"/>
+
+            <!-- Stage 3: Event -->
+            <rect x="435" y="95" width="52" height="28" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <text x="461" y="114" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Event</text>
+            <polygon points="501,95 515,109 501,123 487,109" fill="#fed7aa" stroke="#334155" stroke-width="1.6"/>
+
+            <!-- Stage 4: Review -->
+            <rect x="487" y="132" width="60" height="26" fill="#fde68a" stroke="#334155" stroke-width="1.8"/>
+            <text x="517" y="150" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Review</text>
+            <polygon points="561,132 575,145 561,158 547,145" fill="#fed7aa" stroke="#334155" stroke-width="1.6"/>
+
+            <!-- Timeline Axis 0 to 7 Weeks -->
+            <line x1="60" y1="168" x2="585" y2="168" stroke="currentColor" stroke-width="1.8"/>
+            <!-- Ticks & Boxes 0..7 -->
+            <g font-size="12" font-weight="700" text-anchor="middle">
+              <line x1="60" y1="168" x2="60" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="38" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="60" y="191" fill="#0f172a">0</text>
+
+              <line x1="135" y1="168" x2="135" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="113" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="135" y="191" fill="#0f172a">1</text>
+
+              <line x1="210" y1="168" x2="210" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="188" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="210" y="191" fill="#0f172a">2</text>
+
+              <line x1="285" y1="168" x2="285" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="263" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="285" y="191" fill="#0f172a">3</text>
+
+              <line x1="360" y1="168" x2="360" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="338" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="360" y="191" fill="#0f172a">4</text>
+
+              <line x1="435" y1="168" x2="435" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="413" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="435" y="191" fill="#0f172a">5</text>
+
+              <line x1="510" y1="168" x2="510" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="488" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="510" y="191" fill="#0f172a">6</text>
+
+              <line x1="585" y1="168" x2="585" y2="176" stroke="currentColor" stroke-width="1.8"/>
+              <rect x="563" y="176" width="44" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.4"/><text x="585" y="191" fill="#0f172a">7</text>
+            </g>
+            <text x="322" y="215" text-anchor="middle" font-size="12.5" font-weight="800" fill="currentColor">Time (weeks)</text>
+          </svg>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 40)</strong>
+          The book's Gantt chart places <mark class="hl-b">early planning, detailed planning, event and review across seven weeks</mark> (with gate diamonds after each stage). <mark class="hl-y">It is only a high-level time picture.</mark> The next slide shows how the team analysed risks alongside this time plan.
+        </div>
+      </div>
+
+      <!-- SLIDE 41: TABLE 5.4 RISK ASSESSMENT AND MANAGEMENT -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 41 • Table 5.4</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Risk assessment and management (PRN = Likelihood × Severity)</span>
+        </div>
+        <h3 class="text-xl font-bold">The case risk table names owners and responses (Table 5.4)</h3>
+
+        <div class="overflow-x-auto">
+          <table class="study-table">
+            <thead>
+              <tr>
+                <th>Risk Event</th>
+                <th>Likelihood</th>
+                <th>Severity</th>
+                <th>PRN (rank)</th>
+                <th>Mitigation</th>
+                <th>Owner</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="font-bold"><mark class="hl-p">Lack of teamworking</mark></td>
+                <td class="mono-font font-bold">8</td>
+                <td class="mono-font font-bold">8</td>
+                <td class="mono-font font-bold"><mark class="hl-p">64 (1)</mark></td>
+                <td>Communicate clearly within the group. Share work and make decisions together.</td>
+                <td class="mono-font font-bold"><mark class="hl-v">All</mark></td>
+              </tr>
+              <tr>
+                <td class="font-bold"><mark class="hl-y">Adverse weather conditions</mark></td>
+                <td class="mono-font font-bold">7</td>
+                <td class="mono-font font-bold">8</td>
+                <td class="mono-font font-bold"><mark class="hl-y">56 (2)</mark></td>
+                <td>Find university umbrellas for the event and possibly hire a marquee.</td>
+                <td class="mono-font">–</td>
+              </tr>
+              <tr>
+                <td class="font-bold">No participants</td>
+                <td class="mono-font">2</td>
+                <td class="mono-font">10</td>
+                <td class="mono-font font-bold">20 (3)</td>
+                <td>Lots of publicity early in the summer term.</td>
+                <td class="mono-font font-bold">AS</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Witnesses don't turn up</td>
+                <td class="mono-font">2</td>
+                <td class="mono-font">9</td>
+                <td class="mono-font font-bold">18 (4)</td>
+                <td>Create a reserve list of on campus alternative witnesses e.g. staff.</td>
+                <td class="mono-font font-bold">All</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Advertising not ready</td>
+                <td class="mono-font">1</td>
+                <td class="mono-font">10</td>
+                <td class="mono-font">10 (5)</td>
+                <td>Design and print posters early.</td>
+                <td class="mono-font font-bold">AP</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Car breaks down / not available</td>
+                <td class="mono-font">1</td>
+                <td class="mono-font">10</td>
+                <td class="mono-font">10 (5)</td>
+                <td>Make sure insurance covers for breakdown and have written confirmation with the garage about the hire of the mini for the event.</td>
+                <td class="mono-font font-bold">MB</td>
+              </tr>
+              <tr>
+                <td class="font-bold">No car insurance</td>
+                <td class="mono-font">1</td>
+                <td class="mono-font">10</td>
+                <td class="mono-font">10 (5)</td>
+                <td>Organise through university. Construct a detailed written agreement.</td>
+                <td class="mono-font font-bold">KA</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Personal injury</td>
+                <td class="mono-font">5</td>
+                <td class="mono-font">2</td>
+                <td class="mono-font">10 (5)</td>
+                <td>Organise a St John's Ambulance team to be present at the event.</td>
+                <td class="mono-font font-bold">EN</td>
+              </tr>
+              <tr>
+                <td class="font-bold">Loss of one group member</td>
+                <td class="mono-font">1</td>
+                <td class="mono-font">2</td>
+                <td class="mono-font">2 (9)</td>
+                <td>–</td>
+                <td class="mono-font">–</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="callout-read text-sm">
+          <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 41)</strong>
+          Read across each risk: <strong>event, likelihood, severity, priority number (PRN), mitigation and owner</strong>. In the case, <mark class="hl-p">lack of teamworking (PRN = 64, Rank 1) ranks above adverse weather (PRN = 56, Rank 2)</mark>. <mark class="hl-y">The scores are the student team's estimates, not universal probabilities.</mark>
+        </div>
+      </div>
+
+      <!-- SLIDE 42: CRITIQUE THE MINI PROPOSAL -->
+      <div class="note-card p-6 space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 42</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Case Evaluation Activity</span>
+        </div>
+        <h3 class="text-xl font-bold">Activity: critique the Mini proposal</h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-emerald-600 dark:text-emerald-400 block mb-1">1. Find one strength</strong>
+            Use evidence from the PID, WBS, four-fields map or Gantt chart.<br>
+            ➔ <mark class="hl-g">Clear testable objectives, explicit Gate 1 criteria, and assigned team responsibilities are strengths.</mark>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Find one gap</strong>
+            Identify an assumption, stakeholder, scope boundary, dependency or safety requirement that needs stronger evidence.<br>
+            ➔ <mark class="hl-p">Permissions, insurance liability coverage, participant interest and safe crowding capacity need stronger verification.</mark>
+          </div>
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <strong class="text-indigo-600 dark:text-indigo-400 block mb-1">3. Decide at Gate 1</strong>
+            State go, revise or stop, and the evidence required before the next commitment.<br>
+            ➔ <mark class="hl-y">A cautious reviewer would verify permissions, written insurance, participant interest and safe capacity before approving the event.</mark>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         SECTION 8: EXIT CHECK – PLAN BEFORE SCHEDULING (SLIDE 43)
+    ====================================================================== -->
+    <section id="sec8" class="space-y-6">
+      <div class="flex items-center border-b pb-3" style="border-color: var(--border-line);">
+        <span class="sec-num">8</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold">Exit Check: Plan Before Scheduling</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Slide 43 • Final Exam Self-Test &amp; Complete Suggested Answers</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 space-y-4" style="border-top: 5px solid #10b981;">
+        <div class="flex items-center justify-between">
+          <span class="slide-badge">Slide 43 • Final Review</span>
+          <span class="text-xs font-semibold" style="color: var(--ink-muted);">Three High-Yield Exam Questions</span>
+        </div>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">1. Name the five elements of an initial plan and explain why an outline comes before detailed scheduling.</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong> The five elements are <mark class="hl-g">product</mark>, <mark class="hl-b">process</mark>, <mark class="hl-y">tasks</mark>, <mark class="hl-v">people/organisation</mark> and <mark class="hl-p">costs</mark>. An initial outline comes before detailed scheduling so the team and sponsor can <mark class="hl-y">test fundamental feasibility, scope and value before spending effort on detailed estimates ("roughly right before precisely wrong")</mark>.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">2. Distinguish a brief, PID and charter in one sentence each.</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong>
+              • <strong>Brief:</strong> The <mark class="hl-v">client's or sponsor's initial request</mark> or terms of reference.<br>
+              • <strong>PID (Project Initiation Document):</strong> The <mark class="hl-g">project team's outline proposal and response</mark> setting out scope, justification, approach, roles, plan and controls.<br>
+              • <strong>Charter:</strong> The <mark class="hl-y">sponsor's formal authorisation</mark> to start the project and commit organisational resources.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-xl border" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div class="font-extrabold text-base mb-1">3. Give one gate criterion and one reason a project might be revised or stopped.</div>
+            <p class="text-sm">
+              ➔ <strong>Suggested Answer:</strong>
+              • <strong>Gate criterion:</strong> Confirming <mark class="hl-y">viability before committing more resources</mark> (e.g., confirmed sponsor budget, university insurance coverage, health &amp; safety consent, or suitable venue/car availability).<br>
+              • <strong>Reason to revise or stop:</strong> <mark class="hl-p">Value changed</mark> (better alternative appeared / benefit already obtained), <mark class="hl-p">assumptions failed</mark> (estimates badly wrong, missing capability, key people leave), or <mark class="hl-p">loss of strategic/financial fit</mark> (continuing endangers the organisation).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4">
+      Complete Study Guide for <strong>Lesson 05: Planning for Success</strong> (Slides 01–43) • Prof. Naghdali Choupani • İstanbul Aydın University • Based on Harvey Maylor &amp; Neil Turner, <em>Project Management</em> (5th Edition, Pearson).
+    </div>
+  </footer>
+
+  <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
+  <script>
+    (function() {
+      var root = document.documentElement;
+      var btn = document.getElementById("themeToggle");
+      var icon = document.getElementById("themeIcon");
+      var text = document.getElementById("themeText");
+
+      function applyTheme(theme) {
+        if (theme === "dark") {
+          root.setAttribute("data-theme", "dark");
+          icon.textContent = "☀️";
+          text.textContent = "Light Notebook Mode";
+        } else {
+          root.removeAttribute("data-theme");
+          icon.textContent = "🌙";
+          text.textContent = "Dark Study Mode";
+        }
+      }
+
+      btn.addEventListener("click", function() {
+        var isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
+    })();
+  </script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

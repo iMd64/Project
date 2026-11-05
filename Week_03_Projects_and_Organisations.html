@@ -1,0 +1,1647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Week 03 – Projects and Organisations | Exam Study Notes</title>
+<style>
+:root {
+  --bg: #faf7f2;
+  --dot: #e2dcd3;
+  --card: #ffffff;
+  --card-alt: #f4efe6;
+  --ink: #1c1917;
+  --mute: #57534e;
+  --line: #d6d0c4;
+  --accent: #0f766e;
+  --accent-soft: #ccfbf1;
+  --primary: #1e3a8a;
+  --warn: #b45309;
+  --danger: #be123c;
+  --hl-yellow: #fef08a;
+  --hl-green: #bbf7d0;
+  --hl-blue: #bae6fd;
+  --hl-pink: #fecdd3;
+  --hl-purple: #e9d5ff;
+  --hl-ink: #111827;
+  --shadow: 0 4px 14px rgba(28, 25, 23, 0.06);
+}
+[data-theme="dark"] {
+  --bg: #121316;
+  --dot: #262930;
+  --card: #1b1d22;
+  --card-alt: #22252c;
+  --ink: #f3f4f6;
+  --mute: #9ca3af;
+  --line: #323640;
+  --accent: #2dd4bf;
+  --accent-soft: #134e4a;
+  --primary: #60a5fa;
+  --warn: #fbbf24;
+  --danger: #fb7185;
+  --hl-yellow: #713f12;
+  --hl-green: #14532d;
+  --hl-blue: #0c4a6e;
+  --hl-pink: #881337;
+  --hl-purple: #581c87;
+  --hl-ink: #f9fafb;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--bg);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: var(--ink);
+  font: 16px/1.68 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+.w { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+/* Sticky Top Bar & Navigation */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 92%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 10px 0;
+}
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.brand {
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+nav a {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 11px;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+nav a:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+.theme-btn {
+  background: var(--card);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 5px 13px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Header */
+header {
+  padding: 44px 0 30px;
+  border-bottom: 2px solid var(--line);
+}
+.eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 4px 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+header h1 {
+  font-size: clamp(28px, 4.5vw, 44px);
+  margin: 0 0 10px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+header p.sub {
+  margin: 0 0 18px;
+  color: var(--mute);
+  font-size: 16.5px;
+  max-width: 780px;
+}
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-size: 13px;
+  box-shadow: var(--shadow);
+}
+.legend span.lbl {
+  font-weight: 700;
+  margin-right: 4px;
+  color: var(--mute);
+}
+
+/* Highlighter Marks */
+mark {
+  color: var(--hl-ink);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+mark.y { background: var(--hl-yellow); }
+mark.g { background: var(--hl-green); }
+mark.b { background: var(--hl-blue); }
+mark.p { background: var(--hl-pink); }
+mark.u { background: var(--hl-purple); }
+
+/* Sections & Slide Cards */
+section {
+  padding: 36px 0 16px;
+}
+.sec-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 2px dashed var(--line);
+}
+.sec-num {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 800;
+  font-size: 15px;
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+.sec-head h2 {
+  margin: 0;
+  font-size: clamp(22px, 3vw, 28px);
+}
+
+.slide-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.slide-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+.slide-badge {
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: var(--card-alt);
+  color: var(--primary);
+  border: 1px solid var(--line);
+  padding: 2px 9px;
+  border-radius: 6px;
+}
+.slide-tag {
+  font-size: 12px;
+  color: var(--mute);
+  font-weight: 600;
+}
+.slide-card h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: var(--ink);
+}
+
+/* Grids & Inner Cards */
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 12px 0; }
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; margin: 12px 0; }
+.box {
+  background: var(--card-alt);
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--primary);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.box.teal { border-top-color: var(--accent); }
+.box.warn { border-top-color: var(--warn); }
+.box.danger { border-top-color: var(--danger); }
+.box h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--primary);
+}
+.box.teal h4 { color: var(--accent); }
+.box.warn h4 { color: var(--warn); }
+.box.danger h4 { color: var(--danger); }
+
+/* Quotes, Teaching Notes, How to Read It */
+blockquote.quote {
+  margin: 12px 0;
+  padding: 14px 18px;
+  border-left: 4px solid var(--primary);
+  background: var(--card-alt);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  font-size: 16.5px;
+}
+.note, .read-box {
+  margin-top: 12px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  font-size: 14.5px;
+}
+.note {
+  background: color-mix(in srgb, var(--hl-yellow) 35%, var(--card));
+  border-left: 4px solid var(--warn);
+}
+.read-box {
+  background: color-mix(in srgb, var(--hl-blue) 35%, var(--card));
+  border-left: 4px solid var(--accent);
+}
+.note b.lbl, .read-box b.lbl {
+  display: inline-block;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: var(--card);
+  border: 1px solid var(--line);
+}
+
+/* Formula & Stat Callouts */
+.formula {
+  font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  font-weight: 700;
+  font-size: 16px;
+  background: var(--card-alt);
+  border: 2px dashed var(--primary);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin: 12px 0;
+  text-align: center;
+}
+.stat-num {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+
+/* Tables */
+.tbl-wrap {
+  overflow-x: auto;
+  margin: 12px 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  font-size: 14.5px;
+  min-width: 580px;
+}
+th, td {
+  border-bottom: 1px solid var(--line);
+  border-right: 1px solid var(--line);
+  padding: 10px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+th:last-child, td:last-child { border-right: 0; }
+tr:last-child td { border-bottom: 0; }
+th {
+  background: var(--card-alt);
+  font-weight: 800;
+  color: var(--ink);
+  font-size: 13.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+td.center, th.center { text-align: center; }
+
+/* SVG Containers */
+.svg-wrap {
+  background: var(--card-alt);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px;
+  margin: 12px 0;
+  overflow-x: auto;
+}
+svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+svg text { font-family: 'Inter', 'Segoe UI', system-ui, sans-serif; fill: var(--ink); }
+
+footer {
+  margin-top: 40px;
+  padding: 28px 0 44px;
+  border-top: 2px solid var(--line);
+  color: var(--mute);
+  font-size: 14px;
+  text-align: center;
+}
+</style>
+</head>
+<body data-lesson="week03">
+
+<div class="topbar">
+  <div class="w topbar-inner">
+    <div class="brand">İAÜ • Project Management • Week 03</div>
+    <nav>
+      <a href="#s1">1. Overview</a>
+      <a href="#s2">2. Strategy &amp; Deployment</a>
+      <a href="#s3">3. Portfolios &amp; Programmes</a>
+      <a href="#s4">4. Capacity &amp; Selection</a>
+      <a href="#s5">5. Governance &amp; PMO</a>
+      <a href="#s6">6. Airbus A380 Case</a>
+      <a href="#s7">7. Exit Check</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button">Dark Mode</button>
+  </div>
+</div>
+
+<header>
+  <div class="w">
+    <span class="eyebrow">İstanbul Aydın University • Prof. Naghdali Choupani</span>
+    <h1>Week 03: Projects and Organisations</h1>
+    <p class="sub">Complete exam study notes covering all 40 slides from <i>Project Management</i> (5th Edition, Harvey Maylor &amp; Neil Turner). Scroll top-to-bottom — every concept, diagram, table, and worked case is visible right on the page.</p>
+    <div class="legend">
+      <span class="lbl">Highlighter Key:</span>
+      <mark class="y">Core Principle / Quote</mark>
+      <mark class="g">Strategy / Value Deliverable</mark>
+      <mark class="b">Formula / Quantitative Metric</mark>
+      <mark class="p">Exam Trap / Conflict / Limit</mark>
+      <mark class="u">Governance / Organizational Role</mark>
+    </div>
+  </div>
+</header>
+
+<main class="w">
+
+  <!-- ==================== SECTION 1 ==================== -->
+  <section id="s1">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>Course Context &amp; Learning Objectives (Slides 01–03)</h2>
+    </div>
+
+    <!-- Slide 01 & 02 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 01 – Slide 02</span>
+        <span class="slide-tag">Chapter Learning Objectives</span>
+      </div>
+      <h3>What You Will Learn Today</h3>
+      <div class="grid-3">
+        <div class="box">
+          <h4>1. Define</h4>
+          <p><mark class="y">Define the role of organisational strategy</mark> in projects.</p>
+        </div>
+        <div class="box teal">
+          <h4>2. Recognise</h4>
+          <p><mark class="g">Recognise a process for the deployment of strategy</mark> from high-level objectives down to activities.</p>
+        </div>
+        <div class="box warn">
+          <h4>3. Demonstrate</h4>
+          <p>Demonstrate the <mark class="u">role of portfolios and programmes of projects</mark> and the possible <mark class="u">support roles</mark> that an organisation can offer to portfolio, programme and project managers.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        By the end, you will <mark class="g">explain a project's strategic contribution</mark>, <mark class="b">judge a resource commitment</mark>, and <mark class="u">identify the support and authority needed</mark> to deliver it.
+      </div>
+    </article>
+
+    <!-- Slide 03 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 03</span>
+        <span class="slide-tag">Progression</span>
+      </div>
+      <h3>From the Project to the Organisation</h3>
+      <div class="grid-2">
+        <div class="box">
+          <h4>Weeks 1–2 (Project Level)</h4>
+          <p>Identify project work, understand its environment and process, and assess the difficulty of managing it.</p>
+        </div>
+        <div class="box teal">
+          <h4>Week 3 (Organisational Level)</h4>
+          <p>Ask <mark class="y">why the organisation should undertake the project</mark>, <mark class="p">what other work it competes with</mark>, and <mark class="u">who will steer and support it</mark>.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        Recall the careers-event example. A good event plan is only part of the decision: the organisation also needs <mark class="y">a reason to choose it</mark> and <mark class="b">enough capacity to deliver it</mark>.
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 2 ==================== -->
+  <section id="s2">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>Organisational Strategy &amp; Strategy Deployment (Slides 04–11)</h2>
+    </div>
+
+    <!-- Slide 04 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 04</span>
+        <span class="slide-tag">Figure 3.1</span>
+      </div>
+      <h3>How Organisational Strategy Reaches Project Tasks (Figure 3.1)</h3>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 880 510" width="100%">
+          <defs>
+            <marker id="arrD" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#0f766e"/>
+            </marker>
+            <marker id="arrU" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#b45309"/>
+            </marker>
+            <marker id="arrB" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+              <path d="M0,0 L8,4 L0,8 Z" fill="#1e3a8a"/>
+            </marker>
+            <marker id="arrBL" markerWidth="8" markerHeight="8" refX="1" refY="4" orient="auto">
+              <path d="M8,0 L0,4 L8,8 Z" fill="#1e3a8a"/>
+            </marker>
+          </defs>
+
+          <!-- Left Column: Roles (Blue) -->
+          <g stroke="#1e3a8a" stroke-width="1.5" fill="#dbeafe">
+            <rect x="20" y="20" width="210" height="42" rx="6"/>
+            <rect x="20" y="105" width="210" height="42" rx="6"/>
+            <rect x="20" y="190" width="210" height="42" rx="6"/>
+            <rect x="20" y="275" width="210" height="42" rx="6"/>
+            <rect x="20" y="360" width="210" height="42" rx="6"/>
+            <rect x="20" y="445" width="210" height="42" rx="6"/>
+          </g>
+          <g font-size="13.5" font-weight="700" text-anchor="middle" style="fill:#1e3a8a">
+            <text x="125" y="46">Chief Executive Officer</text>
+            <text x="125" y="131">Senior management</text>
+            <text x="125" y="216">Portfolio management</text>
+            <text x="125" y="301">Programme management</text>
+            <text x="125" y="386">Project managers</text>
+            <text x="125" y="471">Project team</text>
+          </g>
+
+          <!-- Center Column: Hierarchy (Green) -->
+          <g stroke="#0f766e" stroke-width="2" fill="#d1fae5">
+            <rect x="310" y="20" width="240" height="42" rx="6"/>
+            <rect x="310" y="105" width="240" height="42" rx="6"/>
+            <rect x="310" y="190" width="240" height="42" rx="6"/>
+            <rect x="310" y="275" width="240" height="42" rx="6"/>
+            <rect x="310" y="360" width="240" height="42" rx="6"/>
+            <rect x="310" y="445" width="240" height="42" rx="6"/>
+          </g>
+          <g font-size="14" font-weight="800" text-anchor="middle" style="fill:#065f46">
+            <text x="430" y="46">Vision</text>
+            <text x="430" y="131">Organisational strategy</text>
+            <text x="430" y="216">Portfolios</text>
+            <text x="430" y="301">Programmes</text>
+            <text x="430" y="386">Project strategy</text>
+            <text x="430" y="471">Project tasks</text>
+          </g>
+
+          <!-- Downward Arrows (Right side of center column) -->
+          <g stroke="#0f766e" stroke-width="2" marker-end="url(#arrD)">
+            <line x1="465" y1="62" x2="465" y2="102"/>
+            <line x1="465" y1="147" x2="465" y2="187"/>
+            <line x1="465" y1="232" x2="465" y2="272"/>
+            <line x1="465" y1="317" x2="465" y2="357"/>
+            <line x1="465" y1="402" x2="465" y2="442"/>
+          </g>
+          <g font-size="12" font-weight="700" text-anchor="start">
+            <text x="473" y="86">Mission</text>
+            <text x="473" y="171">Selection criteria</text>
+            <text x="473" y="256">Focus</text>
+            <text x="473" y="341">Projects and priorities</text>
+            <text x="473" y="426">Plans and priorities</text>
+          </g>
+
+          <!-- Upward Arrows (Left side of center column) -->
+          <g stroke="#b45309" stroke-width="2" marker-end="url(#arrU)">
+            <line x1="395" y1="105" x2="395" y2="65"/>
+            <line x1="395" y1="190" x2="395" y2="150"/>
+            <line x1="395" y1="275" x2="395" y2="235"/>
+            <line x1="395" y1="360" x2="395" y2="320"/>
+            <line x1="395" y1="445" x2="395" y2="405"/>
+          </g>
+          <g font-size="11.5" font-style="italic" text-anchor="end">
+            <text x="387" y="86">Reports and opportunities</text>
+            <text x="387" y="171">Reports and opportunities</text>
+            <text x="387" y="256">Reports and opportunities</text>
+            <text x="387" y="341">Reports and opportunities</text>
+            <text x="387" y="426">Progress</text>
+          </g>
+
+          <!-- Right Column: Inputs/Constraints (Orange) -->
+          <g stroke="#b45309" stroke-width="1.5" fill="#fef3c7">
+            <rect x="640" y="105" width="220" height="42" rx="6"/>
+            <rect x="640" y="190" width="220" height="42" rx="6"/>
+            <rect x="640" y="275" width="220" height="42" rx="6"/>
+            <rect x="640" y="360" width="220" height="42" rx="6"/>
+          </g>
+          <g font-size="13.5" font-weight="700" text-anchor="middle" style="fill:#92400e">
+            <text x="750" y="131">Competitive analysis</text>
+            <text x="750" y="216">Capability and capacity</text>
+            <text x="750" y="301">Benefits required</text>
+            <text x="750" y="386">Project requirements</text>
+          </g>
+
+          <!-- Double-headed horizontal arrows between Center and Right -->
+          <g stroke="#1e3a8a" stroke-width="2" marker-start="url(#arrBL)" marker-end="url(#arrB)">
+            <line x1="554" y1="126" x2="636" y2="126"/>
+            <line x1="554" y1="211" x2="636" y2="211"/>
+            <line x1="554" y1="296" x2="636" y2="296"/>
+            <line x1="554" y1="381" x2="636" y2="381"/>
+          </g>
+        </svg>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        <mark class="g">Read downwards</mark>: vision becomes strategy, portfolios, programmes, project strategy and tasks. <mark class="y">Read upwards</mark>: reports and opportunities inform higher-level choices. <mark class="p">Capability and capacity constrain</mark> what the organisation can undertake.
+      </div>
+    </article>
+
+    <!-- Slide 05 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 05</span>
+        <span class="slide-tag">Mission Statement</span>
+      </div>
+      <h3>A Mission Should Guide Real Choices</h3>
+      <div class="grid-2">
+        <div class="box danger">
+          <h4>Vague Ambition</h4>
+          <p><i>"Our mission is to be the best producer in the world of high-technology solutions which delight our customers."</i></p>
+        </div>
+        <div class="box teal">
+          <h4>More Useful Focus</h4>
+          <p><i>"To be the <mark class="g">most responsive supplier of PCBs and associated design services</mark> to our customers."</i></p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        The small electronics firm competed through <mark class="g">responsiveness to nearby customers</mark>. A useful mission reflects a <mark class="y">credible advantage and directs decisions</mark>. <b>PCB</b> means <i>printed circuit board</i>.
+      </div>
+    </article>
+
+    <!-- Slide 06 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 06</span>
+        <span class="slide-tag">Figure 3.2</span>
+      </div>
+      <h3>Strategy Is a Two-Way Process (Figure 3.2)</h3>
+      <div class="grid-2">
+        <div class="box danger">
+          <h4>Traditional Approach (One-Way Downward)</h4>
+          <div class="svg-wrap" style="padding:10px">
+            <svg viewBox="0 0 320 145" width="100%">
+              <line x1="55" y1="15" x2="55" y2="125" stroke="#be123c" stroke-width="6" marker-end="url(#arrD)"/>
+              <rect x="95" y="15" width="195" height="44" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+              <text x="192" y="42" text-anchor="middle" font-weight="700" font-size="14" style="fill:#1e3a8a">Organisational Strategy</text>
+              <rect x="95" y="85" width="195" height="44" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+              <text x="192" y="112" text-anchor="middle" font-weight="700" font-size="14" style="fill:#92400e">Project Strategy</text>
+            </svg>
+          </div>
+          <p><mark class="p">Weak link</mark> between project and organisational strategy, <mark class="p">lack of coordination</mark> between projects, <mark class="p">inevitable resource conflicts</mark>, project managers <i>'minimise negative potential of projects'</i>.</p>
+        </div>
+
+        <div class="box teal">
+          <h4>Strategic Approach (Two-Way Interactive)</h4>
+          <div class="svg-wrap" style="padding:10px">
+            <svg viewBox="0 0 320 145" width="100%">
+              <line x1="55" y1="22" x2="55" y2="120" stroke="#0f766e" stroke-width="6" marker-start="url(#arrBL)" marker-end="url(#arrD)"/>
+              <rect x="95" y="15" width="195" height="44" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+              <text x="192" y="42" text-anchor="middle" font-weight="700" font-size="14" style="fill:#1e3a8a">Organisational Strategy</text>
+              <rect x="95" y="85" width="195" height="44" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="1.5"/>
+              <text x="192" y="112" text-anchor="middle" font-weight="700" font-size="14" style="fill:#065f46">Project Strategy</text>
+            </svg>
+          </div>
+          <p><mark class="g">Coherent, coordinated, focused, strategy-driven</mark>, contributing to <mark class="y">strategy-forming and strategy deployment</mark>; strategic competence in project management provides a <mark class="g">source of competitive advantage</mark>.</p>
+        </div>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        The traditional approach has a weak connection between organisational and project strategy. The strategic approach combines <mark class="g">direction from leaders</mark> with <mark class="y">feedback about progress, workload, capability and emerging opportunities</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 07 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 07</span>
+        <span class="slide-tag">Strategic Analysis Tools</span>
+      </div>
+      <h3>Tools Inform Strategy; Priorities Make It Actionable</h3>
+      <div class="grid-2">
+        <div class="box">
+          <h4>Environment (SWOT &amp; Porter's 5-Forces)</h4>
+          <p><mark class="b">SWOT</mark> (strengths, weaknesses, opportunities and threats) and analysis of <mark class="b">5-Forces</mark>:</p>
+          <ol style="margin:6px 0 0; padding-left:20px;">
+            <li><b>Bargaining Power of Customers (Buyers)</b></li>
+            <li><b>Bargaining Power of Suppliers</b></li>
+            <li><b>Threat of New Entrants</b></li>
+            <li><b>Threat of Substitutes</b></li>
+            <li><b>Competitive Rivalry Among Existing Players</b></li>
+          </ol>
+        </div>
+        <div class="box warn">
+          <h4>Priorities</h4>
+          <p><b>'What should we prioritise?'</b> — <mark class="p">doing too many things risks spreading resources too thinly</mark>; clear priorities help managers focus.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        SWOT and the five forces provide inputs to strategic thinking. They <mark class="p">do not remove the need to choose</mark>. Use evidence about the organisation's position and vulnerabilities to decide what deserves scarce resources.
+      </div>
+    </article>
+
+    <!-- Slide 08 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 08</span>
+        <span class="slide-tag">Core Definition</span>
+      </div>
+      <h3>Project Strategy Concerns Value and Direction</h3>
+      <blockquote class="quote">
+        "Project strategy is the <mark class="y">definition of position, the means and the guidelines of what to do and how to do it</mark>, to achieve the <mark class="g">highest competitive advantage and the best value</mark> from a project."
+      </blockquote>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        A schedule explains <i>when</i> work will happen. <mark class="y">Project strategy sets the position, means and guidelines for achieving value</mark>. It should influence choices about scope, delivery methods, suppliers and priorities.
+      </div>
+    </article>
+
+    <!-- Slide 09 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 09</span>
+        <span class="slide-tag">Figure 3.3</span>
+      </div>
+      <h3>Two Routes from Strategy to Projects (Figure 3.3)</h3>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 760 220" width="100%">
+          <rect x="290" y="14" width="180" height="40" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+          <text x="380" y="39" text-anchor="middle" font-weight="800" font-size="15" style="fill:#92400e">PROJECTS</text>
+
+          <path d="M380,54 L380,75 M190,75 L570,75 M190,75 L190,96 M570,75 L570,96" stroke="#57534e" stroke-width="2" fill="none"/>
+
+          <!-- Left Branch: Direct revenue-earning -->
+          <rect x="85" y="96" width="210" height="38" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.8"/>
+          <text x="190" y="120" text-anchor="middle" font-weight="700" font-size="14" style="fill:#1e3a8a">Direct revenue-earning</text>
+          <path d="M190,134 L190,150 M105,150 L275,150 M105,150 L105,165 M275,150 L275,165" stroke="#57534e" stroke-width="1.8" fill="none"/>
+
+          <rect x="30" y="165" width="145" height="44" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="102" y="184" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#1e3a8a">Organisational</text>
+          <text x="102" y="200" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#1e3a8a">objectives</text>
+
+          <rect x="205" y="165" width="145" height="44" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="277" y="184" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#1e3a8a">Project</text>
+          <text x="277" y="200" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#1e3a8a">objectives</text>
+
+          <line x1="178" y1="187" x2="202" y2="187" stroke="#0f766e" stroke-width="3" marker-start="url(#arrBL)" marker-end="url(#arrD)"/>
+
+          <!-- Right Branch: Organisational change -->
+          <rect x="465" y="96" width="210" height="38" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="1.8"/>
+          <text x="570" y="120" text-anchor="middle" font-weight="700" font-size="14" style="fill:#065f46">Organisational change</text>
+          <path d="M570,134 L570,150 M485,150 L655,150 M485,150 L485,165 M655,150 L655,165" stroke="#57534e" stroke-width="1.8" fill="none"/>
+
+          <rect x="410" y="165" width="145" height="44" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="1.5"/>
+          <text x="482" y="184" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#065f46">Strategy</text>
+          <text x="482" y="200" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#065f46">deployment</text>
+
+          <rect x="585" y="165" width="145" height="44" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="1.5"/>
+          <text x="657" y="184" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#065f46">Deployment</text>
+          <text x="657" y="200" text-anchor="middle" font-weight="700" font-size="12.5" style="fill:#065f46">table</text>
+
+          <line x1="558" y1="187" x2="582" y2="187" stroke="#0f766e" stroke-width="3" marker-start="url(#arrBL)" marker-end="url(#arrD)"/>
+        </svg>
+      </div>
+      <p style="font-size:12.5px; color:var(--mute); margin:4px 0 0;"><i>Adapted from Shenhar, A.J., Milosevic, D., Dvir, D. and Thamhain, H., 2007, Linking Project Management to Business Strategy, Project Management Institute, Newtown, PA.</i></p>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        <mark class="g">Direct revenue-earning projects</mark> serve paying clients. <mark class="g">Organisational-change projects</mark> improve what the organisation can do. Both must connect to strategy, although their contribution and justification differ.
+      </div>
+    </article>
+
+    <!-- Slide 10 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 10</span>
+        <span class="slide-tag">Table 3.1</span>
+      </div>
+      <h3>Strategy Deployment: From Objective to Activity (Table 3.1)</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Objectives Level 1</th>
+              <th>Activities Level 1</th>
+              <th>Objectives Level 2</th>
+              <th>Activities Level 2</th>
+              <th>Objectives Level 3</th>
+              <th>Activities Level 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="3"><mark class="b">Reduce new product lead-time by 20 per cent</mark></td>
+              <td><b>1 Establish managed portfolio of projects</b></td>
+              <td>
+                • Achieve balanced work allocations<br>
+                • Close down <mark class="b">80 per cent</mark> of projects that are over 2 years old
+              </td>
+              <td>
+                • Determine workload due to current projects<br>
+                • Examine potential of all projects over 2 years old
+              </td>
+              <td rowspan="2">• Identify strengths and weaknesses in processes</td>
+              <td rowspan="2">• Conduct review of all major projects over the past 3 years</td>
+            </tr>
+            <tr>
+              <td><b>2 Re-engineer project processes</b></td>
+              <td>
+                • Understand current processes<br>
+                • Increase level of concurrency in processes
+              </td>
+              <td>
+                • Map current processes<br>
+                • Co-locate staff for major projects<br>
+                • Train project facilitators
+              </td>
+            </tr>
+            <tr>
+              <td><b>3 Implement new design technology</b></td>
+              <td>
+                • Reduce prototyping time by <mark class="b">80 per cent</mark><br>
+                • Reduce product engineering time by <mark class="b">38 per cent</mark>
+              </td>
+              <td>
+                • Install rapid-prototyping equipment<br>
+                • Install new version of design software
+              </td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        The top objective is a <mark class="b">20% reduction in new-product lead time</mark>. The table links it to <mark class="g">workload balance, process redesign and technology</mark>. Trace one branch from an objective to an action. These percentages are the book's example, not universal targets.
+      </div>
+    </article>
+
+    <!-- Slide 11 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 11</span>
+        <span class="slide-tag">Classroom Activity</span>
+      </div>
+      <h3>Activity: Turn an Objective into a Project</h3>
+      <div class="grid-3">
+        <div class="box">
+          <h4>1. Interpret</h4>
+          <p><b>Teaching scenario:</b> A student-services team wants to <mark class="g">reduce the average time to answer student enquiries</mark>. Identify the intended benefit and a measure of it.</p>
+        </div>
+        <div class="box teal">
+          <h4>2. Deploy</h4>
+          <p>Propose <b>one project</b> and <b>two activities</b> that contribute to that objective. Explain the causal link from each activity to the benefit.</p>
+        </div>
+        <div class="box danger">
+          <h4>3. Test Coherence</h4>
+          <p>Name <mark class="p">one other objective the project might harm</mark> (e.g., answer quality or staff workload). Propose a check to prevent that conflict.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        <b>Deliverable:</b> <mark class="g">objective → project → two activities → measure</mark>, plus <mark class="p">one potential conflict</mark>. This is a classroom scenario, not a statement of university policy.
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 3 ==================== -->
+  <section id="s3">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Portfolio &amp; Programme Management (Slides 12–16)</h2>
+    </div>
+
+    <!-- Slide 12 & 13 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 12 – Slide 13</span>
+        <span class="slide-tag">Portfolios vs. Programmes</span>
+      </div>
+      <h3>Portfolio Management vs. Programme Management</h3>
+      <div class="grid-2">
+        <div class="box">
+          <h4>Portfolio Management: Choose What to Do (Slide 12)</h4>
+          <blockquote class="quote" style="font-size:15px">
+            "The second principle is that <mark class="y">'it is not possible to do everything'</mark>. In practice, organisations and individuals have to make <mark class="g">choices about what they do, not just how well they are going to do it</mark>. This is part of the strategy process known as <b>portfolio management</b>."
+          </blockquote>
+          <p><b>Teaching Note:</b> A portfolio view considers the <mark class="u">collection of work and its contribution to organisational priorities</mark>. An attractive project may still need to wait if higher-priority work requires the same scarce people or funding.</p>
+        </div>
+
+        <div class="box teal">
+          <h4>Programme Management: Obtain Combined Benefits (Slide 13)</h4>
+          <blockquote class="quote" style="font-size:15px">
+            "An [organisational] framework for <mark class="g">grouping existing or defining new projects</mark>, and for focusing all the activities required to achieve a set of major benefits. These projects are <mark class="u">managed in a coordinated way</mark>, either to achieve a common goal, or to <mark class="g">extract benefits which would otherwise not be realised if they were managed independently</mark>."
+          </blockquote>
+          <p><b>Teaching Note:</b> The focus is <mark class="g">coordination across related work</mark> so that the combined benefit is realised. <mark class="p">Size alone does not reliably distinguish a project from a programme</mark>.</p>
+        </div>
+      </div>
+    </article>
+
+    <!-- Slide 14 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 14</span>
+        <span class="slide-tag">Visual Case Example</span>
+      </div>
+      <h3>Completed Projects Can Still Fail to Fit Together</h3>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 680 210" width="100%">
+          <!-- Sky and Ground -->
+          <rect x="10" y="10" width="660" height="190" rx="8" fill="#e0f2fe"/>
+          <rect x="10" y="115" width="660" height="85" rx="0" fill="#d6d3d1"/>
+          <!-- Roadway -->
+          <polygon points="140,200 280,115 430,115 560,200" fill="#44403c"/>
+          <line x1="355" y1="115" x2="350" y2="200" stroke="#fde047" stroke-width="3" stroke-dasharray="10,8"/>
+          <!-- Utility Pole right in the middle of the paved road -->
+          <rect x="372" y="22" width="8" height="142" fill="#78350f"/>
+          <line x1="350" y1="34" x2="402" y2="34" stroke="#78350f" stroke-width="4"/>
+          <line x1="210" y1="12" x2="355" y2="34" stroke="#57534e" stroke-width="1.5"/>
+          <line x1="395" y1="34" x2="540" y2="90" stroke="#57534e" stroke-width="1.5"/>
+          <!-- Traffic cones around the pole in the lane -->
+          <polygon points="355,168 362,148 369,168" fill="#ea580c"/>
+          <polygon points="384,168 391,148 398,168" fill="#ea580c"/>
+          <rect x="425" y="42" width="230" height="58" rx="6" fill="#ffffff" stroke="#be123c" stroke-width="2"/>
+          <text x="540" y="65" text-anchor="middle" font-weight="800" font-size="13" style="fill:#be123c">Missing Interface Coordination!</text>
+          <text x="540" y="84" text-anchor="middle" font-size="12" style="fill:#1c1917">Road paved + utility pole left in lane</text>
+        </svg>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        The book shows a <mark class="p">completed road and utility poles standing in its path</mark> (Courtesy of Michael Trolove). Each piece of work can be "finished" while the <mark class="p">combined result is unsuitable</mark>. <mark class="u">Programme management addresses interfaces and shared benefits</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 15 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 15</span>
+        <span class="slide-tag">Figure 3.4</span>
+      </div>
+      <h3>Projects in Programmes Can Be Arranged Differently (Figure 3.4)</h3>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 740 310" width="100%">
+          <!-- Time Axis -->
+          <line x1="230" y1="28" x2="680" y2="28" stroke="#0f766e" stroke-width="5" marker-end="url(#arrD)"/>
+          <text x="455" y="18" text-anchor="middle" font-weight="800" font-size="14" style="fill:#0f766e">Time</text>
+          <line x1="220" y1="45" x2="220" y2="295" stroke="#57534e" stroke-width="1.5"/>
+
+          <!-- 1. Chain -->
+          <rect x="45" y="65" width="130" height="36" rx="4" fill="#bae6fd" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="110" y="88" text-anchor="middle" font-weight="800" font-size="14" style="fill:#0c4a6e">Chain</text>
+          <line x1="175" y1="83" x2="240" y2="83" stroke="#57534e" stroke-width="1.5"/>
+          <ellipse cx="305" cy="83" rx="65" ry="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="305" y="88" text-anchor="middle" font-weight="700" font-size="13" style="fill:#0c4a6e">Project 1</text>
+          <ellipse cx="435" cy="83" rx="65" ry="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="435" y="88" text-anchor="middle" font-weight="700" font-size="13" style="fill:#0c4a6e">Project 2</text>
+          <ellipse cx="565" cy="83" rx="65" ry="22" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="565" y="88" text-anchor="middle" font-weight="700" font-size="13" style="fill:#0c4a6e">Project 3</text>
+
+          <!-- 2. Portfolio -->
+          <rect x="45" y="160" width="130" height="36" rx="4" fill="#bbf7d0" stroke="#16a34a" stroke-width="1.5"/>
+          <text x="110" y="183" text-anchor="middle" font-weight="800" font-size="14" style="fill:#14532d">Portfolio</text>
+          <path d="M175,178 L240,178 M240,135 L240,221 M240,135 L265,135 M240,178 L265,178 M240,221 L265,221" stroke="#57534e" stroke-width="1.5" fill="none"/>
+          <ellipse cx="330" cy="135" rx="65" ry="18" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+          <text x="330" y="140" text-anchor="middle" font-weight="700" font-size="13" style="fill:#14532d">Project 1</text>
+          <ellipse cx="330" cy="178" rx="65" ry="18" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+          <text x="330" y="183" text-anchor="middle" font-weight="700" font-size="13" style="fill:#14532d">Project 2</text>
+          <ellipse cx="330" cy="221" rx="65" ry="18" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+          <text x="330" y="226" text-anchor="middle" font-weight="700" font-size="13" style="fill:#14532d">Project 3</text>
+
+          <!-- 3. Network -->
+          <rect x="45" y="252" width="130" height="36" rx="4" fill="#fecdd3" stroke="#e11d48" stroke-width="1.5"/>
+          <text x="110" y="275" text-anchor="middle" font-weight="800" font-size="14" style="fill:#881337">Network</text>
+          <path d="M175,270 L240,270 M240,252 L240,286 M240,252 L265,252 M240,270 L325,270 M240,286 L265,286" stroke="#57534e" stroke-width="1.5" fill="none"/>
+          <ellipse cx="325" cy="252" rx="60" ry="17" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5" fill-opacity="0.85"/>
+          <text x="320" y="257" text-anchor="middle" font-weight="700" font-size="13" style="fill:#881337">Project 1</text>
+          <ellipse cx="395" cy="270" rx="65" ry="17" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5" fill-opacity="0.85"/>
+          <text x="405" y="275" text-anchor="middle" font-weight="700" font-size="13" style="fill:#881337">Project 2</text>
+          <ellipse cx="325" cy="286" rx="60" ry="17" fill="#ffe4e6" stroke="#e11d48" stroke-width="1.5" fill-opacity="0.85"/>
+          <text x="320" y="291" text-anchor="middle" font-weight="700" font-size="13" style="fill:#881337">Project 3</text>
+        </svg>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        A <mark class="b">chain</mark> sequences projects; the middle arrangement (<mark class="g">portfolio</mark>) places projects alongside one another; a <mark class="p">network</mark> highlights interconnections. Organisations may combine these patterns. Identify the actual dependencies.
+      </div>
+    </article>
+
+    <!-- Slide 16 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 16</span>
+        <span class="slide-tag">Operations vs. Projects</span>
+      </div>
+      <h3>Transformation Must Coexist with Everyday Operations</h3>
+      <blockquote class="quote">
+        "It is <mark class="y">not possible to shut down normal bank operations</mark> to enable work to be done; the bank functions must remain seamless to the customer at all times."
+      </blockquote>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        The bank case combines branch redesign and internet banking while normal services continue. Later projects can be refined at programme level as learning develops. <mark class="p">Business-as-usual work must be included when estimating available staff time</mark>.
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 4 ==================== -->
+  <section id="s4">
+    <div class="sec-head">
+      <span class="sec-num">04</span>
+      <h2>Aggregate Resource Planning &amp; Project Selection (Slides 17–25)</h2>
+    </div>
+
+    <!-- Slide 17 & 18 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 17 – Slide 18</span>
+        <span class="slide-tag">Aggregate Resource Plan &amp; Capacity Math</span>
+      </div>
+      <h3>Aggregate Resource Plans Make Capacity Visible</h3>
+      <blockquote class="quote">
+        "Providing a concise statement of the <mark class="y">resource requirements of the expected activities, both project and operational</mark>, is the objective of the <b>aggregate resource plan</b>."
+      </blockquote>
+      <p>Combine demand from projects and ongoing operations. Then compare it with available capacity by <mark class="b">time period and skill</mark>. <mark class="p">Adding all hours together is insufficient if the missing capacity belongs to a specialist role</mark>.</p>
+
+      <h4 style="margin:18px 0 8px;">Worked Example: Available Hours Are Finite (Slide 18)</h4>
+      <blockquote class="quote" style="font-size:15px">
+        "This gave a capacity figure of <mark class="b">1200 hours per person per year</mark>."
+      </blockquote>
+      <div class="grid-3">
+        <div class="box center">
+          <div class="stat-num">40</div>
+          <p style="margin:0"><b>Productive weeks per year</b></p>
+        </div>
+        <div class="box teal center">
+          <div class="stat-num">30</div>
+          <p style="margin:0"><b>Productive hours per week</b></p>
+        </div>
+        <div class="box warn center">
+          <div class="stat-num">1,200</div>
+          <p style="margin:0"><b>Hours per person per year</b></p>
+        </div>
+      </div>
+      <div class="formula">40 weeks × 30 hours/week = 1,200 hours/person/year</div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        These are assumptions used by the engineering consultancy in the book. They allow for <mark class="p">leave, training, meetings, administration and other demands</mark>. Use evidence for your own organisation rather than assuming every paid hour is project capacity.
+      </div>
+    </article>
+
+    <!-- Slide 19 & 20 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 19 – Slide 20</span>
+        <span class="slide-tag">Worked Capacity Calculation</span>
+      </div>
+      <h3>Activity &amp; Worked Answer: Is the Proposed Workload Feasible?</h3>
+      <div class="grid-2">
+        <div class="box">
+          <h4>Teaching Scenario (Slide 19)</h4>
+          <ul style="margin:0; padding-left:18px;">
+            <li><b>Team size:</b> 4 people × <mark class="b">1,200 productive hours/year</mark> each</li>
+            <li><b>Ongoing operations need:</b> <mark class="b">1,800 hours</mark></li>
+            <li><b>Proposed Projects:</b> Project A = <mark class="b">1,100 hrs</mark>, Project B = <mark class="b">900 hrs</mark>, Project C = <mark class="b">1,300 hrs</mark></li>
+            <li><b>Task:</b> Find total capacity, capacity remaining for projects, total project demand, and the capacity gap.</li>
+          </ul>
+        </div>
+        <div class="box danger">
+          <h4>Worked Answer: The Portfolio Exceeds Capacity (Slide 20)</h4>
+          <ul style="margin:0; padding-left:18px;">
+            <li><b>Total available hours:</b> <code>4 × 1,200 = 4,800 hours</code></li>
+            <li><b>Hours left after operations:</b> <code>4,800 − 1,800 = 3,000 hours</code></li>
+            <li><b>Hours required by A + B + C:</b> <code>1,100 + 900 + 1,300 = 3,300 hours</code></li>
+            <li><b>Result:</b> <mark class="p">3,300 − 3,000 = 300-hour shortfall</mark></li>
+          </ul>
+        </div>
+      </div>
+      <div class="formula">4 × 1,200 − 1,800 = 3,000 available &nbsp;|&nbsp; 3,300 − 3,000 = 300-hour shortfall</div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        All three cannot be delivered under the stated assumptions. Options include <mark class="g">deferring or reducing work, or adding suitable capacity</mark>. Choose using <mark class="y">strategic contribution, deadlines, dependencies, skill needs and cost</mark> — <mark class="p">not by selecting the smallest project automatically</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 21 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 21</span>
+        <span class="slide-tag">Work in Progress (WIP)</span>
+      </div>
+      <h3>More Active Projects Can Mean Less Completed Work</h3>
+      <blockquote class="quote">
+        "For the development organisation, a move away from the old system of <mark class="p">'whoever shouts loudest'</mark> to a <mark class="g">clear system of priorities reduced the workload from 72 projects to 12</mark>."
+      </blockquote>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        The book reports that clearer priorities and less work in progress helped this firm <mark class="b">complete twice as many projects that year with the same resources</mark>. Treat this as one case, not a universal ratio. <mark class="p">Switching and conflicting priorities consume capacity</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 22 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 22</span>
+        <span class="slide-tag">Table 3.3</span>
+      </div>
+      <h3>A Strategy Matrix Reveals Support and Conflict (Table 3.3)</h3>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Project</th>
+              <th class="center">Objective 1</th>
+              <th class="center">Objective 2</th>
+              <th class="center">Objective 3</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Project 1</b></td>
+              <td class="center"><mark class="g">++</mark></td>
+              <td class="center"><mark class="b">+</mark></td>
+              <td class="center"><mark class="p">-</mark></td>
+            </tr>
+            <tr>
+              <td><b>Project 2</b></td>
+              <td class="center"><mark class="p">-</mark></td>
+              <td class="center"><mark class="g">++</mark></td>
+              <td class="center">—</td>
+            </tr>
+            <tr>
+              <td><b>Project 3</b></td>
+              <td class="center"><mark class="b">+</mark></td>
+              <td class="center"><mark class="b">+</mark></td>
+              <td class="center"><mark class="g">++</mark></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:13.5px; margin:6px 0;"><b>Key:</b> <mark class="g">++ Strong positive relationship</mark> &nbsp;|&nbsp; <mark class="b">+ Positive relationship</mark> &nbsp;|&nbsp; <mark class="p">- Negative relationship</mark> &nbsp;|&nbsp; <mark class="p">-- Strong negative relationship</mark></p>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        Read each project against each objective. Inspect <mark class="p">negative effects and objectives with no supporting project</mark>. This is <mark class="p">not a numerical ranking</mark> or permission to ignore trade-offs.
+      </div>
+    </article>
+
+    <!-- Slide 23, 24, 25 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 23 – Slide 25</span>
+        <span class="slide-tag">Book Case &amp; Table 3.6</span>
+      </div>
+      <h3>Book Case: Select a Student Project &amp; Decision Matrix (Table 3.6)</h3>
+      <p><b>Five Candidate Student Projects (Slide 23):</b></p>
+      <ul>
+        <li><b>Yearbook:</b> produce a yearbook for their class group;</li>
+        <li><b>Video:</b> develop a short video promoting the course that they are studying;</li>
+        <li><b>Formal ball:</b> run a formal ball for the entire department;</li>
+        <li><b>Treasure hunt:</b> organise a treasure hunt one Sunday;</li>
+        <li><b>Awareness day:</b> organise an 'accident awareness' day for schoolchildren.</li>
+      </ul>
+      <div class="note" style="margin-bottom:14px;">
+        <b class="lbl">Teaching Note (Slide 23)</b>
+        The book's students <mark class="y">first agree criteria</mark>: originality, demonstrating skills, report quality, challenge, independence, limited financial risk and enjoyment. <mark class="y">Criteria should precede choosing a favourite option</mark>.
+      </div>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Option</th>
+              <th class="center">Originality</th>
+              <th class="center">Demonstrate skills</th>
+              <th class="center">Produce good report</th>
+              <th class="center">Stretching</th>
+              <th class="center">Independent of others</th>
+              <th class="center">Avoids financial risk</th>
+              <th class="center">FUN</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Yearbook</b></td>
+              <td class="center">✗</td>
+              <td class="center">✓</td>
+              <td class="center">✓</td>
+              <td class="center">—</td>
+              <td class="center">—</td>
+              <td class="center">✗</td>
+              <td class="center">✗</td>
+            </tr>
+            <tr style="background: color-mix(in srgb, var(--hl-green) 25%, var(--card));">
+              <td><b>Video (Chosen)</b></td>
+              <td class="center"><b>✓</b></td>
+              <td class="center"><b>✓</b></td>
+              <td class="center"><b>✓</b></td>
+              <td class="center"><b>✓</b></td>
+              <td class="center"><b>✓</b></td>
+              <td class="center"><mark class="p">?</mark> (blank)</td>
+              <td class="center"><b>✓</b></td>
+            </tr>
+            <tr>
+              <td><b>Ball</b></td>
+              <td class="center">✗</td>
+              <td class="center">✓</td>
+              <td class="center">✓</td>
+              <td class="center">✓</td>
+              <td class="center">✗</td>
+              <td class="center"><mark class="p">✗✗✗</mark></td>
+              <td class="center">✓</td>
+            </tr>
+            <tr>
+              <td><b>Treasure hunt</b></td>
+              <td class="center">✓</td>
+              <td class="center">✓</td>
+              <td class="center">—</td>
+              <td class="center">✗</td>
+              <td class="center">✗</td>
+              <td class="center">✓</td>
+              <td class="center">—</td>
+            </tr>
+            <tr>
+              <td><b>Accident awareness day</b></td>
+              <td class="center">—</td>
+              <td class="center">—</td>
+              <td class="center">—</td>
+              <td class="center">—</td>
+              <td class="center">—</td>
+              <td class="center">✓</td>
+              <td class="center">—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It (Slide 24)</b>
+        Compare each option across the seven criteria. The group <mark class="g">chose the video, while recognising financial risk still needed attention</mark>. The ratings reflect that group's judgement. The book <mark class="p">does not present these marks as numerical weights or an objective universal score</mark>.
+      </div>
+      <div class="note">
+        <b class="lbl">Discussion: Would a Different Group Choose Differently? (Slide 25)</b>
+        <b>Challenge a rating:</b> Choose one matrix entry you would question and state the missing evidence, skill, permission or resource. <b>Explain the decision:</b> Capabilities and constraints affect feasibility, while priorities affect preference. Investigate uncertain ratings and any unacceptable risk before approving the option with the broadest appeal.
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 5 ==================== -->
+  <section id="s5">
+    <div class="sec-head">
+      <span class="sec-num">05</span>
+      <h2>Project Governance &amp; The Project Management Office (PMO) (Slides 26–33)</h2>
+    </div>
+
+    <!-- Slide 26 & 27 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 26 – Slide 27</span>
+        <span class="slide-tag">Governance &amp; Figure 3.5</span>
+      </div>
+      <h3>Governance: Responsibility, Steering &amp; Basic Structure (Figure 3.5)</h3>
+      <blockquote class="quote">
+        "Project governance <mark class="y">sets out who is responsible for doing what and to whom they are responsible</mark>."
+      </blockquote>
+      <p>Governance defines how <mark class="u">direction, authority and accountability</mark> work. Some problems exceed the project manager's authority, such as resolving competition for resources across departments. The project needs a route for those decisions.</p>
+
+      <div class="svg-wrap">
+        <svg viewBox="0 0 820 350" width="100%">
+          <!-- Programme Management -->
+          <rect x="200" y="14" width="320" height="38" rx="6" fill="#bae6fd" stroke="#0284c7" stroke-width="2"/>
+          <text x="360" y="38" text-anchor="middle" font-weight="800" font-size="14.5" style="fill:#0c4a6e">Programme Management</text>
+          <line x1="360" y1="52" x2="360" y2="80" stroke="#57534e" stroke-width="2"/>
+
+          <!-- Project Board -->
+          <rect x="190" y="80" width="340" height="96" rx="6" fill="#dbeafe" stroke="#1e3a8a" stroke-width="2"/>
+          <text x="360" y="104" text-anchor="middle" font-weight="800" font-size="15" style="fill:#1e3a8a">Project Board</text>
+          <text x="235" y="126" font-size="13.5" font-weight="600" style="fill:#1e3a8a">• Senior user</text>
+          <text x="235" y="146" font-size="13.5" font-weight="600" style="fill:#1e3a8a">• Executive / Senior Responsible Owner (SRO)</text>
+          <text x="235" y="166" font-size="13.5" font-weight="600" style="fill:#1e3a8a">• Senior supplier</text>
+
+          <!-- Side bodies: Technical advisory group & Project assurance -->
+          <line x1="530" y1="128" x2="600" y2="128" stroke="#57534e" stroke-width="2"/>
+          <rect x="600" y="102" width="190" height="52" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+          <text x="695" y="124" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#0c4a6e">Technical</text>
+          <text x="695" y="142" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#0c4a6e">advisory group</text>
+
+          <line x1="360" y1="176" x2="360" y2="232" stroke="#57534e" stroke-width="2"/>
+          <line x1="360" y1="202" x2="600" y2="202" stroke="#57534e" stroke-width="2"/>
+          <rect x="600" y="176" width="190" height="52" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+          <text x="695" y="198" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#92400e">Project</text>
+          <text x="695" y="216" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#92400e">assurance</text>
+
+          <!-- Project Manager -->
+          <rect x="200" y="232" width="320" height="38" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="2"/>
+          <text x="360" y="256" text-anchor="middle" font-weight="800" font-size="14.5" style="fill:#065f46">Project Manager</text>
+
+          <!-- Bottom Row: PMO + 4 Teams -->
+          <path d="M360,270 L360,288 M80,288 L640,288 M80,288 L80,302 M220,288 L220,302 M360,288 L360,302 M500,288 L500,302 M640,288 L640,302" stroke="#57534e" stroke-width="1.8" fill="none"/>
+          <rect x="30" y="302" width="100" height="36" rx="5" fill="#f3e8ff" stroke="#7e22ce" stroke-width="1.5"/>
+          <text x="80" y="325" text-anchor="middle" font-weight="800" font-size="13.5" style="fill:#581c87">PMO</text>
+
+          <rect x="170" y="302" width="100" height="36" rx="5" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="220" y="325" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#1e3a8a">Team</text>
+
+          <rect x="310" y="302" width="100" height="36" rx="5" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="360" y="325" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#1e3a8a">Team</text>
+
+          <rect x="450" y="302" width="100" height="36" rx="5" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="500" y="325" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#1e3a8a">Team</text>
+
+          <rect x="590" y="302" width="100" height="36" rx="5" fill="#dbeafe" stroke="#1e3a8a" stroke-width="1.5"/>
+          <text x="640" y="325" text-anchor="middle" font-weight="700" font-size="13.5" style="fill:#1e3a8a">Team</text>
+        </svg>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        Follow the connections from <mark class="u">programme management → project board → project manager → PMO and teams</mark>. Technical advice and assurance support the board.
+      </div>
+    </article>
+
+    <!-- Slide 28 & 29 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 28 – Slide 29</span>
+        <span class="slide-tag">Governance Roles Defined</span>
+      </div>
+      <h3>Board Interests &amp; Management, Advice and Assurance Roles</h3>
+      <div class="grid-3">
+        <div class="box">
+          <h4>SRO and Sponsor (Slide 28)</h4>
+          <p>The <mark class="u">SRO (Senior Responsible Owner)</mark> is the person who <b>ultimately wants the result</b>. The <mark class="u">sponsor</mark> <b>has the budget</b> for the project to be carried out.</p>
+        </div>
+        <div class="box teal">
+          <h4>Senior User (Slide 28)</h4>
+          <p>Provides high-level input from <mark class="u">those who will ultimately be using the output</mark> of the project (e.g. users of an IT system).</p>
+        </div>
+        <div class="box warn">
+          <h4>Senior Supplier (Slide 28)</h4>
+          <p>The representative of <mark class="u">those who will be delivering the project</mark>.</p>
+        </div>
+        <div class="box">
+          <h4>Project Manager (Slide 29)</h4>
+          <p>Coordinates <mark class="u">day-to-day delivery</mark> and the teams doing the work. <mark class="p">Escalates decisions that exceed delegated authority</mark>.</p>
+        </div>
+        <div class="box teal">
+          <h4>Technical Advisory Group (Slide 29)</h4>
+          <p>Provides <mark class="u">specialist advice to the board</mark> on the technical direction and viability of the work.</p>
+        </div>
+        <div class="box danger">
+          <h4>Project Assurance (Slide 29)</h4>
+          <p>Provides <mark class="u">confidence that important requirements and controls are being met</mark>. Placed <mark class="p">outside the project manager's direct control</mark>.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        Identify who wants the result, who controls funding, who represents users and who represents delivery. <mark class="y">Advice informs a decision; assurance examines whether the project meets relevant expectations</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 30, 31, 32 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 30 – Slide 32</span>
+        <span class="slide-tag">Figure 3.6 &amp; PMO Roles</span>
+      </div>
+      <h3>The PMO and the Project Exchange Support and Learning (Figure 3.6)</h3>
+      <div class="svg-wrap">
+        <svg viewBox="0 0 740 250" width="100%">
+          <rect x="220" y="15" width="300" height="42" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="2"/>
+          <text x="370" y="41" text-anchor="middle" font-weight="800" font-size="15" style="fill:#92400e">PROJECT OFFICE (PMO)</text>
+
+          <rect x="220" y="190" width="300" height="42" rx="6" fill="#d1fae5" stroke="#0f766e" stroke-width="2"/>
+          <text x="370" y="216" text-anchor="middle" font-weight="800" font-size="15" style="fill:#065f46">PROJECT PROCESS</text>
+
+          <!-- Downward arrow (Left) -->
+          <line x1="295" y1="57" x2="295" y2="186" stroke="#0f766e" stroke-width="3" marker-end="url(#arrD)"/>
+          <g font-size="13" font-weight="600">
+            <text x="65" y="76">• Skills &amp; Knowledge</text>
+            <text x="65" y="96">• Pool of staff &amp; Resources</text>
+            <text x="65" y="116">• Support &amp; Documentation</text>
+            <text x="65" y="136">• Checks and controls</text>
+            <text x="65" y="156">• Mentoring</text>
+          </g>
+
+          <!-- Upward arrow (Right) -->
+          <line x1="445" y1="190" x2="445" y2="61" stroke="#1e3a8a" stroke-width="3" marker-end="url(#arrB)"/>
+          <g font-size="13" font-weight="600">
+            <text x="468" y="92">• Information about projects</text>
+            <text x="468" y="116">• Knowledge gained from this project</text>
+            <text x="468" y="140">• Staff project experience</text>
+            <text x="468" y="164" style="fill:#be123c">• Overhead cost</text>
+          </g>
+        </svg>
+      </div>
+
+      <h4 style="margin:16px 0 8px;">Five Categories of PMO Work (Slide 31)</h4>
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>PMO Category</th>
+              <th>Selected Roles &amp; Responsibilities</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>1. Performance</b></td>
+              <td>Report status to upper management; monitor and control project performance.</td>
+            </tr>
+            <tr>
+              <td><b>2. Capabilities</b></td>
+              <td>Develop competency of personnel, including training.</td>
+            </tr>
+            <tr>
+              <td><b>3. Multiple projects</b></td>
+              <td>Allocate resources between projects.</td>
+            </tr>
+            <tr>
+              <td><b>4. Strategy</b></td>
+              <td>Provide advice to senior management; participate in strategic planning.</td>
+            </tr>
+            <tr>
+              <td><b>5. Learning</b></td>
+              <td>Conduct project audits; conduct post-project reviews.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <blockquote class="quote" style="font-size:15.5px;">
+        <b>Slide 32:</b> <mark class="p">"All this additional support to the project process does not come free."</mark>
+      </blockquote>
+      <div class="note">
+        <b class="lbl">Teaching Note (Slides 31–32)</b>
+        Training, coordination, reporting and learning need resources. Assess the <mark class="g">benefit of support against its cost and administrative demands</mark>; <mark class="p">more reporting is not automatically better management</mark>.
+      </div>
+    </article>
+
+    <!-- Slide 33 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 33</span>
+        <span class="slide-tag">Governance Activity</span>
+      </div>
+      <h3>Activity: Design Governance for the Careers Event</h3>
+      <div class="grid-3">
+        <div class="box">
+          <h4>1. Allocate Roles</h4>
+          <p>Identify a <b>sponsor</b>, <b>user representative</b>, <b>delivery lead</b> and <b>project manager</b>. State each person's decision responsibility.</p>
+        </div>
+        <div class="box warn">
+          <h4>2. Plan Escalation</h4>
+          <p>The venue becomes unavailable and an alternative <mark class="p">exceeds the agreed budget</mark>. Who proposes options, who reviews impacts and who authorises the decision?</p>
+        </div>
+        <div class="box teal">
+          <h4>3. Choose Support</h4>
+          <p>Identify <b>one PMO-style service</b> that would help and <b>one record</b> worth keeping for the next event.</p>
+        </div>
+      </div>
+      <div class="note">
+        <b class="lbl">Teaching Note</b>
+        <b>Suggested approach:</b> <mark class="u">The manager assembles options and impacts; the authorised sponsor/board decides</mark> within governance arrangements. Booking records, templates and lessons support future teams.
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 6 ==================== -->
+  <section id="s6">
+    <div class="sec-head">
+      <span class="sec-num">06</span>
+      <h2>Major Case Study: Airbus A380 (Slides 34–39)</h2>
+    </div>
+
+    <!-- Slide 34 & 35 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 34 – Slide 35</span>
+        <span class="slide-tag">Figure 3.7</span>
+      </div>
+      <h3>Airbus A380: Scale Creates New Interfaces and Constraints (Figure 3.7)</h3>
+      <blockquote class="quote">
+        "That it ever flew at all was an enormous achievement on the part of the individuals and organisations taking part in the development. The <mark class="y">technical and managerial challenges were significant, not least because of the number of nations involved</mark> in both the design and building of the plane."
+      </blockquote>
+      <p>The chapter describes the <mark class="b">2005 maiden flight</mark> and <mark class="b">entry into commercial service in 2007</mark>. The question is broader than whether engineers could build a large aircraft.</p>
+
+      <div class="tbl-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Dimension / Metric (Figure 3.7)</th>
+              <th>Boeing 747</th>
+              <th>Airbus A380</th>
+              <th>Scale &amp; Integration Impact</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Seating Capacity</b></td>
+              <td><mark class="b">416</mark> (twin aisle upper/main)</td>
+              <td><mark class="b">555 (max 840)</mark> (full double-deck)</td>
+              <td>Full twin-deck cabin configuration</td>
+            </tr>
+            <tr>
+              <td><b>Internal Cabin Width</b></td>
+              <td><mark class="b">6.1 m</mark></td>
+              <td><mark class="b">6.58 m</mark></td>
+              <td>Wider fuselage cross-section</td>
+            </tr>
+            <tr>
+              <td><b>Wingspan (Span)</b></td>
+              <td><mark class="b">64.4 m</mark></td>
+              <td><mark class="b">79.8 m</mark></td>
+              <td>Airport gate &amp; wing transport constraints</td>
+            </tr>
+            <tr>
+              <td><b>Length</b></td>
+              <td><mark class="b">70.7 m</mark></td>
+              <td><mark class="b">73 m</mark></td>
+              <td>Multi-section fuselage joining</td>
+            </tr>
+            <tr>
+              <td><b>Height</b></td>
+              <td><mark class="b">19.4 m</mark></td>
+              <td><mark class="b">24.1 m</mark></td>
+              <td>Larger vertical stabiliser &amp; hangar needs</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        Greater size affected <mark class="p">technology, manufacturing and integration</mark> (Adapted from <i>'Enormous plane takes to the sky'</i>, BBC News, 14 February 2007).
+      </div>
+    </article>
+
+    <!-- Slide 36 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 36</span>
+        <span class="slide-tag">Figure 3.8</span>
+      </div>
+      <h3>Sourcing and Logistics Are Part of the Programme (Figure 3.8)</h3>
+      <div class="grid-2">
+        <div class="box">
+          <h4>Airbus UK</h4>
+          <p><b>Sites:</b> Broughton, Filton<br><b>Components:</b> <mark class="g">Wings</mark></p>
+        </div>
+        <div class="box teal">
+          <h4>Airbus Deutschland (Germany)</h4>
+          <p><b>Sites:</b> Stade, Hamburg, Nordenham, Bremen, Varel, Augsburg, Laupheim<br><b>Components:</b> <mark class="g">Forward &amp; Aft fuselage, Vertical stabiliser, Wing moving surfaces</mark> (+ <mark class="u">fitting out in Hamburg</mark>)</p>
+        </div>
+        <div class="box warn">
+          <h4>Airbus France</h4>
+          <p><b>Sites:</b> Meaulte, St Nazaire, Nantes, Toulouse<br><b>Components:</b> <mark class="g">Nose section, Centre fuselage, Engine pylons, Wing-to-body fairings</mark> (+ <mark class="u">final assembly in Toulouse</mark>)</p>
+        </div>
+        <div class="box danger">
+          <h4>Airbus España (Spain)</h4>
+          <p><b>Sites:</b> Getafe, Illescas, Puerto Real<br><b>Components:</b> <mark class="g">Horizontal stabiliser</mark></p>
+        </div>
+      </div>
+      <div class="read-box">
+        <b class="lbl">How to Read It</b>
+        Components came from multiple sites and countries. They had to <mark class="p">fit technically and arrive for assembly in Toulouse</mark> and <mark class="p">subsequent fitting out in Hamburg</mark>. <mark class="u">Interfaces, logistics and work-sharing agreements</mark> all required coordination.
+      </div>
+    </article>
+
+    <!-- Slide 37, 38, 39 -->
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 37 – Slide 39</span>
+        <span class="slide-tag">Strategic Retrospective &amp; Workshop</span>
+      </div>
+      <h3>Technical Achievement vs. Commercial Value &amp; Case Workshop</h3>
+      <blockquote class="quote">
+        "Despite the magnificence of the aircraft and the hugely impressive engineering and manufacturing behind it, the case shows the <mark class="p">difficulty of predicting how a multi-decade investment will play out in a competitive market</mark>."
+      </blockquote>
+      <p>The chapter records <mark class="b">Airbus's 2019 announcement to end production</mark> and discusses market uncertainty and the pandemic. Its lesson is that <mark class="p">engineering achievement does not guarantee the expected investment return</mark>.</p>
+
+      <h4 style="margin:16px 0 8px;">Case Workshop &amp; Suggested Analysis (Slides 38–39)</h4>
+      <div class="grid-3">
+        <div class="box">
+          <h4>1. Programme Perspective</h4>
+          <p>Treat development as a <mark class="u">programme</mark>: related engineering, manufacturing and logistics projects contribute to a common aircraft capability. <mark class="g">Coordinated interfaces and milestones are essential</mark>.</p>
+        </div>
+        <div class="box teal">
+          <h4>2. Governance and PMO</h4>
+          <p>A proposed board brings <mark class="u">business (SRO/sponsor), user (airlines/passengers) and supplier interests</mark> together. Technical advice and assurance inform decisions; the <mark class="u">PMO coordinates dependencies and shared information</mark>.</p>
+        </div>
+        <div class="box danger">
+          <h4>3. Residual Strategic Risk</h4>
+          <p><mark class="p">Market demand and investment assumptions can change over a long development period</mark>. Good coordination reduces delivery problems but <mark class="p">cannot guarantee commercial success</mark>.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ==================== SECTION 7 ==================== -->
+  <section id="s7">
+    <div class="sec-head">
+      <span class="sec-num">07</span>
+      <h2>Exit Check: Connect Choice, Capacity and Accountability (Slide 40)</h2>
+    </div>
+
+    <article class="slide-card">
+      <div class="slide-meta">
+        <span class="slide-badge">Slide 40</span>
+        <span class="slide-tag">Exam Self-Test &amp; Model Answers</span>
+      </div>
+      <h3>Three Core Exam Questions</h3>
+      <div class="grid-3">
+        <div class="box">
+          <h4>Question 1</h4>
+          <p><b>How is choosing a portfolio different from coordinating a programme?</b></p>
+          <hr style="border:0; border-top:1px dashed var(--line); margin:8px 0;">
+          <p><mark class="g">Portfolio management selects work</mark> across the organisation for strategic value within scarce capacity, whereas <mark class="u">programme management coordinates related projects</mark> to realise combined benefits and manage interfaces.</p>
+        </div>
+        <div class="box teal">
+          <h4>Question 2</h4>
+          <p><b>Why must an aggregate resource plan include ongoing operations?</b></p>
+          <hr style="border:0; border-top:1px dashed var(--line); margin:8px 0;">
+          <p>Because <mark class="p">ongoing operations (business-as-usual) consume the same finite capacity</mark> and specialist staff hours as project work.</p>
+        </div>
+        <div class="box warn">
+          <h4>Question 3</h4>
+          <p><b>What decision might require a sponsor or board, rather than the project manager alone?</b></p>
+          <hr style="border:0; border-top:1px dashed var(--line); margin:8px 0;">
+          <p>A <mark class="u">change beyond delegated budget or scope</mark>, or resolving a <mark class="p">cross-project / cross-departmental priority and resource conflict</mark>.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+</main>
+
+<footer>
+  <div class="w">
+    Week 03 – Projects and Organisations • Prof. Naghdali Choupani • İstanbul Aydın University<br>
+    Based on Harvey Maylor &amp; Neil Turner, <i>Project Management</i> (5th Edition, Pearson).
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root = document.documentElement;
+  var btn = document.getElementById('themeBtn');
+  function applyTheme(theme) {
+    root.setAttribute('data-theme', theme);
+    btn.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+  var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+  applyTheme(prefersDark ? 'dark' : 'light');
+  btn.addEventListener('click', function(){
+    var current = root.getAttribute('data-theme');
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+})();
+</script>
+  <!-- Shared Collapsible Left Navigation (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>

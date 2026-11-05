@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEN412 — Project Management in Engineering | Course Portal & Study Notes Hub</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-paper: #faf7f2;
+      --bg-card: #ffffff;
+      --bg-subtle: #f3efe6;
+      --ink-main: #1e293b;
+      --ink-muted: #64748b;
+      --border-line: #e2dcd0;
+      --accent-primary: #4f46e5;
+      --accent-secondary: #e11d48;
+      --dot-color: rgba(148, 163, 184, 0.28);
+
+      /* Highlighter Colors */
+      --hl-yellow: #fef08a;
+      --hl-yellow-ink: #713f12;
+      --hl-green: #bbf7d0;
+      --hl-green-ink: #14532d;
+      --hl-pink: #fecdd3;
+      --hl-pink-ink: #881337;
+      --hl-blue: #bae6fd;
+      --hl-blue-ink: #0c4a6e;
+      --hl-purple: #e9d5ff;
+      --hl-purple-ink: #4c1d95;
+    }
+
+    [data-theme="dark"] {
+      --bg-paper: #121316;
+      --bg-card: #1c1e24;
+      --bg-subtle: #16181d;
+      --ink-main: #f1f5f9;
+      --ink-muted: #94a3b8;
+      --border-line: #2e323b;
+      --accent-primary: #818cf8;
+      --accent-secondary: #fb7185;
+      --dot-color: rgba(148, 163, 184, 0.12);
+
+      --hl-yellow: rgba(250, 204, 21, 0.25);
+      --hl-yellow-ink: #fef08a;
+      --hl-green: rgba(74, 222, 128, 0.22);
+      --hl-green-ink: #bbf7d0;
+      --hl-pink: rgba(251, 113, 133, 0.25);
+      --hl-pink-ink: #fecdd3;
+      --hl-blue: rgba(56, 189, 248, 0.25);
+      --hl-blue-ink: #bae6fd;
+      --hl-purple: rgba(192, 132, 252, 0.25);
+      --hl-purple-ink: #e9d5ff;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background-color: var(--bg-paper);
+      background-image: radial-gradient(var(--dot-color) 1.25px, transparent 1.25px);
+      background-size: 22px 22px;
+      color: var(--ink-main);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+
+    h1, h2, h3, h4, .heading-font {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    }
+
+    .mono-font {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* Note Cards */
+    .note-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-line);
+      border-radius: 1rem;
+      box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+    .note-card:hover {
+      box-shadow: 0 12px 30px -4px rgba(15, 23, 42, 0.1);
+      border-color: rgba(79, 70, 229, 0.4);
+    }
+
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background-color: var(--bg-subtle);
+      border: 1px solid var(--border-line);
+    }
+
+    .sec-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 0.65rem;
+      background: linear-gradient(135deg, #4f46e5, #e11d48);
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      margin-right: 0.75rem;
+      flex-shrink: 0;
+    }
+
+    .roadmap-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      border: 1px solid var(--border-line);
+      border-radius: 0.75rem;
+      overflow: hidden;
+      background-color: var(--bg-card);
+    }
+    .roadmap-table th {
+      background-color: var(--bg-subtle);
+      color: var(--ink-main);
+      font-weight: 700;
+      text-align: left;
+      padding: 0.75rem 1rem;
+      border-bottom: 2px solid var(--border-line);
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .roadmap-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-line);
+      vertical-align: middle;
+      font-size: 0.92rem;
+    }
+    .roadmap-table tr:last-child td {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body data-lesson="index" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
+
+  <!-- Sticky Topbar Navigation Header -->
+  <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
+    <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="px-2.5 py-1 rounded-md text-xs font-extrabold uppercase tracking-wider bg-gradient-to-r from-indigo-600 to-rose-600 text-white">
+          MEN412 PORTAL
+        </span>
+        <span class="font-bold text-sm sm:text-base truncate">
+          Project Management in Engineering — Study Notes Hub
+        </span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" type="button" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold border transition hover:opacity-90" style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+          <span id="themeIcon">🌙</span>
+          <span id="themeText">Dark Study Mode</span>
+        </button>
+      </div>
+    </div>
+    <!-- Quick Jump Sub-bar -->
+    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
+      <nav class="flex items-center gap-2 text-xs font-semibold whitespace-nowrap">
+        <a href="#lessons" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">📚 Available Lessons</a>
+        <a href="#quiz-prep" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">🎯 Quiz & Midterm Prep</a>
+        <a href="#roadmap" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">🗺️ 14-Week Roadmap</a>
+        <a href="#cheatsheet" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">⚡ Key Frameworks Quick-Sheet</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Header Hero Block -->
+  <header class="max-w-6xl mx-auto px-4 pt-8 pb-6">
+    <div class="note-card p-6 sm:p-10 relative overflow-hidden" style="border-top: 6px solid #4f46e5;">
+      <div class="flex flex-wrap items-center justify-between gap-2 mb-4">
+        <span class="badge-pill text-indigo-600 dark:text-indigo-400">
+          🏛️ İstanbul Aydın University • Faculty of Engineering
+        </span>
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full" style="background-color: var(--bg-subtle); color: var(--ink-muted);">
+          Course Code: MEN412 • Fall Semester
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
+        Project Management
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">
+          in Engineering
+        </span>
+      </h1>
+      
+      <p class="text-base sm:text-lg mb-6 leading-relaxed" style="color: var(--ink-muted);">
+        Comprehensive, interactive HTML study notes built from the official lecture materials by 
+        <strong style="color: var(--ink-main);">Prof. Dr. Naghdali Choupani</strong> and grounded in 
+        <em style="color: var(--ink-main);">Project Management</em> (5th Edition, 2022) by Harvey Maylor & Neil Turner (Pearson).
+      </p>
+
+      <!-- Key Course Metrics Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 border-t" style="border-color: var(--border-line);">
+        <div class="p-3 rounded-xl" style="background-color: var(--bg-subtle);">
+          <div class="text-xs font-bold uppercase text-slate-500">Curriculum Scope</div>
+          <div class="text-lg font-extrabold text-indigo-600 dark:text-indigo-400">14 Weeks</div>
+          <div class="text-xs" style="color: var(--ink-muted);">Initiation to Close-Out</div>
+        </div>
+        <div class="p-3 rounded-xl" style="background-color: var(--bg-subtle);">
+          <div class="text-xs font-bold uppercase text-slate-500">Available Notes</div>
+          <div class="text-lg font-extrabold text-emerald-600 dark:text-emerald-400">6 Weeks + Quiz</div>
+          <div class="text-xs" style="color: var(--ink-muted);">Weeks 01–06 Published</div>
+        </div>
+        <div class="p-3 rounded-xl" style="background-color: var(--bg-subtle);">
+          <div class="text-xs font-bold uppercase text-slate-500">Methodologies</div>
+          <div class="text-lg font-extrabold text-amber-600 dark:text-amber-400">CPM, PERT, EVM</div>
+          <div class="text-xs" style="color: var(--ink-muted);">7-S, ICOM, 4-D, WBS</div>
+        </div>
+        <div class="p-3 rounded-xl" style="background-color: var(--bg-subtle);">
+          <div class="text-xs font-bold uppercase text-slate-500">Study Style</div>
+          <div class="text-lg font-extrabold text-rose-600 dark:text-rose-400">5-Marker System</div>
+          <div class="text-xs" style="color: var(--ink-muted);">Highlighter & Vector SVGs</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="max-w-6xl mx-auto px-4 space-y-12 pb-20">
+
+    <!-- Instant Search & Filter Bar -->
+    <section class="space-y-4">
+      <div class="note-card p-4 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div class="w-full sm:w-2/3">
+          <label for="lessonSearch" class="block text-xs font-bold uppercase tracking-wider mb-1" style="color: var(--ink-muted);">
+            🔍 Instant Topic & Framework Filter:
+          </label>
+          <input type="text" id="lessonSearch" placeholder="Filter by keyword (e.g., CPM, Gantt, 7-S, ICOM, EVM, WBS, Arson, Float, Scope)..." 
+            class="w-full px-4 py-2.5 rounded-lg border text-sm font-medium transition focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            style="background-color: var(--bg-subtle); border-color: var(--border-line); color: var(--ink-main);">
+        </div>
+        <div class="w-full sm:w-auto flex items-center gap-2 text-xs font-semibold">
+          <span class="text-slate-500">Quick Tags:</span>
+          <button type="button" class="filter-tag-btn px-2.5 py-1 rounded-md border text-xs font-bold transition hover:opacity-80" data-filter="cpm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">CPM / Float</button>
+          <button type="button" class="filter-tag-btn px-2.5 py-1 rounded-md border text-xs font-bold transition hover:opacity-80" data-filter="7-s" style="background-color: var(--bg-subtle); border-color: var(--border-line);">7-S / ICOM</button>
+          <button type="button" class="filter-tag-btn px-2.5 py-1 rounded-md border text-xs font-bold transition hover:opacity-80" data-filter="wbs" style="background-color: var(--bg-subtle); border-color: var(--border-line);">WBS / Scope</button>
+          <button type="button" id="clearFilterBtn" class="text-rose-500 hover:underline ml-1">Clear</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: AVAILABLE LESSONS GRID -->
+    <section id="lessons" class="space-y-6">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <span class="sec-num">01</span>
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Available Weekly Study Notes</h2>
+            <p class="text-sm" style="color: var(--ink-muted);">Click any card to open the complete, classroom-annotated study guide.</p>
+          </div>
+        </div>
+        <span id="lessonCountBadge" class="badge-pill bg-indigo-50 text-indigo-700 dark:bg-indigo-950 dark:text-indigo-300">
+          Showing 6 Lessons
+        </span>
+      </div>
+
+      <div id="lessonsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- CARD 1: WEEK 01 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="introduction definitions transient change volume variety line management accidental profession 5 generations traps 44 slides chapter 1">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 01 • Chapter 1</span>
+              <span class="text-xs font-mono font-bold text-slate-500">44 Slides</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Introduction to Project Management</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Definitions of a project, the transient nature of change, volume vs. variety process matrix, line vs. PM contrasts, 5 historical generations, and persistent traps.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Definitions</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">Volume vs Variety</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">5 Generations</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Four Managers Case</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~35 min study</span>
+            <a href="lesson_01_introduction_to_project_management_exam_study_notes.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 2: WEEK 02 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="structures frameworks 5-c pestel 7-s icom conversion 4-d lifecycle s-curve stage gates agile design thinking arson task force atf complexity crossrail 45 slides chapter 2">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 02 • Chapter 2</span>
+              <span class="text-xs font-mono font-bold text-slate-500">45 Slides</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Structures & Frameworks</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Sense-making models: 5-C environment, PESTEL, internal 7-S framework, ICOM conversion engine, 4-D delivery lifecycle, S-curves, Crossrail complexity lenses, and the Arson Task Force diagnostic.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">5-C & PESTEL</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300">7-S & ICOM</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">4-D & S-Curve</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">Arson Task Force</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~40 min study</span>
+            <a href="lesson_02_structures_and_frameworks_exam_study_notes.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 3: WEEK 03 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="projects organisations structures functional matrix projectized team authority governance dual reporting stakeholder management chapter 3">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 03 • Chapter 3</span>
+              <span class="text-xs font-mono font-bold text-slate-500">Lecture Deck</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Projects and Organisations</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Organizational arrangements for project delivery: pure functional, dedicated projectized teams, lightweight vs. heavy matrix structures, dual reporting conflicts, and project governance.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800 dark:bg-purple-950 dark:text-purple-300">Functional vs Matrix</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">PM Authority</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Dual Reporting</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Governance</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~30 min study</span>
+            <a href="Week_03_Projects_and_Organisations.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 4: WEEK 04 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="setting up success project charter scope baseline wbs work breakdown structure hierarchies work packages iron triangle trade-offs chapter 4">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 04 • Chapter 4</span>
+              <span class="text-xs font-mono font-bold text-slate-500">Comprehensive</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Setting up for Success</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Initiating the project right: creating the Project Charter, establishing scope baselines, hierarchical Work Breakdown Structures (WBS), work package definitions, and Iron Triangle trade-off states.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Project Charter</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">WBS Hierarchies</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">Iron Triangle</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Scope Baselines</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~40 min study</span>
+            <a href="lesson_04_setting_up_for_success_exam_study_notes.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 5: WEEK 05 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="planning success activity definition sequencing dependency logic finish start lead lag milestone gates precedence chapter 5">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 05 • Chapter 5</span>
+              <span class="text-xs font-mono font-bold text-slate-500">Detailed Guide</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Planning for Success</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Translating scope into executable work: activity definition from WBS, Precedence Diagramming Method (PDM), 4 dependency types (FS, SS, FF, SF), leads & lags, and milestone governance.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-blue-100 text-blue-800 dark:bg-blue-950 dark:text-blue-300">Activity Definition</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">FS / SS / FF / SF</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Leads & Lags</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Milestone Gates</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~45 min study</span>
+            <a href="lesson_05_planning_for_success_exam_study_notes.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- CARD 6: WEEK 06 -->
+        <article class="lesson-card note-card flex flex-col justify-between p-6 overflow-hidden relative" data-keywords="time planning scheduling critical path method cpm aon activity on node forward pass backward pass total float free float gantt chart chapter 6">
+          <div>
+            <div class="flex items-center justify-between mb-3">
+              <span class="badge-pill text-indigo-600 dark:text-indigo-400">Week 06 • Chapter 6</span>
+              <span class="text-xs font-mono font-bold text-slate-500">Core Quant</span>
+            </div>
+            <h3 class="text-xl font-bold tracking-tight mb-2">Time Planning & Scheduling</h3>
+            <p class="text-xs leading-relaxed mb-4" style="color: var(--ink-muted);">
+              Network scheduling mathematics: 7-box Activity-on-Node representation, forward pass (EST, EFT), backward pass (LST, LFT), Total Float calculation, Critical Path determination, and Gantt charts.
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-6">
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300">Critical Path (CPM)</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-indigo-100 text-indigo-800 dark:bg-indigo-950 dark:text-indigo-300">Forward/Backward Pass</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Total & Free Float</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-teal-100 text-teal-800 dark:bg-teal-950 dark:text-teal-300">Gantt Timelines</span>
+            </div>
+          </div>
+          <div class="pt-4 border-t flex items-center justify-between" style="border-color: var(--border-line);">
+            <span class="text-xs font-semibold" style="color: var(--ink-muted);">~50 min study</span>
+            <a href="lesson_06_time_planning_scheduling_exam_study_notes.html" class="inline-flex items-center gap-1 text-sm font-bold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+              Open Notes <span>→</span>
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: SPECIALIZED QUIZ & MIDTERM PREP -->
+    <section id="quiz-prep" class="space-y-6">
+      <div class="flex items-center">
+        <span class="sec-num">02</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Quiz & Midterm Exam Preparation</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Dedicated interactive revision tools for high-weight exam problems.</p>
+        </div>
+      </div>
+
+      <div class="note-card p-6 sm:p-8 border-l-4 border-rose-500 relative overflow-hidden" style="background: linear-gradient(to right, color-mix(in srgb, #e11d48 5%, var(--bg-card)), var(--bg-card));">
+        <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+          <div class="space-y-3 max-w-2xl">
+            <div class="flex items-center gap-2">
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-extrabold uppercase bg-rose-600 text-white">
+                Exam Radar • Table 6.5 Walkthrough
+              </span>
+              <span class="text-xs font-bold text-slate-500 font-mono">10 Activities A–K</span>
+            </div>
+            <h3 class="text-2xl font-bold tracking-tight">Week 06 Quiz Prep: Short Course Network & Gantt Chart</h3>
+            <p class="text-sm leading-relaxed" style="color: var(--ink-muted);">
+              A complete numerical and graphical masterclass solving the textbook's 10-activity Short Course project: step-by-step 
+              AoN network construction, forward/backward calculations, identification of the 37-week Critical Path (<strong style="color: #e11d48;">A → D → G → J</strong>), 
+              and dynamic, interactive Gantt chart tracking.
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-semibold">
+              <span class="text-emerald-700 dark:text-emerald-300 bg-emerald-50 dark:bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-200 dark:border-emerald-800">
+                ✓ Full AoN SVG Diagram
+              </span>
+              <span class="text-amber-700 dark:text-amber-300 bg-amber-50 dark:bg-amber-950/60 px-2.5 py-1 rounded-md border border-amber-200 dark:border-amber-800">
+                ✓ Float & Slack Calculations
+              </span>
+              <span class="text-indigo-700 dark:text-indigo-300 bg-indigo-50 dark:bg-indigo-950/60 px-2.5 py-1 rounded-md border border-indigo-200 dark:border-indigo-800">
+                ✓ Dynamic Interactive Gantt Grid
+              </span>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row lg:flex-col gap-3 w-full lg:w-auto flex-shrink-0">
+            <a href="week_06_quiz_midterm_prep_short_course_network_gantt_chart.html" class="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm bg-gradient-to-r from-rose-600 to-indigo-600 hover:from-rose-700 hover:to-indigo-700 text-white shadow-lg transition hover:scale-[1.02]">
+              Launch Quiz Prep Tool <span>→</span>
+            </a>
+            <a href="lesson_06_time_planning_scheduling_exam_study_notes.html" class="inline-flex items-center justify-center gap-1.5 px-5 py-3 rounded-xl font-bold text-xs border text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition" style="border-color: var(--border-line);">
+              Review Lesson 06 CPM Notes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: 14-WEEK SYLLABUS ROADMAP -->
+    <section id="roadmap" class="space-y-6">
+      <div class="flex items-center">
+        <span class="sec-num">03</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">14-Week Curriculum Roadmap</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Official semester trajectory mapped from Chapter 1 to Chapter 14.</p>
+        </div>
+      </div>
+
+      <div class="note-card overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="roadmap-table">
+            <thead>
+              <tr>
+                <th style="width: 70px;">Week</th>
+                <th style="width: 260px;">Topic & Module</th>
+                <th style="width: 110px;">Book Ch.</th>
+                <th>Core Subject Matter & Deliverables</th>
+                <th style="width: 140px; text-align: center;">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20">
+                <td class="font-bold text-indigo-600 dark:text-indigo-400 font-mono">01</td>
+                <td class="font-bold">Introduction to Project Management</td>
+                <td class="font-mono text-xs">Ch. 1</td>
+                <td>Definitions, volume-variety process, accidental profession, 5 generations of PM.</td>
+                <td class="text-center"><a href="lesson_01_introduction_to_project_management_exam_study_notes.html" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-300 dark:border-emerald-700">✓ Ready</a></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20">
+                <td class="font-bold text-indigo-600 dark:text-indigo-400 font-mono">02</td>
+                <td class="font-bold">Structures & Frameworks</td>
+                <td class="font-mono text-xs">Ch. 2</td>
+                <td>5-C environment, PESTEL, internal 7-S, ICOM, 4-D, S-curves, Arson Task Force case.</td>
+                <td class="text-center"><a href="lesson_02_structures_and_frameworks_exam_study_notes.html" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-300 dark:border-emerald-700">✓ Ready</a></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20">
+                <td class="font-bold text-indigo-600 dark:text-indigo-400 font-mono">03</td>
+                <td class="font-bold">Projects and Organisations</td>
+                <td class="font-mono text-xs">Ch. 3</td>
+                <td>Functional, dedicated teams, matrix configurations, PM authority & governance.</td>
+                <td class="text-center"><a href="Week_03_Projects_and_Organisations.html" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-300 dark:border-emerald-700">✓ Ready</a></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20">
+                <td class="font-bold text-indigo-600 dark:text-indigo-400 font-mono">04</td>
+                <td class="font-bold">Setting up for Success</td>
+                <td class="font-mono text-xs">Ch. 4</td>
+                <td>Project Charter, Scope baseline, WBS decomposition, Iron Triangle constraints.</td>
+                <td class="text-center"><a href="lesson_04_setting_up_for_success_exam_study_notes.html" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-300 dark:border-emerald-700">✓ Ready</a></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20">
+                <td class="font-bold text-indigo-600 dark:text-indigo-400 font-mono">05</td>
+                <td class="font-bold">Planning for Success</td>
+                <td class="font-mono text-xs">Ch. 5</td>
+                <td>Activity definition, sequencing, Precedence Diagramming (PDM), FS/SS/FF/SF leads & lags.</td>
+                <td class="text-center"><a href="lesson_05_planning_for_success_exam_study_notes.html" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-300 dark:border-emerald-700">✓ Ready</a></td>
+              </tr>
+              <tr class="hover:bg-indigo-50/20 dark:hover:bg-indigo-950/20 bg-indigo-50/10 dark:bg-indigo-950/10">
+                <td class="font-bold text-rose-600 dark:text-rose-400 font-mono">06</td>
+                <td class="font-bold">Time Planning & Scheduling ◄ Active</td>
+                <td class="font-mono text-xs">Ch. 6</td>
+                <td>Activity-on-Node (AoN), Critical Path Method (CPM), forward/backward pass, float, Gantt.</td>
+                <td class="text-center"><a href="lesson_06_time_planning_scheduling_exam_study_notes.html" class="text-xs font-bold text-rose-600 dark:text-rose-400 bg-rose-50 dark:bg-rose-950/50 px-2.5 py-1 rounded-full border border-rose-300 dark:border-rose-700">✓ Ready</a></td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">07</td>
+                <td>Scheduling under Uncertainty (PERT)</td>
+                <td class="font-mono text-xs">Ch. 7</td>
+                <td>Three-time estimates ($a, m, b$), beta distribution, variance, project completion probability.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75 bg-amber-50/10 dark:bg-amber-950/10">
+                <td class="font-bold text-amber-500 font-mono">08</td>
+                <td class="font-bold text-amber-600 dark:text-amber-400">Midterm Examination</td>
+                <td class="font-mono text-xs">—</td>
+                <td>Formal Midterm Assessment covering Weeks 01–07 (30% Course Weight).</td>
+                <td class="text-center text-xs font-bold text-amber-500">Milestone Exam</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">09</td>
+                <td>Resource Allocation & Project Crashing</td>
+                <td class="font-mono text-xs">Ch. 8</td>
+                <td>Resource loading, leveling, smoothing, time-cost trade-offs, crash cost per unit time.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">10</td>
+                <td>Cost Estimating & Earned Value (EVM)</td>
+                <td class="font-mono text-xs">Ch. 9</td>
+                <td>Budget baselines, PV, EV, AC, Cost Variance (CV), Schedule Variance (SV), CPI, SPI.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">11</td>
+                <td>Risk Management in Engineering</td>
+                <td class="font-mono text-xs">Ch. 10</td>
+                <td>Risk identification, probability-impact matrix, FMEA, mitigation & contingency reserves.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">12</td>
+                <td>Quality Assurance & Procurement</td>
+                <td class="font-mono text-xs">Ch. 11</td>
+                <td>Quality standards, QA/QC, contract types (fixed price, cost plus), procurement cycles.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">13</td>
+                <td>Project Leadership, Teams & Ethics</td>
+                <td class="font-mono text-xs">Ch. 12</td>
+                <td>Situational leadership, Tuckman model, conflict resolution, professional engineering ethics.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+              <tr class="opacity-75">
+                <td class="font-bold text-slate-400 font-mono">14</td>
+                <td>Monitoring, Control & Project Closure</td>
+                <td class="font-mono text-xs">Ch. 13</td>
+                <td>Change control board (CCB), stage-gate close-out, post-mortem reviews, lessons learned.</td>
+                <td class="text-center text-xs font-semibold text-slate-400">Upcoming</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: KEY FRAMEWORKS QUICK-SHEET -->
+    <section id="cheatsheet" class="space-y-6">
+      <div class="flex items-center">
+        <span class="sec-num">04</span>
+        <div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight">Core Engineering PM Models & Formulas</h2>
+          <p class="text-sm" style="color: var(--ink-muted);">Essential mental models and quantitative formulas for quick revision.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+        <div class="note-card p-6 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="badge-pill text-indigo-600 dark:text-indigo-400">Model 01</span>
+            <h3 class="font-bold text-base">The ICOM Conversion Model</h3>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);">Conceptualizes the project as an input-transformation-output system:</p>
+          <ul class="text-xs space-y-1.5 list-disc list-inside">
+            <li><strong>Inputs:</strong> Need or want encapsulated in a Project Brief.</li>
+            <li><strong>Controls & Constraints:</strong> Time, cost, quality, legal, ethical, and environmental bounds.</li>
+            <li><strong>Outputs:</strong> Tangible assets, information, or <em>changed people</em> (learning).</li>
+            <li><strong>Mechanisms:</strong> People, tools, technology, and funds integrated by the PM.</li>
+          </ul>
+        </div>
+
+        <div class="note-card p-6 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="badge-pill text-emerald-600 dark:text-emerald-400">Model 02</span>
+            <h3 class="font-bold text-base">The 4-D Lifecycle Framework</h3>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);">Chronological progression connecting delivery with feedback:</p>
+          <ul class="text-xs space-y-1.5 list-disc list-inside">
+            <li><strong>D1 — Define:</strong> What & why? Produces the <em>Project Brief</em>.</li>
+            <li><strong>D2 — Design:</strong> How, who, when? Produces the <em>PID / Proposal</em>.</li>
+            <li><strong>D3 — Do (Deliver):</strong> Execute, monitor, and control. Produces <em>Outcomes</em>.</li>
+            <li><strong>D4 — Develop:</strong> Learn & capture knowledge. Prevents <em>Hedgehog Syndrome</em>.</li>
+          </ul>
+        </div>
+
+        <div class="note-card p-6 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="badge-pill text-rose-600 dark:text-rose-400">Quantitative 03</span>
+            <h3 class="font-bold text-base">CPM Scheduling & Float Calculations</h3>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);">Key algorithms for 7-box Activity-on-Node (AoN) networks:</p>
+          <div class="text-xs font-mono p-3 rounded-lg border space-y-1" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+            <div>EFT = EST + Duration</div>
+            <div>LST = LFT - Duration</div>
+            <div>Total Float = LST - EST = LFT - EFT</div>
+            <div>Free Float = min(EST_successors) - EFT</div>
+            <div class="text-rose-600 font-bold pt-1">Critical Path = Sequence where Total Float == 0</div>
+          </div>
+        </div>
+
+        <div class="note-card p-6 space-y-3">
+          <div class="flex items-center gap-2">
+            <span class="badge-pill text-amber-600 dark:text-amber-400">Diagnostic 04</span>
+            <h3 class="font-bold text-base">The Project 7-S Diagnostic</h3>
+          </div>
+          <p class="text-xs" style="color: var(--ink-muted);">Internal health check adapted by Maylor & Turner:</p>
+          <ul class="text-xs space-y-1.5 list-disc list-inside">
+            <li><strong>Strategy:</strong> High-level goals and means to achieve them.</li>
+            <li><strong>Structure:</strong> Governance, decision owners, authority lines.</li>
+            <li><strong>Systems:</strong> Planning, monitoring, quality, and change control procedures.</li>
+            <li><strong>Staff & Skills:</strong> Headcount vs. specialized technical capability (e.g. PRINCE2).</li>
+            <li><strong>Style & Stakeholders:</strong> Team culture and proactive communication plans.</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t py-8 text-center text-xs" style="border-color: var(--border-line); color: var(--ink-muted);">
+    <div class="max-w-6xl mx-auto px-4 space-y-2">
+      <p class="font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+        MEN412 • Project Management in Engineering
+      </p>
+      <p>
+        İstanbul Aydın University • Department of Mechanical & Software Engineering
+      </p>
+      <p>
+        Textbook: <em>Project Management</em> (5th Edition, 2022) by Harvey Maylor & Neil Turner • Pearson Education
+      </p>
+      <p class="pt-2 text-[11px] opacity-75">
+        Designed for desktop and mobile revision under the <code>project-html-notes</code> standard.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Instant Search Script -->
+  <script>
+    (function() {
+      const searchInput = document.getElementById("lessonSearch");
+      const clearBtn = document.getElementById("clearFilterBtn");
+      const tagBtns = document.querySelectorAll(".filter-tag-btn");
+      const cards = document.querySelectorAll(".lesson-card");
+      const countBadge = document.getElementById("lessonCountBadge");
+
+      function filterCards(query) {
+        query = query.trim().toLowerCase();
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+          const kw = (card.getAttribute("data-keywords") || "").toLowerCase();
+          const title = (card.querySelector("h3")?.textContent || "").toLowerCase();
+          const desc = (card.querySelector("p")?.textContent || "").toLowerCase();
+          const match = !query || kw.includes(query) || title.includes(query) || desc.includes(query);
+
+          if (match) {
+            card.style.display = "flex";
+            visibleCount++;
+          } else {
+            card.style.display = "none";
+          }
+        });
+
+        countBadge.textContent = query ? `Found ${visibleCount} Lessons` : `Showing ${cards.length} Lessons`;
+      }
+
+      if (searchInput) {
+        searchInput.addEventListener("input", e => filterCards(e.target.value));
+      }
+
+      if (clearBtn) {
+        clearBtn.addEventListener("click", () => {
+          if (searchInput) searchInput.value = "";
+          filterCards("");
+        });
+      }
+
+      tagBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const tag = btn.getAttribute("data-filter");
+          if (searchInput) {
+            searchInput.value = tag;
+            filterCards(tag);
+          }
+        });
+      });
+    })();
+  </script>
+
+  <!-- Mount Shared Collapsible Navigation Sidebar (nav.js) -->
+  <script src="nav.js"></script>
+</body>
+</html>
