@@ -371,6 +371,23 @@ footer {
   font-size: 14px;
   text-align: center;
 }
+
+/* Responsive Mobile Enhancements */
+@media (max-width: 768px) {
+  .w { padding: 0 12px; }
+  .topbar { padding: 8px 0; }
+  .topbar-inner { gap: 8px; }
+  .topbar .title { font-size: 13px; max-width: calc(100vw - 160px); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  header { padding: 24px 0 20px; }
+  header h1 { font-size: 26px; }
+  header p.sub { font-size: 14px; }
+  .card { padding: 14px; border-radius: 10px; margin-bottom: 16px; }
+  .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 10px; }
+  table { min-width: 460px; font-size: 12.5px; }
+  th, td { padding: 7px 9px; }
+  .sec-num { width: 1.8rem; height: 1.8rem; font-size: 0.9rem; }
+}
+
 </style>
 </head>
 <body data-lesson="week03">

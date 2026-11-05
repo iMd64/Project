@@ -1,14 +1,20 @@
 /**
- * nav.js — Shared Collapsible Navigation Sidebar for MEN412 Project Management HTML Notes
+ * nav.js — Shared Dynamic Collapsible Navigation & Mobile Responsive Engine
+ * for MEN412 Project Management in Engineering HTML Study Notes
  * Standardized under the project-html-notes skill.
- * 
+ *
  * Features:
- * - Dynamic Left-Side Collapsible Sidebar (Desktop persistent rail + Mobile drawer)
+ * - Dynamic Left-Side Collapsible Sidebar (Desktop persistent rail + Mobile slide-over drawer)
  * - Auto-detection of active lesson from filename or body data-lesson
- * - Automatic In-Page Table of Contents (TOC) with ScrollSpy for section anchors (#sec1, etc.)
+ * - Automatic In-Page Table of Contents (TOC) with ScrollSpy for section anchors (#sec1, #s1, etc.)
  * - Integrated Dark/Light Study Mode Theme Controller (synced with localStorage & page toggles)
- * - Remembers collapsed/expanded preference across pages
- * - Smooth desktop margin-shift so content is never obscured
+ * - Universal Mobile / Phone Layout Engine:
+ *     * Injects integrated hamburger menu into top bar on mobile (no button overlap)
+ *     * Automatically wraps all bare tables in responsive horizontal touch-scroll containers
+ *     * Automatically wraps wide SVG diagrams in pinch/swipe-friendly containers with swipe hints
+ *     * Sticky activity column for complex Gantt charts on mobile
+ *     * Eliminates mobile horizontal blowouts with strict viewport bounding
+ *     * Auto-dismisses mobile drawer on link navigation
  * - Pure vanilla JS, zero external dependencies
  */
 
@@ -116,7 +122,7 @@
     return null;
   }
 
-  // Inject Navigation CSS
+  // Inject Comprehensive Navigation & Responsive Mobile Styles
   function injectStyles() {
     if (document.getElementById("pm-nav-styles")) return;
 
@@ -125,7 +131,7 @@
     style.textContent = `
       :root {
         --pm-sidebar-w: 290px;
-        --pm-sidebar-bg: rgba(255, 255, 255, 0.94);
+        --pm-sidebar-bg: rgba(255, 255, 255, 0.95);
         --pm-sidebar-border: #e2dcd0;
         --pm-sidebar-ink: #1e293b;
         --pm-sidebar-muted: #64748b;
@@ -146,6 +152,12 @@
         --pm-sidebar-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
       }
 
+      /* Global Mobile Safety */
+      html, body {
+        max-width: 100vw;
+        overflow-x: hidden;
+      }
+
       /* Desktop Layout Transition */
       @media (min-width: 1200px) {
         body.pm-sidebar-expanded {
@@ -164,7 +176,7 @@
         top: 0;
         bottom: 0;
         left: 0;
-        width: var(--pm-sidebar-w);
+        width: min(var(--pm-sidebar-w), 86vw);
         background-color: var(--pm-sidebar-bg);
         border-right: 1px solid var(--pm-sidebar-border);
         box-shadow: var(--pm-sidebar-shadow);
@@ -173,7 +185,7 @@
         z-index: 9999;
         display: flex;
         flex-direction: column;
-        transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+        transition: transform 0.26s cubic-bezier(0.16, 1, 0.3, 1);
         font-family: 'Inter', system-ui, -apple-system, sans-serif;
       }
 
@@ -181,38 +193,13 @@
         transform: translateX(-100%);
       }
 
-      /* Floating Toggle Button (visible when collapsed or on mobile) */
-      #pm-sidebar-toggle-btn {
-        position: fixed;
-        top: 14px;
-        left: 14px;
-        z-index: 9998;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 6px 12px;
-        border-radius: 9999px;
-        background: var(--pm-sidebar-bg);
-        border: 1px solid var(--pm-sidebar-border);
-        color: var(--pm-sidebar-ink);
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(8px);
-        cursor: pointer;
-        font-size: 12px;
-        font-weight: 700;
-        transition: all 0.2s ease;
-      }
-      #pm-sidebar-toggle-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-      }
-
       /* Backdrop Overlay on Mobile */
       #pm-sidebar-backdrop {
         position: fixed;
         inset: 0;
-        background: rgba(15, 23, 42, 0.45);
+        background: rgba(15, 23, 42, 0.5);
         backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
         z-index: 9990;
         opacity: 0;
         pointer-events: none;
@@ -221,6 +208,54 @@
       #pm-sidebar-backdrop.active {
         opacity: 1;
         pointer-events: auto;
+      }
+
+      /* Integrated Menu Button in Topbar */
+      .pm-topbar-menu-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 5px 9px;
+        border-radius: 7px;
+        background: var(--pm-sidebar-active-bg);
+        border: 1px solid var(--pm-sidebar-active-border);
+        color: var(--pm-sidebar-active-border);
+        cursor: pointer;
+        font-size: 11.5px;
+        font-weight: 700;
+        transition: all 0.15s ease;
+        flex-shrink: 0;
+        margin-right: 6px;
+      }
+      .pm-topbar-menu-btn:hover {
+        opacity: 0.9;
+        transform: scale(0.98);
+      }
+
+      /* Floating Fallback Button (visible when no topbar is present or on desktop collapse) */
+      #pm-sidebar-toggle-btn {
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+        z-index: 9980;
+        display: none;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 9999px;
+        background: var(--pm-sidebar-bg);
+        border: 1px solid var(--pm-sidebar-border);
+        color: var(--pm-sidebar-ink);
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+        backdrop-filter: blur(8px);
+        cursor: pointer;
+        font-size: 12px;
+        font-weight: 700;
+        transition: all 0.2s ease;
+      }
+      #pm-sidebar-toggle-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
       }
 
       /* Custom Scrollbar for Nav */
@@ -240,7 +275,7 @@
         display: flex;
         align-items: flex-start;
         gap: 10px;
-        padding: 8px 12px;
+        padding: 9px 12px;
         border-radius: 10px;
         color: var(--pm-sidebar-ink);
         text-decoration: none;
@@ -282,6 +317,125 @@
         border-left-color: #e11d48;
         font-weight: 700;
       }
+
+      /* Table Scroll Wrap & Indicator */
+      .pm-table-scroll-wrap {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin: 1.25rem 0 !important;
+        border-radius: 0.75rem !important;
+        position: relative;
+      }
+      .pm-swipe-hint {
+        display: none;
+        align-items: center;
+        gap: 5px;
+        font-size: 10.5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: var(--pm-sidebar-muted);
+        margin-bottom: 5px;
+        padding: 2px 6px;
+      }
+
+      /* SVG Diagram Touch Scroll Wrapper */
+      .pm-svg-scroll-wrap {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        border-radius: 0.75rem !important;
+        margin: 1.25rem 0 !important;
+        padding: 4px 0 !important;
+      }
+
+      /* Sticky Gantt Activity Label Column on Mobile */
+      .gantt-grid-table td.act-label {
+        position: sticky !important;
+        left: 0 !important;
+        z-index: 5 !important;
+        background-color: var(--bg-card, #ffffff) !important;
+        box-shadow: 2px 0 6px rgba(0, 0, 0, 0.06);
+      }
+
+      /* ========================================================
+         MOBILE PHONE RESPONSIVE ENHANCEMENTS (< 768px & < 640px)
+         ======================================================== */
+      @media (max-width: 768px) {
+        .pm-swipe-hint {
+          display: inline-flex !important;
+        }
+
+        /* Topbar Header Text Truncation on Phone */
+        .sticky.top-0 .truncate,
+        .topbar .truncate {
+          max-width: calc(100vw - 180px) !important;
+          font-size: 12.5px !important;
+        }
+
+        /* Section horizontal scroll pill list without chunky scrollbar */
+        .sticky.top-0 div[class*="overflow-x-auto"],
+        .topbar div[class*="overflow-x-auto"] {
+          scrollbar-width: none !important;
+          -webkit-overflow-scrolling: touch !important;
+        }
+        .sticky.top-0 div[class*="overflow-x-auto"]::-webkit-scrollbar,
+        .topbar div[class*="overflow-x-auto"]::-webkit-scrollbar {
+          display: none !important;
+        }
+
+        /* Table cell touch density */
+        .study-table th, .study-table td,
+        .roadmap-table th, .roadmap-table td {
+          padding: 7px 9px !important;
+          font-size: 12px !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        /* Mobile note-card padding compression */
+        .note-card, article.note-card {
+          padding: 1rem !important;
+          border-radius: 0.85rem !important;
+        }
+
+        /* Header hero responsive compression */
+        header.max-w-6xl {
+          padding-top: 1rem !important;
+          padding-bottom: 0.75rem !important;
+        }
+        header h1 {
+          font-size: 1.65rem !important;
+          line-height: 1.2 !important;
+          margin-bottom: 0.5rem !important;
+        }
+        header p {
+          font-size: 0.92rem !important;
+          line-height: 1.5 !important;
+        }
+
+        /* Callouts on phone */
+        .callout-quote, .callout-teach, .callout-read, .callout-trap {
+          padding: 0.75rem 0.9rem !important;
+          margin: 0.75rem 0 !important;
+          font-size: 0.88rem !important;
+          border-radius: 0 0.5rem 0.5rem 0 !important;
+        }
+
+        /* Section Numbers */
+        .sec-num {
+          width: 1.9rem !important;
+          height: 1.9rem !important;
+          font-size: 0.95rem !important;
+          margin-right: 0.5rem !important;
+        }
+
+        /* Spacing in Main */
+        main.space-y-12 {
+          gap: 1.75rem !important;
+        }
+      }
     `;
     document.head.appendChild(style);
   }
@@ -289,18 +443,15 @@
   // Scan in-page sections for Table of Contents
   function getInPageSections() {
     const sections = [];
-    // Search sections with IDs
     const sectionEls = document.querySelectorAll("main section[id], section[id], article section[id]");
     sectionEls.forEach((el) => {
       const id = el.getAttribute("id");
       if (!id) return;
-      // Get heading
       const h = el.querySelector("h1, h2, h3, h4");
       let title = h ? h.textContent.trim() : id;
-      // Clean up common badge prefixes like numbers
       title = title.replace(/^[0-9IVX]+\s*[•·\-\.]\s*/, "").trim();
-      if (title.length > 40) {
-        title = title.substring(0, 38) + "…";
+      if (title.length > 38) {
+        title = title.substring(0, 36) + "…";
       }
       sections.push({ id, title });
     });
@@ -347,7 +498,6 @@
       `;
     });
 
-    // Upcoming weeks collapsible accordion
     const upcomingHtml = `
       <details style="margin-top: 12px; font-size: 11.5px; border-top: 1px dashed var(--pm-sidebar-border); padding-top: 10px;">
         <summary style="cursor: pointer; font-weight: 700; color: var(--pm-sidebar-muted); display: flex; align-items: center; justify-content: space-between;">
@@ -371,14 +521,14 @@
       <!-- Backdrop for mobile -->
       <div id="pm-sidebar-backdrop"></div>
 
-      <!-- Floating Open Button (Visible when sidebar is collapsed) -->
+      <!-- Floating Open Button (Fallback when topbar button is scrolled or absent) -->
       <button id="pm-sidebar-toggle-btn" type="button" aria-label="Toggle navigation menu">
         <span>📖</span>
         <span id="pm-toggle-btn-text">Course Menu</span>
       </button>
 
       <!-- Sidebar -->
-      <aside id="pm-sidebar" aria-label="Course navigation">
+      <aside id="pm-sidebar" class="collapsed" aria-label="Course navigation">
         <!-- Sidebar Header -->
         <div style="padding: 14px 16px; border-bottom: 1px solid var(--pm-sidebar-border); display: flex; align-items: center; justify-content: space-between; gap: 8px;">
           <a href="index.html" style="text-decoration: none; display: flex; align-items: center; gap: 8px; color: var(--pm-sidebar-ink);">
@@ -390,15 +540,15 @@
               <div style="font-size: 13px; font-weight: 700; line-height: 1.1;">Study Notes Hub</div>
             </div>
           </a>
-          <button id="pm-sidebar-close-btn" type="button" style="background: transparent; border: none; font-size: 16px; cursor: pointer; color: var(--pm-sidebar-muted); padding: 4px; border-radius: 6px;" title="Collapse sidebar">
+          <button id="pm-sidebar-close-btn" type="button" style="background: transparent; border: none; font-size: 18px; cursor: pointer; color: var(--pm-sidebar-muted); padding: 4px 8px; border-radius: 6px;" title="Collapse sidebar">
             ✕
           </button>
         </div>
 
-        <!-- Instructor & Book Credit Pill -->
+        <!-- Instructor & Term Credit -->
         <div style="padding: 8px 16px; background-color: rgba(148, 163, 184, 0.08); border-bottom: 1px solid var(--pm-sidebar-border); font-size: 11px; color: var(--pm-sidebar-muted); display: flex; align-items: center; justify-content: space-between;">
           <span>Prof. Dr. Naghdali Choupani</span>
-          <span style="font-weight: 700;">Fall 2026</span>
+          <span style="font-weight: 700;">Fall Semester</span>
         </div>
 
         <!-- Scrollable Links Container -->
@@ -414,7 +564,7 @@
         </div>
 
         <!-- Sidebar Footer: Theme Toggle & Links -->
-        <div style="padding: 12px 16px; border-top: 1px solid var(--pm-sidebar-border); display: flex; items-center; justify-content: space-between; gap: 8px; font-size: 12px;">
+        <div style="padding: 12px 16px; border-top: 1px solid var(--pm-sidebar-border); display: flex; align-items: center; justify-content: space-between; gap: 8px; font-size: 12px;">
           <button id="pm-sidebar-theme-toggle" type="button" style="display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--pm-sidebar-border); background: transparent; color: var(--pm-sidebar-ink); cursor: pointer; font-size: 12px; font-weight: 600;">
             <span id="pm-theme-icon">🌙</span>
             <span id="pm-theme-label">Dark Mode</span>
@@ -427,11 +577,32 @@
       </aside>
     `;
 
-    // Inject into document body
     const mountDiv = document.createElement("div");
     mountDiv.id = "pm-navigation-mount";
     mountDiv.innerHTML = sidebarHtml;
     document.body.prepend(mountDiv);
+  }
+
+  // Setup Dynamic Mobile Topbar Integration
+  function setupTopbarIntegration(toggleAction) {
+    const topbar = document.querySelector(".sticky.top-0, .topbar");
+    if (!topbar) return;
+
+    const flexContainer = topbar.querySelector("div[class*='flex'], .topbar-inner");
+    if (!flexContainer) return;
+
+    if (document.getElementById("pm-topbar-menu-btn")) return;
+
+    const btn = document.createElement("button");
+    btn.id = "pm-topbar-menu-btn";
+    btn.className = "pm-topbar-menu-btn";
+    btn.type = "button";
+    btn.setAttribute("aria-label", "Toggle course navigation sidebar");
+    btn.innerHTML = `<span style="font-size:14px;">☰</span><span>Menu</span>`;
+    btn.addEventListener("click", toggleAction);
+
+    const leftTarget = flexContainer.querySelector("div[class*='flex'], .flex") || flexContainer;
+    leftTarget.prepend(btn);
   }
 
   // Setup Theme Controller
@@ -440,8 +611,6 @@
     const themeBtn = document.getElementById("pm-sidebar-theme-toggle");
     const themeIcon = document.getElementById("pm-theme-icon");
     const themeLabel = document.getElementById("pm-theme-label");
-
-    // Also look for page-level toggle if present
     const pageThemeToggle = document.getElementById("themeToggle");
 
     function applyTheme(theme) {
@@ -460,7 +629,6 @@
       }
     }
 
-    // Initialize from storage or system preference
     const saved = localStorage.getItem("pm_theme");
     const currentAttr = root.getAttribute("data-theme");
     if (saved === "dark" || currentAttr === "dark") {
@@ -476,7 +644,6 @@
       });
     }
 
-    // Sync with existing page toggle if any
     if (pageThemeToggle) {
       pageThemeToggle.addEventListener("click", () => {
         setTimeout(() => {
@@ -498,7 +665,6 @@
 
     const isDesktop = () => window.innerWidth >= 1200;
 
-    // Load saved state (on desktop defaults to open unless user closed it)
     const savedCollapsed = localStorage.getItem("pm_nav_collapsed");
     let isCollapsed = isDesktop() ? savedCollapsed === "true" : true;
 
@@ -507,38 +673,55 @@
         sidebar.classList.add("collapsed");
         body.classList.remove("pm-sidebar-expanded");
         body.classList.add("pm-sidebar-collapsed");
-        toggleBtn.style.display = "inline-flex";
         backdrop.classList.remove("active");
+        if (isDesktop() && toggleBtn) {
+          toggleBtn.style.display = "inline-flex";
+        } else if (toggleBtn) {
+          toggleBtn.style.display = "none";
+        }
       } else {
         sidebar.classList.remove("collapsed");
         if (isDesktop()) {
           body.classList.add("pm-sidebar-expanded");
           body.classList.remove("pm-sidebar-collapsed");
-          toggleBtn.style.display = "none";
           backdrop.classList.remove("active");
         } else {
-          toggleBtn.style.display = "none";
           backdrop.classList.add("active");
         }
+        if (toggleBtn) toggleBtn.style.display = "none";
       }
     }
 
-    toggleBtn.addEventListener("click", () => {
-      isCollapsed = false;
-      if (isDesktop()) localStorage.setItem("pm_nav_collapsed", "false");
+    function toggleOpen() {
+      isCollapsed = !isCollapsed;
+      if (isDesktop()) {
+        localStorage.setItem("pm_nav_collapsed", isCollapsed ? "true" : "false");
+      }
       updateState();
+    }
+
+    function closeSidebar() {
+      isCollapsed = true;
+      if (isDesktop()) {
+        localStorage.setItem("pm_nav_collapsed", "true");
+      }
+      updateState();
+    }
+
+    if (toggleBtn) toggleBtn.addEventListener("click", toggleOpen);
+    if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
+    if (backdrop) backdrop.addEventListener("click", closeSidebar);
+
+    // Auto-close on mobile when any link is clicked
+    document.querySelectorAll(".pm-nav-link, .pm-toc-sublink").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (!isDesktop()) {
+          closeSidebar();
+        }
+      });
     });
 
-    closeBtn.addEventListener("click", () => {
-      isCollapsed = true;
-      if (isDesktop()) localStorage.setItem("pm_nav_collapsed", "true");
-      updateState();
-    });
-
-    backdrop.addEventListener("click", () => {
-      isCollapsed = true;
-      updateState();
-    });
+    setupTopbarIntegration(toggleOpen);
 
     window.addEventListener("resize", () => {
       if (!isDesktop() && !isCollapsed) {
@@ -547,11 +730,70 @@
       } else if (isDesktop() && !isCollapsed) {
         backdrop.classList.remove("active");
         body.classList.add("pm-sidebar-expanded");
-        toggleBtn.style.display = "none";
       }
+      updateState();
     });
 
     updateState();
+  }
+
+  // Dynamic Mobile Content Enhancer (Tables & Wide SVGs)
+  function enhanceMobileContent() {
+    // 1. Wrap all bare tables in responsive touch-scroll wrappers
+    const tables = document.querySelectorAll("table:not(.pm-wrapped)");
+    tables.forEach((tbl) => {
+      const parent = tbl.parentElement;
+      if (parent && (parent.classList.contains("overflow-x-auto") || parent.classList.contains("pm-table-scroll-wrap"))) {
+        return;
+      }
+      tbl.classList.add("pm-wrapped");
+      const wrapper = document.createElement("div");
+      wrapper.className = "pm-table-scroll-wrap";
+
+      const hint = document.createElement("div");
+      hint.className = "pm-swipe-hint";
+      hint.innerHTML = "<span>↔</span><span>Scroll table horizontally</span>";
+
+      tbl.parentNode.insertBefore(wrapper, tbl);
+      wrapper.appendChild(tbl);
+      wrapper.parentNode.insertBefore(hint, wrapper);
+    });
+
+    // 2. Wrap wide SVGs in touch-scroll wrappers with swipe hints
+    const svgs = document.querySelectorAll("svg:not(.pm-wrapped)");
+    svgs.forEach((svg) => {
+      const vb = svg.getAttribute("viewBox") || svg.getAttribute("viewbox") || "";
+      let vbW = 0;
+      if (vb) {
+        const parts = vb.split(/[\s,]+/);
+        if (parts.length >= 3) {
+          vbW = parseFloat(parts[2]);
+        }
+      }
+
+      if (vbW >= 480) {
+        const parent = svg.parentElement;
+        if (parent && (parent.classList.contains("overflow-x-auto") || parent.classList.contains("pm-svg-scroll-wrap"))) {
+          return;
+        }
+        svg.classList.add("pm-wrapped");
+
+        const wrapper = document.createElement("div");
+        wrapper.className = "pm-svg-scroll-wrap";
+
+        const inner = document.createElement("div");
+        inner.style.minWidth = Math.min(vbW, 640) + "px";
+
+        const hint = document.createElement("div");
+        hint.className = "pm-swipe-hint";
+        hint.innerHTML = "<span>👆</span><span>Swipe to inspect full diagram ↔</span>";
+
+        svg.parentNode.insertBefore(wrapper, svg);
+        wrapper.appendChild(hint);
+        wrapper.appendChild(inner);
+        inner.appendChild(svg);
+      }
+    });
   }
 
   // ScrollSpy for in-page TOC anchors
@@ -598,6 +840,7 @@
     renderSidebar(activeLesson);
     setupTheme();
     setupSidebarInteractions();
+    enhanceMobileContent();
     setupScrollSpy();
   }
 
