@@ -5,6 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MEN412 — Project Management in Engineering | Course Portal & Study Notes Hub</title>
   <!-- Tailwind CSS CDN -->
+    <script>
+    tailwind = {
+      config: {
+        darkMode: 'class'
+      }
+    };
+    (function() {
+      var t = localStorage.getItem("pm_theme");
+      if (t === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Google Fonts: Inter, Plus Jakarta Sans, JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">

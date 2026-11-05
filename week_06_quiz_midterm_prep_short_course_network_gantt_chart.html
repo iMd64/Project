@@ -4,6 +4,20 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week 06 Quiz &amp; Midterm Prep – Short Course Network &amp; Gantt Chart (Table 6.5)</title>
+  <script>
+    tailwind = {
+      config: {
+        darkMode: 'class'
+      }
+    };
+    (function() {
+      var t = localStorage.getItem("pm_theme");
+      if (t === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        document.documentElement.classList.add("dark");
+      }
+    })();
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -733,7 +747,7 @@
                 <code>D: EST=4, Dur=10 ➔ EFT = 14</code><br>
                 <code>E: EST=2, Dur=2  ➔ EFT = 4</code>
               </li>
-              <li class="p-2 rounded bg-amber-100/80 dark:bg-amber-950/40 border border-amber-300">
+              <li class="p-2 rounded border" style="background-color: var(--quote-bg); border-color: var(--quote-border);">
                 ★ <strong>Join 1 at F (preceded by C and E):</strong><br>
                 <code>EST(F) = max[EFT(C)=6, EFT(E)=4] = <mark class="y">6</mark></code> <em>(C controls F!)</em><br>
                 <code>EFT(F) = 6 + 1 = 7</code>
@@ -742,7 +756,7 @@
                 <code>G: EST=14, Dur=3 ➔ EFT = 17</code><br>
                 <code>H: EST=7,  Dur=2 ➔ EFT = 9</code>
               </li>
-              <li class="p-2 rounded bg-rose-100/80 dark:bg-rose-950/40 border border-rose-300">
+              <li class="p-2 rounded border" style="background-color: var(--trap-bg); border-color: var(--trap-border);">
                 ★ <strong>Join 2 at J (preceded by G and H):</strong><br>
                 <code>EST(J) = max[EFT(G)=17, EFT(H)=9] = <mark class="p">17</mark></code> <em>(G controls J!)</em><br>
                 <code>EFT(J) = 17 + 20 = <mark class="p">37</mark></code>
@@ -765,7 +779,7 @@
                 <code>J: LFT=37, LST = 37 − 20 = 17 ➔ Float = 0</code><br>
                 <code>K: LFT=37, LST = 37 − 1  = <mark class="u">36</mark> ➔ Float = 37 − 18 = <mark class="g">19</mark></code>
               </li>
-              <li class="p-2 rounded bg-rose-100/80 dark:bg-rose-950/40 border border-rose-300">
+              <li class="p-2 rounded border" style="background-color: var(--trap-bg); border-color: var(--trap-border);">
                 ★ <strong>Burst at G (G precedes both J and K):</strong><br>
                 <code>LFT(G) = min[LST(J)=17, LST(K)=36] = <mark class="p">17</mark></code><br>
                 <code>LST(G) = 17 − 3 = 14 ➔ Float = 0</code>
@@ -878,12 +892,12 @@
             ⚠️ Watch Out! 2 Small Arithmetic Slips in the Class Handwritten Sheet (Page 2) — Write the Corrected Numbers on Your Quiz:
           </strong>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
-            <div class="p-3.5 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+            <div class="p-3.5 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-line);">
               <strong class="text-rose-600 dark:text-rose-400 block mb-1">1. Bottom Row of Box K:</strong>
               In the handwritten sheet, the bottom row of Box <code>K</code> was written as <code>17 | 19 | 18</code> (accidentally copying 17 and 18 from the top row).<br>
               ➔ <strong>Correct Bottom Row for K:</strong> <mark class="p">36 | 19 | 37</mark> because <code>LFT = 37</code> (project finish), <code>LST = 37 − 1 = 36</code>, and <code>Float = 37 − 18 = 19 weeks</code>.
             </div>
-            <div class="p-3.5 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
+            <div class="p-3.5 rounded-lg border" style="background-color: var(--bg-card); border-color: var(--border-line);">
               <strong class="text-rose-600 dark:text-rose-400 block mb-1">2. Bottom Row of Box B (and Box E):</strong>
               In the handwritten sheet, the student crossed out the bottom of <code>E</code> and wrote the correct numbers <mark class="g">12 | 10 | 14</mark> underneath, but forgot to update Box <code>B</code> (leaving <code>4 | 4 | 8</code>).<br>
               ➔ <strong>Correct Bottom Row for B:</strong> <mark class="p">10 | 10 | 12</mark> because <code>LFT(B) = LST(E) = 12</code>, <code>LST(B) = 12 − 2 = 10</code>, and <code>Float(B) = 10 weeks</code> (matching Slide 43: <em>"B and E each have 10 weeks"</em>).
@@ -1196,28 +1210,7 @@
         gTable.innerHTML = html;
       }
 
-      // 3. Dark / Light Study Mode Toggle
-      var root = document.documentElement;
-      var btn = document.getElementById("themeToggle");
-      var icon = document.getElementById("themeIcon");
-      var text = document.getElementById("themeText");
-
-      function applyTheme(theme) {
-        if (theme === "dark") {
-          root.setAttribute("data-theme", "dark");
-          icon.textContent = "☀️";
-          text.textContent = "Light Notebook Mode";
-        } else {
-          root.removeAttribute("data-theme");
-          icon.textContent = "🌙";
-          text.textContent = "Dark Study Mode";
-        }
-      }
-
-      btn.addEventListener("click", function() {
-        var isDark = root.getAttribute("data-theme") === "dark";
-        applyTheme(isDark ? "light" : "dark");
-      });
+      // Theme management handled centrally by nav.js
     })();
   </script>
   <!-- Shared Collapsible Left Navigation (nav.js) -->
