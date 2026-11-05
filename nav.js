@@ -612,33 +612,20 @@
     const themeIcon = document.getElementById("pm-theme-icon");
     const themeLabel = document.getElementById("pm-theme-label");
     const pageThemeToggle = document.getElementById("themeToggle");
-    const pageThemeIcon = document.getElementById("themeIcon");
-    const pageThemeText = document.getElementById("themeText");
-
-    // Force Tailwind CDN into class-based dark mode so OS preferences do not pollute the UI
-    if (window.tailwind) {
-      window.tailwind.config = window.tailwind.config || {};
-      window.tailwind.config.darkMode = "class";
-    }
 
     function applyTheme(theme) {
-      const isDark = theme === "dark";
-      if (isDark) {
+      if (theme === "dark") {
         root.setAttribute("data-theme", "dark");
         root.classList.add("dark");
         localStorage.setItem("pm_theme", "dark");
         if (themeIcon) themeIcon.textContent = "☀️";
         if (themeLabel) themeLabel.textContent = "Light Mode";
-        if (pageThemeIcon) pageThemeIcon.textContent = "☀️";
-        if (pageThemeText) pageThemeText.textContent = "Light Notebook Mode";
       } else {
         root.removeAttribute("data-theme");
         root.classList.remove("dark");
         localStorage.setItem("pm_theme", "light");
         if (themeIcon) themeIcon.textContent = "🌙";
         if (themeLabel) themeLabel.textContent = "Dark Mode";
-        if (pageThemeIcon) pageThemeIcon.textContent = "🌙";
-        if (pageThemeText) pageThemeText.textContent = "Dark Study Mode";
       }
     }
 
@@ -650,21 +637,21 @@
       applyTheme("light");
     }
 
-    function handleToggle(e) {
-      if (e) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-      const isDark = root.getAttribute("data-theme") === "dark" || root.classList.contains("dark");
-      applyTheme(isDark ? "light" : "dark");
-    }
-
     if (themeBtn) {
-      themeBtn.onclick = handleToggle;
+      themeBtn.addEventListener("click", () => {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        applyTheme(isDark ? "light" : "dark");
+      });
     }
 
     if (pageThemeToggle) {
-      pageThemeToggle.onclick = handleToggle;
+      pageThemeToggle.addEventListener("click", () => {
+        setTimeout(() => {
+          const isDark = root.getAttribute("data-theme") === "dark";
+          if (themeIcon) themeIcon.textContent = isDark ? "☀️" : "🌙";
+          if (themeLabel) themeLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
+        }, 50);
+      });
     }
   }
 
