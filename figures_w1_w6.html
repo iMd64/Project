@@ -226,7 +226,60 @@
     html.dark .f26-focus-txt text, html.dark .f26-focus-txt, [data-theme="dark"] .f26-focus-txt text, [data-theme="dark"] .f26-focus-txt { fill: #fde68a !important; }
     html.dark .f26-deliv-box rect, [data-theme="dark"] .f26-deliv-box rect { fill: rgba(219, 39, 119, 0.2) !important; stroke: #f472b6 !important; }
     html.dark .f26-deliv-txt text, html.dark .f26-deliv-txt, [data-theme="dark"] .f26-deliv-txt text, [data-theme="dark"] .f26-deliv-txt { fill: #fbcfe8 !important; }
-</style>
+
+    /* WBS Figure 5.14 Hierarchical Tree Styles */
+    .wbs-root-box {
+      fill: #fde68a;
+      stroke: #d97706;
+      stroke-width: 2px;
+    }
+    .wbs-node-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .wbs-root-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .wbs-node-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .wbs-line {
+      stroke: #475569;
+      stroke-width: 1.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Dark Mode overrides for Figure 5.14 */
+    html.dark .wbs-root-box,
+    [data-theme="dark"] .wbs-root-box {
+      fill: rgba(245, 158, 11, 0.22) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .wbs-node-box,
+    [data-theme="dark"] .wbs-node-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .wbs-root-txt text,
+    [data-theme="dark"] .wbs-root-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .wbs-node-txt text,
+    [data-theme="dark"] .wbs-node-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .wbs-line line,
+    [data-theme="dark"] .wbs-line line {
+      stroke: #94a3b8 !important;
+    }
+
+  </style>
 </head>
 <body data-lesson="figures_w1_w6" class="min-h-screen pb-24">
 
@@ -2379,90 +2432,241 @@
         </div>
         <h3 class="text-xl font-bold">The WBS decomposes the event (Figure 5.14)</h3>
 
-        <!-- Complete Visual Tree of Figure 5.14 -->
-        <div class="p-4 sm:p-5 rounded-xl border-2 shadow-sm space-y-4 bg-white dark:bg-slate-900/60" style="border-color: var(--border-line);">
-          <div class="text-center">
-            <span class="inline-block px-6 py-2.5 rounded-lg font-black text-sm sm:text-base border-2 border-amber-600 bg-amber-200 text-amber-950 dark:bg-amber-950 dark:text-amber-200 dark:border-amber-600 shadow-xs">
-              The Mini World Record Challenge
-            </span>
-          </div>
-
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
-            <!-- Branch 1: Obtain car -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">1. Obtain car</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Contact local dealers</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Present dealer with proposal</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Arrange conditions for borrowing car</li>
-              </ul>
-            </div>
-
-            <!-- Branch 2: Alert Guinness & Branch 7: Select charity -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-3">
-              <div>
-                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">2. Alert Guinness</div>
-                <p class="text-[11px] mt-1.5 pl-2 text-slate-700 dark:text-slate-300 font-semibold">Direct work package (record rules/pack)</p>
-              </div>
-              <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
-                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">7. Select charity</div>
-                <p class="text-[11px] mt-1.5 pl-2 text-slate-700 dark:text-slate-300 font-semibold">Direct work package (beneficiary)</p>
-              </div>
-            </div>
-
-            <!-- Branch 3: Arrange insurance -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">3. Arrange insurance</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Meet with university insurance department</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Arrange insurance for event and car transport</li>
-              </ul>
-            </div>
-
-            <!-- Branch 4: Organise barbeque -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">4. Organise barbeque</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Contact university catering</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Obtain barbeque equipment</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Ask supermarkets for free food</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Collect / purchase food</li>
-              </ul>
-            </div>
-
-            <!-- Branch 5: Satisfy health and safety -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">5. Satisfy health and safety</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert university security</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Meet with health and safety team</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Carry out formal risk assessment</li>
-              </ul>
-            </div>
-
-            <!-- Branch 6: Promote event -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2 sm:col-span-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">6. Promote event</div>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-2 border-l-2 border-amber-500">
-                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Design &amp; produce posters</div>
-                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert local radio</div>
-                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert local newspaper</div>
-                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Set up walkway stall</div>
-                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs sm:col-span-2">Advertise on university intranet</div>
-              </div>
-            </div>
-
-            <!-- Branch 8: Arrange venue -->
-            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">8. Arrange venue</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Look for suitable venues</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Select venue &amp; back-up venue</li>
-                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Check venue access &amp; security</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <!-- Authentic Hierarchical Vector SVG: Figure 5.14 -->
+        <div class="pm-svg-scroll-wrap p-4 rounded-xl border flex flex-col items-center justify-center overflow-x-auto shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-line);">
+  <div class="w-full text-center mb-3">
+    <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Figure 5.14 Work Breakdown Structure (The Mini World Record Challenge)</span>
+  </div>
+  <svg viewBox="0 0 980 660" class="w-full min-w-[880px] max-w-[960px]" aria-label="Figure 5.14 Work breakdown structure (The Mini World Record Challenge)" xmlns="http://www.w3.org/2000/svg">
+    <!-- Connecting Orthogonal Lines -->
+    <g class="wbs-line" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="500" y1="66" x2="500" y2="88"/>
+      <line x1="75" y1="88" x2="901" y2="88"/>
+      <line x1="75" y1="88" x2="75" y2="112"/>
+      <line x1="193" y1="88" x2="193" y2="112"/>
+      <line x1="311" y1="88" x2="311" y2="112"/>
+      <line x1="429" y1="88" x2="429" y2="112"/>
+      <line x1="547" y1="88" x2="547" y2="112"/>
+      <line x1="665" y1="88" x2="665" y2="112"/>
+      <line x1="783" y1="88" x2="783" y2="112"/>
+      <line x1="901" y1="88" x2="901" y2="112"/>
+      <line x1="75" y1="166" x2="75" y2="202"/>
+      <line x1="70" y1="202" x2="273" y2="202"/>
+      <line x1="70" y1="202" x2="70" y2="240"/>
+      <line x1="168" y1="202" x2="168" y2="240"/>
+      <line x1="273" y1="202" x2="273" y2="240"/>
+      <line x1="547" y1="192" x2="547" y2="218"/>
+      <line x1="448" y1="218" x2="653" y2="218"/>
+      <line x1="448" y1="218" x2="448" y2="245"/>
+      <line x1="545" y1="218" x2="545" y2="245"/>
+      <line x1="653" y1="218" x2="653" y2="245"/>
+      <line x1="901" y1="166" x2="901" y2="186"/>
+      <line x1="901" y1="186" x2="831" y2="186"/>
+      <line x1="831" y1="186" x2="831" y2="248"/>
+      <line x1="784" y1="248" x2="891" y2="248"/>
+      <line x1="784" y1="248" x2="784" y2="275"/>
+      <line x1="891" y1="248" x2="891" y2="275"/>
+      <line x1="831" y1="248" x2="831" y2="400"/>
+      <line x1="429" y1="166" x2="429" y2="190"/>
+      <line x1="429" y1="190" x2="396" y2="190"/>
+      <line x1="396" y1="190" x2="396" y2="370"/>
+      <line x1="286" y1="370" x2="616" y2="370"/>
+      <line x1="286" y1="370" x2="286" y2="400"/>
+      <line x1="388" y1="370" x2="388" y2="400"/>
+      <line x1="502" y1="370" x2="502" y2="400"/>
+      <line x1="616" y1="370" x2="616" y2="400"/>
+      <line x1="311" y1="166" x2="311" y2="190"/>
+      <line x1="311" y1="190" x2="334" y2="190"/>
+      <line x1="334" y1="190" x2="334" y2="362"/>
+      <line x1="334" y1="362" x2="136" y2="362"/>
+      <line x1="136" y1="362" x2="136" y2="510"/>
+      <line x1="77" y1="510" x2="201" y2="510"/>
+      <line x1="77" y1="510" x2="77" y2="540"/>
+      <line x1="201" y1="510" x2="201" y2="540"/>
+      <line x1="665" y1="166" x2="665" y2="186"/>
+      <line x1="665" y1="186" x2="722" y2="186"/>
+      <line x1="722" y1="186" x2="722" y2="510"/>
+      <line x1="415" y1="510" x2="829" y2="510"/>
+      <line x1="415" y1="510" x2="415" y2="540"/>
+      <line x1="514" y1="510" x2="514" y2="540"/>
+      <line x1="611" y1="510" x2="611" y2="540"/>
+      <line x1="719" y1="510" x2="719" y2="540"/>
+      <line x1="829" y1="510" x2="829" y2="540"/>
+    </g>
+    <!-- WBS 29 Hierarchical Nodes -->
+    <rect x="340" y="24" width="320" height="42" rx="6" class="wbs-root-box"/>
+    <g class="wbs-root-txt" font-size="13.5" font-weight="800" text-anchor="middle">
+      <text x="500.0" y="49.1">The Mini World Record Challenge</text>
+    </g>
+    <rect x="30" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="75.0" y="134.8">Obtain</text>
+      <text x="75.0" y="149.0">car</text>
+    </g>
+    <rect x="148" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="193.0" y="134.8">Alert</text>
+      <text x="193.0" y="149.0">Guinness</text>
+    </g>
+    <rect x="266" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="311.0" y="134.8">Arrange</text>
+      <text x="311.0" y="149.0">insurance</text>
+    </g>
+    <rect x="384" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="429.0" y="134.8">Organise</text>
+      <text x="429.0" y="149.0">barbeque</text>
+    </g>
+    <rect x="502" y="112" width="90" height="80" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="547.0" y="134.1">Satisfy</text>
+      <text x="547.0" y="147.8">health</text>
+      <text x="547.0" y="161.5">and</text>
+      <text x="547.0" y="175.2">safety</text>
+    </g>
+    <rect x="620" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="665.0" y="134.8">Promote</text>
+      <text x="665.0" y="149.0">event</text>
+    </g>
+    <rect x="738" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="783.0" y="134.8">Select</text>
+      <text x="783.0" y="149.0">charity</text>
+    </g>
+    <rect x="856" y="112" width="90" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="901.0" y="134.8">Arrange</text>
+      <text x="901.0" y="149.0">venue</text>
+    </g>
+    <rect x="30" y="240" width="80" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="70.0" y="262.9">Contact</text>
+      <text x="70.0" y="276.6">local</text>
+      <text x="70.0" y="290.3">dealers</text>
+    </g>
+    <rect x="122" y="240" width="92" height="82" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="168.0" y="263.1">Present</text>
+      <text x="168.0" y="276.8">dealer</text>
+      <text x="168.0" y="290.5">with</text>
+      <text x="168.0" y="304.2">proposal</text>
+    </g>
+    <rect x="226" y="240" width="94" height="98" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10" font-weight="700" text-anchor="middle">
+      <text x="273.0" y="265.0">Arrange</text>
+      <text x="273.0" y="278.2">conditions</text>
+      <text x="273.0" y="291.4">for</text>
+      <text x="273.0" y="304.6">borrowing</text>
+      <text x="273.0" y="317.8">car</text>
+    </g>
+    <rect x="410" y="245" width="76" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="448.0" y="267.8">Alert</text>
+      <text x="448.0" y="281.5">security</text>
+    </g>
+    <rect x="498" y="245" width="94" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="545.0" y="267.9">Meet with</text>
+      <text x="545.0" y="281.6">health and</text>
+      <text x="545.0" y="295.3">safety</text>
+    </g>
+    <rect x="604" y="245" width="98" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="653.0" y="267.9">Carry out</text>
+      <text x="653.0" y="281.6">risk</text>
+      <text x="653.0" y="295.3">assessment</text>
+    </g>
+    <rect x="742" y="275" width="84" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="784.0" y="297.9">Look for</text>
+      <text x="784.0" y="311.6">suitable</text>
+      <text x="784.0" y="325.3">venues</text>
+    </g>
+    <rect x="842" y="275" width="98" height="82" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="891.0" y="298.1">Select</text>
+      <text x="891.0" y="311.8">venue and</text>
+      <text x="891.0" y="325.5">back-up</text>
+      <text x="891.0" y="339.2">venue</text>
+    </g>
+    <rect x="240" y="400" width="92" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="286.0" y="422.9">Contact</text>
+      <text x="286.0" y="436.6">university</text>
+      <text x="286.0" y="450.3">catering</text>
+    </g>
+    <rect x="344" y="400" width="88" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="388.0" y="422.8">Obtain</text>
+      <text x="388.0" y="436.5">barbeque</text>
+    </g>
+    <rect x="444" y="400" width="116" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="502.0" y="422.9">Ask</text>
+      <text x="502.0" y="436.6">supermarkets</text>
+      <text x="502.0" y="450.3">for free food</text>
+    </g>
+    <rect x="572" y="400" width="88" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="616.0" y="422.9">Collect/</text>
+      <text x="616.0" y="436.6">purchase</text>
+      <text x="616.0" y="450.3">food</text>
+    </g>
+    <rect x="748" y="400" width="160" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="828.0" y="422.9">Check venues for</text>
+      <text x="828.0" y="436.6">access and check</text>
+      <text x="828.0" y="450.3">with security</text>
+    </g>
+    <rect x="26" y="540" width="102" height="82" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10" font-weight="700" text-anchor="middle">
+      <text x="77.0" y="563.6">Meet with</text>
+      <text x="77.0" y="576.8">university</text>
+      <text x="77.0" y="590.0">insurance</text>
+      <text x="77.0" y="603.2">department</text>
+    </g>
+    <rect x="140" y="540" width="122" height="98" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10" font-weight="700" text-anchor="middle">
+      <text x="201.0" y="571.6">Arrange insurance</text>
+      <text x="201.0" y="584.8">for event and</text>
+      <text x="201.0" y="598.0">driving car to</text>
+      <text x="201.0" y="611.2">and from site</text>
+    </g>
+    <rect x="366" y="540" width="98" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="415.0" y="563.0">Design and</text>
+      <text x="415.0" y="576.7">produce</text>
+      <text x="415.0" y="590.4">posters</text>
+    </g>
+    <rect x="476" y="540" width="76" height="68" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="514.0" y="563.0">Alert</text>
+      <text x="514.0" y="576.7">local</text>
+      <text x="514.0" y="590.4">radio</text>
+    </g>
+    <rect x="564" y="540" width="94" height="54" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="611.0" y="562.8">Alert local</text>
+      <text x="611.0" y="576.5">newspaper</text>
+    </g>
+    <rect x="670" y="540" width="98" height="82" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10" font-weight="700" text-anchor="middle">
+      <text x="719.0" y="563.6">Set up</text>
+      <text x="719.0" y="576.8">stall on</text>
+      <text x="719.0" y="590.0">university</text>
+      <text x="719.0" y="603.2">walkway</text>
+    </g>
+    <rect x="780" y="540" width="98" height="82" rx="4" class="wbs-node-box"/>
+    <g class="wbs-node-txt" font-size="10" font-weight="700" text-anchor="middle">
+      <text x="829.0" y="563.6">Advertise</text>
+      <text x="829.0" y="576.8">on</text>
+      <text x="829.0" y="590.0">university</text>
+      <text x="829.0" y="603.2">intranet</text>
+    </g>
+  </svg>
+</div>
 
         <div class="callout-read text-sm">
           <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 38)</strong>

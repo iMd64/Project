@@ -251,6 +251,59 @@
       html.dark .w3-arr-horiz line, html.dark .w3-arr-horiz, [data-theme="dark"] .w3-arr-horiz line, [data-theme="dark"] .w3-arr-horiz { stroke: #60a5fa !important; }
       html.dark #arrB path, html.dark #arrBL path, [data-theme="dark"] #arrB path, [data-theme="dark"] #arrBL path { fill: #60a5fa !important; }
 
+      
+    /* WBS Figure 5.14 Hierarchical Tree Styles */
+    .wbs-root-box {
+      fill: #fde68a;
+      stroke: #d97706;
+      stroke-width: 2px;
+    }
+    .wbs-node-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .wbs-root-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .wbs-node-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .wbs-line {
+      stroke: #475569;
+      stroke-width: 1.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* Dark Mode overrides for Figure 5.14 */
+    html.dark .wbs-root-box,
+    [data-theme="dark"] .wbs-root-box {
+      fill: rgba(245, 158, 11, 0.22) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .wbs-node-box,
+    [data-theme="dark"] .wbs-node-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .wbs-root-txt text,
+    [data-theme="dark"] .wbs-root-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .wbs-node-txt text,
+    [data-theme="dark"] .wbs-node-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .wbs-line line,
+    [data-theme="dark"] .wbs-line line {
+      stroke: #94a3b8 !important;
+    }
+
       /* Global Mobile Safety */
       html, body {
         max-width: 100vw;
