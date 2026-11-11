@@ -1122,38 +1122,50 @@ footer {
         <table>
           <thead>
             <tr>
-              <th>Project</th>
-              <th class="center">Objective 1</th>
-              <th class="center">Objective 2</th>
-              <th class="center">Objective 3</th>
+              <th style="width: 25%;">Project</th>
+              <th class="center" style="width: 25%;"><em>Objective 1</em></th>
+              <th class="center" style="width: 25%;"><em>Objective 2</em></th>
+              <th class="center" style="width: 25%;"><em>Objective 3</em></th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><b>Project 1</b></td>
-              <td class="center"><mark class="g">++</mark></td>
-              <td class="center"><mark class="b">+</mark></td>
-              <td class="center"><mark class="p">-</mark></td>
+              <td class="center"><mark class="g" style="font-weight: 800; font-size: 1.15em; letter-spacing: 1px;">++</mark></td>
+              <td class="center"><mark class="b" style="font-weight: 800; font-size: 1.15em;">+</mark></td>
+              <td class="center"></td>
             </tr>
             <tr>
               <td><b>Project 2</b></td>
-              <td class="center"><mark class="p">-</mark></td>
-              <td class="center"><mark class="g">++</mark></td>
-              <td class="center">—</td>
+              <td class="center"><mark class="p" style="font-weight: 800; font-size: 1.15em; letter-spacing: 1px;">--</mark></td>
+              <td class="center"><mark class="g" style="font-weight: 800; font-size: 1.15em; letter-spacing: 1px;">++</mark></td>
+              <td class="center"></td>
             </tr>
             <tr>
               <td><b>Project 3</b></td>
-              <td class="center"><mark class="b">+</mark></td>
-              <td class="center"><mark class="b">+</mark></td>
-              <td class="center"><mark class="g">++</mark></td>
+              <td class="center"><mark class="b" style="font-weight: 800; font-size: 1.15em;">+</mark></td>
+              <td class="center"><mark class="b" style="font-weight: 800; font-size: 1.15em;">+</mark></td>
+              <td class="center"><mark class="g" style="font-weight: 800; font-size: 1.15em; letter-spacing: 1px;">++</mark></td>
             </tr>
           </tbody>
         </table>
       </div>
-      <p style="font-size:13.5px; margin:6px 0;"><b>Key:</b> <mark class="g">++ Strong positive relationship</mark> &nbsp;|&nbsp; <mark class="b">+ Positive relationship</mark> &nbsp;|&nbsp; <mark class="p">- Negative relationship</mark> &nbsp;|&nbsp; <mark class="p">-- Strong negative relationship</mark></p>
+      <p style="font-size:13.5px; margin:8px 0;">
+        <b>Key:</b> &nbsp;
+        <mark class="g">++ Strong positive relationship</mark> &nbsp;|&nbsp;
+        <mark class="b">+ Positive relationship</mark> &nbsp;|&nbsp;
+        <mark class="p">- Negative relationship</mark> &nbsp;|&nbsp;
+        <mark class="p">-- Strong negative relationship</mark>
+      </p>
       <div class="read-box">
         <b class="lbl">How to Read It</b>
-        Read each project against each objective. Inspect <mark class="p">negative effects and objectives with no supporting project</mark>. This is <mark class="p">not a numerical ranking</mark> or permission to ignore trade-offs.
+        Read each project across its row against strategic objectives:
+        <ul style="margin: 6px 0 6px 18px; padding-left: 0;">
+          <li><strong>Project 1:</strong> Strongly positive for Objective 1 (<mark class="g">++</mark>), positive for Objective 2 (<mark class="b">+</mark>), with no direct effect on Objective 3.</li>
+          <li><strong>Project 2:</strong> <mark class="p">Strong negative conflict with Objective 1 (--)</mark>, strongly positive for Objective 2 (<mark class="g">++</mark>), with no direct effect on Objective 3.</li>
+          <li><strong>Project 3:</strong> Positive for Objective 1 (<mark class="b">+</mark>) and Objective 2 (<mark class="b">+</mark>), and strongly positive for Objective 3 (<mark class="g">++</mark>).</li>
+        </ul>
+        <mark class="p">Exam Flag: Inspect negative impacts and objectives lacking project support.</mark> This matrix is <strong>not a numerical ranking</strong>—it identifies strategic alignment, synergies, and potential trade-offs before portfolio selection.
       </div>
     </article>
 
