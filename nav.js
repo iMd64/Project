@@ -86,6 +86,14 @@
       title: "Quiz & Midterm Prep (Network & Gantt)",
       icon: "🎯",
       summary: "Table 6.5 Short Course 10-Activity AoN & interactive Gantt"
+    },
+    {
+      id: "figures_w1_w6",
+      file: "figures_w1_w6.html",
+      week: "Atlas",
+      title: "Figures & Shapes W1–W6",
+      icon: "📊",
+      summary: "All course diagrams, models & figures from Weeks 1 to 6"
     }
   ];
 
@@ -151,6 +159,79 @@
         --pm-sidebar-active-border: #818cf8;
         --pm-sidebar-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
       }
+
+      /* ===================================================================
+         Universal SVG & Diagram Contrast Overrides for Dark Study Mode
+         ==================================================================== */
+      /* Global Dark Mode Arrowheads and Markers */
+      html.dark svg marker path[fill="#1e293b"],
+      html.dark svg marker path[fill="#334155"],
+      html.dark svg marker path[fill="#475569"],
+      html.dark svg marker path[fill="#0f172a"],
+      html.dark svg marker path[fill="#000000"],
+      [data-theme="dark"] svg marker path[fill="#1e293b"],
+      [data-theme="dark"] svg marker path[fill="#334155"],
+      [data-theme="dark"] svg marker path[fill="#475569"],
+      [data-theme="dark"] svg marker path[fill="#0f172a"],
+      [data-theme="dark"] svg marker path[fill="#000000"] {
+        fill: #94a3b8 !important;
+      }
+
+      /* Global Dark Mode Connector Lines and Dependency Arrows */
+      html.dark svg line[stroke="#1e293b"],
+      html.dark svg line[stroke="#334155"],
+      html.dark svg line[stroke="#475569"],
+      html.dark svg line[stroke="#0f172a"],
+      html.dark svg line[stroke="#000000"],
+      html.dark svg path.dep-arrow,
+      html.dark svg line.dep-arrow,
+      html.dark svg line.sg-arr-line,
+      html.dark svg line.seq-arr-line,
+      html.dark svg path.seq-arr-line,
+      [data-theme="dark"] svg line[stroke="#1e293b"],
+      [data-theme="dark"] svg line[stroke="#334155"],
+      [data-theme="dark"] svg line[stroke="#475569"],
+      [data-theme="dark"] svg line[stroke="#0f172a"],
+      [data-theme="dark"] svg line[stroke="#000000"],
+      [data-theme="dark"] svg path.dep-arrow,
+      [data-theme="dark"] svg line.dep-arrow,
+      [data-theme="dark"] svg line.sg-arr-line,
+      [data-theme="dark"] svg line.seq-arr-line,
+      [data-theme="dark"] svg path.seq-arr-line {
+        stroke: #94a3b8 !important;
+      }
+
+      /* Named Marker Overrides in Dark Mode */
+      html.dark #arr65 path, [data-theme="dark"] #arr65 path,
+      html.dark #fsA path, [data-theme="dark"] #fsA path,
+      html.dark #sgArr path, [data-theme="dark"] #sgArr path,
+      html.dark #seqArr path, [data-theme="dark"] #seqArr path,
+      html.dark #seqStart path, [data-theme="dark"] #seqStart path,
+      html.dark #f57Arr path, [data-theme="dark"] #f57Arr path,
+      html.dark #arrFunnel path, [data-theme="dark"] #arrFunnel path {
+        fill: #94a3b8 !important;
+      }
+
+      html.dark #seqArrRed path, [data-theme="dark"] #seqArrRed path,
+      html.dark #seqStartRed path, [data-theme="dark"] #seqStartRed path {
+        fill: #fb7185 !important;
+      }
+
+      /* Figure 3.1 Dark Mode Overrides (Strategy Cascade) */
+      html.dark .w3-role-box, [data-theme="dark"] .w3-role-box { fill: rgba(59, 130, 246, 0.18) !important; stroke: #60a5fa !important; }
+      html.dark .w3-role-text text, html.dark .w3-role-text, [data-theme="dark"] .w3-role-text text, [data-theme="dark"] .w3-role-text { fill: #93c5fd !important; }
+      html.dark .w3-hier-box, [data-theme="dark"] .w3-hier-box { fill: rgba(16, 185, 129, 0.18) !important; stroke: #34d399 !important; }
+      html.dark .w3-hier-text text, html.dark .w3-hier-text, [data-theme="dark"] .w3-hier-text text, [data-theme="dark"] .w3-hier-text { fill: #6ee7b7 !important; }
+      html.dark .w3-input-box, [data-theme="dark"] .w3-input-box { fill: rgba(245, 158, 11, 0.18) !important; stroke: #fbbf24 !important; }
+      html.dark .w3-input-text text, html.dark .w3-input-text, [data-theme="dark"] .w3-input-text text, [data-theme="dark"] .w3-input-text { fill: #fde68a !important; }
+      html.dark .w3-arr-down line, html.dark .w3-arr-down, [data-theme="dark"] .w3-arr-down line, [data-theme="dark"] .w3-arr-down { stroke: #34d399 !important; }
+      html.dark #arrD path, [data-theme="dark"] #arrD path { fill: #34d399 !important; }
+      html.dark .w3-text-down text, html.dark .w3-text-down, [data-theme="dark"] .w3-text-down text, [data-theme="dark"] .w3-text-down { fill: #a7f3d0 !important; }
+      html.dark .w3-arr-up line, html.dark .w3-arr-up, [data-theme="dark"] .w3-arr-up line, [data-theme="dark"] .w3-arr-up { stroke: #fbbf24 !important; }
+      html.dark #arrU path, [data-theme="dark"] #arrU path { fill: #fbbf24 !important; }
+      html.dark .w3-text-up text, html.dark .w3-text-up, [data-theme="dark"] .w3-text-up text, [data-theme="dark"] .w3-text-up { fill: #fde68a !important; }
+      html.dark .w3-arr-horiz line, html.dark .w3-arr-horiz, [data-theme="dark"] .w3-arr-horiz line, [data-theme="dark"] .w3-arr-horiz { stroke: #60a5fa !important; }
+      html.dark #arrB path, html.dark #arrBL path, [data-theme="dark"] #arrB path, [data-theme="dark"] #arrBL path { fill: #60a5fa !important; }
 
       /* Global Mobile Safety */
       html, body {
@@ -612,23 +693,46 @@
     const themeIcon = document.getElementById("pm-theme-icon");
     const themeLabel = document.getElementById("pm-theme-label");
     const pageThemeToggle = document.getElementById("themeToggle");
+    const pageThemeIcon = document.getElementById("themeIcon");
+    const pageThemeText = document.getElementById("themeText");
+
+    function syncUI(isDark) {
+      if (isDark) {
+        if (themeIcon) themeIcon.textContent = "☀️";
+        if (themeLabel) themeLabel.textContent = "Light Mode";
+        if (pageThemeIcon) pageThemeIcon.textContent = "☀️";
+        if (pageThemeText) pageThemeText.textContent = "Light Notebook Mode";
+      } else {
+        if (themeIcon) themeIcon.textContent = "🌙";
+        if (themeLabel) themeLabel.textContent = "Dark Mode";
+        if (pageThemeIcon) pageThemeIcon.textContent = "🌙";
+        if (pageThemeText) pageThemeText.textContent = "Dark Study Mode";
+      }
+    }
 
     function applyTheme(theme) {
-      if (theme === "dark") {
+      const isDark = theme === "dark";
+      if (isDark) {
         root.setAttribute("data-theme", "dark");
         root.classList.add("dark");
         localStorage.setItem("pm_theme", "dark");
-        if (themeIcon) themeIcon.textContent = "☀️";
-        if (themeLabel) themeLabel.textContent = "Light Mode";
       } else {
         root.removeAttribute("data-theme");
         root.classList.remove("dark");
         localStorage.setItem("pm_theme", "light");
-        if (themeIcon) themeIcon.textContent = "🌙";
-        if (themeLabel) themeLabel.textContent = "Dark Mode";
       }
+      syncUI(isDark);
     }
 
+    function toggleTheme(e) {
+      if (e && e.preventDefault) {
+        e.preventDefault();
+      }
+      const isDark = root.getAttribute("data-theme") === "dark";
+      applyTheme(isDark ? "light" : "dark");
+    }
+
+    // Initialize from storage or attribute
     const saved = localStorage.getItem("pm_theme");
     const currentAttr = root.getAttribute("data-theme");
     if (saved === "dark" || currentAttr === "dark") {
@@ -637,25 +741,43 @@
       applyTheme("light");
     }
 
+    // Set tooltips explaining the "T" shortcut
     if (themeBtn) {
-      themeBtn.addEventListener("click", () => {
-        const isDark = root.getAttribute("data-theme") === "dark";
-        applyTheme(isDark ? "light" : "dark");
-      });
+      themeBtn.title = "Toggle Light / Dark Study Mode (Press 'T')";
+      themeBtn.onclick = toggleTheme;
     }
 
     if (pageThemeToggle) {
-      pageThemeToggle.addEventListener("click", () => {
-        setTimeout(() => {
-          const isDark = root.getAttribute("data-theme") === "dark";
-          if (themeIcon) themeIcon.textContent = isDark ? "☀️" : "🌙";
-          if (themeLabel) themeLabel.textContent = isDark ? "Light Mode" : "Dark Mode";
-        }, 50);
-      });
+      pageThemeToggle.title = "Toggle Light / Dark Study Mode (Press 'T')";
+      pageThemeToggle.onclick = toggleTheme;
     }
+
+    // Observe data-theme changes to keep UI synchronized
+    if (window.MutationObserver) {
+      const observer = new MutationObserver(() => {
+        const isDark = root.getAttribute("data-theme") === "dark";
+        syncUI(isDark);
+      });
+      observer.observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+    }
+
+    // Keyboard Shortcut: Press "T" or "t" to toggle dark mode
+    document.addEventListener("keydown", (e) => {
+      const target = e.target;
+      const tag = target && target.tagName ? target.tagName.toLowerCase() : "";
+      if (tag === "input" || tag === "textarea" || tag === "select" || (target && target.isContentEditable)) {
+        return;
+      }
+      if (e.ctrlKey || e.altKey || e.metaKey) {
+        return;
+      }
+      if (e.key === "t" || e.key === "T") {
+        toggleTheme(e);
+      }
+    });
   }
 
-  // Setup Sidebar Toggle Behaviors (Mobile + Desktop)
+    // Setup Sidebar Toggle Behaviors (Mobile + Desktop)
   function setupSidebarInteractions() {
     const sidebar = document.getElementById("pm-sidebar");
     const toggleBtn = document.getElementById("pm-sidebar-toggle-btn");

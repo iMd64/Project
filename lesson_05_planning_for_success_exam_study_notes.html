@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lesson 05 – Planning for Success | Exam Study Notes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
@@ -243,6 +243,14 @@
       margin-right: 0.75rem;
       flex-shrink: 0;
     }
+  
+    /* Dark Mode Overrides for Figure 5.8 (Stage-Gate) & Figure 5.12 (Sequential vs Concurrent) */
+    [data-theme="dark"] #sgArr path { fill: #94a3b8 !important; }
+    [data-theme="dark"] .sg-arr-line { stroke: #94a3b8 !important; }
+    [data-theme="dark"] #seqArr path, [data-theme="dark"] #seqStart path { fill: #94a3b8 !important; }
+    [data-theme="dark"] .seq-arr-line { stroke: #94a3b8 !important; }
+    [data-theme="dark"] #seqArrRed path, [data-theme="dark"] #seqStartRed path { fill: #fb7185 !important; }
+
   </style>
 </head>
 <body data-lesson="week05" class="min-h-screen antialiased selection:bg-amber-200 selection:text-slate-900">
@@ -251,7 +259,7 @@
   <div class="sticky top-0 z-50 backdrop-blur-md border-b" style="background-color: color-mix(in srgb, var(--bg-card) 90%, transparent); border-color: var(--border-line);">
     <div class="max-w-6xl mx-auto px-4 py-2.5 flex flex-wrap items-center justify-between gap-2">
       <div class="flex items-center gap-2">
-        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Lesson 05</span>
+        <span class="px-2.5 py-1 rounded-md text-xs font-bold uppercase tracking-wider bg-indigo-600 text-white">Week 05 / Lesson 05</span>
         <span class="font-bold text-sm sm:text-base truncate">Planning for Success — Complete Study Notes (Slides 01–43)</span>
       </div>
 
@@ -261,20 +269,6 @@
           <span id="themeText">Dark Study Mode</span>
         </button>
       </div>
-    </div>
-
-    <!-- Section Jump Pills -->
-    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
-      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
-        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Overview &amp; Initial Plan (S1–4)</a>
-        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. Idea Funnel &amp; Screening (S5–9)</a>
-        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Scope &amp; Change (S10–16)</a>
-        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. Balance &amp; Stances (S17–23)</a>
-        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. ICOMs, Process &amp; PID (S24–29)</a>
-        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. Stage-Gate &amp; Concurrent Work (S30–35)</a>
-        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Case Study: Mini Event (S36–42)</a>
-        <a href="#sec8" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">8. Exit Check (S43)</a>
-      </nav>
     </div>
   </div>
 
@@ -289,7 +283,7 @@
       </div>
 
       <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3">
-        Lesson 05: <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Planning for Success</span>
+        Week 05 (Lesson 05): <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-rose-600">Planning for Success</span>
       </h1>
       <p class="text-base sm:text-lg mb-6" style="color: var(--ink-muted);">
         <strong>Instructor:</strong> Prof. Naghdali Choupani &nbsp;|&nbsp;
@@ -1404,40 +1398,40 @@
             <!-- Concept Circle -->
             <circle cx="48" cy="70" r="34" fill="#bae6fd" stroke="#0284c7" stroke-width="2"/>
             <text x="48" y="74" text-anchor="middle" font-size="12.5" font-weight="700" fill="#0f172a">Concept</text>
-            <line x1="82" y1="70" x2="104" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="82" y1="70" x2="104" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Gate 1 Diamond -->
             <polygon points="150,22 192,70 150,118 108,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
             <text x="150" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 1</text>
-            <line x1="192" y1="70" x2="214" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="192" y1="70" x2="214" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Stage 1 Box -->
             <rect x="218" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
             <text x="246" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
             <text x="246" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">1</text>
-            <line x1="274" y1="70" x2="296" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="274" y1="70" x2="296" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Gate 2 Diamond -->
             <polygon points="342,22 384,70 342,118 300,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
             <text x="342" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 2</text>
-            <line x1="384" y1="70" x2="406" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="384" y1="70" x2="406" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Stage 2 Box -->
             <rect x="410" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
             <text x="438" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
             <text x="438" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">2</text>
-            <line x1="466" y1="70" x2="488" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="466" y1="70" x2="488" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Gate 3 Diamond -->
             <polygon points="534,22 576,70 534,118 492,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
             <text x="534" y="74" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Gate 3</text>
-            <line x1="576" y1="70" x2="598" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="576" y1="70" x2="598" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Stage 3 Box -->
             <rect x="602" y="20" width="56" height="100" fill="#fde68a" stroke="#b45309" stroke-width="2"/>
             <text x="630" y="66" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">Stage</text>
             <text x="630" y="82" text-anchor="middle" font-size="12" font-weight="700" fill="#0f172a">3</text>
-            <line x1="658" y1="70" x2="680" y2="70" stroke="#1e293b" stroke-width="1.8" marker-end="url(#sgArr)"/>
+            <line x1="658" y1="70" x2="680" y2="70" stroke="#1e293b" stroke-width="2" class="sg-arr-line" marker-end="url(#sgArr)"/>
 
             <!-- Gate 4 Diamond -->
             <polygon points="726,22 768,70 726,118 684,70" fill="#d9f99d" stroke="#15803d" stroke-width="2"/>
@@ -1612,24 +1606,30 @@
                   <marker id="seqStart" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto">
                     <path d="M6,0 L0,3 L6,6 Z" fill="#1e293b"/>
                   </marker>
+                  <marker id="seqArrRed" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#e11d48"/>
+                  </marker>
+                  <marker id="seqStartRed" markerWidth="6" markerHeight="6" refX="1" refY="3" orient="auto">
+                    <path d="M6,0 L0,3 L6,6 Z" fill="#e11d48"/>
+                  </marker>
                 </defs>
 
                 <!-- TOP: SEQUENTIAL MODEL -->
                 <text x="55" y="15" font-size="11" font-weight="800" fill="currentColor">1. Sequential Model (End-to-End)</text>
                 <line x1="45" y1="18" x2="45" y2="128" stroke="currentColor" stroke-width="1.8"/>
-                <line x1="45" y1="128" x2="510" y2="128" stroke="currentColor" stroke-width="1.8" marker-end="url(#seqArr)"/>
+                <line x1="45" y1="128" x2="510" y2="128" stroke="currentColor" stroke-width="1.8" class="seq-arr-line" marker-end="url(#seqArr)"/>
 
                 <rect x="65" y="24" width="85" height="24" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
                 <text x="107" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Marketing</text>
-                <path d="M150,36 L165,36 L165,52" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+                <path d="M150,36 L165,36 L165,52" fill="none" stroke="#1e293b" stroke-width="1.5" class="seq-arr-line" marker-end="url(#seqArr)"/>
 
                 <rect x="165" y="52" width="75" height="24" fill="#bae6fd" stroke="#334155" stroke-width="1.5"/>
                 <text x="202" y="68" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Design</text>
-                <path d="M240,64 L255,64 L255,80" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+                <path d="M240,64 L255,64 L255,80" fill="none" stroke="#1e293b" stroke-width="1.5" class="seq-arr-line" marker-end="url(#seqArr)"/>
 
                 <rect x="255" y="80" width="95" height="24" fill="#d9f99d" stroke="#334155" stroke-width="1.5"/>
                 <text x="302" y="96" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Engineering</text>
-                <path d="M350,92 L365,92 L365,104" fill="none" stroke="#1e293b" stroke-width="1.5" marker-end="url(#seqArr)"/>
+                <path d="M350,92 L365,92 L365,104" fill="none" stroke="#1e293b" stroke-width="1.5" class="seq-arr-line" marker-end="url(#seqArr)"/>
 
                 <rect x="365" y="98" width="110" height="24" fill="#fecdd3" stroke="#334155" stroke-width="1.5"/>
                 <text x="420" y="114" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Manufacturing</text>
@@ -1640,28 +1640,28 @@
                 <!-- BOTTOM: CONCURRENT MODEL -->
                 <text x="55" y="150" font-size="11" font-weight="800" fill="currentColor">2. Concurrent Engineering Model (Overlapping + Two-Way Communication)</text>
                 <line x1="45" y1="154" x2="45" y2="255" stroke="currentColor" stroke-width="1.8"/>
-                <line x1="45" y1="255" x2="510" y2="255" stroke="currentColor" stroke-width="1.8" marker-end="url(#seqArr)"/>
+                <line x1="45" y1="255" x2="510" y2="255" stroke="currentColor" stroke-width="1.8" class="seq-arr-line" marker-end="url(#seqArr)"/>
 
                 <rect x="65" y="158" width="85" height="22" fill="#fde68a" stroke="#334155" stroke-width="1.5"/>
                 <text x="107" y="173" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Marketing</text>
 
-                <line x1="130" y1="180" x2="130" y2="188" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+                <line x1="130" y1="180" x2="130" y2="188" stroke="#1e293b" stroke-width="1.8" class="seq-arr-line" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
 
                 <rect x="110" y="186" width="75" height="22" fill="#bae6fd" stroke="#334155" stroke-width="1.5"/>
                 <text x="147" y="201" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Design</text>
 
-                <line x1="168" y1="208" x2="168" y2="216" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+                <line x1="168" y1="208" x2="168" y2="216" stroke="#1e293b" stroke-width="1.8" class="seq-arr-line" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
 
                 <rect x="145" y="214" width="95" height="22" fill="#d9f99d" stroke="#334155" stroke-width="1.5"/>
                 <text x="192" y="229" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Engineering</text>
 
-                <line x1="215" y1="236" x2="215" y2="244" stroke="#1e293b" stroke-width="1.8" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+                <line x1="215" y1="236" x2="215" y2="244" stroke="#1e293b" stroke-width="1.8" class="seq-arr-line" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
 
                 <rect x="195" y="230" width="110" height="22" fill="#fecdd3" stroke="#334155" stroke-width="1.5"/>
                 <text x="250" y="245" text-anchor="middle" font-size="11" font-weight="700" fill="#0f172a">Manufacturing</text>
 
                 <!-- Time Saved Double Arrow -->
-                <line x1="308" y1="272" x2="472" y2="272" stroke="#e11d48" stroke-width="2" marker-start="url(#seqStart)" marker-end="url(#seqArr)"/>
+                <line x1="308" y1="272" x2="472" y2="272" stroke="#e11d48" stroke-width="2.2" marker-start="url(#seqStartRed)" marker-end="url(#seqArrRed)"/>
                 <text x="390" y="286" text-anchor="middle" font-size="11.5" font-weight="800" fill="#e11d48">Time saved</text>
                 <text x="275" y="286" text-anchor="middle" font-size="11.5" font-weight="700" fill="currentColor">Time</text>
               </svg>
@@ -1761,85 +1761,85 @@
         <h3 class="text-xl font-bold">The WBS decomposes the event (Figure 5.14)</h3>
 
         <!-- Complete Visual Tree of Figure 5.14 -->
-        <div class="p-4 rounded-xl border space-y-4" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+        <div class="p-4 sm:p-5 rounded-xl border-2 shadow-sm space-y-4 bg-white dark:bg-slate-900/60" style="border-color: var(--border-line);">
           <div class="text-center">
-            <span class="inline-block px-6 py-2.5 rounded-lg font-extrabold text-sm sm:text-base border-2 border-amber-700 bg-amber-200 text-slate-900 shadow-sm">
+            <span class="inline-block px-6 py-2.5 rounded-lg font-black text-sm sm:text-base border-2 border-amber-600 bg-amber-200 text-amber-950 dark:bg-amber-950 dark:text-amber-200 dark:border-amber-600 shadow-xs">
               The Mini World Record Challenge
             </span>
           </div>
 
           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs">
             <!-- Branch 1: Obtain car -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">1. Obtain car</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Contact local dealers</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Present dealer with proposal</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Arrange conditions for borrowing car</li>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">1. Obtain car</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Contact local dealers</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Present dealer with proposal</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Arrange conditions for borrowing car</li>
               </ul>
             </div>
 
             <!-- Branch 2: Alert Guinness & Branch 7: Select charity -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-3" style="border-color: var(--border-line);">
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-3">
               <div>
-                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">2. Alert Guinness</div>
-                <p class="text-[11px] mt-1 pl-2" style="color: var(--ink-muted);">Direct work package (record rules/pack)</p>
+                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">2. Alert Guinness</div>
+                <p class="text-[11px] mt-1.5 pl-2 text-slate-700 dark:text-slate-300 font-semibold">Direct work package (record rules/pack)</p>
               </div>
-              <div class="pt-2 border-t" style="border-color: var(--border-line);">
-                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">7. Select charity</div>
-                <p class="text-[11px] mt-1 pl-2" style="color: var(--ink-muted);">Direct work package (beneficiary)</p>
+              <div class="pt-2 border-t border-slate-200 dark:border-slate-700">
+                <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">7. Select charity</div>
+                <p class="text-[11px] mt-1.5 pl-2 text-slate-700 dark:text-slate-300 font-semibold">Direct work package (beneficiary)</p>
               </div>
             </div>
 
             <!-- Branch 3: Arrange insurance -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">3. Arrange insurance</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Meet with university insurance department</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Arrange insurance for event and driving car to and from site</li>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">3. Arrange insurance</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Meet with university insurance department</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Arrange insurance for event and car transport</li>
               </ul>
             </div>
 
             <!-- Branch 4: Organise barbeque -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">4. Organise barbeque</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Contact university catering</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Obtain barbeque</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Ask supermarkets for free food</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Collect/purchase food</li>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">4. Organise barbeque</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Contact university catering</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Obtain barbeque equipment</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Ask supermarkets for free food</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Collect / purchase food</li>
               </ul>
             </div>
 
             <!-- Branch 5: Satisfy health and safety -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">5. Satisfy health and safety</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert security</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Meet with health and safety</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Carry out risk assessment</li>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">5. Satisfy health and safety</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert university security</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Meet with health and safety team</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Carry out formal risk assessment</li>
               </ul>
             </div>
 
             <!-- Branch 6: Promote event -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2 sm:col-span-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">6. Promote event</div>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-1.5 pl-2 border-l-2 border-amber-400">
-                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Design and produce posters</div>
-                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert local radio</div>
-                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Alert local newspaper</div>
-                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Set up stall on university walkway</div>
-                <div class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60 sm:col-span-2">Advertise on university intranet</div>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2 sm:col-span-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">6. Promote event</div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 pl-2 border-l-2 border-amber-500">
+                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Design &amp; produce posters</div>
+                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert local radio</div>
+                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Alert local newspaper</div>
+                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Set up walkway stall</div>
+                <div class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs sm:col-span-2">Advertise on university intranet</div>
               </div>
             </div>
 
             <!-- Branch 8: Arrange venue -->
-            <div class="p-3 rounded-lg border bg-white dark:bg-slate-800 space-y-2" style="border-color: var(--border-line);">
-              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-100 text-amber-900 border border-amber-300">8. Arrange venue</div>
-              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-400">
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Look for suitable venues</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Select venue and back-up venue</li>
-                <li class="p-1.5 rounded bg-amber-50/70 dark:bg-slate-700/60">Check venues for access and check with security</li>
+            <div class="p-3.5 rounded-xl border-2 border-amber-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 space-y-2">
+              <div class="font-extrabold text-sm px-2.5 py-1 rounded bg-amber-200/90 text-amber-950 dark:bg-amber-950/70 dark:text-amber-200 border border-amber-400 dark:border-amber-700">8. Arrange venue</div>
+              <ul class="space-y-1.5 pl-2 border-l-2 border-amber-500">
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Look for suitable venues</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Select venue &amp; back-up venue</li>
+                <li class="p-1.5 rounded bg-white dark:bg-slate-700 border border-slate-200 dark:border-slate-600 text-slate-800 dark:text-slate-100 font-semibold shadow-xs">Check venue access &amp; security</li>
               </ul>
             </div>
           </div>
@@ -1860,100 +1860,119 @@
         <h3 class="text-xl font-bold">The four-fields map joins work and gates (Figure 5.15)</h3>
 
         <!-- Structured Visual Replica of Figure 5.15 -->
-        <div class="p-4 rounded-xl border overflow-x-auto" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
-          <div class="min-w-[720px] grid grid-cols-12 gap-2.5 text-xs">
+        <div class="p-4 sm:p-5 rounded-xl border-2 shadow-sm bg-white dark:bg-slate-900/60 overflow-x-auto" style="border-color: var(--border-line);">
+          <div class="min-w-[760px] grid grid-cols-12 gap-3 text-xs">
             <!-- Left Vertical Phase Banner -->
-            <div class="col-span-1 rounded-lg bg-amber-300 text-slate-900 font-extrabold flex items-center justify-center p-2 text-center tracking-widest" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+            <div class="col-span-1 rounded-xl bg-indigo-600 text-white font-black flex items-center justify-center p-2 text-center tracking-widest shadow-xs" style="writing-mode: vertical-rl; transform: rotate(180deg);">
               EARLY PLANNING PHASE
             </div>
 
-            <!-- Center 6 Team Member Columns -->
-            <div class="col-span-9 space-y-2.5">
-              <!-- Team Member Headers -->
-              <div class="grid grid-cols-6 gap-2 text-center font-extrabold">
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Antony</div>
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Matthew</div>
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Amrit</div>
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Katherine</div>
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Emil</div>
-                <div class="p-2 rounded bg-amber-100 text-slate-900 border border-amber-400">Nikolaos</div>
+            <!-- Center 6 Team Member Columns (Field 1 & Field 2) -->
+            <div class="col-span-8 space-y-2.5">
+              <!-- Field 1: Team Member Headers -->
+              <div class="grid grid-cols-6 gap-2 text-center font-black">
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Antony</div>
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Matthew</div>
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Amrit</div>
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Katherine</div>
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Emil</div>
+                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Nikolaos</div>
               </div>
 
-              <!-- Full-Width Bar: Initial meetings -->
-              <div class="p-2 rounded bg-amber-200/90 text-slate-900 font-bold text-center border border-amber-500">
-                Initial meetings
+              <!-- Field 2: Process - Initial meetings milestone -->
+              <div class="p-2.5 rounded-lg bg-indigo-600 text-white font-black text-center shadow-xs">
+                Initial team meetings &amp; scope alignment
               </div>
 
               <!-- Swimlane Tasks Row 1 -->
               <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Contact BMW Mini dealers
                 </div>
-                <div class="col-span-1 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-1 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Alert Guinness
                 </div>
-                <div class="col-span-1 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-1 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Contact catering
                 </div>
-                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Look for suitable venues
                 </div>
               </div>
 
               <!-- Swimlane Tasks Row 2 -->
               <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Present dealer with proposal
                 </div>
                 <div class="col-span-2"></div>
-                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
+                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
                   Contact security
                 </div>
               </div>
 
               <!-- Swimlane Tasks Row 3 -->
               <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
-                  Meet with university insurance representatives
+                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
+                  Meet insurance reps
                 </div>
-                <div class="col-span-3 p-2 rounded bg-white dark:bg-slate-800 border text-center font-semibold" style="border-color: var(--border-line);">
-                  Meet with health and safety &nbsp;➔&nbsp; Draw up risk assessment
+                <div class="col-span-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs flex items-center justify-center gap-1.5">
+                  <span>Meet H&amp;S</span>
+                  <span class="text-indigo-600 dark:text-indigo-400 font-extrabold">➔</span>
+                  <span>Draw up risk assessment</span>
                 </div>
                 <div class="col-span-1"></div>
               </div>
 
-              <!-- Full-Width Bar: Review meetings -->
-              <div class="p-2 rounded bg-amber-200/90 text-slate-900 font-bold text-center border border-amber-500">
-                Review meetings
+              <!-- Field 2: Process - Review meetings milestone -->
+              <div class="p-2.5 rounded-lg bg-indigo-600 text-white font-black text-center shadow-xs">
+                Review meetings &amp; Gate submission
               </div>
 
-              <!-- GATE 1 Diamond -->
-              <div class="flex justify-center py-1">
-                <div class="px-6 py-2 rounded-full bg-rose-600 text-white font-extrabold tracking-wider shadow">
-                  ◆ GATE 1 ◆
+              <!-- Field 3: GATE 1 Decision Point -->
+              <div class="flex justify-center pt-1">
+                <div class="px-8 py-2 rounded-full bg-rose-600 text-white font-black tracking-wider shadow-md border-2 border-rose-400 flex items-center gap-2">
+                  <span>◆</span>
+                  <span>GATE 1 DECISION POINT</span>
+                  <span>◆</span>
                 </div>
               </div>
             </div>
 
-            <!-- Right Vertical Standards Column -->
-            <div class="col-span-2 flex flex-col gap-2">
-              <div class="p-2 rounded bg-amber-100 text-slate-900 font-extrabold text-center border border-amber-400">
-                Standards
+            <!-- Field 4: Right Vertical Standards Column -->
+            <div class="col-span-3 flex flex-col gap-2">
+              <div class="p-2 rounded-lg bg-amber-400 text-amber-950 font-black text-center border border-amber-500 shadow-xs">
+                Mandatory Standards
               </div>
-              <div class="flex-1 p-3 rounded-lg bg-amber-50 dark:bg-slate-800 border border-amber-300 flex flex-col justify-around text-center font-semibold">
-                <span>See venue standards</span>
-                <span>See car standards</span>
-                <span>See insurance standards</span>
-                <span>See health and safety standards</span>
+              <div class="flex-1 p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border-2 border-amber-300 dark:border-amber-700 flex flex-col justify-between gap-2 text-center font-bold">
+                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
+                  <span>📋</span>
+                  <span>Venue standards</span>
+                </div>
+                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
+                  <span>🚗</span>
+                  <span>Car standards</span>
+                </div>
+                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
+                  <span>🛡️</span>
+                  <span>Insurance standards</span>
+                </div>
+                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
+                  <span>⛑️</span>
+                  <span>H&amp;S standards</span>
+                </div>
               </div>
             </div>
           </div>
 
           <!-- Gate 1 Criteria & Standards Details Boxes -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-3 border-t" style="border-color: var(--border-line);">
-            <div class="p-4 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
-              <strong class="block text-sm font-extrabold text-rose-600 dark:text-rose-400 mb-2">Gate 1 Criteria (5 Pass Questions):</strong>
-              <ul class="text-xs space-y-1.5 list-disc list-inside">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-rose-300 dark:border-rose-900/60 shadow-xs">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                <strong class="text-sm font-extrabold text-rose-700 dark:text-rose-400">Gate 1 Criteria (5 Pass Questions):</strong>
+              </div>
+              <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-800 dark:text-slate-100 font-medium">
                 <li><mark class="hl-y">Can a car be obtained?</mark></li>
                 <li><mark class="hl-p">Will the event be covered by university insurance?</mark></li>
                 <li><mark class="hl-g">Is there a suitable site on campus?</mark></li>
@@ -1962,13 +1981,16 @@
               </ul>
             </div>
 
-            <div class="p-4 rounded-lg bg-white dark:bg-slate-800 border" style="border-color: var(--border-line);">
-              <strong class="block text-sm font-extrabold text-indigo-600 dark:text-indigo-400 mb-2">Standards (4 Mandatory Specifications):</strong>
-              <ul class="text-xs space-y-1.5 list-disc list-inside">
-                <li><strong>Venue:</strong> Must be accessible for a vehicle, central location, visible for spectators, large enough to accommodate a large number of people.</li>
+            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-indigo-300 dark:border-indigo-900/60 shadow-xs">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
+                <strong class="text-sm font-extrabold text-indigo-700 dark:text-indigo-400">Standards (4 Mandatory Specifications):</strong>
+              </div>
+              <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-800 dark:text-slate-100 font-medium">
+                <li><strong>Venue:</strong> Must be accessible for a vehicle, central location, visible for spectators, large enough for crowd.</li>
                 <li><strong>Car:</strong> Must be a standard BMW Mini, available for borrowing for one whole day.</li>
-                <li><strong>Insurance:</strong> Event must be completely covered by university insurance such that <mark class="hl-p">group members are not liable for any damage to the car</mark>.</li>
-                <li><strong>Health &amp; safety:</strong> Procedures must be established such that <mark class="hl-p">group members are not responsible for any injury to participants</mark>.</li>
+                <li><strong>Insurance:</strong> Completely covered by university insurance so <mark class="hl-p">group members are not liable for damage</mark>.</li>
+                <li><strong>Health &amp; safety:</strong> Procedures established so <mark class="hl-p">group members are not responsible for any injury</mark>.</li>
               </ul>
             </div>
           </div>
@@ -2236,31 +2258,6 @@
   </footer>
 
   <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
-  <script>
-    (function() {
-      var root = document.documentElement;
-      var btn = document.getElementById("themeToggle");
-      var icon = document.getElementById("themeIcon");
-      var text = document.getElementById("themeText");
-
-      function applyTheme(theme) {
-        if (theme === "dark") {
-          root.setAttribute("data-theme", "dark");
-          icon.textContent = "☀️";
-          text.textContent = "Light Notebook Mode";
-        } else {
-          root.removeAttribute("data-theme");
-          icon.textContent = "🌙";
-          text.textContent = "Dark Study Mode";
-        }
-      }
-
-      btn.addEventListener("click", function() {
-        var isDark = root.getAttribute("data-theme") === "dark";
-        applyTheme(isDark ? "light" : "dark");
-      });
-    })();
-  </script>
   <!-- Shared Collapsible Left Navigation (nav.js) -->
   <script src="nav.js"></script>
 </body>

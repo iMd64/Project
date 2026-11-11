@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lesson 02 (Week 02) – Structures and Frameworks | Exam Study Notes</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet">
@@ -261,19 +261,6 @@
           <span id="themeText">Dark Study Mode</span>
         </button>
       </div>
-    </div>
-
-    <!-- Section Jump Pills -->
-    <div class="max-w-6xl mx-auto px-4 pb-2 overflow-x-auto">
-      <nav class="flex items-center gap-1.5 text-xs font-semibold whitespace-nowrap">
-        <a href="#sec1" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">1. Overview &amp; C2C (S1–4)</a>
-        <a href="#sec2" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">2. 5-C Model &amp; PESTEL (S5–9)</a>
-        <a href="#sec3" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">3. Project 7-S Framework (S10–14)</a>
-        <a href="#sec4" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">4. ICOM Conversion Process (S15–20)</a>
-        <a href="#sec5" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">5. 4-D, S-Curve, Gates &amp; Agile (S21–30)</a>
-        <a href="#sec6" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">6. 3 Complexity Lenses &amp; Crossrail (S31–38)</a>
-        <a href="#sec7" class="px-2.5 py-1 rounded-md hover:bg-indigo-500/10 transition" style="color: var(--ink-main);">7. Arson Task Force &amp; Exit Check (S39–45)</a>
-      </nav>
     </div>
   </div>
 
@@ -1670,31 +1657,6 @@
   </footer>
 
   <!-- DARK / LIGHT MODE TOGGLE SCRIPT -->
-  <script>
-    (function() {
-      var root = document.documentElement;
-      var btn = document.getElementById("themeToggle");
-      var icon = document.getElementById("themeIcon");
-      var text = document.getElementById("themeText");
-
-      function applyTheme(theme) {
-        if (theme === "dark") {
-          root.setAttribute("data-theme", "dark");
-          icon.textContent = "☀️";
-          text.textContent = "Light Notebook Mode";
-        } else {
-          root.removeAttribute("data-theme");
-          icon.textContent = "🌙";
-          text.textContent = "Dark Study Mode";
-        }
-      }
-
-      btn.addEventListener("click", function() {
-        var isDark = root.getAttribute("data-theme") === "dark";
-        applyTheme(isDark ? "light" : "dark");
-      });
-    })();
-  </script>
   <!-- Shared Collapsible Left Navigation (nav.js) -->
   <script src="nav.js"></script>
 </body>
