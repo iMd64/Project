@@ -304,6 +304,164 @@
       stroke: #94a3b8 !important;
     }
 
+      
+    /* Four Fields Map (Figure 5.15) Styles */
+    .ff-phase-box {
+      fill: #f59e0b;
+      stroke: #b45309;
+      stroke-width: 1.5px;
+    }
+    .ff-phase-txt text {
+      fill: #451a03;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 900;
+    }
+    .ff-team-box {
+      fill: #fde68a;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-team-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .ff-bar-box {
+      fill: #fef3c7;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-bar-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .ff-standards-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-standards-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .ff-node-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-node-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .ff-line {
+      stroke: #475569;
+      stroke-width: 1.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ff-gate-diamond {
+      fill: #ecfdf5;
+      stroke: #059669;
+      stroke-width: 1.8px;
+    }
+    .ff-gate-txt {
+      fill: #065f46;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+    .ff-card-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-card-header {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .ff-card-body text {
+      fill: #334155;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    /* Dark Mode Overrides for Figure 5.15 */
+    html.dark .ff-phase-box,
+    [data-theme="dark"] .ff-phase-box {
+      fill: rgba(245, 158, 11, 0.28) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .ff-phase-txt text,
+    [data-theme="dark"] .ff-phase-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-team-box,
+    [data-theme="dark"] .ff-team-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-team-txt text,
+    [data-theme="dark"] .ff-team-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .ff-bar-box,
+    [data-theme="dark"] .ff-bar-box {
+      fill: rgba(245, 158, 11, 0.22) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .ff-bar-txt text,
+    [data-theme="dark"] .ff-bar-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-standards-box,
+    [data-theme="dark"] .ff-standards-box {
+      fill: rgba(30, 41, 59, 0.75) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-standards-txt text,
+    [data-theme="dark"] .ff-standards-txt text {
+      fill: #cbd5e1 !important;
+    }
+    html.dark .ff-node-box,
+    [data-theme="dark"] .ff-node-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-node-txt text,
+    [data-theme="dark"] .ff-node-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .ff-line,
+    html.dark .ff-line line,
+    [data-theme="dark"] .ff-line,
+    [data-theme="dark"] .ff-line line {
+      stroke: #94a3b8 !important;
+    }
+    html.dark .ff-gate-diamond,
+    [data-theme="dark"] .ff-gate-diamond {
+      fill: rgba(16, 185, 129, 0.22) !important;
+      stroke: #10b981 !important;
+    }
+    html.dark .ff-gate-txt,
+    [data-theme="dark"] .ff-gate-txt {
+      fill: #a7f3d0 !important;
+    }
+    html.dark .ff-card-box,
+    [data-theme="dark"] .ff-card-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-card-header,
+    [data-theme="dark"] .ff-card-header {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-card-body text,
+    [data-theme="dark"] .ff-card-body text {
+      fill: #cbd5e1 !important;
+    }
+
       /* Global Mobile Safety */
       html, body {
         max-width: 100vw;

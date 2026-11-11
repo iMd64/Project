@@ -279,6 +279,164 @@
       stroke: #94a3b8 !important;
     }
 
+  
+    /* Four Fields Map (Figure 5.15) Styles */
+    .ff-phase-box {
+      fill: #f59e0b;
+      stroke: #b45309;
+      stroke-width: 1.5px;
+    }
+    .ff-phase-txt text {
+      fill: #451a03;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 900;
+    }
+    .ff-team-box {
+      fill: #fde68a;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-team-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .ff-bar-box {
+      fill: #fef3c7;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-bar-txt text {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .ff-standards-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-standards-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+    .ff-node-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-node-txt text {
+      fill: #1e293b;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 700;
+    }
+    .ff-line {
+      stroke: #475569;
+      stroke-width: 1.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .ff-gate-diamond {
+      fill: #ecfdf5;
+      stroke: #059669;
+      stroke-width: 1.8px;
+    }
+    .ff-gate-txt {
+      fill: #065f46;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+    }
+    .ff-card-box {
+      fill: #fffbeb;
+      stroke: #d97706;
+      stroke-width: 1.5px;
+    }
+    .ff-card-header {
+      fill: #78350f;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      font-weight: 800;
+    }
+    .ff-card-body text {
+      fill: #334155;
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    }
+
+    /* Dark Mode Overrides for Figure 5.15 */
+    html.dark .ff-phase-box,
+    [data-theme="dark"] .ff-phase-box {
+      fill: rgba(245, 158, 11, 0.28) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .ff-phase-txt text,
+    [data-theme="dark"] .ff-phase-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-team-box,
+    [data-theme="dark"] .ff-team-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-team-txt text,
+    [data-theme="dark"] .ff-team-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .ff-bar-box,
+    [data-theme="dark"] .ff-bar-box {
+      fill: rgba(245, 158, 11, 0.22) !important;
+      stroke: #f59e0b !important;
+    }
+    html.dark .ff-bar-txt text,
+    [data-theme="dark"] .ff-bar-txt text {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-standards-box,
+    [data-theme="dark"] .ff-standards-box {
+      fill: rgba(30, 41, 59, 0.75) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-standards-txt text,
+    [data-theme="dark"] .ff-standards-txt text {
+      fill: #cbd5e1 !important;
+    }
+    html.dark .ff-node-box,
+    [data-theme="dark"] .ff-node-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-node-txt text,
+    [data-theme="dark"] .ff-node-txt text {
+      fill: #f1f5f9 !important;
+    }
+    html.dark .ff-line,
+    html.dark .ff-line line,
+    [data-theme="dark"] .ff-line,
+    [data-theme="dark"] .ff-line line {
+      stroke: #94a3b8 !important;
+    }
+    html.dark .ff-gate-diamond,
+    [data-theme="dark"] .ff-gate-diamond {
+      fill: rgba(16, 185, 129, 0.22) !important;
+      stroke: #10b981 !important;
+    }
+    html.dark .ff-gate-txt,
+    [data-theme="dark"] .ff-gate-txt {
+      fill: #a7f3d0 !important;
+    }
+    html.dark .ff-card-box,
+    [data-theme="dark"] .ff-card-box {
+      fill: rgba(30, 41, 59, 0.85) !important;
+      stroke: #d97706 !important;
+    }
+    html.dark .ff-card-header,
+    [data-theme="dark"] .ff-card-header {
+      fill: #fef08a !important;
+    }
+    html.dark .ff-card-body text,
+    [data-theme="dark"] .ff-card-body text {
+      fill: #cbd5e1 !important;
+    }
+
   </style>
 </head>
 <body data-lesson="figures_w1_w6" class="min-h-screen pb-24">
@@ -2682,142 +2840,186 @@
         </div>
         <h3 class="text-xl font-bold">The four-fields map joins work and gates (Figure 5.15)</h3>
 
-        <!-- Structured Visual Replica of Figure 5.15 -->
-        <div class="p-4 sm:p-5 rounded-xl border-2 shadow-sm bg-white dark:bg-slate-900/60 overflow-x-auto" style="border-color: var(--border-line);">
-          <div class="min-w-[760px] grid grid-cols-12 gap-3 text-xs">
-            <!-- Left Vertical Phase Banner -->
-            <div class="col-span-1 rounded-xl bg-indigo-600 text-white font-black flex items-center justify-center p-2 text-center tracking-widest shadow-xs" style="writing-mode: vertical-rl; transform: rotate(180deg);">
-              EARLY PLANNING PHASE
-            </div>
-
-            <!-- Center 6 Team Member Columns (Field 1 & Field 2) -->
-            <div class="col-span-8 space-y-2.5">
-              <!-- Field 1: Team Member Headers -->
-              <div class="grid grid-cols-6 gap-2 text-center font-black">
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Antony</div>
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Matthew</div>
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Amrit</div>
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Katherine</div>
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Emil</div>
-                <div class="p-2 rounded-lg bg-indigo-100 text-indigo-950 dark:bg-indigo-950 dark:text-indigo-100 border border-indigo-300 dark:border-indigo-700 shadow-xs">Nikolaos</div>
-              </div>
-
-              <!-- Field 2: Process - Initial meetings milestone -->
-              <div class="p-2.5 rounded-lg bg-indigo-600 text-white font-black text-center shadow-xs">
-                Initial team meetings &amp; scope alignment
-              </div>
-
-              <!-- Swimlane Tasks Row 1 -->
-              <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Contact BMW Mini dealers
-                </div>
-                <div class="col-span-1 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Alert Guinness
-                </div>
-                <div class="col-span-1 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Contact catering
-                </div>
-                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Look for suitable venues
-                </div>
-              </div>
-
-              <!-- Swimlane Tasks Row 2 -->
-              <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Present dealer with proposal
-                </div>
-                <div class="col-span-2"></div>
-                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Contact security
-                </div>
-              </div>
-
-              <!-- Swimlane Tasks Row 3 -->
-              <div class="grid grid-cols-6 gap-2 items-stretch">
-                <div class="col-span-2 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs">
-                  Meet insurance reps
-                </div>
-                <div class="col-span-3 p-2.5 rounded-lg bg-slate-50 dark:bg-slate-800 border-2 border-slate-300 dark:border-slate-600 text-slate-900 dark:text-slate-100 text-center font-bold shadow-xs flex items-center justify-center gap-1.5">
-                  <span>Meet H&amp;S</span>
-                  <span class="text-indigo-600 dark:text-indigo-400 font-extrabold">➔</span>
-                  <span>Draw up risk assessment</span>
-                </div>
-                <div class="col-span-1"></div>
-              </div>
-
-              <!-- Field 2: Process - Review meetings milestone -->
-              <div class="p-2.5 rounded-lg bg-indigo-600 text-white font-black text-center shadow-xs">
-                Review meetings &amp; Gate submission
-              </div>
-
-              <!-- Field 3: GATE 1 Decision Point -->
-              <div class="flex justify-center pt-1">
-                <div class="px-8 py-2 rounded-full bg-rose-600 text-white font-black tracking-wider shadow-md border-2 border-rose-400 flex items-center gap-2">
-                  <span>◆</span>
-                  <span>GATE 1 DECISION POINT</span>
-                  <span>◆</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Field 4: Right Vertical Standards Column -->
-            <div class="col-span-3 flex flex-col gap-2">
-              <div class="p-2 rounded-lg bg-amber-400 text-amber-950 font-black text-center border border-amber-500 shadow-xs">
-                Mandatory Standards
-              </div>
-              <div class="flex-1 p-3 rounded-xl bg-amber-50/70 dark:bg-amber-950/30 border-2 border-amber-300 dark:border-amber-700 flex flex-col justify-between gap-2 text-center font-bold">
-                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
-                  <span>📋</span>
-                  <span>Venue standards</span>
-                </div>
-                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
-                  <span>🚗</span>
-                  <span>Car standards</span>
-                </div>
-                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
-                  <span>🛡️</span>
-                  <span>Insurance standards</span>
-                </div>
-                <div class="p-2 rounded-lg bg-white dark:bg-slate-800 border border-amber-300 dark:border-amber-700 text-slate-900 dark:text-slate-100 shadow-xs flex items-center gap-1.5 justify-center">
-                  <span>⛑️</span>
-                  <span>H&amp;S standards</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Gate 1 Criteria & Standards Details Boxes -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
-            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-rose-300 dark:border-rose-900/60 shadow-xs">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-                <strong class="text-sm font-extrabold text-rose-700 dark:text-rose-400">Gate 1 Criteria (5 Pass Questions):</strong>
-              </div>
-              <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-800 dark:text-slate-100 font-medium">
-                <li><mark class="hl-y">Can a car be obtained?</mark></li>
-                <li><mark class="hl-p">Will the event be covered by university insurance?</mark></li>
-                <li><mark class="hl-g">Is there a suitable site on campus?</mark></li>
-                <li><mark class="hl-p">Do health and safety give consent?</mark></li>
-                <li><mark class="hl-b">Will catering allow us to run our own barbeque?</mark></li>
-              </ul>
-            </div>
-
-            <div class="p-4 rounded-xl bg-slate-50 dark:bg-slate-800/80 border border-indigo-300 dark:border-indigo-900/60 shadow-xs">
-              <div class="flex items-center gap-2 mb-2">
-                <span class="w-2.5 h-2.5 rounded-full bg-indigo-500"></span>
-                <strong class="text-sm font-extrabold text-indigo-700 dark:text-indigo-400">Standards (4 Mandatory Specifications):</strong>
-              </div>
-              <ul class="text-xs space-y-1.5 list-disc list-inside text-slate-800 dark:text-slate-100 font-medium">
-                <li><strong>Venue:</strong> Must be accessible for a vehicle, central location, visible for spectators, large enough for crowd.</li>
-                <li><strong>Car:</strong> Must be a standard BMW Mini, available for borrowing for one whole day.</li>
-                <li><strong>Insurance:</strong> Completely covered by university insurance so <mark class="hl-p">group members are not liable for damage</mark>.</li>
-                <li><strong>Health &amp; safety:</strong> Procedures established so <mark class="hl-p">group members are not responsible for any injury</mark>.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <!-- Authentic Four Fields Vector SVG: Figure 5.15 -->
+        <div class="pm-svg-scroll-wrap p-4 rounded-xl border flex flex-col items-center justify-center overflow-x-auto shadow-sm" style="background-color: var(--bg-card); border-color: var(--border-line);">
+  <div class="w-full text-center mb-3">
+    <span class="text-xs font-extrabold uppercase tracking-wider text-amber-600 dark:text-amber-400">Figure 5.15 Four Fields Map (Early Planning Phase &amp; Gate 1 Criteria)</span>
+  </div>
+  <svg viewBox="0 0 880 860" class="w-full min-w-[780px] max-w-[880px]" aria-label="Figure 5.15 Four fields map" xmlns="http://www.w3.org/2000/svg">
+    <!-- Field 1: Phase Banner -->
+    <rect x="28" y="28" width="34" height="418" rx="4" class="ff-phase-box"/>
+    <g class="ff-phase-txt" font-size="11" font-weight="900" text-anchor="middle">
+      <text x="45" y="48">E</text>
+      <text x="45" y="67">A</text>
+      <text x="45" y="86">R</text>
+      <text x="45" y="105">L</text>
+      <text x="45" y="124">Y</text>
+      <text x="45" y="162">P</text>
+      <text x="45" y="181">L</text>
+      <text x="45" y="200">A</text>
+      <text x="45" y="219">N</text>
+      <text x="45" y="238">N</text>
+      <text x="45" y="257">I</text>
+      <text x="45" y="276">N</text>
+      <text x="45" y="295">G</text>
+      <text x="45" y="333">P</text>
+      <text x="45" y="352">H</text>
+      <text x="45" y="371">A</text>
+      <text x="45" y="390">S</text>
+      <text x="45" y="409">E</text>
+    </g>
+    <!-- Field 2: Team Member Swimlane Headers -->
+    <rect x="82" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="128.0" y="48.0">Antony</text>
+    </g>
+    <rect x="186" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="232.0" y="48.0">Matthew</text>
+    </g>
+    <rect x="290" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="336.0" y="48.0">Ammes</text>
+    </g>
+    <rect x="394" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="440.0" y="48.0">Katherine</text>
+    </g>
+    <rect x="498" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="544.0" y="48.0">Emil</text>
+    </g>
+    <rect x="602" y="28" width="92" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="648.0" y="48.0">Nikolaos</text>
+    </g>
+    <!-- Field 3: Standards Column -->
+    <rect x="716" y="28" width="134" height="34" rx="4" class="ff-team-box"/>
+    <g class="ff-team-txt" font-size="11.5" font-weight="700" text-anchor="middle">
+      <text x="783.0" y="48.0">Standards</text>
+    </g>
+    <rect x="716" y="78" width="134" height="368" rx="4" class="ff-standards-box"/>
+    <g class="ff-standards-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="783" y="152">See venue</text>
+      <text x="783" y="166">standards</text>
+      
+      <text x="783" y="222">See car</text>
+      <text x="783" y="236">standards</text>
+      
+      <text x="783" y="294">See insurance</text>
+      <text x="783" y="308">standards</text>
+      
+      <text x="783" y="360">See health</text>
+      <text x="783" y="374">and safety</text>
+      <text x="783" y="388">standards</text>
+    </g>
+    <!-- Field 4: Process Flow -->
+    <rect x="82" y="78" width="612" height="34" rx="4" class="ff-bar-box"/>
+    <g class="ff-bar-txt" font-size="12" font-weight="700" text-anchor="middle">
+      <text x="388.0" y="98.2">Initial meetings</text>
+    </g>
+    <rect x="82" y="134" width="196" height="44" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="180.0" y="151.5">Contact BMW Mini</text>
+      <text x="180.0" y="166.0">dealers</text>
+    </g>
+    <rect x="82" y="202" width="196" height="44" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="180.0" y="219.5">Present dealer with</text>
+      <text x="180.0" y="234.0">proposal</text>
+    </g>
+    <rect x="82" y="270" width="196" height="52" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="10.5" font-weight="700" text-anchor="middle">
+      <text x="180.0" y="284.5">Meet with university</text>
+      <text x="180.0" y="298.5">insurance</text>
+      <text x="180.0" y="312.5">representatives</text>
+    </g>
+    <rect x="290" y="134" width="92" height="44" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="336.0" y="151.5">Alert</text>
+      <text x="336.0" y="166.0">Guinness</text>
+    </g>
+    <rect x="394" y="134" width="92" height="44" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="440.0" y="151.5">Contact</text>
+      <text x="440.0" y="166.0">catering</text>
+    </g>
+    <rect x="498" y="134" width="196" height="36" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="596.0" y="154.8">Look for suitable venues</text>
+    </g>
+    <rect x="498" y="198" width="196" height="36" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="596.0" y="218.8">Contact security</text>
+    </g>
+    <rect x="290" y="270" width="300" height="36" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="440.0" y="290.8">Meet with health and safety</text>
+    </g>
+    <rect x="290" y="326" width="300" height="36" rx="4" class="ff-node-box"/>
+    <g class="ff-node-txt" font-size="11" font-weight="700" text-anchor="middle">
+      <text x="440.0" y="346.8">Draw up risk assessment</text>
+    </g>
+    <rect x="82" y="412" width="612" height="34" rx="4" class="ff-bar-box"/>
+    <g class="ff-bar-txt" font-size="12" font-weight="700" text-anchor="middle">
+      <text x="388.0" y="432.2">Review meetings</text>
+    </g>
+    <!-- Connector Lines -->
+    <g class="ff-line" stroke="#475569" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="128" y1="62" x2="128" y2="78"/>
+      <line x1="232" y1="62" x2="232" y2="78"/>
+      <line x1="336" y1="62" x2="336" y2="78"/>
+      <line x1="440" y1="62" x2="440" y2="78"/>
+      <line x1="544" y1="62" x2="544" y2="78"/>
+      <line x1="648" y1="62" x2="648" y2="78"/>
+      <line x1="180" y1="112" x2="180" y2="134"/>
+      <line x1="336" y1="112" x2="336" y2="134"/>
+      <line x1="440" y1="112" x2="440" y2="134"/>
+      <line x1="596" y1="112" x2="596" y2="134"/>
+      <line x1="180" y1="178" x2="180" y2="202"/>
+      <line x1="180" y1="246" x2="180" y2="270"/>
+      <line x1="336" y1="178" x2="336" y2="270"/>
+      <line x1="440" y1="178" x2="440" y2="270"/>
+      <line x1="596" y1="170" x2="596" y2="198"/>
+      <line x1="540" y1="234" x2="540" y2="270"/>
+      <line x1="648" y1="234" x2="648" y2="390"/>
+      <line x1="440" y1="306" x2="440" y2="326"/>
+      <line x1="180" y1="322" x2="180" y2="390"/>
+      <line x1="336" y1="362" x2="336" y2="390"/>
+      <line x1="440" y1="362" x2="440" y2="390"/>
+      <line x1="540" y1="306" x2="540" y2="390"/>
+      <line x1="180" y1="390" x2="648" y2="390"/>
+      <line x1="388" y1="390" x2="388" y2="412"/>
+      <line x1="388" y1="446" x2="388" y2="466"/>
+    </g>
+    <!-- Gate 1 Diamond -->
+    <polygon points="388,466 426,484 388,502 350,484" class="ff-gate-diamond"/>
+    <text x="388" y="488" class="ff-gate-txt" font-size="11" font-weight="900" text-anchor="middle">GATE 1</text>
+    <line x1="388" y1="502" x2="388" y2="524" class="ff-line" stroke="#475569" stroke-width="1.5"/>
+    <!-- Gate 1 Criteria Card -->
+    <rect x="82" y="524" width="612" height="126" rx="4" class="ff-card-box"/>
+    <text x="100" y="546" class="ff-card-header" font-size="12" font-weight="800">Gate 1 Criteria:</text>
+    <g class="ff-card-body" font-size="11" font-weight="600">
+      <text x="100" y="566">• Can a car be obtained?</text>
+      <text x="100" y="584">• Will the event be covered by university insurance?</text>
+      <text x="100" y="602">• Is there a suitable site on campus?</text>
+      <text x="100" y="620">• Do health and safety give consent?</text>
+      <text x="100" y="638">• Will catering allow us to run our own barbeque?</text>
+    </g>
+    <!-- Standards Card -->
+    <rect x="82" y="662" width="612" height="172" rx="4" class="ff-card-box"/>
+    <text x="100" y="684" class="ff-card-header" font-size="12" font-weight="800">Standards:</text>
+    <g class="ff-card-body" font-size="11" font-weight="600">
+      <text x="100" y="704">• The venue must be accessible for a vehicle, central location, visible for</text>
+      <text x="112" y="720">spectators, large enough to accommodate a large number of people.</text>
+      <text x="100" y="740">• The car must be a standard BMW Mini, available for borrowing for one whole day.</text>
+      <text x="100" y="760">• The event must be completely covered by university insurance such that group</text>
+      <text x="112" y="776">members are not liable for any damage to the car.</text>
+      <text x="100" y="796">• Health and safety procedures must be established such that group members</text>
+      <text x="112" y="812">are not responsible for any injury to participants.</text>
+    </g>
+  </svg>
+</div>
 
         <div class="callout-read text-sm">
           <strong class="block text-xs uppercase tracking-wider mb-1 text-emerald-700 dark:text-emerald-400">🔍 How to Read It (Slide 39)</strong>
