@@ -217,7 +217,25 @@
         fill: #fb7185 !important;
       }
 
-      /* Figure 3.1 Dark Mode Overrides (Strategy Cascade) */
+            /* Figure 2.6 Dark Mode Overrides (IDeA Armenia Lifecycle) */
+      html.dark .f26-frame, [data-theme="dark"] .f26-frame { fill: rgba(15, 23, 42, 0.6) !important; stroke: #334155 !important; }
+      html.dark .f26-span-proj, [data-theme="dark"] .f26-span-proj { fill: rgba(22, 163, 74, 0.22) !important; stroke: #4ade80 !important; }
+      html.dark .f26-span-ops, [data-theme="dark"] .f26-span-ops { fill: rgba(22, 163, 74, 0.22) !important; stroke: #4ade80 !important; }
+      html.dark .f26-span-proj-txt, [data-theme="dark"] .f26-span-proj-txt,
+      html.dark .f26-span-ops-txt, [data-theme="dark"] .f26-span-ops-txt { fill: #86efac !important; }
+      html.dark .f26-row-label text, html.dark .f26-row-label, [data-theme="dark"] .f26-row-label text, [data-theme="dark"] .f26-row-label { fill: #f1f5f9 !important; }
+      html.dark .f26-dash, [data-theme="dark"] .f26-dash { stroke: #2dd4bf !important; }
+      html.dark .f26-phase-bound, [data-theme="dark"] .f26-phase-bound { stroke: #64748b !important; }
+      html.dark .f26-phase-box rect, [data-theme="dark"] .f26-phase-box rect { fill: rgba(2, 132, 199, 0.2) !important; stroke: #38bdf8 !important; }
+      html.dark .f26-phase-txt text, html.dark .f26-phase-txt, [data-theme="dark"] .f26-phase-txt text, [data-theme="dark"] .f26-phase-txt { fill: #bae6fd !important; }
+      html.dark .f26-gate-diamond polygon, [data-theme="dark"] .f26-gate-diamond polygon { fill: rgba(13, 148, 136, 0.25) !important; stroke: #2dd4bf !important; }
+      html.dark .f26-gate-txt text, html.dark .f26-gate-txt, [data-theme="dark"] .f26-gate-txt text, [data-theme="dark"] .f26-gate-txt { fill: #5eead4 !important; }
+      html.dark .f26-focus-box rect, [data-theme="dark"] .f26-focus-box rect { fill: rgba(217, 119, 6, 0.2) !important; stroke: #fbbf24 !important; }
+      html.dark .f26-focus-txt text, html.dark .f26-focus-txt, [data-theme="dark"] .f26-focus-txt text, [data-theme="dark"] .f26-focus-txt { fill: #fde68a !important; }
+      html.dark .f26-deliv-box rect, [data-theme="dark"] .f26-deliv-box rect { fill: rgba(219, 39, 119, 0.2) !important; stroke: #f472b6 !important; }
+      html.dark .f26-deliv-txt text, html.dark .f26-deliv-txt, [data-theme="dark"] .f26-deliv-txt text, [data-theme="dark"] .f26-deliv-txt { fill: #fbcfe8 !important; }
+
+/* Figure 3.1 Dark Mode Overrides (Strategy Cascade) */
       html.dark .w3-role-box, [data-theme="dark"] .w3-role-box { fill: rgba(59, 130, 246, 0.18) !important; stroke: #60a5fa !important; }
       html.dark .w3-role-text text, html.dark .w3-role-text, [data-theme="dark"] .w3-role-text text, [data-theme="dark"] .w3-role-text { fill: #93c5fd !important; }
       html.dark .w3-hier-box, [data-theme="dark"] .w3-hier-box { fill: rgba(16, 185, 129, 0.18) !important; stroke: #34d399 !important; }

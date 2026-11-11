@@ -208,6 +208,24 @@
     html.dark .w3-text-up text, html.dark .w3-text-up, [data-theme="dark"] .w3-text-up text, [data-theme="dark"] .w3-text-up { fill: #fde68a !important; }
     html.dark .w3-arr-horiz line, html.dark .w3-arr-horiz, [data-theme="dark"] .w3-arr-horiz line, [data-theme="dark"] .w3-arr-horiz { stroke: #60a5fa !important; }
     html.dark #arrB path, html.dark #arrBL path, [data-theme="dark"] #arrB path, [data-theme="dark"] #arrBL path { fill: #60a5fa !important; }
+
+    /* Figure 2.6 Dark Mode Overrides (IDeA Armenia Lifecycle) */
+    html.dark .f26-frame, [data-theme="dark"] .f26-frame { fill: rgba(15, 23, 42, 0.6) !important; stroke: #334155 !important; }
+    html.dark .f26-span-proj, [data-theme="dark"] .f26-span-proj { fill: rgba(22, 163, 74, 0.22) !important; stroke: #4ade80 !important; }
+    html.dark .f26-span-ops, [data-theme="dark"] .f26-span-ops { fill: rgba(22, 163, 74, 0.22) !important; stroke: #4ade80 !important; }
+    html.dark .f26-span-proj-txt, [data-theme="dark"] .f26-span-proj-txt,
+    html.dark .f26-span-ops-txt, [data-theme="dark"] .f26-span-ops-txt { fill: #86efac !important; }
+    html.dark .f26-row-label text, html.dark .f26-row-label, [data-theme="dark"] .f26-row-label text, [data-theme="dark"] .f26-row-label { fill: #f1f5f9 !important; }
+    html.dark .f26-dash, [data-theme="dark"] .f26-dash { stroke: #2dd4bf !important; }
+    html.dark .f26-phase-bound, [data-theme="dark"] .f26-phase-bound { stroke: #64748b !important; }
+    html.dark .f26-phase-box rect, [data-theme="dark"] .f26-phase-box rect { fill: rgba(2, 132, 199, 0.2) !important; stroke: #38bdf8 !important; }
+    html.dark .f26-phase-txt text, html.dark .f26-phase-txt, [data-theme="dark"] .f26-phase-txt text, [data-theme="dark"] .f26-phase-txt { fill: #bae6fd !important; }
+    html.dark .f26-gate-diamond polygon, [data-theme="dark"] .f26-gate-diamond polygon { fill: rgba(13, 148, 136, 0.25) !important; stroke: #2dd4bf !important; }
+    html.dark .f26-gate-txt text, html.dark .f26-gate-txt, [data-theme="dark"] .f26-gate-txt text, [data-theme="dark"] .f26-gate-txt { fill: #5eead4 !important; }
+    html.dark .f26-focus-box rect, [data-theme="dark"] .f26-focus-box rect { fill: rgba(217, 119, 6, 0.2) !important; stroke: #fbbf24 !important; }
+    html.dark .f26-focus-txt text, html.dark .f26-focus-txt, [data-theme="dark"] .f26-focus-txt text, [data-theme="dark"] .f26-focus-txt { fill: #fde68a !important; }
+    html.dark .f26-deliv-box rect, [data-theme="dark"] .f26-deliv-box rect { fill: rgba(219, 39, 119, 0.2) !important; stroke: #f472b6 !important; }
+    html.dark .f26-deliv-txt text, html.dark .f26-deliv-txt, [data-theme="dark"] .f26-deliv-txt text, [data-theme="dark"] .f26-deliv-txt { fill: #fbcfe8 !important; }
 </style>
 </head>
 <body data-lesson="figures_w1_w6" class="min-h-screen pb-24">
@@ -989,7 +1007,272 @@
               <strong>Level of activity</strong> peaks in D3 ("Do it") and drops toward handover. In contrast, <strong>Cumulative expenditure</strong> always accumulates monotonically and never falls, forming the classic S-curve.
             </div>
           </div>
-        </div>
+        
+          <!-- Slide 26 Figure 2.6 -->
+          <div class="note-card p-6 space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+              <span class="slide-badge">Slide 26 • Figure 2.6</span>
+              <span class="text-xs font-semibold" style="color: var(--ink-muted);">IDeA Foundation Armenia Example</span>
+            </div>
+            <h3 class="text-xl font-bold">Stage gates: assess before continuing (Figure 2.6)</h3>
+            <div class="pm-svg-scroll-wrap p-4 rounded-xl border flex flex-col items-center justify-center overflow-x-auto shadow-sm" style="background-color: var(--bg-subtle); border-color: var(--border-line);">
+  <div class="w-full text-center mb-2">
+    <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Figure 2.6 Authentic Lifecycle Model</span>
+  </div>
+  <svg viewBox="0 0 1000 520" class="w-full min-w-[860px] max-w-[980px]" aria-label="Figure 2.6 Project lifecycle example from IDeA in Armenia" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- Arrowhead for Project and Operations top banners -->
+      <marker id="f26ArrGreen" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+        <path d="M0,1 L8,4.5 L0,8 Z" fill="#15803d"/>
+      </marker>
+      <marker id="f26ArrGreenDark" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+        <path d="M0,1 L8,4.5 L0,8 Z" fill="#4ade80"/>
+      </marker>
+    </defs>
+
+    <!-- Outer Container Card Frame -->
+    <rect x="8" y="8" width="984" height="504" rx="10" class="f26-frame" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+
+    <!-- ==========================================
+         TOP ROW: PROJECT & OPERATIONS SPAN ARROWS
+         ========================================== -->
+    <!-- Project Chevron Banner (spanning phases 2-6 / Gates 0-5) -->
+    <path d="M 230,22 L 815,22 L 833,35 L 815,48 L 230,48 Z" class="f26-span-proj" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="531" y="39" text-anchor="middle" font-size="13" font-weight="800" class="f26-span-proj-txt" fill="#14532d">Project ➔</text>
+
+    <!-- Operations Chevron Banner (spanning Phase 7) -->
+    <path d="M 852,22 L 950,22 L 968,35 L 950,48 L 852,48 Z" class="f26-span-ops" fill="#dcfce7" stroke="#16a34a" stroke-width="1.6"/>
+    <text x="910" y="39" text-anchor="middle" font-size="12" font-weight="800" class="f26-span-ops-txt" fill="#14532d">Operations ➔</text>
+
+    <!-- ==========================================
+         LEFT HEADERS (ROW LABELS)
+         ========================================== -->
+    <g class="f26-row-label" font-size="13.5" font-weight="800" fill="#0f172a">
+      <text x="24" y="92">Phase</text>
+      <text x="24" y="183">Gate number</text>
+      <text x="24" y="258">Gate focus</text>
+      <text x="24" y="332">Main</text>
+      <text x="24" y="350">deliverables</text>
+      <text x="24" y="368">to gate</text>
+    </g>
+
+    <!-- ==========================================
+         VERTICAL DASHED BOUNDARY & GATE LINES
+         ========================================== -->
+    <!-- Gate 0 Line (between Phase 1 & 2) -->
+    <line x1="215" y1="58" x2="215" y2="390" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+    <!-- Gate 1 Line (between Phase 2 & 3) -->
+    <line x1="335" y1="58" x2="335" y2="390" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+    <!-- Gate 2 Line (between Phase 3 & 4) -->
+    <line x1="455" y1="58" x2="455" y2="390" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+    <!-- Gate 3 Line (between Phase 4 & 5) -->
+    <line x1="575" y1="58" x2="575" y2="390" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+    <!-- Gate 4 Line (between Phase 5 & 6) -->
+    <line x1="705" y1="58" x2="705" y2="470" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+    <!-- Gate 5 Line (between Phase 6 & 7) -->
+    <line x1="837" y1="58" x2="837" y2="470" stroke="#0d9488" stroke-width="1.4" stroke-dasharray="4,3" class="f26-dash"/>
+
+    <!-- Phase 1 boundary left and Phase 7 boundary right (dashed) -->
+    <line x1="135" y1="62" x2="135" y2="122" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3" class="f26-phase-bound"/>
+    <line x1="958" y1="62" x2="958" y2="122" stroke="#94a3b8" stroke-width="1.2" stroke-dasharray="3,3" class="f26-phase-bound"/>
+
+    <!-- ==========================================
+         ROW 1: 7 PHASE BOXES (Blue)
+         ========================================== -->
+    <g class="f26-phase-box" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5">
+      <!-- 1. Capture Idea -->
+      <rect x="142" y="66" width="66" height="52" rx="4"/>
+      <!-- 2. Initiate Project -->
+      <rect x="224" y="66" width="102" height="52" rx="4"/>
+      <!-- 3. Develop Concept -->
+      <rect x="344" y="66" width="102" height="52" rx="4"/>
+      <!-- 4. Select & Plan in Detail -->
+      <rect x="464" y="66" width="102" height="52" rx="4"/>
+      <!-- 5. Fundraise & Prepare to Execute -->
+      <rect x="584" y="66" width="112" height="52" rx="4"/>
+      <!-- 6. Execute -->
+      <rect x="714" y="66" width="114" height="52" rx="4"/>
+      <!-- 7. Operate -->
+      <rect x="846" y="66" width="102" height="52" rx="4"/>
+    </g>
+
+    <!-- Phase Titles -->
+    <g class="f26-phase-txt" font-size="11" font-weight="700" text-anchor="middle" fill="#0369a1">
+      <text x="175" y="89">Capture</text>
+      <text x="175" y="104">Idea</text>
+
+      <text x="275" y="89">Initiate</text>
+      <text x="275" y="104">Project</text>
+
+      <text x="395" y="89">Develop</text>
+      <text x="395" y="104">Concept</text>
+
+      <text x="515" y="88">Select &amp;</text>
+      <text x="515" y="101">Plan in</text>
+      <text x="515" y="113" font-size="10">Detail</text>
+
+      <text x="640" y="83" font-size="10.5">Fundraise</text>
+      <text x="640" y="96" font-size="10">&amp; Prepare</text>
+      <text x="640" y="109" font-size="10">to Execute</text>
+
+      <text x="771" y="96" font-size="12">Execute</text>
+
+      <text x="897" y="96" font-size="12">Operate</text>
+    </g>
+
+    <!-- ==========================================
+         ROW 2: 6 GATE DIAMONDS (Teal / Mint)
+         ========================================== -->
+    <g class="f26-gate-diamond" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.8">
+      <!-- Gate 0 (center 215, 178) -->
+      <polygon points="215,152 242,178 215,204 188,178"/>
+      <!-- Gate 1 (center 335, 178) -->
+      <polygon points="335,152 362,178 335,204 308,178"/>
+      <!-- Gate 2 (center 455, 178) -->
+      <polygon points="455,152 482,178 455,204 428,178"/>
+      <!-- Gate 3 (center 575, 178) -->
+      <polygon points="575,152 602,178 575,204 548,178"/>
+      <!-- Gate 4 (center 705, 178) -->
+      <polygon points="705,152 732,178 705,204 678,178"/>
+      <!-- Gate 5 (center 837, 178) -->
+      <polygon points="837,152 864,178 837,204 810,178"/>
+    </g>
+
+    <!-- Gate Labels -->
+    <g class="f26-gate-txt" text-anchor="middle" fill="#0f766e">
+      <text x="215" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="215" y="189" font-size="13" font-weight="800">0</text>
+
+      <text x="335" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="335" y="189" font-size="13" font-weight="800">1</text>
+
+      <text x="455" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="455" y="189" font-size="13" font-weight="800">2</text>
+
+      <text x="575" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="575" y="189" font-size="13" font-weight="800">3</text>
+
+      <text x="705" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="705" y="189" font-size="13" font-weight="800">4</text>
+
+      <text x="837" y="174" font-size="10" font-weight="700">Gate</text>
+      <text x="837" y="189" font-size="13" font-weight="800">5</text>
+    </g>
+
+    <!-- ==========================================
+         ROW 3: 6 GATE FOCUS BOXES (Warm Apricot / Amber)
+         ========================================== -->
+    <g class="f26-focus-box" fill="#fef3c7" stroke="#d97706" stroke-width="1.5">
+      <!-- Gate 0 Focus -->
+      <rect x="162" y="234" width="106" height="42" rx="4"/>
+      <!-- Gate 1 Focus -->
+      <rect x="282" y="234" width="106" height="42" rx="4"/>
+      <!-- Gate 2 Focus -->
+      <rect x="402" y="234" width="106" height="42" rx="4"/>
+      <!-- Gate 3 Focus -->
+      <rect x="522" y="234" width="106" height="42" rx="4"/>
+      <!-- Gate 4 Focus -->
+      <rect x="647" y="234" width="116" height="42" rx="4"/>
+      <!-- Gate 5 Focus -->
+      <rect x="779" y="234" width="116" height="42" rx="4"/>
+    </g>
+
+    <g class="f26-focus-txt" font-size="11" font-weight="800" text-anchor="middle" fill="#92400e">
+      <text x="215" y="251">Strategic</text>
+      <text x="215" y="265">Assessment</text>
+
+      <text x="335" y="251">Funding</text>
+      <text x="335" y="265">Assessment</text>
+
+      <text x="455" y="251">Delivery</text>
+      <text x="455" y="265">Strategy</text>
+
+      <text x="575" y="251">Financing</text>
+      <text x="575" y="265">Decision</text>
+
+      <text x="705" y="251">Execution</text>
+      <text x="705" y="265">Readiness</text>
+
+      <text x="837" y="251">Operational</text>
+      <text x="837" y="265">Readiness</text>
+    </g>
+
+    <!-- ==========================================
+         ROW 4: DELIVERABLES BOXES (Rose / Mauve)
+         ========================================== -->
+    <!-- Gate 0 Deliverable -->
+    <g class="f26-deliv-box" fill="#fce7f3" stroke="#db2777" stroke-width="1.5">
+      <rect x="162" y="296" width="106" height="76" rx="4"/>
+      <rect x="282" y="296" width="106" height="76" rx="4"/>
+      <rect x="402" y="296" width="106" height="76" rx="4"/>
+      <rect x="522" y="296" width="106" height="76" rx="4"/>
+
+      <!-- Gate 4 Tall Deliverable -->
+      <rect x="647" y="296" width="116" height="186" rx="4"/>
+      <!-- Gate 5 Tall Deliverable -->
+      <rect x="779" y="296" width="116" height="186" rx="4"/>
+
+      <!-- Wide Spanning Rule Box (Under Gates 0-3) -->
+      <rect x="162" y="386" width="466" height="96" rx="4"/>
+    </g>
+
+    <!-- Deliverable Texts -->
+    <g class="f26-deliv-txt" font-size="10" font-weight="600" fill="#831843">
+      <!-- Gate 0 -->
+      <text x="170" y="313">ROM time, cost,</text>
+      <text x="170" y="327">benefits,</text>
+      <text x="170" y="341">assumptions,</text>
+      <text x="170" y="355">risks</text>
+
+      <!-- Gate 1 -->
+      <text x="290" y="318">Project Initiation</text>
+      <text x="290" y="334">Document/</text>
+      <text x="290" y="350">Proposal</text>
+
+      <!-- Gate 2 -->
+      <text x="410" y="330">Preliminary</text>
+      <text x="410" y="346">plans</text>
+
+      <!-- Gate 3 -->
+      <text x="530" y="325">• Detailed plans</text>
+      <text x="530" y="343">• Fundraising</text>
+      <text x="538" y="357">document</text>
+
+      <!-- Gate 4 (Tall) -->
+      <text x="655" y="316" font-weight="700">• Execution</text>
+      <text x="664" y="330">plans</text>
+      <text x="655" y="348" font-weight="700">• Contracts</text>
+      <text x="655" y="368" font-weight="700">• Benefits</text>
+      <text x="664" y="382">realisation</text>
+      <text x="664" y="396">plan</text>
+      <text x="655" y="416" font-weight="700">• Funding</text>
+      <text x="664" y="430">availability</text>
+
+      <!-- Gate 5 (Tall) -->
+      <text x="787" y="316" font-weight="700">• Operational</text>
+      <text x="796" y="330">start-up</text>
+      <text x="796" y="344">plans</text>
+      <text x="787" y="364" font-weight="700">• Asset data</text>
+      <text x="787" y="384" font-weight="700">• Project</text>
+      <text x="796" y="398">history file</text>
+      <text x="787" y="418" font-weight="700">• Lessons</text>
+      <text x="796" y="432">learned</text>
+
+      <!-- Spanning Box text -->
+      <text x="174" y="416" font-size="11" font-weight="700">• Opportunity Statement updated at each gate.</text>
+      <text x="174" y="440" font-size="11" font-weight="700">• Cost, time, resources proposed/estimated for each gate,</text>
+      <text x="183" y="458" font-size="11" font-weight="700">before moving to the next gate.</text>
+    </g>
+  </svg>
+</div>
+            <div class="callout-read text-xs sm:text-sm">
+              <strong class="text-emerald-700 dark:text-emerald-400 block uppercase tracking-wider text-[11px]">Lifecycle &amp; Stage-Gate Mechanics:</strong>
+              • <strong>Pre-Project vs. Project:</strong> <em>Capture Idea</em> is the pre-project incubation phase. The formal project spans Gates 0 to 5 (from <em>Initiate Project</em> through <em>Execute</em>), handing over to ongoing <em>Operations</em> at Gate 5.<br/>
+              • <strong>Decision Gates at Boundaries:</strong> Gates sit directly on the transitions between phases to evaluate continuing strategic, funding, delivery, financing, execution, and operational viability.<br/>
+              • <strong>Continuous Rules (Gates 0–3):</strong> The Opportunity Statement is iteratively refined at each gate, and time, cost, and resource estimates are formally committed before unlocking subsequent phases.
+            </div>
+          </div>
+</div>
       </section>
 
       <!-- ===================================================================
